@@ -22,8 +22,20 @@ public class Character {
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
 	private String charactername;
 	private String playerName;
+	private int Strength;
+	private int Dexerity;
+	private int Intelligence;
+	private int Constitution;
+	private int Wisdom;
+	private int Charisma;
+	// Mod[0] = strength
+	// Mod[1] = dexterity
+	// Mod[2] = intelligence;
+	// Mod[3] = Constitution;
+	// Mod[4] = Wisdom;
+	// Mod[5] = Charisma;
 	private int[] baseMods = new int[6];
-	private int[] raceMods = new int[6];
+	public int[] raceMods = new int[6];
 	private int[] totalMods = new int[6];
 	private int copperPieces;
 	private int silverPieces;

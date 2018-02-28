@@ -11,11 +11,12 @@ public class Human extends Race {
 	}
 	
 	private void setRacialModifiers() {
-		Strength ++;
-		Dexterity ++;
-		Constitution ++;
-		Intelligence ++;
-		Wisdom ++;
-		Charisma ++;
+		
+		Strength++;
+		Dexterity++;
+		Constitution++;
+		Intelligence++;
+		Wisdom++;
+		Charisma++;
 	}
 }
