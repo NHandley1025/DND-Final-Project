@@ -5,14 +5,14 @@ import Items.Item;
 public class Armor extends Item {
 
 	protected int baseAC;
-	protected Integer maxDex;
+	protected Integer maxDexMod;
 	protected int strRequriement;
 	protected boolean stealthDisatvantage;
 	
 	public Armor(String name, String description, String value, int weight, int baseAC, Integer maxDex, int strRequirement, boolean stealthDisatvantage) {
 		super(name, description, value, weight);
 		this.baseAC = baseAC;
-		this.maxDex = maxDex;
+		this.maxDexMod = maxDex;
 		this.strRequriement = strRequirement;
 		this.stealthDisatvantage = stealthDisatvantage;
 	}
@@ -22,7 +22,7 @@ public class Armor extends Item {
 	}
 
 	public Integer getMaxDex() {
-		return maxDex;
+		return maxDexMod;
 	}
 
 	public int getStrRequriement() {
