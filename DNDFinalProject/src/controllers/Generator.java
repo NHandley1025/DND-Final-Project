@@ -1,11 +1,11 @@
 package controllers;
 
-import gui.FxMain;
+import gui.FxController;
 
 public class Generator {
 
 	public static void run(String[] args) {
-		FxMain.launch(args);
+		FxController.launch(args);
 	}
 	
 }
