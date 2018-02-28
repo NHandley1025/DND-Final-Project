@@ -23,7 +23,7 @@ public class Character {
 	private String charactername;
 	private String playerName;
 	private int Strength;
-	private int strMod;
+	private int strMod = totalMods[0];
 	private int Dexerity;
 	private int dexMod;
 	private int Intelligence;
