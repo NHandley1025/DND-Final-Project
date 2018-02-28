@@ -18,6 +18,6 @@ public class Tiefling extends Race {
 	private void setRacialSkills() {
 		racialSkills.add(skills.DarkVision);
 		racialSkills.add(skills.HellishResistance);
-		racialSkills.add(Skills.InfernalLegacy);
+		racialSkills.add(skills.InfernalLegacy);
 	}
 }
