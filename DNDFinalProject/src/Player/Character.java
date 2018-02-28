@@ -12,6 +12,25 @@ import javafx.beans.property.SimpleObjectProperty;
 
 public class Character {
 
+	public Character() {
+		setMods();
+	}
+	
+	public void setMods() {
+		baseMods[0] = (Strength-10)/2;
+		baseMods[1] = (Dexterity-10)/2;
+		baseMods[2] = (Intelligence-10)/2;
+		baseMods[3] = (Constitution-10)/2;
+		baseMods[4] = (Wisdom-10)/2;
+		baseMods[5] = (Charisma-10)/2;
+		strMod = baseMods[0] += raceMods[0];
+		dexMod = baseMods[1] += raceMods[1];
+		intMod = baseMods[2] += raceMods[2];
+		conMod = baseMods[3] += raceMods[3];
+		wisMod = baseMods[4] += raceMods[4];
+		chaMod = baseMods[5] += raceMods[5];
+	}
+	
 	private Race race;
 	public int level;
 	private Class characterClass;
@@ -23,8 +42,8 @@ public class Character {
 	private String charactername;
 	private String playerName;
 	private int Strength;
-	private int strMod = baseMods[0] += raceMods[0];
-	private int Dexerity;
+	private int strMod;
+	private int Dexterity;
 	private int dexMod;
 	private int Intelligence;
 	private int intMod;
@@ -63,15 +82,6 @@ public class Character {
 	private int silverPieces;
 	private int goldPieces;
 	private int platPieces;
-	
-	public void setMods() {
-		baseMods[0] = (Strength-10)/2;
-		baseMods[0] = (Strength-10)/2;
-		baseMods[0] = (Strength-10)/2;
-		baseMods[0] = (Strength-10)/2;
-		baseMods[0] = (Strength-10)/2;
-		
-	}
 	
 	public int getLevel() {
 		return level;
