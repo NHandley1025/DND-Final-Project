@@ -20,9 +20,18 @@ public class HalfOrc extends Race {
 	}
 	
 	private void setRacialModifiers() {
-		Strength += 2;
-		Constituion ++;
-		
+		// Mod[0] = strength
+		// Mod[1] = dexterity
+		// Mod[2] = intelligence;
+		// Mod[3] = Constitution;
+		// Mod[4] = Wisdom;
+		// Mod[5] = Charisma;
+		racialModifiers[0] = 2;
+		racialModifiers[1] = 0;
+		racialModifiers[2] = 0;
+		racialModifiers[3] = 1;
+		racialModifiers[4] = 0;
+		racialModifiers[5] = 0;
 	}
 	
 }

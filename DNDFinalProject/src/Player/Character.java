@@ -12,6 +12,8 @@ import javafx.beans.property.SimpleObjectProperty;
 
 public class Character {
 
+	public static int[] raceMods = new int[6];
+	
 	public Character() {
 		setMods();
 	}
@@ -23,6 +25,7 @@ public class Character {
 		baseMods[3] = (Constitution-10)/2;
 		baseMods[4] = (Wisdom-10)/2;
 		baseMods[5] = (Charisma-10)/2;
+		race.getRacialModifiers();
 		strMod = baseMods[0] += raceMods[0];
 		dexMod = baseMods[1] += raceMods[1];
 		intMod = baseMods[2] += raceMods[2];
@@ -77,7 +80,6 @@ public class Character {
 	private int Stealth = dexMod;
 	private int Survival = wisMod;
 	private int[] baseMods = new int[6];
-	public int[] raceMods = new int[6];
 	private int copperPieces;
 	private int silverPieces;
 	private int goldPieces;
