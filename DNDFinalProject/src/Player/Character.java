@@ -23,7 +23,7 @@ public class Character {
 	private String charactername;
 	private String playerName;
 	private int Strength;
-	private int strMod = totalMods[0];
+	private int strMod = baseMods[0] += raceMods[0];
 	private int Dexerity;
 	private int dexMod;
 	private int Intelligence;
@@ -59,11 +59,19 @@ public class Character {
 	private int Survival = wisMod;
 	private int[] baseMods = new int[6];
 	public int[] raceMods = new int[6];
-	private int[] totalMods = new int[6];
 	private int copperPieces;
 	private int silverPieces;
 	private int goldPieces;
 	private int platPieces;
+	
+	public void setMods() {
+		baseMods[0] = (Strength-10)/2;
+		baseMods[0] = (Strength-10)/2;
+		baseMods[0] = (Strength-10)/2;
+		baseMods[0] = (Strength-10)/2;
+		baseMods[0] = (Strength-10)/2;
+		
+	}
 	
 	public int getLevel() {
 		return level;

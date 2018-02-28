@@ -3,17 +3,17 @@ package Traits;
 import java.util.HashMap;
 
 public class Backgrounds {
-	static HashMap<TraitKey, Trait> traits = new HashMap<>();
+	static HashMap<TraitKey, trait> traits = new HashMap<>();
 	
 	public static Background get(String name) {
 		return null;
 	}
 	
-	private static Trait getTrait(String name) {
+	private static trait getTrait(String name) {
 		return null;
 	}
 	
-	public static HashMap<TraitKey, Trait> getHash() {
+	public static HashMap<TraitKey, trait> getHash() {
 		return traits;
 	}
 }

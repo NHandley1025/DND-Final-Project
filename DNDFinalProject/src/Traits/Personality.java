@@ -1,6 +1,6 @@
 package Traits;
 
-public class Personality extends Trait{
+public class Personality extends trait{
 
 	public Personality(String keyword, String description) {
 		super(keyword, description);
