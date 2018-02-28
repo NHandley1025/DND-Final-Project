@@ -1,4 +1,4 @@
-package gui.scenes.main;
+package gui.Scenes.Main;
 
 import java.net.URL;
 import java.util.ResourceBundle;
