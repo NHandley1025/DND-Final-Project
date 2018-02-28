@@ -21,7 +21,7 @@ public class HalfOrc extends Race {
 	
 	private void setRacialModifiers() {
 		Strength += 2;
-		Constituion += 1;
+		Constituion ++;
 		
 	}
 	
