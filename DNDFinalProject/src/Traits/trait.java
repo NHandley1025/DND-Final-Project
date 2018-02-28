@@ -1,9 +1,9 @@
 package Traits;
 
-public class Trait{
+public class trait{
 	private String keyword;
 	private String description;
-	public Trait(String keyword, String description) {
+	public trait(String keyword, String description) {
 		this.keyword = keyword;
 		this.description = description;
 	}
