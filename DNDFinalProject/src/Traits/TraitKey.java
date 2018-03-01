@@ -52,7 +52,7 @@ public class TraitKey {
 	public int hashCode() {
 		int result = Objects.hashCode(keyword);
 		int modifier = Objects.hashCode(backgroundName);
-		result = 153 * result + modifier;
+		result = 163 * result + modifier;
 		return result;
 	}
 }
