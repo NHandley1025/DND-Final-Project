@@ -19,6 +19,7 @@ public class Character {
 	}
 	
 	public void setMods() {
+		
 		baseMods[0] = (Strength-10)/2;
 		baseMods[1] = (Dexterity-10)/2;
 		baseMods[2] = (Intelligence-10)/2;
