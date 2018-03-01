@@ -2,6 +2,7 @@ package Player;
 
 import java.util.ArrayList;
 
+import Dice.die;
 import Items.*;
 import Races.*;
 import Spells.*;
@@ -14,12 +15,7 @@ public class Character {
 
 	public static int[] raceMods = new int[6];
 	
-	public Character() {
-		setMods();
-	}
-	
 	public void setMods() {
-		
 		baseMods[0] = (Strength-10)/2;
 		baseMods[1] = (Dexterity-10)/2;
 		baseMods[2] = (Intelligence-10)/2;
@@ -179,8 +175,8 @@ public class Character {
 		return Strength;
 	}
 
-	public void setStrength(int strength) {
-		Strength = strength;
+	public void setStrength() {
+		Strength = rollStats();
 	}
 
 	public int getStrMod() {
@@ -195,8 +191,8 @@ public class Character {
 		return Dexterity;
 	}
 
-	public void setDexterity(int dexterity) {
-		Dexterity = dexterity;
+	public void setDexterity() {
+		Dexterity = rollStats();
 	}
 
 	public int getDexMod() {
@@ -211,8 +207,8 @@ public class Character {
 		return Intelligence;
 	}
 
-	public void setIntelligence(int intelligence) {
-		Intelligence = intelligence;
+	public void setIntelligence() {
+		Intelligence = rollStats();
 	}
 
 	public int getIntMod() {
@@ -227,8 +223,8 @@ public class Character {
 		return Constitution;
 	}
 
-	public void setConstitution(int constitution) {
-		Constitution = constitution;
+	public void setConstitution() {
+		Constitution = rollStats();
 	}
 
 	public int getConMod() {
@@ -243,8 +239,8 @@ public class Character {
 		return Wisdom;
 	}
 
-	public void setWisdom(int wisdom) {
-		Wisdom = wisdom;
+	public void setWisdom() {
+		Wisdom = rollStats();
 	}
 
 	public int getWisMod() {
@@ -259,8 +255,8 @@ public class Character {
 		return Charisma;
 	}
 
-	public void setCharisma(int charisma) {
-		Charisma = charisma;
+	public void setCharisma() {
+		Charisma = rollStats();
 	}
 
 	public int getChaMod() {
@@ -591,6 +587,38 @@ public class Character {
 		this.isProSurvival = isProSurvival;
 	}
 	
-	
+	public int rollStats() {
+		int roll1 = die.roll();
+		int roll2 = die.roll();
+		int roll3 = die.roll();
+		int roll4 = die.roll();
+		int dieSum = roll1 + roll2 + roll3 + roll4;
+		if(roll1 > roll2) {
+			if(roll1 > roll3) {
+				if(roll1 > roll4) {
+					dieSum -= roll1;
+				}
+			}
+		}else if(roll2 > roll1) {
+			if(roll2 > roll3) {
+				if(roll2 < roll4) {
+					dieSum -= roll2;
+				}
+			}
+		}else if(roll3 > roll1) {
+			if(roll3 > roll2) {
+				if(roll3 < roll4) {
+					dieSum -= roll3;
+				}
+			}
+		}else if(roll4 > roll1) {
+			if(roll4 > roll2) {
+				if(roll4 < roll3) {
+					dieSum -= roll4;
+				}
+			}
+		}
+		return dieSum;
+	}
 	
 }
