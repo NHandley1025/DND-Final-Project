@@ -20,7 +20,7 @@ public class Armor extends Item {
 	public int getBaseAC() {
 		return baseAC;
 	}
-
+ 
 	public Integer getMaxDex() {
 		return maxDexMod;
 	}
