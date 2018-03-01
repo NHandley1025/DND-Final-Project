@@ -15,6 +15,62 @@ public class Character {
 
 	public static int[] raceMods = new int[6];
 	
+	public Character() {
+		
+	}
+	
+	
+
+	public Character(Race race, int level, Class characterClass, trait traits,
+			ArrayList<Item> equipment, SimpleObjectProperty<weapon> equippedWeapon,
+			SimpleObjectProperty<Armor> equipArmor, String charactername, String playerName, boolean isProAcrobatics,
+			boolean isProAnimalHandling, boolean isProArcana, boolean isProAthletics, boolean isProDeception,
+			boolean isProHistory, boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation,
+			boolean isProMedicine, boolean isProNature, boolean isProPerception, boolean isProPersuasion,
+			boolean isProReligion, boolean isProSleightOfHand, boolean isProStealth, boolean isProSurvival,
+			int copperPieces, int silverPieces, int goldPieces, int platPieces) {
+		super();
+		setStrength();
+		setDexterity();
+		setIntelligence();
+		setConstitution();
+		setWisdom();
+		setCharisma();
+		this.race = race;
+		setMods();
+		this.level = level;
+		this.characterClass = characterClass;
+		this.traits = traits;
+		this.equipment = equipment;
+		this.equippedWeapon = equippedWeapon;
+		this.equipArmor = equipArmor;
+		this.charactername = charactername;
+		this.playerName = playerName;
+		this.isProAcrobatics = isProAcrobatics;
+		this.isProAnimalHandling = isProAnimalHandling;
+		this.isProArcana = isProArcana;
+		this.isProAthletics = isProAthletics;
+		this.isProDeception = isProDeception;
+		this.isProHistory = isProHistory;
+		this.isProInsight = isProInsight;
+		this.isProIntimidation = isProIntimidation;
+		this.isProInvestigation = isProInvestigation;
+		this.isProMedicine = isProMedicine;
+		this.isProNature = isProNature;
+		this.isProPerception = isProPerception;
+		this.isProPersuasion = isProPersuasion;
+		this.isProReligion = isProReligion;
+		this.isProSleightOfHand = isProSleightOfHand;
+		this.isProStealth = isProStealth;
+		this.isProSurvival = isProSurvival;
+		this.copperPieces = copperPieces;
+		this.silverPieces = silverPieces;
+		this.goldPieces = goldPieces;
+		this.platPieces = platPieces;
+	}
+
+
+
 	public void setMods() {
 		baseMods[0] = (Strength-10)/2;
 		baseMods[1] = (Dexterity-10)/2;
@@ -35,7 +91,6 @@ public class Character {
 	public int level;
 	private Class characterClass;
 	private trait traits;
-	private ArrayList<spell> spellList = new ArrayList<>();
 	private ArrayList<Item> equipment = new ArrayList<>();
 	private SimpleObjectProperty<weapon> equippedWeapon = new SimpleObjectProperty<>();
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
@@ -98,6 +153,7 @@ public class Character {
 	private int silverPieces;
 	private int goldPieces;
 	private int platPieces;
+	private int proficiencyBonus;
 
 	public Race getRace() {
 		return race;
@@ -121,14 +177,6 @@ public class Character {
 
 	public void setTraits(trait traits) {
 		this.traits = traits;
-	}
-
-	public ArrayList<spell> getSpellList() {
-		return spellList;
-	}
-
-	public void setSpellList(ArrayList<spell> spellList) {
-		this.spellList = spellList;
 	}
 
 	public ArrayList<Item> getEquipment() {
