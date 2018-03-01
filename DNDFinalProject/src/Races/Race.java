@@ -11,7 +11,7 @@ public class Race {
 	protected String size;
 	protected int landBaseSpeed;
 	protected ArrayList<Skill> racialSkills = new ArrayList<>();
-	protected int[] racialModifiers = new int[6];
+	public int[] racialModifiers = new int[6];
 	
 	public int getWeight() {
 		return weight;
