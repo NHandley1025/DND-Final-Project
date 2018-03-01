@@ -9,10 +9,10 @@ public class Armor extends Item {
 	protected int strRequriement;
 	protected boolean stealthDisatvantage;
 	
-	public Armor(String name, String description, String value, int weight, int baseAC, Integer maxDex, int strRequirement, boolean stealthDisatvantage) {
+	public Armor(String name, String value, int baseAC, int strRequirement, boolean stealthDisatvantage, int weight,Integer maxDexMod, String description) {
 		super(name, description, value, weight);
 		this.baseAC = baseAC;
-		this.maxDexMod = maxDex;
+		this.maxDexMod = maxDexMod;
 		this.strRequriement = strRequirement;
 		this.stealthDisatvantage = stealthDisatvantage;
 	}

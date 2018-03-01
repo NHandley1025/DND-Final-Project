@@ -2,6 +2,7 @@ package Player;
 
 import java.util.ArrayList;
 
+import Dice.die;
 import Items.*;
 import Races.*;
 import Spells.*;
@@ -13,10 +14,6 @@ import javafx.beans.property.SimpleObjectProperty;
 public class Character {
 
 	public static int[] raceMods = new int[6];
-	
-	public Character() {
-		setMods();
-	}
 	
 	public void setMods() {
 		baseMods[0] = (Strength-10)/2;
@@ -63,22 +60,39 @@ public class Character {
 	// Mod[4] = Wisdom;
 	// Mod[5] = Charisma;
 	private int Acrobatics = dexMod;
+	private boolean isProAcrobatics = false;
 	private int AnimalHandling = wisMod;
+	private boolean isProAnimalHandling = false;
 	private int Arcana = intMod;
+	private boolean isProArcana = false;
 	private int Athletics = strMod;
+	private boolean isProAthletics = false;
 	private int Deception = chaMod;
+	private boolean isProDeception = false;
 	private int History = intMod;
+	private boolean isProHistory = false;
 	private int Insight = wisMod;
+	private boolean isProInsight = false;
 	private int Intimidation = chaMod;
+	private boolean isProIntimidation = false;
 	private int Investigation = intMod;
+	private boolean isProInvestigation = false;
 	private int Medicine = wisMod;
+	private boolean isProMedicine = false;
 	private int Nature = intMod;
+	private boolean isProNature = false;
 	private int Perception = wisMod;
+	private boolean isProPerception = false;
 	private int Persuasion = chaMod;
+	private boolean isProPersuasion = false;
 	private int Religion = intMod;
+	private boolean isProReligion = false;
 	private int SleightOfHand = dexMod;
+	private boolean isProSleightOfHand = false;
 	private int Stealth = dexMod;
+	private boolean isProStealth = false;
 	private int Survival = wisMod;
+	private boolean isProSurvival = false;
 	private int[] baseMods = new int[6];
 	private int copperPieces;
 	private int silverPieces;
@@ -161,8 +175,8 @@ public class Character {
 		return Strength;
 	}
 
-	public void setStrength(int strength) {
-		Strength = strength;
+	public void setStrength() {
+		Strength = rollStats();
 	}
 
 	public int getStrMod() {
@@ -177,8 +191,8 @@ public class Character {
 		return Dexterity;
 	}
 
-	public void setDexterity(int dexterity) {
-		Dexterity = dexterity;
+	public void setDexterity() {
+		Dexterity = rollStats();
 	}
 
 	public int getDexMod() {
@@ -193,8 +207,8 @@ public class Character {
 		return Intelligence;
 	}
 
-	public void setIntelligence(int intelligence) {
-		Intelligence = intelligence;
+	public void setIntelligence() {
+		Intelligence = rollStats();
 	}
 
 	public int getIntMod() {
@@ -209,8 +223,8 @@ public class Character {
 		return Constitution;
 	}
 
-	public void setConstitution(int constitution) {
-		Constitution = constitution;
+	public void setConstitution() {
+		Constitution = rollStats();
 	}
 
 	public int getConMod() {
@@ -225,8 +239,8 @@ public class Character {
 		return Wisdom;
 	}
 
-	public void setWisdom(int wisdom) {
-		Wisdom = wisdom;
+	public void setWisdom() {
+		Wisdom = rollStats();
 	}
 
 	public int getWisMod() {
@@ -241,8 +255,8 @@ public class Character {
 		return Charisma;
 	}
 
-	public void setCharisma(int charisma) {
-		Charisma = charisma;
+	public void setCharisma() {
+		Charisma = rollStats();
 	}
 
 	public int getChaMod() {
@@ -393,10 +407,6 @@ public class Character {
 		return baseMods;
 	}
 
-	public void setBaseMods(int[] baseMods) {
-		this.baseMods = baseMods;
-	}
-
 	public int getCopperPieces() {
 		return copperPieces;
 	}
@@ -440,4 +450,175 @@ public class Character {
 	public void levelUp() {
 		level++;
 	}
+
+	public boolean isProAcrobatics() {
+		return isProAcrobatics;
+	}
+
+	public void setProAcrobatics(boolean isProAcrobatics) {
+		this.isProAcrobatics = isProAcrobatics;
+	}
+
+	public boolean isProAnimalHandling() {
+		return isProAnimalHandling;
+	}
+
+	public void setProAnimalHandling(boolean isProAnimalHandling) {
+		this.isProAnimalHandling = isProAnimalHandling;
+	}
+
+	public boolean isProArcana() {
+		return isProArcana;
+	}
+
+	public void setProArcana(boolean isProArcana) {
+		this.isProArcana = isProArcana;
+	}
+
+	public boolean isProAthletics() {
+		return isProAthletics;
+	}
+
+	public void setProAthletics(boolean isProAthletics) {
+		this.isProAthletics = isProAthletics;
+	}
+
+	public boolean isProDeception() {
+		return isProDeception;
+	}
+
+	public void setProDeception(boolean isProDeception) {
+		this.isProDeception = isProDeception;
+	}
+
+	public boolean isProHistory() {
+		return isProHistory;
+	}
+
+	public void setProHistory(boolean isProHistory) {
+		this.isProHistory = isProHistory;
+	}
+
+	public boolean isProInsight() {
+		return isProInsight;
+	}
+
+	public void setProInsight(boolean isProInsight) {
+		this.isProInsight = isProInsight;
+	}
+
+	public boolean isProIntimidation() {
+		return isProIntimidation;
+	}
+
+	public void setProIntimidation(boolean isProIntimidation) {
+		this.isProIntimidation = isProIntimidation;
+	}
+
+	public boolean isProInvestigation() {
+		return isProInvestigation;
+	}
+
+	public void setProInvestigation(boolean isProInvestigation) {
+		this.isProInvestigation = isProInvestigation;
+	}
+
+	public boolean isProMedicine() {
+		return isProMedicine;
+	}
+
+	public void setProMedicine(boolean isProMedicine) {
+		this.isProMedicine = isProMedicine;
+	}
+
+	public boolean isProNature() {
+		return isProNature;
+	}
+
+	public void setProNature(boolean isProNature) {
+		this.isProNature = isProNature;
+	}
+
+	public boolean isProPerception() {
+		return isProPerception;
+	}
+
+	public void setProPerception(boolean isProPerception) {
+		this.isProPerception = isProPerception;
+	}
+
+	public boolean isProPersuasion() {
+		return isProPersuasion;
+	}
+
+	public void setProPersuasion(boolean isProPersuasion) {
+		this.isProPersuasion = isProPersuasion;
+	}
+
+	public boolean isProReligion() {
+		return isProReligion;
+	}
+
+	public void setProReligion(boolean isProReligion) {
+		this.isProReligion = isProReligion;
+	}
+
+	public boolean isProSleightOfHand() {
+		return isProSleightOfHand;
+	}
+
+	public void setProSleightOfHand(boolean isProSleightOfHand) {
+		this.isProSleightOfHand = isProSleightOfHand;
+	}
+
+	public boolean isProStealth() {
+		return isProStealth;
+	}
+
+	public void setProStealth(boolean isProStealth) {
+		this.isProStealth = isProStealth;
+	}
+
+	public boolean isProSurvival() {
+		return isProSurvival;
+	}
+
+	public void setProSurvival(boolean isProSurvival) {
+		this.isProSurvival = isProSurvival;
+	}
+	
+	public int rollStats() {
+		int roll1 = die.roll();
+		int roll2 = die.roll();
+		int roll3 = die.roll();
+		int roll4 = die.roll();
+		int dieSum = roll1 + roll2 + roll3 + roll4;
+		if(roll1 > roll2) {
+			if(roll1 > roll3) {
+				if(roll1 > roll4) {
+					dieSum -= roll1;
+				}
+			}
+		}else if(roll2 > roll1) {
+			if(roll2 > roll3) {
+				if(roll2 < roll4) {
+					dieSum -= roll2;
+				}
+			}
+		}else if(roll3 > roll1) {
+			if(roll3 > roll2) {
+				if(roll3 < roll4) {
+					dieSum -= roll3;
+				}
+			}
+		}else if(roll4 > roll1) {
+			if(roll4 > roll2) {
+				if(roll4 < roll3) {
+					dieSum -= roll4;
+				}
+			}
+		}
+		return dieSum;
+	}
+	
 }
