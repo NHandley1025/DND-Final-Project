@@ -1,7 +1,7 @@
-package Spells;
+package keys;
 
 public class spellKey {
-	public final int spellLevel;
+	public final Integer spellLevel;
 	public final String name;
 	public final String classReq;
 	
@@ -10,6 +10,12 @@ public class spellKey {
 		this.spellLevel = spellLevel;
 		this.name = name;
 		this.classReq = classReq;
+	}
+	
+	public boolean isFilter() {
+		boolean isFilter;
+		isFilter = spellLevel == null || name == null || classReq == null;
+		return isFilter;
 	}
 	
 	

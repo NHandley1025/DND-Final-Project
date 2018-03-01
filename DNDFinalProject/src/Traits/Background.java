@@ -1,5 +1,7 @@
 package Traits;
 
+import keys.TraitKey;
+
 public class Background {
 	private Bond bond;
 	private Personality personalityTraits;
@@ -9,15 +11,51 @@ public class Background {
 	
 	public Background(String name) {
 		setName(name);
-		Backgrounds.get(name);
 	}
 	
 	public void setName(String name) {
 		if(Backgrounds.getHash().containsKey(new TraitKey(name, null))) {
 			this.name = name;
 		}else {
-			this.name = "Chosen One";
+			this.name = "The Chosen One";
 		}
 	}
+
+	public Bond getBond() {
+		return bond;
+	}
+
+	public void setBond(Bond bond) {
+		this.bond = bond;
+	}
+
+	public Personality getPersonalityTraits() {
+		return personalityTraits;
+	}
+
+	public void setPersonalityTraits(Personality personalityTraits) {
+		this.personalityTraits = personalityTraits;
+	}
+
+	public Ideal getIdeals() {
+		return ideals;
+	}
+
+	public void setIdeals(Ideal ideals) {
+		this.ideals = ideals;
+	}
+
+	public Flaw getFlaws() {
+		return flaws;
+	}
+
+	public void setFlaws(Flaw flaws) {
+		this.flaws = flaws;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
 	
 }

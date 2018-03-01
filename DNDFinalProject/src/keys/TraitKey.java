@@ -1,4 +1,4 @@
-package Traits;
+package keys;
 
 import java.util.Objects;
 
@@ -6,7 +6,7 @@ public class TraitKey {
 	private String backgroundName;
 	private String keyword;
 	
-	TraitKey(String backgroundName, String keyword){
+	public TraitKey(String backgroundName, String keyword){
 		if(backgroundName == null && keyword == null) {
 			throw new IllegalArgumentException("The retrieving key cannot have both values be null");
 		}
@@ -25,7 +25,11 @@ public class TraitKey {
 	public String getKeyword() {
 		return keyword;
 	}
-
+	
+	public boolean isFilter() {
+		boolean isFilter = backgroundName == null || keyword == null;
+		return isFilter;
+	}
 
 	@Override
 	public boolean equals(Object o) {
