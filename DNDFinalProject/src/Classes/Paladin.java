@@ -1,5 +1,5 @@
 package Classes;
 
-public class Paladin {
+public class Paladin extends Class{
 
 }

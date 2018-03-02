@@ -1,5 +1,5 @@
 package Classes;
 
-public class Druid {
+public class Druid extends Class{
 
 }

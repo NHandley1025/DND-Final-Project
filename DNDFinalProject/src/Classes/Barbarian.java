@@ -1,6 +1,7 @@
 package Classes;
 
 import Skills.Skill;
+import Skills.skills;
 
 public class Barbarian extends Class{
 	

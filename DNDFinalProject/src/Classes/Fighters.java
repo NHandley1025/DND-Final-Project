@@ -1,5 +1,5 @@
 package Classes;
 
-public class Fighters {
+public class Fighters extends Class{
 
 }
