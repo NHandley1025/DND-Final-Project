@@ -60,6 +60,78 @@ public class Character {
 		this.silverPieces = silverPieces;
 		this.goldPieces = goldPieces;
 		this.platPieces = platPieces;
+		if(isProAcrobatics) {
+			Acrobatics += proficiencyBonus;
+		}
+		if(isProAnimalHandling) {
+			AnimalHandling += proficiencyBonus;
+		}
+		if(isProArcana) {
+			Arcana += proficiencyBonus;
+		}
+		if(isProAthletics) {
+			Athletics += proficiencyBonus;
+		}
+		if(isProDeception) {
+			Deception += proficiencyBonus;
+		}
+		if(isProHistory) {
+			History += proficiencyBonus;
+		}
+		if(isProInsight) {
+			Insight += proficiencyBonus;
+		}
+		if(isProIntimidation) {
+			Intimidation += proficiencyBonus;
+		}
+		if(isProInvestigation) {
+			Investigation += proficiencyBonus;
+		}
+		if(isProMedicine) {
+			Medicine += proficiencyBonus;
+		}
+		if(isProNature) {
+			Nature += proficiencyBonus;
+		}
+		if(isProPerception) {
+			Perception += proficiencyBonus;
+		}
+		if(isProPerformance) {
+			Performance += proficiencyBonus;
+		}
+		if(isProPersuasion) {
+			Persuasion += proficiencyBonus;
+		}
+		if(isProReligion) {
+			Religion += proficiencyBonus;
+		}
+		if(isProSleightOfHand) {
+			SleightOfHand += proficiencyBonus;
+		}
+		if(isProStealth) {
+			Stealth += proficiencyBonus;
+		}
+		if(isProSurvival) {
+			Survival += proficiencyBonus;
+		}
+		if(isProStr) {
+			strSaving += proficiencyBonus;
+		}
+		if(isProDex) {
+			dexSaving += proficiencyBonus;
+		}
+		if(isProInt) {
+			intSaving += proficiencyBonus;
+		}
+		if(isProCon) {
+			conSaving += proficiencyBonus;
+		}
+		if(isProWis) {
+			wisSaving += proficiencyBonus;
+		}
+		if(isProCha) {
+			chaSaving += proficiencyBonus;
+		}
 	}
 
 
@@ -131,6 +203,8 @@ public class Character {
 	private boolean isProNature = false;
 	private int Perception = wisMod;
 	private boolean isProPerception = false;
+	private int Performance = chaMod;
+	private boolean isProPerformance = false;
 	private int Persuasion = chaMod;
 	private boolean isProPersuasion = false;
 	private int Religion = intMod;
@@ -141,17 +215,17 @@ public class Character {
 	private boolean isProStealth = false;
 	private int Survival = wisMod;
 	private boolean isProSurvival = false;
-	private int strSaving;
+	private int strSaving = strMod;
 	private boolean isProStr;
-	private int dexSaving;
+	private int dexSaving = dexMod;
 	private boolean isProDex;
-	private int intSaving;
+	private int intSaving = intMod;
 	private boolean isProInt;
-	private int conSaving;
+	private int conSaving = conMod;
 	private boolean isProCon;
-	private int wisSaving;
+	private int wisSaving = wisMod;
 	private boolean isProWis;
-	private int chaSaving;
+	private int chaSaving = chaMod;
 	private boolean isProCha;
 	private int[] baseMods = new int[6];
 	private int copperPieces;
@@ -159,6 +233,11 @@ public class Character {
 	private int goldPieces;
 	private int platPieces;
 	private int proficiencyBonus;
+	private int Initiative = dexMod;
+	
+	public int getInitiativa() {
+		return Initiative;
+	}
 
 	public Race getRace() {
 		return race;
