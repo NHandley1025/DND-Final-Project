@@ -21,6 +21,7 @@ public class Character {
 			boolean isProHistory, boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation,
 			boolean isProMedicine, boolean isProNature, boolean isProPerception, boolean isProPersuasion,
 			boolean isProReligion, boolean isProSleightOfHand, boolean isProStealth, boolean isProSurvival,
+			boolean isProStr, boolean isProDex, boolean isProInt, boolean isProCon, boolean isProWis, boolean isProCha,
 			int copperPieces, int silverPieces, int goldPieces, int platPieces) {
 		super();
 		setStrength();
@@ -84,7 +85,7 @@ public class Character {
 	private Class characterClass;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
-	private ArrayList<String> proficiencies = new ArrayList<>();
+	private static ArrayList<String> proficiencies = new ArrayList<>();
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
 	private String charactername;
 	private String playerName;
@@ -140,6 +141,18 @@ public class Character {
 	private boolean isProStealth = false;
 	private int Survival = wisMod;
 	private boolean isProSurvival = false;
+	private int strSaving;
+	private boolean isProStr;
+	private int dexSaving;
+	private boolean isProDex;
+	private int intSaving;
+	private boolean isProInt;
+	private int conSaving;
+	private boolean isProCon;
+	private int wisSaving;
+	private boolean isProWis;
+	private int chaSaving;
+	private boolean isProCha;
 	private int[] baseMods = new int[6];
 	private int copperPieces;
 	private int silverPieces;
@@ -661,7 +674,7 @@ public class Character {
 		this.proficiencyBonus = proficiencyBonus;
 	}
 	
-	public void addProficiency(String prof) {
+	public static void addProficiency(String prof) {
 		proficiencies.add(prof);
 	}
 	

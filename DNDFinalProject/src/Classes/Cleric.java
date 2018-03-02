@@ -2,6 +2,7 @@ package Classes;
 
 import Skills.Skill;
 import Skills.skills;
+import Player.Character;
 
 public class Cleric extends Class {
 
@@ -74,7 +75,10 @@ public class Cleric extends Class {
 	}
 
 	private void setProficiencies() {
-		
+		Character.addProficiency("Light Armor");
+		Character.addProficiency("Medium Armor");
+		Character.addProficiency("Shields");
+		Character.addProficiency("Simple Weapons");
 	}
 	
 }
