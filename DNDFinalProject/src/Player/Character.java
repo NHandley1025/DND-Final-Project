@@ -14,16 +14,9 @@ import javafx.beans.property.SimpleObjectProperty;
 public class Character {
 
 	public static int[] raceMods = new int[6];
-	
-	public Character() {
-		
-	}
-	
-	
 
 	public Character(Race race, int level, Class characterClass, trait traits,
-			ArrayList<Item> equipment, SimpleObjectProperty<weapon> equippedWeapon,
-			SimpleObjectProperty<Armor> equipArmor, String charactername, String playerName, boolean isProAcrobatics,
+			ArrayList<Item> equipment, String charactername, String playerName, boolean isProAcrobatics,
 			boolean isProAnimalHandling, boolean isProArcana, boolean isProAthletics, boolean isProDeception,
 			boolean isProHistory, boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation,
 			boolean isProMedicine, boolean isProNature, boolean isProPerception, boolean isProPersuasion,
@@ -88,7 +81,7 @@ public class Character {
 	}
 	
 	private Race race;
-	public int level;
+	public static int level;
 	private Class characterClass;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
@@ -491,7 +484,7 @@ public class Character {
 		this.level = level;
 	}
 
-	public int getLevel() {
+	public static int getLevel() {
 		return level;
 	}
 	
