@@ -661,4 +661,8 @@ public class Character {
 		this.proficiencyBonus = proficiencyBonus;
 	}
 	
+	public void addProficiency(String prof) {
+		proficiencies.add(prof);
+	}
+	
 }

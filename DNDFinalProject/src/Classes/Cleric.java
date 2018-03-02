@@ -15,60 +15,52 @@ public class Cleric extends Class {
 			chooseArchetype();
 		}
 		switch (level) {
-		case 20:
-			addSkill(skills.DivineInterventionImprovement);
-
-		case 19:
-			addSkill(skills.AbilityScoreImprovement);
-
-		case 18:
-			addSkill(skills.ChannelDivinity);
-
-		case 17:
-			addSkill(skills.DestroyUndead, skills.chooseDvineDomainFeature());
-
-		case 16:
-			addSkill(skills.AbilityScoreImprovement);
-
+		case 20:addSkill(skills.DivineInterventionImprovement);
+			setProficiencyBonus(6);
+		case 19:addSkill(skills.AbilityScoreImprovement);
+			setProficiencyBonus(6);
+		case 18:addSkill(skills.ChannelDivinity);
+			setProficiencyBonus(6);
+		case 17:addSkill(skills.DestroyUndead, skills.chooseDvineDomainFeature());
+			setProficiencyBonus(6);
+		case 16:addSkill(skills.AbilityScoreImprovement);
+			setProficiencyBonus(5);
 		case 15:
-
-		case 14:
-			archetypeCheck(skills.DestroyUndead);
-
+			setProficiencyBonus(5);
+		case 14:addSkill(skills.DestroyUndead);
+			setProficiencyBonus(5);
 		case 13:
-
-		case 12:
-			addSkill(skills.AbilityScoreImprovement);
-
-		case 11:
-			addSkill(skills.DestroyUndead);
-
-		case 10:
-			archetypeCheck(skills.DivineIntervention);
-
+			setProficiencyBonus(5);
+		case 12:addSkill(skills.AbilityScoreImprovement);
+			setProficiencyBonus(4);
+		case 11:addSkill(skills.DestroyUndead);
+			setProficiencyBonus(4);
+		case 10:addSkill(skills.DivineIntervention);
+			setProficiencyBonus(4);
 		case 9:
-
+			setProficiencyBonus(4);
 		case 8:
 			addSkill(skills.AbilityScoreImprovement, skills.DestroyUndead);
-
+			setProficiencyBonus(3);
 		case 7:
-
+			setProficiencyBonus(3);
 		case 6:
 			addSkill(skills.ChannelDivinity, skills.chooseDivineDomainFeature());
-
+			setProficiencyBonus(3);
 		case 5:
 			addSkill(skills.DestroyUndead);
-
+			setProficiencyBonus(3);
 		case 4:
 			addSkill(skills.AbilityScoreImprovement);
-
+			setProficiencyBonus(2);
 		case 3:
-
+			setProficiencyBonus(2);
 		case 2:
 			addSkill(skills.ChannelDivinity, skills.chooseDivineDomainFeature());
-
+			setProficiencyBonus(2);
 		case 1:
 			addSkill(skills.SpellCasting, skills.DivineDomain);
+			setProficiencyBonus(2);
 		default:
 			break;
 		}
