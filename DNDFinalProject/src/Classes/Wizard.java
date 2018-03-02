@@ -1,5 +1,5 @@
 package Classes;
 
-public class Wizard {
+public class Wizard extends Class{
 
 }

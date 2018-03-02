@@ -14,16 +14,9 @@ import javafx.beans.property.SimpleObjectProperty;
 public class Character {
 
 	public static int[] raceMods = new int[6];
-	
-	public Character() {
-		
-	}
-	
-	
 
 	public Character(Race race, int level, Class characterClass, trait traits,
-			ArrayList<Item> equipment, SimpleObjectProperty<weapon> equippedWeapon,
-			SimpleObjectProperty<Armor> equipArmor, String charactername, String playerName, boolean isProAcrobatics,
+			ArrayList<Item> equipment, String charactername, String playerName, boolean isProAcrobatics,
 			boolean isProAnimalHandling, boolean isProArcana, boolean isProAthletics, boolean isProDeception,
 			boolean isProHistory, boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation,
 			boolean isProMedicine, boolean isProNature, boolean isProPerception, boolean isProPersuasion,
@@ -42,7 +35,6 @@ public class Character {
 		this.characterClass = characterClass;
 		this.traits = traits;
 		this.equipment = equipment;
-		this.equippedWeapon = equippedWeapon;
 		this.equipArmor = equipArmor;
 		this.charactername = charactername;
 		this.playerName = playerName;
@@ -88,11 +80,11 @@ public class Character {
 	}
 	
 	private Race race;
-	public int level;
+	public static int level;
 	private Class characterClass;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
-	private SimpleObjectProperty<weapon> equippedWeapon = new SimpleObjectProperty<>();
+	private ArrayList<String> proficiencies = new ArrayList<>();
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
 	private String charactername;
 	private String playerName;
@@ -185,14 +177,6 @@ public class Character {
 
 	public void setEquipment(ArrayList<Item> equipment) {
 		this.equipment = equipment;
-	}
-
-	public SimpleObjectProperty<weapon> getEquippedWeapon() {
-		return equippedWeapon;
-	}
-
-	public void setEquippedWeapon(SimpleObjectProperty<weapon> equippedWeapon) {
-		this.equippedWeapon = equippedWeapon;
 	}
 
 	public SimpleObjectProperty<Armor> getEquipArmor() {
@@ -491,7 +475,7 @@ public class Character {
 		this.level = level;
 	}
 
-	public int getLevel() {
+	public static int getLevel() {
 		return level;
 	}
 	
@@ -667,6 +651,14 @@ public class Character {
 			}
 		}
 		return dieSum;
+	}
+
+	public int getProficiencyBonus() {
+		return proficiencyBonus;
+	}
+
+	public void setProficiencyBonus(int proficiencyBonus) {
+		this.proficiencyBonus = proficiencyBonus;
 	}
 	
 }

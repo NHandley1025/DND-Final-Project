@@ -9,7 +9,7 @@ public class Class {
 	ArrayList<Skill> classSkills = new ArrayList<>();
 	private Archetype archetype;
 	private int proficiencyBonus;
-	pArrayList<String> itemProficiencies = new ArrayList<>();
+	ArrayList<String> itemProficiencies = new ArrayList<>();
 	
 	public Skill getSkill(Skill skill) {
 		return skill;
