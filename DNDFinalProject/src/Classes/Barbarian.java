@@ -1,10 +1,16 @@
 package Classes;
 
 import Skills.Skill;
+import Player.Character;
 
 public class Barbarian extends Class{
 	
 	byte ragesPerDay = 2;
+	byte rageDamage = 2;
+	
+	public Barbarian() {
+		setSkills(Character.getLevel());
+	}
 	
 	public void setSkills(int level) {
 		if(level > 3 && getArchetype() == null) {
@@ -21,6 +27,7 @@ public class Barbarian extends Class{
 		case 17:ragesPerDay = 6;
 			
 		case 16:addSkill(skills.AbilityScoreImprovement);
+		rageDamage = 4;
 		
 		case 15:addSkill(skills.PersistantRage);
 		
@@ -35,6 +42,7 @@ public class Barbarian extends Class{
 		case 10:archetypeCheck(skills.SpiritWalker, skills.IntimidatingPresence);
 		
 		case 9:addSkill(skills.BrutalCritical);
+		rageDamage = 3;
 		
 		case 8:addSkill(skills.AbilityScoreImprovement);
 		
