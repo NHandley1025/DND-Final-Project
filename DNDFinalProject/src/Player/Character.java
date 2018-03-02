@@ -35,7 +35,6 @@ public class Character {
 		this.characterClass = characterClass;
 		this.traits = traits;
 		this.equipment = equipment;
-		this.equippedWeapon = equippedWeapon;
 		this.equipArmor = equipArmor;
 		this.charactername = charactername;
 		this.playerName = playerName;
@@ -85,7 +84,7 @@ public class Character {
 	private Class characterClass;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
-	private SimpleObjectProperty<weapon> equippedWeapon = new SimpleObjectProperty<>();
+	private ArrayList<String> proficiencies = new ArrayList<>();
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
 	private String charactername;
 	private String playerName;
@@ -178,14 +177,6 @@ public class Character {
 
 	public void setEquipment(ArrayList<Item> equipment) {
 		this.equipment = equipment;
-	}
-
-	public SimpleObjectProperty<weapon> getEquippedWeapon() {
-		return equippedWeapon;
-	}
-
-	public void setEquippedWeapon(SimpleObjectProperty<weapon> equippedWeapon) {
-		this.equippedWeapon = equippedWeapon;
 	}
 
 	public SimpleObjectProperty<Armor> getEquipArmor() {
@@ -660,6 +651,14 @@ public class Character {
 			}
 		}
 		return dieSum;
+	}
+
+	public int getProficiencyBonus() {
+		return proficiencyBonus;
+	}
+
+	public void setProficiencyBonus(int proficiencyBonus) {
+		this.proficiencyBonus = proficiencyBonus;
 	}
 	
 }
