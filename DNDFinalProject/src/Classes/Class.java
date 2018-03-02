@@ -1,18 +1,26 @@
 package Classes;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 import Skills.Skill;
 
 public class Class {
 
-	HashMap<String, Skill> skills = new HashMap<>();
-	Skill[] classSkills = new Skill[0];
+	ArrayList<Skill> classSkills = new ArrayList<>();
 	private Archetype archetype;
 	private int proficiencyBonus;
+	ArrayList<String> itemProficiencies = new ArrayList<>();
 	
 	public Skill getSkill(Skill skill) {
 		return skill;
+	}
+
+	public int getProficiencyBonus() {
+		return proficiencyBonus;
+	}
+
+	public void setProficiencyBonus(int proficiencyBonus) {
+		this.proficiencyBonus = proficiencyBonus;
 	}
 	
 }
