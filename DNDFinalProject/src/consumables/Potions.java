@@ -18,9 +18,8 @@ private static HashMap<String, Potion> potionHash = new HashMap<>();
 		String [] lines = file.split("\n");
 		for(int i = 0; i < lines.length; i++) {
 			String [] words = lines[i].split("::");
-			
-			
-			//add value to potions
+			Potion potion = new Potion(words[0], Integer.parseInt(words[1]), words[2]);
+			potionHash.put(words[0], potion);
 		}
 	}
 }

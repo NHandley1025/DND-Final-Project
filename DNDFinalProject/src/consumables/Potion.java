@@ -6,7 +6,7 @@ public class Potion extends Item{
 	
 
 	
-	public Potion(String name, String description){
-		super(name, description, "", 0);
+	public Potion(String name, int value, String description){
+		super(name, description, "", value);
 	}
 }
