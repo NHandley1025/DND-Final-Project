@@ -62,8 +62,11 @@ public class skills {
 	public static final Skill InfernalLegacy = new Skill("Infernal Legacy", "You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a Long Rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a Long Rest. Charisma is your spellcasting ability for these Spells");
 	
 	
-	
-	
+	//Barbarian
+	public static final Skill Rage = new Skill("Rage", "As a bonus action, you can rage. \n    The rage gives you proficiency in Strength checks and Strength saving throws.\n    When you make a melee Strength attack, you can add a rage bonus to your damage roll this increases as you level up barbarian.\n    You have resistance to bludgeoning, slashing, and piercing damage.\nRage lasts for one minute, but wil end if you are unconsious, don't attack hostile creatures, or taken damage. You can voluntarily choose to stop raging as a bonus action./n After you raged your rages per day amount, you must take a long rest to reset your counter.");
+	public static final Skill UnarmoredDefense = new Skill("Unarmored Defense", "If you don't wear any armor, your AC will be 10 + Dexerity Modifer + Constitution Modifer. You can still hold a shield and have this benefit");
+	public static final Skill RecklessAttack = new Skill("Reckless Attack", "You throw away any concern to defense and go all offense. You can have your first attack be a Reckless Attack, which will give you advantage to Strength weapon attack rolls, but attack rolls towards you will have advantage until your next turn");
+	public static final Skill DangerSense = new Skill("Danger Sense", "You have an innate sense on when things are awry. You have an advantage with your Dexterity Saving Throws against abilities you can see. You cannot be blinded, deafened, or incompasitated to use this bonus");
 	
 	
 }
