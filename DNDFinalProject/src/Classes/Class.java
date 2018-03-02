@@ -23,4 +23,12 @@ public class Class {
 		this.proficiencyBonus = proficiencyBonus;
 	}
 	
+	public Archetype getArchetype() {
+		return archetype;
+	}
+	
+	protected void setArchetype(Archetype archetype) {
+		this.archetype=archetype;
+	}
+	
 }
