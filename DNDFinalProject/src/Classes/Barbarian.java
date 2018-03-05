@@ -2,6 +2,7 @@ package Classes;
 
 import Skills.Skill;
 import Skills.skills;
+import Player.Character;
 
 
 public class Barbarian extends Class{
