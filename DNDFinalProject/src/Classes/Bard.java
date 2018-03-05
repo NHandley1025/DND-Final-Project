@@ -10,7 +10,7 @@ public class Bard extends Class {
 			chooseArchetype();
 		}
 		switch (level) {
-		case 1: addSkill(skills.spellcasting);
+		case 1: addSkill(skills.spellCasting);
 				addSkill(skills.bardicInspiration);
 				
 		case 2: addSkill(skills.jackOfAllTrades);

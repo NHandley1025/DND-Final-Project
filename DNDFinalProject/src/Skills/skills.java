@@ -3,8 +3,15 @@ package Skills;
 public class skills {
 	
 	
-	public static final Skill DarkVision = new Skill("DarkVision", "You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can't discern color in Darkness, only shades of gray.");
-	public static final Skill spellcasting = new Skill("Spell Casting", "");                
+	// All casters
+	
+	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
+	
+	public static void AbilityScoreImprovement() {
+		
+	}
+	
+	public static final Skill DarkVision = new Skill("DarkVision", "You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can't discern color in Darkness, only shades of gray.");         
 	               
 	               
 	//Half-Orc     
@@ -77,7 +84,6 @@ public class skills {
 
 	
 	//Cleric
-	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
 	public static final Skill DivineDomain = new Skill("Divine Domain", "");
 	public static final Skill ChannelDivinity = new Skill("Channel Divinity", "");
 	public static final Skill DivineIntervention = new Skill("Divine Domain", "");
@@ -88,12 +94,6 @@ public class skills {
 	public static final Skill DestroyUndeadCR4 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
 	public static final Skill DivineInterventionImprovement = new Skill("Divine Intervention", "");
 	public static void chooseDivineDomainFeature() {
-		
-	}
-	
-	// All classes
-	
-	public static void AbilityScoreImprovement() {
 		
 	}
 	
