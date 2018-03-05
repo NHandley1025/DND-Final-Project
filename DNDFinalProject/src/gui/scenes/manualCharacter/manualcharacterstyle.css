@@ -1,0 +1,15 @@
+* {
+	-fx-text-fill: red;
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+
+
+#Pane {
+    -fx-background-image: url("/resources/Background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: left left;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0); 
+}
+
