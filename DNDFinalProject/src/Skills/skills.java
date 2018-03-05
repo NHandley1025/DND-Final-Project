@@ -4,7 +4,7 @@ public class skills {
 	
 	
 	public static final Skill DarkVision = new Skill("DarkVision", "You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can't discern color in Darkness, only shades of gray.");
-	               
+	public static final Skill spellcasting = new Skill("Spell Casting", "");                
 	               
 	               
 	//Half-Orc     
@@ -60,8 +60,24 @@ public class skills {
 	//Tiefling
 	public static final Skill HellishResistance = new Skill("Hellish Resistance", "You have Resistance to fire damage.");
 	public static final Skill InfernalLegacy = new Skill("Infernal Legacy", "You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a Long Rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a Long Rest. Charisma is your spellcasting ability for these Spells");
+
+
 	
+	//bard
+	public static final Skill superiorInspiration = new Skill("Superior Inspiration", "");
+	public static final Skill bardicInspiration = new Skill("Bardic Inspiration", "");
+	public static final Skill magicalSecrets = new Skill("Magical Secrets", "");
+	public static final Skill songOfRest = new Skill("Song of Rest", "");
+	public static final Skill bardCollegeFeature = new Skill("Bard College Feature", "");
+	public static final Skill counterCharm = new Skill("Counter Charm", "");
+	public static final Skill fontOfInspiration = new Skill("Font of Inspiration", "");
+	public static final Skill jackOfAllTrades = new Skill("Jack of All Trades", "");
+	public static final Skill expertise = new Skill("Expertise", "");
+	public static final Skill bardCollege = new Skill("Bard College", "");
+
+
 	
+
 	//Barbarian
 	public static final Skill Rage = new Skill("Rage", "As a bonus action, you can rage. \n    The rage gives you proficiency in Strength checks and Strength saving throws.\n    When you make a melee Strength attack, you can add a rage bonus to your damage roll this increases as you level up barbarian.\n    You have resistance to bludgeoning, slashing, and piercing damage.\nRage lasts for one minute, but wil end if you are unconsious, don't attack hostile creatures, or taken damage. You can voluntarily choose to stop raging as a bonus action./n After you raged your rages per day amount, you must take a long rest to reset your counter.");
 	public static final Skill UnarmoredDefense = new Skill("Unarmored Defense", "If you don't wear any armor, your AC will be 10 + Dexerity Modifer + Constitution Modifer. You can still hold a shield and have this benefit");
@@ -74,5 +90,6 @@ public class skills {
 	public static final Skill FeralInstinct = new Skill("Feral Instinct", "You instinct are so honed that you have an advantage with initiative rolls");
 	public static final Skill BrutalCritical = new Skill("Brutal Critical", "You can roll an additional hit die with critical hits. This increases to 2 dice at level 13 and 3 dice at level 17");
 	public static final Skill IntimidatingPresence = new Skill("Intimidating Presence", "");
+
 	
 }

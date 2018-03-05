@@ -4,7 +4,7 @@ import Skills.Skill;
 import Skills.skills;
 
 
-public class Barbarian extends Class{
+public class Barbarian extends Fighters{
 	
 	byte ragesPerDay = 2;
 	byte rageDamage = 2;
@@ -67,7 +67,7 @@ public class Barbarian extends Class{
 	}
 	
 	private void addSkill(Skill... skills) {
-		for(Skill skill : skills)
+		for(Skill skill : skills) {
 			if(!classSkills.contains(skill)) {
 				classSkills.add(skill);
 			}

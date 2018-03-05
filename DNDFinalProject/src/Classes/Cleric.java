@@ -8,13 +8,11 @@ public class Cleric extends Class {
 
 	public Cleric() {
 		super();
-
+		setSkills(Character.getLevel());
+		setProficiencies();
 	}
 
 	public void setSkills(int level) {
-		if (level > 3 && getArchetype() == null) {
-			chooseArchetype();
-		}
 		switch (level) {
 		case 20:addSkill(skills.DivineInterventionImprovement);
 			setProficiencyBonus(6);
