@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class Tools {
 private static HashMap<String, Tool> toolHash = new HashMap<>();
 	
-	public HashMap<String, Tool> getToolHash(){
+	public static HashMap<String, Tool> getToolHash(){
 		return toolHash;
 	}
 
