@@ -75,13 +75,24 @@ public class skills {
 	public static final Skill expertise = new Skill("Expertise", "");
 	public static final Skill bardCollege = new Skill("Bard College", "");
 
-
+	//Cleric
+	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
+	public static final Skill DivineDomain = new Skill("Divine Domain", "");
+	public static final Skill ChannelDivinity = new Skill("Channel Divinity", "");
+	public static final Skill DivineIntervention = new Skill("Divine Domain", "");
+	public static final Skill DestroyUndeadCR0 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
+	public static final Skill DestroyUndeadCR1 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
+	public static final Skill DestroyUndeadCR2 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
+	public static final Skill DestroyUndeadCR3 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
+	public static final Skill DestroyUndeadCR4 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
+	public static final Skill DivineInterventionImprovement = new Skill("Divine Intervention", "");
+	public static void chooseDivineDomainFeature() {
+		
+	}
 	
+	// All classes
 	
-	
-	
-	
-	
-	
-	
+	public static void AbilityScoreImprovement() {
+		
+	}
 }

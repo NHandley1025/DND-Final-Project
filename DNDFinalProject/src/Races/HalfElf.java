@@ -8,6 +8,8 @@ public class HalfElf extends Race {
 	public HalfElf() {
 		size = "Medium";
 		landBaseSpeed = 30;
+		setRacialModifiers();
+		setRacialSkills();
 	}
 	
 	private void setRacialModifiers() {

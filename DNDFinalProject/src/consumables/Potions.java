@@ -9,7 +9,7 @@ import consumables.Potion;
 public class Potions {
 private static HashMap<String, Potion> potionHash = new HashMap<>();
 	
-	public HashMap<String, Potion> getpotionHash(){
+	public static HashMap<String, Potion> getPotionHash(){
 		return potionHash;
 	}
 	

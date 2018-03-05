@@ -9,7 +9,8 @@ public class Elf extends Race {
 		super();
 		size = "Medium";
 		landBaseSpeed = 30;
-		
+		setRacialModifiers();
+		setRacialSkills();
 	}
 	
 	private void setRacialModifiers() {

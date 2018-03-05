@@ -10,7 +10,7 @@ import Weapons.weapon;
 public class weapons {
 	private static HashMap<String, weapon> weaponHash = new HashMap<>();
 	
-	public HashMap<String, weapon> getweaponHash(){
+	public static HashMap<String, weapon> getWeaponHash() {
 		return weaponHash;
 	}
 	

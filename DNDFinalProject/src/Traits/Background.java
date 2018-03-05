@@ -14,7 +14,7 @@ public class Background {
 	}
 	
 	public void setName(String name) {
-		if(Backgrounds.getHash().containsKey(new TraitKey(name, null))) {
+		if(Backgrounds.getTraitHash().containsKey(new TraitKey(name, null))) {
 			this.name = name;
 		}else {
 			this.name = "The Chosen One";
