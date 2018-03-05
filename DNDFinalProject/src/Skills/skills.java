@@ -114,8 +114,8 @@ public class skills {
 	public static final Skill perfectSelf = new Skill("Perfect Self", "");
 	
 	//Paladin
-	public static final Skill divineSence = new Skill("Divine Sence", "");
-	public static final Skill layOnHands = new Skill("", "");
+	public static final Skill divineSence = new Skill("Divine Sense", "As an action you can open your senses to strong evil. Until the end of your next turn you know the location of any Celestial, fiend, or undead within 60 feet of you that is not behind total cover.");
+	public static final Skill layOnHands = new Skill("Lay on Hands", "As an action you can touch a creature and restore a total number of hit points equal to your paladin level x 5");
 	public static final Skill fightingStyle = new Skill("", "");
 	public static final Skill spellCasting = new Skill("", "");
 	public static final Skill divineSmite = new Skill("", "");
