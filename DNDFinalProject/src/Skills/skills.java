@@ -77,6 +77,91 @@ public class skills {
 
 
 	
+	//Monk
+	public static final Skill unarmoredDefense = new Skill("Unarmored Defense", "");
+	public static final Skill martialArts = new Skill("Martial Arts", "");
+	public static final Skill ki = new Skill("Martial Arts", "");
+	public static final Skill monasticTradition = new Skill("Monastic Tradition", "");
+	public static final Skill deflectMissile = new Skill("Deflect Missile", "");
+	public static final Skill slowFall = new Skill("Slow Fall", "");
+	public static final Skill extraAttack = new Skill("Extra Attack", "");
+	public static final Skill stillnessOfMind = new Skill("Stillness of Mind", "");
+	public static final Skill purityOfBody = new Skill("Purity of Body", "");
+	public static final Skill toungeOfTheSunAndMoon = new Skill("Tounge of the Sun and Moon", "");
+	public static final Skill diamondSoul = new Skill("Diamond Soul", "");
+	public static final Skill timelessBody = new Skill("Timeless Body", "");
+	public static final Skill emptyBody = new Skill("Empty Body", "");
+	public static final Skill perfectSelf = new Skill("Perfect Self", "");
+	
+	//Paladin
+	public static final Skill divineSence = new Skill("Divine Sence", "");
+	public static final Skill layOnHands = new Skill("", "");
+	public static final Skill fightingStyle = new Skill("", "");
+	public static final Skill spellCasting = new Skill("", "");
+	public static final Skill divineSmite = new Skill("", "");
+	public static final Skill divineHealth = new Skill("", "");
+	public static final Skill sacredOath = new Skill("", "");
+	public static final Skill extraAttack1 = new Skill("", "");
+	public static final Skill sacredOathFeature = new Skill("", "");
+	public static final Skill auraOfCourage = new Skill("", "");
+	public static final Skill improvedDivineSmite = new Skill("", "");
+	public static final Skill cleansingTouch = new Skill("", "");
+	
+	//Ranger
+	public static final Skill favoredEnemy = new Skill("", "");
+	public static final Skill naturalExplorer = new Skill("", "");
+	//public static final Skill fightingStyle = new Skill("", "");
+	//public static final Skill spellCasting = new Skill("", "");
+	public static final Skill primevalAwareness = new Skill ("", "");
+	//public static final Skill extraAttack = new Skill ("", "");
+	public static final Skill landsStride = new Skill("", "");
+	public static final Skill hideInPlainSight = new Skill("", "");
+	public static final Skill vanish = new Skill("", "");
+	public static final Skill feralSenses = new Skill("", "");
+	public static final Skill foeSlayer = new Skill("", "");
+	
+	//Rogue
+	public static final Skill sneakAttack = new Skill("", "");
+	//public static final Skill expertise = new Skill("", "");
+	public static final Skill thievesCant = new Skill("", "");
+	public static final Skill cunningAction = new Skill("", "");
+	public static final Skill uncannyDodge = new Skill("", "");
+	public static final Skill evasion = new Skill("", "");
+	public static final Skill reliableTalent = new Skill("", "");
+	public static final Skill blindSense = new Skill("", "");
+	public static final Skill slipperyMind = new Skill("", "");
+	public static final Skill elusive = new Skill("", "");
+	public static final Skill strokeOfLuck = new Skill("", "");
+	
+	//sorcerer
+	public static final Skill sorcerousOrigin = new Skill("", "");
+	public static final Skill fontOfMagic = new Skill("", "");
+	public static final Skill metaMagic = new Skill("", "");
+	public static final Skill sorcerousRestoration = new Skill("", "");
+	public static final Skill sorcerousOriginFeature = new Skill("", "");
+	
+	//warlock
+	public static final Skill otherWordly = new Skill("", "");
+	public static final Skill pactMagic = new Skill ("", "");
+	public static final Skill pactBoon = new Skill ("", "");
+	public static final Skill mysticArcanum = new Skill ("", "");
+	public static final Skill eldricthMaster = new Skill("", "");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
