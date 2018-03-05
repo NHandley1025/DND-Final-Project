@@ -62,7 +62,7 @@ public class Barbarian extends Fighters{
 			
 		case 2:addSkill(skills.RecklessAttack, skills.DangerSense);
 		
-		case 1:addSkill(skills.Rage, skills.UnarmoredDefense);
+		case 1:addSkill(skills.Rage, skills.UnArmoredDefense);
 		default: break;
 		}
 	}
