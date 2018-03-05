@@ -67,6 +67,12 @@ public class skills {
 	public static final Skill UnarmoredDefense = new Skill("Unarmored Defense", "If you don't wear any armor, your AC will be 10 + Dexerity Modifer + Constitution Modifer. You can still hold a shield and have this benefit");
 	public static final Skill RecklessAttack = new Skill("Reckless Attack", "You throw away any concern to defense and go all offense. You can have your first attack be a Reckless Attack, which will give you advantage to Strength weapon attack rolls, but attack rolls towards you will have advantage until your next turn");
 	public static final Skill DangerSense = new Skill("Danger Sense", "You have an innate sense on when things are awry. You have an advantage with your Dexterity Saving Throws against abilities you can see. You cannot be blinded, deafened, or incompasitated to use this bonus");
-	
+	public static final Skill Frenzy = new Skill("Frenzy", "When you rage, you can go into a frenzy. While in a frenzy, you will have gain an make a single melee attack as a bonus action for each turn after your frenzied. When your rage stops, you will suffer a level of exhaustion.");
+	public static final Skill ExtraAttack = new Skill("Extra Attack", "For your attack action, you can do two melee attacks instead of one.");
+	public static final Skill FastMovement = new Skill("Fast Movement", "If your not wearing heavy armor, your base speed increases by 10ft");
+	public static final Skill MindlessRage = new Skill("Mindless Rage", "You cannot be charmed or frightened while in rage. If you would have gained those effects while in the rage, the effects will be suspended until you leave rage");
+	public static final Skill FeralInstinct = new Skill("Feral Instinct", "You instinct are so honed that you have an advantage with initiative rolls");
+	public static final Skill BrutalCritical = new Skill("Brutal Critical", "You can roll an additional hit die with critical hits. This increases to 2 dice at level 13 and 3 dice at level 17");
+	public static final Skill IntimidatingPresence = new Skill("Intimidating Presence", "");
 	
 }
