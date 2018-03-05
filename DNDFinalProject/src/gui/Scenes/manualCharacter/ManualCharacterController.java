@@ -1,14 +1,13 @@
-package gui.Scenes.Main;
+package gui.Scenes.manualCharacter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import gui.FxController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-public class MainController implements Initializable{
+public class ManualCharacterController implements Initializable{
 
 	
 	@FXML
@@ -18,8 +17,7 @@ public class MainController implements Initializable{
 	
 	@FXML
 	public void genCharButton(ActionEvent event) {
-		FxController main = new FxController();
-		main.switchScene("Scenes.manualCharacter.fxml");
+		System.exit(0);
 	}
 
 	@Override
