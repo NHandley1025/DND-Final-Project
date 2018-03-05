@@ -10,7 +10,6 @@ public class Armors {
 	public HashMap<String, Armor> getArmorHash(){
 		return armorHash;
 	}
-	
 	private static void readArmorFile() throws FileNotFoundException, IOException{
 		String file = lib.ProgramUtil.readFile("C:\\Users\\Andy\\Documents\\GitHub\\DND-Final-Project\\Armor.txt");
 		String[] lines = file.split("\n");
@@ -20,5 +19,4 @@ public class Armors {
           armorHash.put(words[0], armor);
 		}
 	}
-	
 }
