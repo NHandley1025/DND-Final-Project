@@ -75,7 +75,7 @@ public class skills {
 	public static final Skill expertise = new Skill("Expertise", "");
 	public static final Skill bardCollege = new Skill("Bard College", "");
 
-<<<<<<< HEAD
+	
 	//Cleric
 	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
 	public static final Skill DivineDomain = new Skill("Divine Domain", "");
@@ -96,8 +96,6 @@ public class skills {
 	public static void AbilityScoreImprovement() {
 		
 	}
-=======
-
 	
 	//Monk
 	public static final Skill unarmoredDefense = new Skill("Unarmored Defense", "");
@@ -189,7 +187,4 @@ public class skills {
 	
 	
 	
-	
-	
->>>>>>> 94030bebacca94f57ad71f1c870fcf141125de45
 }
