@@ -179,6 +179,10 @@ public class Generator {
 		
 		equipment.add(Potions.getPotionHash().get(consumeList[randomConsume]));
 		
+		// choose random tools to add to equipment
+		
+		int toolHashSize = Tools.getToolHash().keySet().size();
+		
 		return equipment;
 	}
 	
