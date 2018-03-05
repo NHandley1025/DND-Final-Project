@@ -21,6 +21,10 @@ public class Generator {
 	public static void run(String[] args) {
 		FxController.launch(args);
 	}
+	
+	public Character manualGenerateChar() {
+		
+	}
 
 	public Character generateRandomChar() {
 		Random rand = new Random();
