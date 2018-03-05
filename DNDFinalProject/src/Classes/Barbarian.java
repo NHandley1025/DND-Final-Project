@@ -2,6 +2,7 @@ package Classes;
 
 import Skills.Skill;
 import Skills.skills;
+import Player.Character;
 
 
 public class Barbarian extends Fighters{
@@ -21,13 +22,13 @@ public class Barbarian extends Fighters{
 		case 20:addSkill(skills.PrimalChampion);
 		ragesPerDay = 0;
 			
-		case 19:addSkill(skills.AbilityScoreImprovement);
+		case 19:skills.AbilityScoreImprovement();
 			
 		case 18:addSkill(skills.IndomitableFight);
 		
 		case 17:ragesPerDay = 6;
 			
-		case 16:addSkill(skills.AbilityScoreImprovement);
+		case 16:skills.AbilityScoreImprovement();
 		rageDamage = 4;
 		
 		case 15:addSkill(skills.PersistantRage);
@@ -35,7 +36,7 @@ public class Barbarian extends Fighters{
 		case 14:archetypeCheck(skills.TotemWarrior3, skills.Retaliation);
 		case 13:
 			
-		case 12:addSkill(skills.AbilityScoreImprovement);
+		case 12:skills.AbilityScoreImprovement();
 		ragesPerDay = 5;
 		
 		case 11:addSkill(skills.PersistantRage);
@@ -45,7 +46,7 @@ public class Barbarian extends Fighters{
 		case 9:addSkill(skills.BrutalCritical);
 		rageDamage = 3;
 		
-		case 8:addSkill(skills.AbilityScoreImprovement);
+		case 8:skills.AbilityScoreImprovement();
 		
 		case 7:addSkill(skills.FeralInstinct);
 		
@@ -54,7 +55,7 @@ public class Barbarian extends Fighters{
 		
 		case 5:addSkill(skills.ExtraAttack, skills.FastMovement);
 		
-		case 4:addSkill(skills.AbilityScoreImprovement);
+		case 4:skills.AbilityScoreImprovement();
 		
 		case 3:archetypeCheck(skills.TotemWarrior1, skills.Frenzy);
 		ragesPerDay = 3;

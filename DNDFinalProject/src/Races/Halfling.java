@@ -8,6 +8,8 @@ public class Halfling extends Race {
 		super();
 		landBaseSpeed = 25;
 		size = "Small";
+		setRacialModifiers();
+		setRacialSkills();
 	}
 	
 	private void setRacialModifiers() {

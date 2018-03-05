@@ -1,12 +1,20 @@
 package controllers;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import Player.Character;
 import Races.*;
+import Traits.Backgrounds;
+import Traits.trait;
+import Weapons.weapons;
+import armor.Armors;
+import consumables.Potions;
 import Classes.*;
 import Classes.Class;
+import Items.Item;
 import gui.FxController;
+import keys.TraitKey;
 
 public class Generator {
 
@@ -16,14 +24,22 @@ public class Generator {
 
 	public Character generateRandomChar() {
 		Random rand = new Random();
+		int randCopper = rand.nextInt(101);
+		int randSilver = rand.nextInt(101);
+		int randGold = rand.nextInt(101);
+		int randPlat = rand.nextInt(101);
 		int randomLevel = rand.nextInt(20)+1;
 		int randTraits = rand.nextInt();
-		int randEquipment = rand.nextInt();
 		String randName = "???";
 		String playerName = "???";
 		int randMoney = rand.nextInt(101);
-		Character randomChar = new Character(genRandRace(), randomLevel, );
-		return null;
+		Character randomChar = new Character(genRandRace(), randomLevel, genRandClass(), genRandTrait(), genRandEquipment(),
+		randName, playerName, randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
+		randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), 
+		randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), 
+		randBoolean(), randBoolean(), randBoolean(), randBoolean(), 
+		randCopper, randSilver, randGold, randPlat);
+		return randomChar;
 	}
 
 	public boolean randBoolean() {
@@ -116,4 +132,63 @@ public class Generator {
 		return randClass;
 	}
 	
+	public ArrayList<Item> genRandEquipment() {
+		ArrayList<Item> equipment = new ArrayList<>();
+		Random rand = new Random();
+		
+		//choose random weapon to add to equipment
+		
+		int weaponHashSize = weapons.getWeaponHash().keySet().size();
+		int randomWeapon = rand.nextInt(weaponHashSize);
+		String[] weaponList = new String[weaponHashSize];
+		for(String key : weapons.getWeaponHash().keySet()) {
+			for(int x = 0; x > weaponHashSize; x++) {
+				weaponList[x] = key;
+			}
+		}
+		equipment.add(weapons.getWeaponHash().get(weaponList[randomWeapon]));
+		
+		//choose random Armor to add to equipment
+		
+		int armorHashSize = Armors.getArmorHash().keySet().size();
+		int randomArmor = rand.nextInt(armorHashSize);
+		String[] armorList = new String[armorHashSize];
+		for(String key : Armors.getArmorHash().keySet()) {
+			for(int x = 0; x > armorHashSize; x++) {
+				armorList[x] = key;
+			}
+		}
+		
+		equipment.add(Armors.getArmorHash().get(armorList[randomArmor]));
+		
+		
+		//choose random consumables to add to equipment
+		
+		int consumeHashSize = Potions.getPotionHash().keySet().size();
+		int randomConsume = rand.nextInt(consumeHashSize);
+		String[] consumeList = new String[consumeHashSize];
+		for(String key : Potions.getPotionHash().keySet()) {
+			for(int x = 0; x > consumeHashSize; x++) {
+				consumeList[x] = key;
+			}
+		}
+		
+		equipment.add(Potions.getPotionHash().get(consumeList[randomConsume]));
+		
+		return equipment;
+	}
+	
+	public trait genRandTrait() {
+		Random rand = new Random();
+		int traitListSize = Backgrounds.getTraitHash().keySet().size();
+		int randomTrait = rand.nextInt(traitListSize);
+		TraitKey[] traitList = new TraitKey[traitListSize];
+		for(TraitKey key : Backgrounds.getTraitHash().keySet()) {
+			for(int x = 0; x > traitListSize; x++) {
+				traitList[x] = key;
+			}
+		}
+		trait randomTraits = Backgrounds.get(traitList[randomTrait]);
+		return randomTraits;
+	}
 }
