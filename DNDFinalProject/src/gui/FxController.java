@@ -10,27 +10,30 @@ import javafx.stage.Stage;
 
 public class FxController extends Application {
 
-	public static Stage stage;
 
 	@Override
 	public void start(Stage primaryStage) {
-		stage = primaryStage;
 		Parent root = null;
 		try {
-			root = FXMLLoader.load(getClass().getResource("scenes/main/Main.fxml"));
+			root = FXMLLoader.load(getClass().getResource("Scenes/Main/main.fxml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		Scene scene = new Scene(root);
-		scene.getStylesheets().add(getClass().getResource("scenes/main/mainstyle.css").toExternalForm());
-
 		primaryStage.setTitle("DnD Character Generator");
-		primaryStage.setScene(scene);
+		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
+		primaryStage.setResizable(false);
 
 	}
+	
+	public void switchScene(String fxmlFile)
+	{
+		
+
+	}
+	
+
 
 	public static void main(String[] args) {
 		launch(args);

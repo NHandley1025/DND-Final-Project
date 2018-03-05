@@ -1,23 +1,7 @@
-
 * {
 	-fx-text-fill: red;
 	-fx-stroke: black;
 	-fx-stroke-width: 1;
-}
-
-.label {
-}
-
-.button {
-	-fx-font-size: 30;
-}
-.button:pressed {
-    -fx-border-color: transparent, black;
-
-}
-.button:hover {
-	-fx-background-color: black;
-	-fx-opacity: .5;
 }
 
 

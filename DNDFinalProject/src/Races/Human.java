@@ -8,6 +8,7 @@ public class Human extends Race {
 		super();
 		landBaseSpeed = 30;
 		size = "Medium";
+		setRacialModifiers();
 	}
 	
 	private void setRacialModifiers() {

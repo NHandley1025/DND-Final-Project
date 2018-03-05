@@ -9,6 +9,7 @@ import Spells.*;
 import Traits.*;
 import Weapons.*;
 import armor.*;
+import Classes.Class;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class Character {
@@ -24,21 +25,21 @@ public class Character {
 			boolean isProStr, boolean isProDex, boolean isProInt, boolean isProCon, boolean isProWis, boolean isProCha,
 			int copperPieces, int silverPieces, int goldPieces, int platPieces) {
 		super();
+		setRace(race);
+		setLevel(level);
+		setCharacterClass(characterClass);
 		setStrength();
 		setDexterity();
 		setIntelligence();
 		setConstitution();
 		setWisdom();
 		setCharisma();
-		this.race = race;
 		setMods();
-		this.level = level;
-		this.characterClass = characterClass;
-		this.traits = traits;
-		this.equipment = equipment;
-		this.equipArmor = equipArmor;
-		this.charactername = charactername;
-		this.playerName = playerName;
+		setTraits(traits);
+		setEquipment(equipment);
+		setEquipArmor(equipArmor);
+		setCharacterName(charactername);
+		setPlayerName(playerName);
 		this.isProAcrobatics = isProAcrobatics;
 		this.isProAnimalHandling = isProAnimalHandling;
 		this.isProArcana = isProArcana;
@@ -152,7 +153,7 @@ public class Character {
 		chaMod = baseMods[5] += raceMods[5];
 	}
 	
-	private Race race;
+	private static Race race;
 	public static int level;
 	private Class characterClass;
 	private trait traits;
@@ -239,7 +240,7 @@ public class Character {
 		return Initiative;
 	}
 
-	public Race getRace() {
+	public static Race getRace() {
 		return race;
 	}
 
@@ -279,11 +280,11 @@ public class Character {
 		this.equipArmor = equipArmor;
 	}
 
-	public String getCharactername() {
+	public String getCharacterName() {
 		return charactername;
 	}
 
-	public void setCharactername(String charactername) {
+	public void setCharacterName(String charactername) {
 		this.charactername = charactername;
 	}
 
