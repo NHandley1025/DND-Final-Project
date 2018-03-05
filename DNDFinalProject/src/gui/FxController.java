@@ -26,13 +26,7 @@ public class FxController extends Application {
 		primaryStage.setResizable(false);
 
 	}
-	
-	public void switchScene(String fxmlFile)
-	{
-		
 
-	}
-	
 
 
 	public static void main(String[] args) {
