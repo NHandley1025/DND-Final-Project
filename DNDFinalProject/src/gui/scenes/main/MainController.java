@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,7 @@ public class MainController implements Initializable {
 	public void genCharButton(ActionEvent event) throws IOException {
 		System.out.println("Ive been CLICKED!!");
 		Parent root = null;
-		root = FXMLLoader.load(getClass().getResource("/manualCharacter/ManualCharacter.fxml"));
+		root = FXMLLoader.load(getClass().getResource("/gui/Scenes/manualCharacter/ManualCharacter.fxml"));
 		Scene scene = new Scene(root);
 		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(scene);
@@ -34,7 +35,12 @@ public class MainController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-
+		
 	}
+	
+
+
+
+
 
 }
