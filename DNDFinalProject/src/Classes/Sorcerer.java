@@ -1,5 +1,5 @@
 package Classes;
 
-public class Sorcerer {
+public class Sorcerer extends Class{
 
 }

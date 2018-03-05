@@ -9,4 +9,16 @@ public class Archetype {
 
 	private String name;
 	
+	public Archetype(String name) {
+		setName(name);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	protected void setName(String name) {
+		this.name = name;
+	}
+	
 }

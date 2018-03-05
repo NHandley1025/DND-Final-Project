@@ -9,43 +9,37 @@ import Spells.*;
 import Traits.*;
 import Weapons.*;
 import armor.*;
+import Classes.Class;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class Character {
 
 	public static int[] raceMods = new int[6];
-	
-	public Character() {
-		
-	}
-	
-	
 
 	public Character(Race race, int level, Class characterClass, trait traits,
-			ArrayList<Item> equipment, SimpleObjectProperty<weapon> equippedWeapon,
-			SimpleObjectProperty<Armor> equipArmor, String charactername, String playerName, boolean isProAcrobatics,
+			ArrayList<Item> equipment, String charactername, String playerName, boolean isProAcrobatics,
 			boolean isProAnimalHandling, boolean isProArcana, boolean isProAthletics, boolean isProDeception,
 			boolean isProHistory, boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation,
 			boolean isProMedicine, boolean isProNature, boolean isProPerception, boolean isProPersuasion,
 			boolean isProReligion, boolean isProSleightOfHand, boolean isProStealth, boolean isProSurvival,
+			boolean isProStr, boolean isProDex, boolean isProInt, boolean isProCon, boolean isProWis, boolean isProCha,
 			int copperPieces, int silverPieces, int goldPieces, int platPieces) {
 		super();
+		setRace(race);
+		setLevel(level);
+		setCharacterClass(characterClass);
 		setStrength();
 		setDexterity();
 		setIntelligence();
 		setConstitution();
 		setWisdom();
 		setCharisma();
-		this.race = race;
 		setMods();
-		this.level = level;
-		this.characterClass = characterClass;
-		this.traits = traits;
-		this.equipment = equipment;
-		this.equippedWeapon = equippedWeapon;
-		this.equipArmor = equipArmor;
-		this.charactername = charactername;
-		this.playerName = playerName;
+		setTraits(traits);
+		setEquipment(equipment);
+		setEquipArmor(equipArmor);
+		setCharacterName(charactername);
+		setPlayerName(playerName);
 		this.isProAcrobatics = isProAcrobatics;
 		this.isProAnimalHandling = isProAnimalHandling;
 		this.isProArcana = isProArcana;
@@ -67,6 +61,78 @@ public class Character {
 		this.silverPieces = silverPieces;
 		this.goldPieces = goldPieces;
 		this.platPieces = platPieces;
+		if(isProAcrobatics) {
+			Acrobatics += proficiencyBonus;
+		}
+		if(isProAnimalHandling) {
+			AnimalHandling += proficiencyBonus;
+		}
+		if(isProArcana) {
+			Arcana += proficiencyBonus;
+		}
+		if(isProAthletics) {
+			Athletics += proficiencyBonus;
+		}
+		if(isProDeception) {
+			Deception += proficiencyBonus;
+		}
+		if(isProHistory) {
+			History += proficiencyBonus;
+		}
+		if(isProInsight) {
+			Insight += proficiencyBonus;
+		}
+		if(isProIntimidation) {
+			Intimidation += proficiencyBonus;
+		}
+		if(isProInvestigation) {
+			Investigation += proficiencyBonus;
+		}
+		if(isProMedicine) {
+			Medicine += proficiencyBonus;
+		}
+		if(isProNature) {
+			Nature += proficiencyBonus;
+		}
+		if(isProPerception) {
+			Perception += proficiencyBonus;
+		}
+		if(isProPerformance) {
+			Performance += proficiencyBonus;
+		}
+		if(isProPersuasion) {
+			Persuasion += proficiencyBonus;
+		}
+		if(isProReligion) {
+			Religion += proficiencyBonus;
+		}
+		if(isProSleightOfHand) {
+			SleightOfHand += proficiencyBonus;
+		}
+		if(isProStealth) {
+			Stealth += proficiencyBonus;
+		}
+		if(isProSurvival) {
+			Survival += proficiencyBonus;
+		}
+		if(isProStr) {
+			strSaving += proficiencyBonus;
+		}
+		if(isProDex) {
+			dexSaving += proficiencyBonus;
+		}
+		if(isProInt) {
+			intSaving += proficiencyBonus;
+		}
+		if(isProCon) {
+			conSaving += proficiencyBonus;
+		}
+		if(isProWis) {
+			wisSaving += proficiencyBonus;
+		}
+		if(isProCha) {
+			chaSaving += proficiencyBonus;
+		}
 	}
 
 
@@ -87,12 +153,12 @@ public class Character {
 		chaMod = baseMods[5] += raceMods[5];
 	}
 	
-	private Race race;
-	public int level;
+	private static Race race;
+	public static int level;
 	private Class characterClass;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
-	private SimpleObjectProperty<weapon> equippedWeapon = new SimpleObjectProperty<>();
+	private static ArrayList<String> proficiencies = new ArrayList<>();
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
 	private String charactername;
 	private String playerName;
@@ -138,6 +204,8 @@ public class Character {
 	private boolean isProNature = false;
 	private int Perception = wisMod;
 	private boolean isProPerception = false;
+	private int Performance = chaMod;
+	private boolean isProPerformance = false;
 	private int Persuasion = chaMod;
 	private boolean isProPersuasion = false;
 	private int Religion = intMod;
@@ -148,14 +216,31 @@ public class Character {
 	private boolean isProStealth = false;
 	private int Survival = wisMod;
 	private boolean isProSurvival = false;
+	private int strSaving = strMod;
+	private boolean isProStr;
+	private int dexSaving = dexMod;
+	private boolean isProDex;
+	private int intSaving = intMod;
+	private boolean isProInt;
+	private int conSaving = conMod;
+	private boolean isProCon;
+	private int wisSaving = wisMod;
+	private boolean isProWis;
+	private int chaSaving = chaMod;
+	private boolean isProCha;
 	private int[] baseMods = new int[6];
 	private int copperPieces;
 	private int silverPieces;
 	private int goldPieces;
 	private int platPieces;
 	private int proficiencyBonus;
+	private int Initiative = dexMod;
+	
+	public int getInitiativa() {
+		return Initiative;
+	}
 
-	public Race getRace() {
+	public static Race getRace() {
 		return race;
 	}
 
@@ -187,14 +272,6 @@ public class Character {
 		this.equipment = equipment;
 	}
 
-	public SimpleObjectProperty<weapon> getEquippedWeapon() {
-		return equippedWeapon;
-	}
-
-	public void setEquippedWeapon(SimpleObjectProperty<weapon> equippedWeapon) {
-		this.equippedWeapon = equippedWeapon;
-	}
-
 	public SimpleObjectProperty<Armor> getEquipArmor() {
 		return equipArmor;
 	}
@@ -203,11 +280,11 @@ public class Character {
 		this.equipArmor = equipArmor;
 	}
 
-	public String getCharactername() {
+	public String getCharacterName() {
 		return charactername;
 	}
 
-	public void setCharactername(String charactername) {
+	public void setCharacterName(String charactername) {
 		this.charactername = charactername;
 	}
 
@@ -491,7 +568,7 @@ public class Character {
 		this.level = level;
 	}
 
-	public int getLevel() {
+	public static int getLevel() {
 		return level;
 	}
 	
@@ -667,6 +744,18 @@ public class Character {
 			}
 		}
 		return dieSum;
+	}
+
+	public int getProficiencyBonus() {
+		return proficiencyBonus;
+	}
+
+	public void setProficiencyBonus(int proficiencyBonus) {
+		this.proficiencyBonus = proficiencyBonus;
+	}
+	
+	public static void addProficiency(String prof) {
+		proficiencies.add(prof);
 	}
 	
 }

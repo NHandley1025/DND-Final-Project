@@ -8,6 +8,8 @@ public class Dwarf extends Race {
 		super();
 		size = "Medium";
 		landBaseSpeed = 25;
+		setRacialSkills();
+		setRacialModifiers();
 		}
 	
 	private void setRacialSkills() {

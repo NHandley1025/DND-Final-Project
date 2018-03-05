@@ -26,7 +26,7 @@ public class Backgrounds {
 		return filteredTraits;
 	}
 	
-	public static HashMap<TraitKey, trait> getHash() {
+	public static HashMap<TraitKey, trait> getTraitHash() {
 		return traits;
 	}
 }
