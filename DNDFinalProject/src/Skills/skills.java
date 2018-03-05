@@ -3,15 +3,8 @@ package Skills;
 public class skills {
 	
 	
-	// All casters
-	
-	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
-	
-	public static void AbilityScoreImprovement() {
-		
-	}
-	
-	public static final Skill DarkVision = new Skill("DarkVision", "You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can't discern color in Darkness, only shades of gray.");         
+	public static final Skill DarkVision = new Skill("DarkVision", "You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can't discern color in Darkness, only shades of gray.");
+	public static final Skill spellcasting = new Skill("Spell Casting", "");                
 	               
 	               
 	//Half-Orc     
@@ -84,6 +77,7 @@ public class skills {
 
 	
 	//Cleric
+	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
 	public static final Skill DivineDomain = new Skill("Divine Domain", "");
 	public static final Skill ChannelDivinity = new Skill("Channel Divinity", "");
 	public static final Skill DivineIntervention = new Skill("Divine Domain", "");
@@ -94,6 +88,12 @@ public class skills {
 	public static final Skill DestroyUndeadCR4 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
 	public static final Skill DivineInterventionImprovement = new Skill("Divine Intervention", "");
 	public static void chooseDivineDomainFeature() {
+		
+	}
+	
+	// All classes
+	
+	public static void AbilityScoreImprovement() {
 		
 	}
 	
@@ -130,10 +130,10 @@ public class skills {
 	//Ranger
 	public static final Skill favoredEnemy = new Skill("", "");
 	public static final Skill naturalExplorer = new Skill("", "");
-	//public static final Skill fightingStyle = new Skill("", "");
-	//public static final Skill spellCasting = new Skill("", "");
+	//fightingStyle
+	//spellCasting
 	public static final Skill primevalAwareness = new Skill ("", "");
-	//public static final Skill extraAttack = new Skill ("", "");
+	//extraAttack
 	public static final Skill landsStride = new Skill("", "");
 	public static final Skill hideInPlainSight = new Skill("", "");
 	public static final Skill vanish = new Skill("", "");
@@ -167,6 +167,45 @@ public class skills {
 	public static final Skill mysticArcanum = new Skill ("", "");
 	public static final Skill eldricthMaster = new Skill("", "");
 	
+	//Druid
+	public static final Skill druidic = new Skill ("", "");
+	//spell casting
+	public static final Skill wildShape0 = new Skill ("", "");
+	public static final Skill druidCircle0 = new Skill ("", "");
+	public static final Skill wildShape1 = new Skill ("", "");
+	public static final Skill druidCircleFeature = new Skill("", "");
+	//timeless body
+	public static final Skill beastSpells = new Skill("", "");
+	public static final Skill archdruid = new Skill("", "");
+	
+	//fighter
+	//Fighting Style
+	public static final Skill secondWind = new Skill("", "");
+	//Action surge
+	//Extra attack
+	//Indomitable
+	
+	
+	//barbarian
+	public static final Skill Rage = new Skill("", "");
+	public static final Skill UnArmoredDefense = new Skill ("", "");
+	public static final Skill RecklessAttack = new Skill("", "");
+	public static final Skill DangerSense = new Skill ("", "");
+	public static final Skill TotemWarrior1 = new Skill ("", "");
+	public static final Skill Frenzy = new Skill ("", "");
+	public static final Skill ExtraAttack = new Skill("", "");
+	public static final Skill FastMovement = new Skill("", "");
+	public static final Skill TotemWarrior2 = new Skill("", "");
+	public static final Skill MindlessRage = new Skill("", "");
+	public static final Skill FeralInstinct = new Skill("", "");
+	public static final Skill BrutalCritical = new Skill ("", "");
+	public static final Skill SpiritWalker = new Skill("", "");
+	public static final Skill IntimidatingPresence = new Skill ("", "");
+	public static final Skill PersistantRage = new Skill ("", "");
+	public static final Skill TotemWarrior3 = new Skill ("", "");
+	public static final Skill Retaliation = new Skill ("", "");
+	public static final Skill IndomitableFight = new Skill ("", "");
+	public static final Skill PrimalChampion = new Skill ("", "");
 	
 	
 	
@@ -180,19 +219,11 @@ public class skills {
 	
 	
 	
-
-	//Barbarian
-	public static final Skill Rage = new Skill("Rage", "As a bonus action, you can rage. \n    The rage gives you proficiency in Strength checks and Strength saving throws.\n    When you make a melee Strength attack, you can add a rage bonus to your damage roll this increases as you level up barbarian.\n    You have resistance to bludgeoning, slashing, and piercing damage.\nRage lasts for one minute, but wil end if you are unconsious, don't attack hostile creatures, or taken damage. You can voluntarily choose to stop raging as a bonus action./n After you raged your rages per day amount, you must take a long rest to reset your counter.");
-	public static final Skill UnarmoredDefense = new Skill("Unarmored Defense", "If you don't wear any armor, your AC will be 10 + Dexerity Modifer + Constitution Modifer. You can still hold a shield and have this benefit");
-	public static final Skill RecklessAttack = new Skill("Reckless Attack", "You throw away any concern to defense and go all offense. You can have your first attack be a Reckless Attack, which will give you advantage to Strength weapon attack rolls, but attack rolls towards you will have advantage until your next turn");
-	public static final Skill DangerSense = new Skill("Danger Sense", "You have an innate sense on when things are awry. You have an advantage with your Dexterity Saving Throws against abilities you can see. You cannot be blinded, deafened, or incompasitated to use this bonus");
-	public static final Skill Frenzy = new Skill("Frenzy", "When you rage, you can go into a frenzy. While in a frenzy, you will have gain an make a single melee attack as a bonus action for each turn after your frenzied. When your rage stops, you will suffer a level of exhaustion.");
-	public static final Skill ExtraAttack = new Skill("Extra Attack", "For your attack action, you can do two melee attacks instead of one.");
-	public static final Skill FastMovement = new Skill("Fast Movement", "If your not wearing heavy armor, your base speed increases by 10ft");
-	public static final Skill MindlessRage = new Skill("Mindless Rage", "You cannot be charmed or frightened while in rage. If you would have gained those effects while in the rage, the effects will be suspended until you leave rage");
-	public static final Skill FeralInstinct = new Skill("Feral Instinct", "You instinct are so honed that you have an advantage with initiative rolls");
-	public static final Skill BrutalCritical = new Skill("Brutal Critical", "You can roll an additional hit die with critical hits. This increases to 2 dice at level 13 and 3 dice at level 17");
-	public static final Skill IntimidatingPresence = new Skill("Intimidating Presence", "");
-
+	
+	
+	
+	
+	
+	
 	
 }
