@@ -143,7 +143,7 @@ public class skills {
 	
 	//Rogue
 	public static final Skill sneakAttack = new Skill("", "");
-	//public static final Skill expertise = new Skill("", "");
+	//expertise
 	public static final Skill thievesCant = new Skill("", "");
 	public static final Skill cunningAction = new Skill("", "");
 	public static final Skill uncannyDodge = new Skill("", "");
@@ -180,11 +180,15 @@ public class skills {
 	public static final Skill archdruid = new Skill("", "");
 	
 	//fighter
-	//Fighting Style
 	public static final Skill secondWind = new Skill("", "");
-	//Action surge
-	//Extra attack
-	//Indomitable
+	public static final Skill actionSurge1 = new Skill("", "");
+	public static final Skill actionSurge2 = new Skill("", "");
+	public static final Skill indomidable1 = new Skill("", "");
+	public static final Skill indomidable2 = new Skill("", "");
+	public static final Skill indomidable3 = new Skill("", "");
+	public static final Skill extraAttack2 = new Skill("", "");
+	public static final Skill extraAttack3 = new Skill("", "");
+	
 	
 	
 	//barbarian
