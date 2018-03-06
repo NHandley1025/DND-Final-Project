@@ -5,10 +5,6 @@ import Skills.Skill;
 
 public class Fighter extends Class{
 	
-	public monk() {
-		setSkills(Character.getLevel());
-	}
-	
 	public void setSkills(int level) {
 		if (level > 3 && getArchetype() == null) {
 			chooseArchetype();
