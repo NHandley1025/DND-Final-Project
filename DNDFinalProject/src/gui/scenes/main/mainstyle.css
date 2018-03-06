@@ -3,6 +3,7 @@
 	-fx-text-fill: red;
 	-fx-stroke: black;
 	-fx-stroke-width: 1;
+		-fx-size: 100%;
 }
 
 .label {

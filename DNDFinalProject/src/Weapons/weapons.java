@@ -15,7 +15,7 @@ public class weapons {
 	}
 	
 	public static void readWeaponFile() throws FileNotFoundException, IOException {
-		String file = lib.ProgramUtil.readFile("C:\\Users\\Andy\\Documents\\GitHub\\DND-Final-Project\\Weapons.txt");
+		String file = lib.ProgramUtil.readFile("Weapons.txt");
 		String [] lines = file.split("\n");
 		for(int i = 0; i < lines.length; i++) {
 			String [] words = lines[i].split("::");

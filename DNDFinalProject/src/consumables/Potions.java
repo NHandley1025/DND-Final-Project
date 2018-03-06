@@ -14,7 +14,7 @@ private static HashMap<String, Potion> potionHash = new HashMap<>();
 	}
 	
 	public static void readPotionFile() throws FileNotFoundException, IOException {
-		String file = lib.ProgramUtil.readFile("C:\\Users\\Andy\\Documents\\GitHub\\DND-Final-Project\\Potions.txt");
+		String file = lib.ProgramUtil.readFile("Potions.txt");
 		String [] lines = file.split("\n");
 		for(int i = 0; i < lines.length; i++) {
 			String [] words = lines[i].split("::");
