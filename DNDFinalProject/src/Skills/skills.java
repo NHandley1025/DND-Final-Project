@@ -98,14 +98,13 @@ public class skills {
 	}
 	
 	//Monk
+	public static final Skill unarmoredDefense = new Skill("Unarmored Defense", "");
 	public static final Skill martialArts = new Skill("Martial Arts", "");
 	public static final Skill ki = new Skill("Martial Arts", "");
-	public static final Skill unArmoredMovement  = new Skill("", "");
+	public static final Skill monasticTradition = new Skill("Monastic Tradition", "");
 	public static final Skill deflectMissile = new Skill("Deflect Missile", "");
 	public static final Skill slowFall = new Skill("Slow Fall", "");
 	public static final Skill extraAttack = new Skill("Extra Attack", "");
-	public static final Skill stunningStrike = new Skill("Stunning Strike", "");
-	public static final Skill kiEmpoweredStrike = new Skill("Ki-empowered Strike", "");
 	public static final Skill stillnessOfMind = new Skill("Stillness of Mind", "");
 	public static final Skill purityOfBody = new Skill("Purity of Body", "");
 	public static final Skill toungeOfTheSunAndMoon = new Skill("Tounge of the Sun and Moon", "");
@@ -115,8 +114,8 @@ public class skills {
 	public static final Skill perfectSelf = new Skill("Perfect Self", "");
 	
 	//Paladin
-	public static final Skill divineSence = new Skill("Divine Sence", "");
-	public static final Skill layOnHands = new Skill("", "");
+	public static final Skill divineSence = new Skill("Divine Sense", "As an action you can open your senses to strong evil. Until the end of your next turn you know the location of any Celestial, fiend, or undead within 60 feet of you that is not behind total cover.");
+	public static final Skill layOnHands = new Skill("Lay on Hands", "As an action you can touch a creature and restore a total number of hit points equal to your paladin level x 5");
 	public static final Skill fightingStyle = new Skill("", "");
 	public static final Skill spellCasting = new Skill("", "");
 	public static final Skill divineSmite = new Skill("", "");
@@ -143,7 +142,7 @@ public class skills {
 	
 	//Rogue
 	public static final Skill sneakAttack = new Skill("", "");
-	//expertise
+	//public static final Skill expertise = new Skill("", "");
 	public static final Skill thievesCant = new Skill("", "");
 	public static final Skill cunningAction = new Skill("", "");
 	public static final Skill uncannyDodge = new Skill("", "");
@@ -180,15 +179,11 @@ public class skills {
 	public static final Skill archdruid = new Skill("", "");
 	
 	//fighter
+	//Fighting Style
 	public static final Skill secondWind = new Skill("", "");
-	public static final Skill actionSurge1 = new Skill("", "");
-	public static final Skill actionSurge2 = new Skill("", "");
-	public static final Skill indomidable1 = new Skill("", "");
-	public static final Skill indomidable2 = new Skill("", "");
-	public static final Skill indomidable3 = new Skill("", "");
-	public static final Skill extraAttack2 = new Skill("", "");
-	public static final Skill extraAttack3 = new Skill("", "");
-	
+	//Action surge
+	//Extra attack
+	//Indomitable
 	
 	
 	//barbarian

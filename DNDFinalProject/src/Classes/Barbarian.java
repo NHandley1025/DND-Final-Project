@@ -5,7 +5,7 @@ import Skills.skills;
 import Player.Character;
 
 
-public class Barbarian extends Fighters{
+public class Barbarian extends Class{
 	
 	byte ragesPerDay = 2;
 	byte rageDamage = 2;
