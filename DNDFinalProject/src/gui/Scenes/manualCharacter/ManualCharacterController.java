@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Races.*;
-import controllers.Generator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -430,10 +429,13 @@ public class ManualCharacterController implements Initializable {
 			race = new Dwarf();
 			break;
 		case "Elf":
+			race = new Elf();
 			break;
 		case "Half Elf":
+			race = new HalfElf();
 			break;
-		case "Halfing":
+		case "Halfling":
+			race = new Halfling();
 			break;
 		case "Half Orc":
 			break;
@@ -448,7 +450,7 @@ public class ManualCharacterController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		RaceComboBox.setValue("Race");
 		ClassComboBox.setValue("Class");
-		RaceComboBox.getItems().addAll("Dragonborn", "Dwarf", "Elf", "Half Elf", "Hafling", "Half Orc", "Human", "Tiefling");
+		RaceComboBox.getItems().addAll("Dragonborn", "Dwarf", "Elf", "Half Elf", "Halfling", "Half Orc", "Human", "Tiefling");
 		ClassComboBox.getItems().addAll("Archetype", "Barbarian", "Bard", "Caster", "Clerk", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
 
 	}

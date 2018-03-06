@@ -5,14 +5,11 @@ import Skills.Skill;
 import Skills.skills;
 
 public class Fighter extends Class{
-	
-<<<<<<< HEAD
-=======
+
 	public Fighter() {
 		setSkills(Character.getLevel());
 	}
 	
->>>>>>> aee7bdb0afb23473523771ec1c93b7c2c5d254f7
 	public void setSkills(int level) {
 		if (level > 3 && getArchetype() == null) {
 			chooseArchetype();

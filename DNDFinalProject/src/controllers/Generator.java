@@ -109,7 +109,7 @@ public class Generator {
 			randClass = new Druid();
 			break;
 		case 5:
-			randClass = new Fighters();
+			randClass = new Fighter();
 			break;
 		case 6:
 			randClass = new Monk();
