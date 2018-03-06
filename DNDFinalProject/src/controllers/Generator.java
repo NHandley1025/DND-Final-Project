@@ -13,15 +13,12 @@ import consumables.Potions;
 import Classes.*;
 import Classes.Class;
 import Items.Item;
-import gui.FxController;
 import keys.TraitKey;
 import tools.Tools;
 
 public class Generator {
+	public static Character character;
 
-	public static void main(String[] args) {
-		FxController.launch(args);
-	}
 
 	public Character manualGenerateChar() {
 		Character manualChar = new Character(null, 0, null, null, null, null, null, false, false, false, false, false, false, false,
@@ -112,7 +109,7 @@ public class Generator {
 			randClass = new Druid();
 			break;
 		case 5:
-			randClass = new Fighters();
+			randClass = new Fighter();
 			break;
 		case 6:
 			randClass = new Monk();

@@ -9,7 +9,7 @@ public class Fighter extends Class{
 	public Fighter() {
 		setSkills(Character.getLevel());
 	}
-	
+
 	public void setSkills(int level) {
 		if (level > 3 && getArchetype() == null) {
 			chooseArchetype();

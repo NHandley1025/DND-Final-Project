@@ -10,14 +10,16 @@ import javafx.stage.Stage;
 
 public class FxController extends Application {
 
+	
+	
 
 	@Override
 	public void start(Stage primaryStage) {
 		Parent root = null;
 		try {
-			root = FXMLLoader.load(getClass().getResource("Scenes/Main/main.fxml"));
+			root = FXMLLoader.load(getClass().getResource("Scenes/Main/Main.fxml"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		primaryStage.setTitle("DnD Character Generator");
