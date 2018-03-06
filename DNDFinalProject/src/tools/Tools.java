@@ -12,7 +12,7 @@ private static HashMap<String, Tool> toolHash = new HashMap<>();
 	}
 
 	public static void readToolFile() throws FileNotFoundException, IOException {
-		String file = lib.ProgramUtil.readFile("C:\\Users\\Andy\\Documents\\GitHub\\DND-Final-Project\\Tools.txt");
+		String file = lib.ProgramUtil.readFile("Tools.txt");
 		String[] lines = file.split("\n");
 		for(int i = 0; i < lines.length; i++) {
 			String [] words = lines[i].split("::");

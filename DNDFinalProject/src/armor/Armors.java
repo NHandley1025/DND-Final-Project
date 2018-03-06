@@ -11,7 +11,7 @@ public class Armors {
 		return armorHash;
 	}
 	private static void readArmorFile() throws FileNotFoundException, IOException{
-		String file = lib.ProgramUtil.readFile("C:\\Users\\Andy\\Documents\\GitHub\\DND-Final-Project\\Armor.txt");
+		String file = lib.ProgramUtil.readFile("Armor.txt");
 		String[] lines = file.split("\n");
 		for(int i = 0; i < lines.length; i++) {
 			String [] words = lines[i].split("::");
