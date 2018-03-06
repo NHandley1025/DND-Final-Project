@@ -116,64 +116,64 @@ public class skills {
 	
 	//Paladin
 	public static final Skill divineSence = new Skill("Divine Sence", "");
-	public static final Skill layOnHands = new Skill("", "");
+	public static final Skill layOnHands = new Skill("Lay on Hands", "");
 	public static final Skill fightingStyle = new Skill("", "");
-	public static final Skill spellCasting = new Skill("", "");
-	public static final Skill divineSmite = new Skill("", "");
-	public static final Skill divineHealth = new Skill("", "");
+	public static final Skill divineSmite = new Skill("Divine Smite", "");
+	public static final Skill divineHealth = new Skill("Divine Health", "");
 	public static final Skill sacredOath = new Skill("", "");
-	public static final Skill extraAttack1 = new Skill("", "");
+	public static final Skill extraAttack1 = new Skill("Extra Attack", "");
 	public static final Skill sacredOathFeature = new Skill("", "");
-	public static final Skill auraOfCourage = new Skill("", "");
+	public static final Skill auraOfCourage = new Skill("Aura of Courage", "");
 	public static final Skill improvedDivineSmite = new Skill("", "");
-	public static final Skill cleansingTouch = new Skill("", "");
+	public static final Skill cleansingTouch = new Skill("Cleansing Touch", "");
 	
 	//Ranger
-	public static final Skill favoredEnemy = new Skill("", "");
-	public static final Skill naturalExplorer = new Skill("", "");
+	public static final Skill favoredEnemy = new Skill("Favored Enemy", "");
+	public static final Skill naturalExplorer = new Skill("Natural Explorer", "");
 	//fightingStyle
 	//spellCasting
-	public static final Skill primevalAwareness = new Skill ("", "");
+	public static final Skill primevalAwareness = new Skill ("Primeval Awareness", "");
 	//extraAttack
-	public static final Skill landsStride = new Skill("", "");
-	public static final Skill hideInPlainSight = new Skill("", "");
-	public static final Skill vanish = new Skill("", "");
-	public static final Skill feralSenses = new Skill("", "");
-	public static final Skill foeSlayer = new Skill("", "");
+	public static final Skill landsStride = new Skill("Lands Stride", "");
+	public static final Skill hideInPlainSight = new Skill("Hide in plain Sight", "");
+	public static final Skill vanish = new Skill("Vanish", "");
+	public static final Skill feralSenses = new Skill("Feral Senses", "");
+	public static final Skill foeSlayer = new Skill("Foe Slayer", "");
 	
 	//Rogue
-	public static final Skill sneakAttack = new Skill("", "");
+	public static final Skill sneakAttack = new Skill("Sneak Attack", "");
 	//public static final Skill expertise = new Skill("", "");
-	public static final Skill thievesCant = new Skill("", "");
-	public static final Skill cunningAction = new Skill("", "");
-	public static final Skill uncannyDodge = new Skill("", "");
-	public static final Skill evasion = new Skill("", "");
-	public static final Skill reliableTalent = new Skill("", "");
-	public static final Skill blindSense = new Skill("", "");
-	public static final Skill slipperyMind = new Skill("", "");
-	public static final Skill elusive = new Skill("", "");
-	public static final Skill strokeOfLuck = new Skill("", "");
+	public static final Skill thievesCant = new Skill("Thieves Cant", "");
+	public static final Skill cunningAction = new Skill("Cunning Action", "");
+	public static final Skill uncannyDodge = new Skill("Uncanny Dodge", "");
+	public static final Skill evasion = new Skill("Evasion", "");
+	public static final Skill reliableTalent = new Skill("Relaible Talent", "");
+	public static final Skill blindSense = new Skill("Blind Sense", "");
+	public static final Skill slipperyMind = new Skill("Slippery Mind", "");
+	public static final Skill elusive = new Skill("Elusive", "");
+	public static final Skill strokeOfLuck = new Skill("Stroke of Luck", "");
 	
 	//sorcerer
-	public static final Skill sorcerousOrigin = new Skill("", "");
-	public static final Skill fontOfMagic = new Skill("", "");
-	public static final Skill metaMagic = new Skill("", "");
-	public static final Skill sorcerousRestoration = new Skill("", "");
+	public static final Skill sorcerousOrigin = new Skill("Sorcerous Origin", "");
+	public static final Skill fontOfMagic = new Skill("Font of Magic", "");
+	public static final Skill metaMagic = new Skill("Meta Magic", "");
+	public static final Skill sorcerousRestoration = new Skill("Sourcerous Restoration", "");
 	public static final Skill sorcerousOriginFeature = new Skill("", "");
 	
 	//warlock
-	public static final Skill otherWordly = new Skill("", "");
-	public static final Skill pactMagic = new Skill ("", "");
+	public static final Skill otherWordly = new Skill("Other Worldly", "");
+	public static final Skill pactMagic = new Skill ("Pact Magic", "");
 	public static final Skill pactBoon = new Skill ("", "");
-	public static final Skill mysticArcanum = new Skill ("", "");
-	public static final Skill eldricthMaster = new Skill("", "");
+	public static final Skill mysticArcanum = new Skill ("Mystic Arcanum", "");
+	public static final Skill eldricthMaster = new Skill("Eldritch Master", "");
 	
 	//Druid
-	public static final Skill druidic = new Skill ("", "");
+	public static final Skill druidic = new Skill ("Druidic", "");
 	//spell casting
-	public static final Skill wildShape0 = new Skill ("", "");
+	public static final Skill wildShape0 = new Skill ("Wild Shape", "You can shift into any animal you have seen, so long as it has no flying or swimming speed");
+	public static final Skill wildShape1 = new Skill ("Wild Shape", "You can shift into any animal you have seen, so long as it has no flying speed");
+	public static final Skill wildShape2 = new Skill("Wild Shape", "You can shift into any animal you have seen!");
 	public static final Skill druidCircle0 = new Skill ("", "");
-	public static final Skill wildShape1 = new Skill ("", "");
 	public static final Skill druidCircleFeature = new Skill("", "");
 	//timeless body
 	public static final Skill beastSpells = new Skill("", "");
@@ -181,7 +181,7 @@ public class skills {
 	
 	//fighter
 	//Fighting Style
-	public static final Skill secondWind = new Skill("", "");
+	public static final Skill secondWind = new Skill("Second Wind", "");
 	//Action surge
 	//Extra attack
 	//Indomitable
