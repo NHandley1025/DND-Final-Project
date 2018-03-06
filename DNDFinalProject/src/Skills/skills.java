@@ -98,7 +98,6 @@ public class skills {
 	}
 	
 	//Monk
-<<<<<<< HEAD
 	public static final Skill martialArts = new Skill("Martial Arts", "Your practice of matrial arts gives you mastery of combat styles that use unarmed strikes and monk weapons");
 	public static final Skill ki = new Skill("Ki", "You can spend Ki points to fuel various Ki features");
 	public static final Skill unArmoredMovement  = new Skill("UnArmored Movement","Your speed increases by 10 feet while you are not wearing armor or wielding a shield");
@@ -127,36 +126,6 @@ public class skills {
 	public static final Skill auraOfCourage = new Skill("Aura of Courage", "Starting at 10th level, you and friendly creatures within 10 feet of you can't be Frightened while you are conscious. At 18th level, the range of this aura increases to 30 feet.");
 	public static final Skill improvedDivineSmite = new Skill("", "you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an Attack, you add this damage to the extra damage of your Divine Smite.");
 	public static final Skill cleansingTouch = new Skill("Cleansing Touch", "you can use your action to end one spell on yourself or on one willing creature that you touch. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a Long Rest.");
-=======
-	public static final Skill unarmoredDefense = new Skill("Unarmored Defense", "");
-	public static final Skill martialArts = new Skill("Martial Arts", "");
-	public static final Skill ki = new Skill("Martial Arts", "");
-	public static final Skill monasticTradition = new Skill("Monastic Tradition", "");
-	public static final Skill deflectMissile = new Skill("Deflect Missile", "");
-	public static final Skill slowFall = new Skill("Slow Fall", "");
-	public static final Skill extraAttack = new Skill("Extra Attack", "");
-	public static final Skill stillnessOfMind = new Skill("Stillness of Mind", "");
-	public static final Skill purityOfBody = new Skill("Purity of Body", "");
-	public static final Skill toungeOfTheSunAndMoon = new Skill("Tounge of the Sun and Moon", "");
-	public static final Skill diamondSoul = new Skill("Diamond Soul", "");
-	public static final Skill timelessBody = new Skill("Timeless Body", "");
-	public static final Skill emptyBody = new Skill("Empty Body", "");
-	public static final Skill perfectSelf = new Skill("Perfect Self", "");
-	
-	//Paladin
-	public static final Skill divineSence = new Skill("Divine Sense", "As an action you can open your senses to strong evil. Until the end of your next turn you know the location of any Celestial, fiend, or undead within 60 feet of you that is not behind total cover.");
-	public static final Skill layOnHands = new Skill("Lay on Hands", "As an action you can touch a creature and restore a total number of hit points equal to your paladin level x 5");
-	public static final Skill fightingStyle = new Skill("", "");
-	public static final Skill spellCasting = new Skill("", "");
-	public static final Skill divineSmite = new Skill("", "");
-	public static final Skill divineHealth = new Skill("", "");
-	public static final Skill sacredOath = new Skill("", "");
-	public static final Skill extraAttack1 = new Skill("", "");
-	public static final Skill sacredOathFeature = new Skill("", "");
-	public static final Skill auraOfCourage = new Skill("", "");
-	public static final Skill improvedDivineSmite = new Skill("", "");
-	public static final Skill cleansingTouch = new Skill("", "");
->>>>>>> 30096b00b0cf677312e6d55a7c751d2e01b2d703
 	
 	//Ranger
 	public static final Skill favoredEnemy = new Skill("Favored Enemy", "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy. Choose a type of favored enemy: Aberrations, Beasts, Celestials, constructs, dragons, elementals, fey, Fiends, Giants, Monstrosities, oozes, Plants, or Undead. Alternatively, you can select two races of humanoid (such as Gnolls and orcs) as favored enemies. You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence Checks to recall information about them. When you gain this feature, you also learn one Language of your choice that is spoken by your favored enemies, if they speak one at all.You choose one additional favored enemy, as well as an associated Language, at 6th and 14th level. As you gain levels, your choices should reflect the types of Monsters you have encountered on your adventures.");
@@ -169,10 +138,9 @@ public class skills {
 	public static final Skill hideInPlainSight = new Skill("Hide in plain Sight", "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, Plants, soot, and other naturally occurring materials with which to create your camouflage. Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit.");
 	public static final Skill vanish = new Skill("Vanish", "Starting at 14th level, you can use the Hide action as a Bonus Action on Your Turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.");
 	public static final Skill feralSenses = new Skill("Feral Senses", "you gain preternatural senses that help you fight creatures you can't see. When you Attack a creature you can't see, your inability to see it doesn't impose disadvantage on your Attack rolls against it. You are also aware of the location of any Invisible creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't Blinded or Deafened.");
-	public static final Skill foeSlayer = new Skill("Foe Slayer", "you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the Attack roll or the damage roll of an Attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.");
+	public static final Skill foeSlayer = new Skill("Foe Slayer", "");
 	
 	//Rogue
-<<<<<<< HEAD
 	public static final Skill sneakAttack = new Skill("Sneak Attack", "");
 	//public static final Skill expertise = new Skill("", "");
 	public static final Skill thievesCant = new Skill("Thieves Cant", "");
@@ -185,19 +153,6 @@ public class skills {
 	public static final Skill elusive = new Skill("Elusive", "");
 	public static final Skill strokeOfLuck = new Skill("Stroke of Luck", "");
 
-=======
-	public static final Skill sneakAttack = new Skill("", "");
-	//public static final Skill expertise = new Skill("", "");
-	public static final Skill thievesCant = new Skill("", "");
-	public static final Skill cunningAction = new Skill("", "");
-	public static final Skill uncannyDodge = new Skill("", "");
-	public static final Skill evasion = new Skill("", "");
-	public static final Skill reliableTalent = new Skill("", "");
-	public static final Skill blindSense = new Skill("", "");
-	public static final Skill slipperyMind = new Skill("", "");
-	public static final Skill elusive = new Skill("", "");
-	public static final Skill strokeOfLuck = new Skill("", "");
->>>>>>> 30096b00b0cf677312e6d55a7c751d2e01b2d703
 	
 	//sorcerer
 	public static final Skill sorcerousOrigin = new Skill("Sorcerous Origin", "");
@@ -226,7 +181,6 @@ public class skills {
 	public static final Skill archdruid = new Skill("Archdruid", "");
 	
 	//fighter
-<<<<<<< HEAD
 	public static final Skill secondWind = new Skill("Second Wind", "");
 	public static final Skill actionSurge1 = new Skill("Action Surge", "");
 	public static final Skill actionSurge2 = new Skill("Action Surge", "");
@@ -236,13 +190,6 @@ public class skills {
 	public static final Skill extraAttack2 = new Skill("Extra Attack", "");
 	public static final Skill extraAttack3 = new Skill("Extra Attack", "");
 
-=======
-	//Fighting Style
-	public static final Skill secondWind = new Skill("", "");
-	//Action surge
-	//Extra attack
-	//Indomitable
->>>>>>> 30096b00b0cf677312e6d55a7c751d2e01b2d703
 	
 	
 	//barbarian
