@@ -200,7 +200,7 @@ public class skills {
 	public static final Skill DangerSense = new Skill ("Danger Sense", "");
 	public static final Skill TotemWarrior1 = new Skill ("Totem Warrior", "");
 	public static final Skill Frenzy = new Skill ("Frenzy", "");
-	public static final Skill ExtraAttack = new Skill("Extra Attack", "");
+	public static final Skill extraAttack = new Skill("Extra Attack", "");
 	public static final Skill FastMovement = new Skill("Fast Movement", "");
 	public static final Skill TotemWarrior2 = new Skill("Totem Warrior", "");
 	public static final Skill MindlessRage = new Skill("Mindless Rage", "");

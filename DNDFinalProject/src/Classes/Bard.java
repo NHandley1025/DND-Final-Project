@@ -67,13 +67,6 @@ public class Bard extends Class {
 
 	}
 
-	private void addSkill(Skill... skills) {
-		for (Skill skill : skills)
-			if (!classSkills.contains(skill)) {
-				classSkills.add(skill);
-			}
-	}
-
 	private void chooseArchetype() {
 
 	}
