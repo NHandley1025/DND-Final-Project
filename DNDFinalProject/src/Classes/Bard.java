@@ -8,7 +8,7 @@ public class Bard extends Class {
 
 	public Bard() {
 		setSkills(Character.getLevel());
-		Character.setHitDice("1d12");
+		Character.setHitDice("1d8");
 	}
 	
 	public void setSkills(int level) {

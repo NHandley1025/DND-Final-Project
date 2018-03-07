@@ -5,7 +5,7 @@ import Player.Character;
 public class Ranger extends Class {
 
 	public Ranger() {
-		Character.setHitDice("");
+		Character.setHitDice("1d10");
 	}
 
 }

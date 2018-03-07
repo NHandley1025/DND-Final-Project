@@ -8,7 +8,7 @@ public class Monk extends Class{
 	byte ki = 0;
 
 	public Monk() {
-		Character.setHitDice("");
+		Character.setHitDice("1d8");
 		setSkills(Character.getLevel());
 	}
 	
