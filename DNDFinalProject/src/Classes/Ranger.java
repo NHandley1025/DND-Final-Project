@@ -1,5 +1,11 @@
 package Classes;
 
-public class Ranger extends Class{
+import Player.Character;
+
+public class Ranger extends Class {
+
+	public Ranger() {
+		Character.setHitDice("1d10");
+	}
 
 }
