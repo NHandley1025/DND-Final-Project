@@ -1,5 +1,7 @@
 package Traits;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -29,4 +31,22 @@ public class Backgrounds {
 	public static HashMap<TraitKey, trait> getTraitHash() {
 		return traits;
 	}
+	
+	public static void load() {
+		loadFile("Bonds.txt", new Bond(null, null));
+		loadFile("Flaws.txt", new Flaw(null, null));
+		loadFile("Ideals.txt", new Ideal(null, null));
+		loadFile("Personality.txt", new Personality(null, null));
+	}
+	
+	public static <T extends trait> void loadFile(String filePath, T type) {
+		try {
+			lib.ProgramUtil.readFile(filePath);
+		}catch(FileNotFoundException fnfe) {
+			
+		}catch(IOException ioe) {
+			
+		}
+	}
+	
 }

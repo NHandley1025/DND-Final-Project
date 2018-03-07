@@ -52,7 +52,7 @@ public class Fighter extends Class{
 		
 		case 18: ;
 		
-		case 19: skills.AbilityScoreImprovement();;
+		case 19: skills.AbilityScoreImprovement();
 		
 		case 20: addSkill(skills.extraAttack3);
 		
