@@ -5,7 +5,7 @@ import Player.Character;
 public class Wizard extends Class{
 
 	public Wizard() {
-		Character.setHitDice("1d6");
+		Character.setHitDice("");
 	}
 	
 }
