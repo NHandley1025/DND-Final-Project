@@ -210,9 +210,11 @@ public class skills {
 	public static final Skill RecklessAttack = new Skill("Reckless Attack", "you can throw aside all concern for defense to Attack with fierce desperation. When you make your first Attack on Your Turn, you can decide to Attack recklessly. Doing so gives you advantage on melee weapon Attack rolls using Strength during this turn, but Attack rolls against you have advantage until your next turn.");
 	public static final Skill DangerSense = new Skill ("Danger Sense", "you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and Spells. To gain this benefit, you can't be Blinded, Deafened, or Incapacitated.");
 	public static final Skill TotemWarrior1 = new Skill ("Totem Warrior", "");
+
 	public static final Skill Frenzy = new Skill ("Frenzy", "You can go into a frenzy when you rage. If you do so, for the Duration of your rage you can make a single melee weapon Attack as a Bonus Action on each of your turns after this one. When your rage ends, you suffer one level of Exhaustion (as described in Conditions).");
 	public static final Skill ExtraAttack = new Skill("Extra Attack", "You can Attack twice, instead of once, whenever you take the Attack action on Your Turn.");
 	public static final Skill FastMovement = new Skill("Fast Movement", "Your speed increases by 10 feet while you aren't wearing Heavy Armor.");
+
 	public static final Skill TotemWarrior2 = new Skill("Totem Warrior", "");
 	public static final Skill MindlessRage = new Skill("Mindless Rage", "You can’t be Charmed or Frightened while raging. If you are Charmed or Frightened when you enter your rage, the effect is suspended for the Duration of the rage.");
 	public static final Skill FeralInstinct = new Skill("Feral Instinct", "Your instincts are so honed that you have advantage on initiative rolls.\r\n" + 
