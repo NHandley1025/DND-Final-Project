@@ -19,15 +19,22 @@ import tools.Tools;
 public class Generator {
 	public static Character character;
 
+<<<<<<< HEAD
+
+	public static void manualGenerateChar() {
+		character = new Character(null, 0, null, null, null, null, null, false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 0, 0, 0, 0);
+=======
 	public Character manualGenerateChar() {
 		String[] background = new String[4];
 		Character manualChar = new Character(null, 0, null, background, null, null, null, false, false, false, false, false,
 				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 				false, false, false, 0, 0, 0, 0);
 		return manualChar;
+>>>>>>> 0301e4791a7219501c3e6b66756d9a4d65db4a23
 	}
 
-	public Character generateRandomChar() {
+	public static Character generateRandomChar() {
 		Random rand = new Random();
 		int randCopper = rand.nextInt(101);
 		int randSilver = rand.nextInt(101);
@@ -45,10 +52,11 @@ public class Generator {
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randCopper, randSilver,
 				randGold, randPlat);
+		randomChar.setMods();
 		return randomChar;
 	}
 
-	public boolean randBoolean() {
+	public static boolean randBoolean() {
 		Random rand = new Random();
 		int randBool = rand.nextInt(2) + 1;
 		boolean bool;
@@ -60,7 +68,7 @@ public class Generator {
 		return bool;
 	}
 
-	private Race genRandRace() {
+	private static Race genRandRace() {
 		Race race = new Race();
 		Random rand = new Random();
 		int randomRace = rand.nextInt(8) + 1;
@@ -93,7 +101,7 @@ public class Generator {
 		return race;
 	}
 
-	private Class genRandClass() {
+	private static Class genRandClass() {
 		Random rand = new Random();
 		int randomClass = rand.nextInt(12) + 1;
 		Class randClass = new Class();
@@ -138,7 +146,7 @@ public class Generator {
 		return randClass;
 	}
 
-	public ArrayList<Item> genRandEquipment() {
+	public static ArrayList<Item> genRandEquipment() {
 		ArrayList<Item> equipment = new ArrayList<>();
 		Random rand = new Random();
 
@@ -196,7 +204,7 @@ public class Generator {
 		return equipment;
 	}
 
-	public trait genRandTrait() {
+	public static trait genRandTrait() {
 		Random rand = new Random();
 		int traitListSize = Backgrounds.getTraitHash().keySet().size();
 		int randomTrait = rand.nextInt(traitListSize);

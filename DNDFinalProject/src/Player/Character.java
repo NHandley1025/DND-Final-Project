@@ -34,7 +34,6 @@ public class Character {
 		setConstitution();
 		setWisdom();
 		setCharisma();
-		setMods();
 		setTraits(traits);
 		setEquipment(equipment);
 		setEquipArmor(equipArmor);
