@@ -5,7 +5,7 @@ import Player.Character;
 public class Rogue extends Class{
 
 	public Rogue() {
-		Character.setHitDice("");
+		Character.setHitDice("1d8");
 	}
 	
 }

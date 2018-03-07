@@ -5,7 +5,7 @@ import Player.Character;
 public class Warlock extends Class{
 
 	public Warlock() {
-		Character.setHitDice("");
+		Character.setHitDice("1d8");
 	}
 	
 }
