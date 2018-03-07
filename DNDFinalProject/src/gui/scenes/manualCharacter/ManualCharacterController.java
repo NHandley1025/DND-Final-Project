@@ -444,6 +444,11 @@ public class ManualCharacterController implements Initializable {
 		ConstitutionStatText.setText(String.valueOf(Generator.character.getConstitution()));
 		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntelligence()));
 		WisdomStatText.setText(String.valueOf(Generator.character.getWisdom()));
+		StrengthModText.setText(String.valueOf(Generator.character.getStrMod()));
+		DexterityModText.setText(String.valueOf(Generator.character.getDexMod()));
+		ConstitutionModText.setText(String.valueOf(Generator.character.getConMod()));
+		IntelligenceModText.setText(String.valueOf(Generator.character.getIntMod()));
+		WisdomModText.setText(String.valueOf(Generator.character.getWisMod()));
 		
 	}
 	
