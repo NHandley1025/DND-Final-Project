@@ -12,6 +12,7 @@ public class Barbarian extends Class{
 	
 	public Barbarian() {
 		setSkills(Character.getLevel());
+		
 	}
 	
 	public void setSkills(int level) {
