@@ -305,7 +305,7 @@ public class ManualCharacterController implements Initializable {
 	private TextField AttBonus9;
 
 	@FXML
-	private TextArea StengthStatText;
+	private TextArea StrengthStatText;
 
 	@FXML
 	private TextArea DexterityStatText;
@@ -426,6 +426,12 @@ public class ManualCharacterController implements Initializable {
 	}
 	
 	@FXML
+	public void raceSelctor(ActionEvent event) {
+		CalculateButton.setDisable(false);
+		Generator.character.setRace(setRC());
+	}
+	
+	@FXML
 	public void calculateButton(ActionEvent event) {
 		CalculateButton.setDisable(true);
 		Generator.character.setStrength();
@@ -433,13 +439,12 @@ public class ManualCharacterController implements Initializable {
 		Generator.character.setStrength();
 		Generator.character.setStrength();
 		Generator.character.setMods();
+		StrengthStatText.
 		
 	}
 	
-	@FXML
-	public void saveButton(ActionEvent event) {
-
-		Race race;
+	private Race setRC() {
+		Race race = null;
 		switch (RaceComboBox.getValue()) {
 		case "Dragonborn":
 			race = new Dragonborn();
@@ -466,6 +471,13 @@ public class ManualCharacterController implements Initializable {
 			race = new Tiefling();
 			break;
 		}
+		return race;
+	}
+	
+	@FXML
+	public void saveButton(ActionEvent event) {
+
+
 		Class cl;
 		switch (ClassComboBox.getValue()) {
 

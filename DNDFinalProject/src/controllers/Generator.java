@@ -19,19 +19,11 @@ import tools.Tools;
 public class Generator {
 	public static Character character;
 
-<<<<<<< HEAD
-
 	public static void manualGenerateChar() {
-		character = new Character(null, 0, null, null, null, null, null, false, false, false, false, false, false, false,
-		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 0, 0, 0, 0);
-=======
-	public Character manualGenerateChar() {
 		String[] background = new String[4];
-		Character manualChar = new Character(null, 0, null, background, null, null, null, false, false, false, false, false,
+		character = new Character(null, 0, null, background, null, null, null, false, false, false, false, false,
 				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 				false, false, false, 0, 0, 0, 0);
-		return manualChar;
->>>>>>> 0301e4791a7219501c3e6b66756d9a4d65db4a23
 	}
 
 	public static Character generateRandomChar() {
