@@ -19,10 +19,19 @@ import tools.Tools;
 public class Generator {
 	public static Character character;
 
+<<<<<<< HEAD
 
 	public static void manualGenerateChar() {
 		character = new Character(null, 0, null, null, null, null, null, false, false, false, false, false, false, false,
 		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 0, 0, 0, 0);
+=======
+	public Character manualGenerateChar() {
+		String[] background = new String[4];
+		Character manualChar = new Character(null, 0, null, background, null, null, null, false, false, false, false, false,
+				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+				false, false, false, 0, 0, 0, 0);
+		return manualChar;
+>>>>>>> 0301e4791a7219501c3e6b66756d9a4d65db4a23
 	}
 
 	public static Character generateRandomChar() {
@@ -35,8 +44,9 @@ public class Generator {
 		int randTraits = rand.nextInt();
 		String randName = "???";
 		String playerName = "???";
+		String[] background = new String[4];
 		int randMoney = rand.nextInt(101);
-		Character randomChar = new Character(genRandRace(), randomLevel, genRandClass(), genRandTrait(),
+		Character randomChar = new Character(genRandRace(), randomLevel, genRandClass(), background,
 				genRandEquipment(), randName, playerName, randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
@@ -188,9 +198,9 @@ public class Generator {
 				toolsList[x] = key;
 			}
 		}
-		
+
 		equipment.add(Tools.getToolHash().get(toolsList[randomTools]));
-		
+
 		return equipment;
 	}
 

@@ -12,6 +12,7 @@ public class Barbarian extends Class{
 	
 	public Barbarian() {
 		setSkills(Character.getLevel());
+		Character.setHitDice("1d12");
 	}
 	
 	public void setSkills(int level) {

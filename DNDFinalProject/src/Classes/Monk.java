@@ -1,11 +1,17 @@
 package Classes;
 
+import Player.Character;
 import Skills.Skill;
 import Skills.skills;
 
 public class Monk extends Class{
 	byte ki = 0;
 
+	public Monk() {
+		Character.setHitDice("");
+		setSkills(Character.getLevel());
+	}
+	
 	public void setSkills(int level) {
 		if (level > 3 && getArchetype() == null) {
 			chooseArchetype();
