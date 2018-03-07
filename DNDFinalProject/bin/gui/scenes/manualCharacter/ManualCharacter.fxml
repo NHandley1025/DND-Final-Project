@@ -145,7 +145,7 @@
             <TextField fx:id="AttNameText9" layoutX="441.0" layoutY="1116.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
             <TextField fx:id="AttType9" layoutX="646.0" layoutY="1116.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
             <TextField fx:id="AttBonus9" layoutX="578.0" layoutY="1116.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextArea fx:id="StengthStatText" layoutX="70.0" layoutY="308.0" prefHeight="61.0" prefWidth="84.0" />
+            <TextArea fx:id="StrengthStatText" layoutX="70.0" layoutY="308.0" prefHeight="61.0" prefWidth="84.0" />
             <TextArea fx:id="DexterityStatText" layoutX="71.0" layoutY="453.0" prefHeight="61.0" prefWidth="84.0" />
             <TextArea fx:id="ConstitutionStatText" layoutX="71.0" layoutY="598.0" prefHeight="61.0" prefWidth="84.0" />
             <TextArea fx:id="IntelligenceStatText" layoutX="70.0" layoutY="744.0" prefHeight="61.0" prefWidth="84.0" />
