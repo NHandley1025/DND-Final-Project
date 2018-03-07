@@ -20,7 +20,8 @@ public class Generator {
 	public static Character character;
 
 	public Character manualGenerateChar() {
-		Character manualChar = new Character(null, 0, null, null, null, null, null, false, false, false, false, false,
+		String[] background = new String[4];
+		Character manualChar = new Character(null, 0, null, background, null, null, null, false, false, false, false, false,
 				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 				false, false, false, 0, 0, 0, 0);
 		return manualChar;

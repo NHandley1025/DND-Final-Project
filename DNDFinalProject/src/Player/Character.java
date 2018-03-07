@@ -156,7 +156,7 @@ public class Character {
 	private static Race race;
 	public static int level;
 	private Class characterClass;
-	private String hitDice;
+	private static String hitDice;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
 	private static ArrayList<String> proficiencies = new ArrayList<>();
@@ -761,14 +761,12 @@ public class Character {
 
 
 
-	public String getHitDice() {
+	public static String getHitDice() {
 		return hitDice;
 	}
 
-
-
-	public void setHitDice(String hitDice) {
-		this.hitDice = hitDice;
+	public static void setHitDice(String hitDie) {
+		hitDice = hitDie;
 	}
 	
 }

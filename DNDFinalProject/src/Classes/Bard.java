@@ -1,10 +1,16 @@
 package Classes;
 
+import Player.Character;
 import Skills.Skill;
 import Skills.skills;
 
 public class Bard extends Class {
 
+	public Bard() {
+		setSkills(Character.getLevel());
+		Character.setHitDice("1d12");
+	}
+	
 	public void setSkills(int level) {
 		if (level > 3 && getArchetype() == null) {
 			chooseArchetype();

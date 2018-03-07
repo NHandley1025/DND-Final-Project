@@ -10,6 +10,7 @@ public class Cleric extends Class {
 		super();
 		setSkills(Character.getLevel());
 		setProficiencies();
+		Character.setHitDice("");
 	}
 
 	public void setSkills(int level) {

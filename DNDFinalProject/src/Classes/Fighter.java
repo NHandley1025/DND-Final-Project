@@ -8,6 +8,7 @@ public class Fighter extends Class {
 
 	public Fighter() {
 		setSkills(Character.getLevel());
+		Character.setHitDice("");
 	}
 
 	public void setSkills(int level) {
