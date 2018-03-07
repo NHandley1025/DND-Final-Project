@@ -5,7 +5,7 @@ import Player.Character;
 public class Druid extends Class{
 
 	public Druid() {
-		Character.setHitDice("");
+		Character.setHitDice("1d8");
 	}
 	
 }
