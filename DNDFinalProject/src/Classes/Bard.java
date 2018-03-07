@@ -1,15 +1,22 @@
 package Classes;
 
+import Player.Character;
 import Skills.Skill;
 import Skills.skills;
 
 public class Bard extends Class {
 
+	public Bard() {
+		setSkills(Character.getLevel());
+		Character.setHitDice("1d8");
+	}
+	
 	public void setSkills(int level) {
 		if (level > 3 && getArchetype() == null) {
 			chooseArchetype();
 		}
 		switch (level) {
+
 		case 20: addSkill(skills.superiorInspiration);
 		
 		case 19: //ability score improvement
@@ -57,12 +64,11 @@ public class Bard extends Class {
 		
 		case 1: addSkill(skills.spellCasting);
 		addSkill(skills.bardicInspiration);
-
 		}
-		
 	}
 
+
 	private void chooseArchetype() {
-		
+
 	}
 }

@@ -2,9 +2,15 @@ package gui.Scenes.manualCharacter;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import Races.*;
+import Traits.trait;
+import controllers.Generator;
+import Classes.*;
+import Classes.Class;
+import Items.Item;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -154,22 +160,20 @@ public class ManualCharacterController implements Initializable {
 	private TextArea EquipmentText;
 
 	@FXML
-	private TextField EqCpText;
+	private TextField CpText;
 
 	@FXML
-	private TextField EqSpText;
+	private TextField SpText;
+
 
 	@FXML
-	private TextField EqEpText;
+	private TextField GpText;
 
 	@FXML
-	private TextField EqGpText;
+	private TextField PpText;
 
 	@FXML
-	private TextField EqPpText;
-
-	@FXML
-	private TextArea PersonalityText;
+	private TextArea TraitText;
 
 	@FXML
 	private TextArea IdealsText;
@@ -401,6 +405,9 @@ public class ManualCharacterController implements Initializable {
 
 	@FXML
 	private Button ExitButton;
+	
+	@FXML
+	private Button CalculateButton;
 
 	@FXML
 	public void exitButton(ActionEvent event) {
@@ -417,11 +424,23 @@ public class ManualCharacterController implements Initializable {
 		stage.setScene(scene);
 		stage.show();
 	}
-
+	
+	@FXML
+	public void calculateButton(ActionEvent event) {
+		CalculateButton.setDisable(true);
+		Generator.character.setStrength();
+		Generator.character.setDexterity();
+		Generator.character.setStrength();
+		Generator.character.setStrength();
+		Generator.character.setMods();
+		
+	}
+	
 	@FXML
 	public void saveButton(ActionEvent event) {
+
 		Race race;
-		switch(RaceComboBox.getValue()) {
+		switch (RaceComboBox.getValue()) {
 		case "Dragonborn":
 			race = new Dragonborn();
 			break;
@@ -438,20 +457,104 @@ public class ManualCharacterController implements Initializable {
 			race = new Halfling();
 			break;
 		case "Half Orc":
+			race = new HalfOrc();
 			break;
 		case "Human":
+			race = new Human();
 			break;
 		case "Tiefling":
+			race = new Tiefling();
 			break;
 		}
+		Class cl;
+		switch (ClassComboBox.getValue()) {
+
+		case "Barbarian":
+			cl = new Barbarian();
+			break;
+		case "Bard":
+			cl = new Bard();
+		case "Cleric":
+			cl = new Cleric();
+			break;
+		case "Druid":
+			cl = new Druid();
+			break;
+		case "Fighter":
+			cl = new Fighter();
+			break;
+		case "Monk":
+			cl = new Fighter();
+			break;
+		case "Paladin":
+			cl = new Paladin();
+			break;
+		case "Ranger":
+			cl = new Ranger();
+		case "Rogue":
+			cl = new Rogue();
+			break;
+		case "Sorcerer":
+			cl = new Sorcerer();
+			break;
+		case "Warlock":
+			cl = new Warlock();
+			break;
+		case "Wizard":
+			cl = new Wizard();
+			break;
+		}
+		trait trt;
+		String[] keys = TraitText.getText().split("\n");
+		
+		String[] items = EquipmentText.getText().split("\n");
+		ArrayList<Item> weapons = null;
+		for(String item : items) {
+			String[] weapon = item.split(":");
+			weapons.add(new Item(weapon[0], weapon[1], weapon[2], Integer.parseInt(weapon[3])));
+		}
+		String CharName = CharNameText.getText();
+		String PlayerName = NameText.getText();
+		Boolean isAcro = AcrobaticsCheck.isSelected();
+		Boolean isAnimal = AnimalCheck.isSelected();
+		Boolean isArcana = ArcanaCheck.isSelected();
+		Boolean isAthletic = AthleticsCheck.isSelected();
+		Boolean isDeception = DecptionCheck.isSelected();
+		Boolean isHistory = HistoryCheck.isSelected();
+		Boolean isInsight = InsightCheck.isSelected();
+		Boolean isIntimidation = IntimidationCheck.isSelected();
+		Boolean isInvestigation = InvestigationCheck.isSelected();
+		Boolean isMedicine = MedicineCheck.isSelected();
+		Boolean isNature = NatureCheck.isSelected();
+		Boolean isPerception = PerceptionCheck.isSelected();
+		Boolean isPerformance = PerformanceCheck.isSelected();
+		Boolean isPersuasian = PersuasionCheck.isSelected();
+		Boolean isReligion = ReligionCheck.isSelected();
+		Boolean isSleight = SleightCheck.isSelected();
+		Boolean isStealth = StealthCheck.isSelected();
+		Boolean isSurvival = SurvivalCheck.isSelected();
+		Boolean isStrength = StrengthCheck.isSelected();
+		Boolean isDexterity = DexterityCheck.isSelected();
+		Boolean isConstitution = ConstitutionCheck.isSelected();
+		Boolean isIntelligence = IntelligenceCheck.isSelected();
+		Boolean isWisdom = WisdomCheck.isSelected();
+		Boolean isCharisma = CharismaCheck.isSelected();
+		int cp = Integer.parseInt(CpText.getText());
+		int sp = Integer.parseInt(SpText.getText());
+		int gp = Integer.parseInt(GpText.getText());
+		int pp = Integer.parseInt(PpText.getText());
+
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		Generator.manualGenerateChar();
 		RaceComboBox.setValue("Race");
 		ClassComboBox.setValue("Class");
-		RaceComboBox.getItems().addAll("Dragonborn", "Dwarf", "Elf", "Half Elf", "Halfling", "Half Orc", "Human", "Tiefling");
-		ClassComboBox.getItems().addAll("Archetype", "Barbarian", "Bard", "Caster", "Clerk", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
+		RaceComboBox.getItems().addAll("Dragonborn", "Dwarf", "Elf", "Half Elf", "Halfling", "Half Orc", "Human",
+				"Tiefling");
+		ClassComboBox.getItems().addAll("Barbarian", "Bard", "Caster", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
+				"Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
 
 	}
 

@@ -16,7 +16,7 @@ public class Character {
 
 	public static int[] raceMods = new int[6];
 
-	public Character(Race race, int level, Class characterClass, trait traits,
+	public Character(Race race, int level, Class characterClass, String[] background,
 			ArrayList<Item> equipment, String charactername, String playerName, boolean isProAcrobatics,
 			boolean isProAnimalHandling, boolean isProArcana, boolean isProAthletics, boolean isProDeception,
 			boolean isProHistory, boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation,
@@ -34,7 +34,6 @@ public class Character {
 		setConstitution();
 		setWisdom();
 		setCharisma();
-		setMods();
 		setTraits(traits);
 		setEquipment(equipment);
 		setEquipArmor(equipArmor);
@@ -156,6 +155,7 @@ public class Character {
 	private static Race race;
 	public static int level;
 	private Class characterClass;
+	private static String hitDice;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
 	private static ArrayList<String> proficiencies = new ArrayList<>();
@@ -712,7 +712,7 @@ public class Character {
 		this.isProSurvival = isProSurvival;
 	}
 	
-	public int rollStats() {
+	public static int rollStats() {
 		int roll1 = die.roll();
 		int roll2 = die.roll();
 		int roll3 = die.roll();
@@ -756,6 +756,16 @@ public class Character {
 	
 	public static void addProficiency(String prof) {
 		proficiencies.add(prof);
+	}
+
+
+
+	public static String getHitDice() {
+		return hitDice;
+	}
+
+	public static void setHitDice(String hitDie) {
+		hitDice = hitDie;
 	}
 	
 }
