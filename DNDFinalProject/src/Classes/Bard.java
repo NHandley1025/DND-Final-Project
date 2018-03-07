@@ -8,7 +8,7 @@ public class Bard extends Class {
 
 	public Bard() {
 		setSkills(Character.getLevel());
-		Character.setHitDice("1d8");
+		Character.setHitDice("1d12");
 	}
 	
 	public void setSkills(int level) {
@@ -16,16 +16,15 @@ public class Bard extends Class {
 			chooseArchetype();
 		}
 		switch (level) {
-
 		case 20: addSkill(skills.superiorInspiration);
 		
-		case 19: //ability score improvement
+		case 19: skills.AbilityScoreImprovement();
 			
 		case 18: addSkill(skills.magicalSecrets);
 		
 		case 17: addSkill(skills.songOfRest);
 		
-		case 16: // ability score improvement
+		case 16: skills.AbilityScoreImprovement();
 			
 		case 15: addSkill(skills.bardicInspiration);
 		
@@ -62,11 +61,18 @@ public class Bard extends Class {
 		case 2: addSkill(skills.jackOfAllTrades);
 		addSkill(skills.songOfRest);
 		
-		case 1: addSkill(skills.spellCasting);
+		case 1: addSkill(skills.spellCastingBard);
 		addSkill(skills.bardicInspiration);
 		}
+
 	}
 
+	private void addSkill(Skill... skills) {
+		for (Skill skill : skills)
+			if (!classSkills.contains(skill)) {
+				classSkills.add(skill);
+			}
+	}
 
 	private void chooseArchetype() {
 

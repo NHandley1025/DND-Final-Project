@@ -9,6 +9,7 @@ public class Archetypes {
 	Archetype CollegeOfLore = new Archetype("College of Lore");
 	Archetype CollegeOfValor = new Archetype("College of Valor");
 	// Cleric
+	
 	Archetype Knowledge = new Archetype("Divine Domain of Knowledge");
 	Archetype Life = new Archetype("Divine Domain of Life");
 	Archetype Light = new Archetype("Divine Domain of Light");
