@@ -41,7 +41,14 @@ public class Backgrounds {
 	
 	public static <T extends trait> void loadFile(String filePath, T type) {
 		try {
-			lib.ProgramUtil.readFile(filePath);
+			String file = lib.ProgramUtil.readFile(filePath);
+			String[] lines = file.split("\n");
+			for(String line: lines) {
+				String[] parts = line.split("::");
+				trait t = new trait(parts[1], parts[2]);
+				T item = (T)t;
+				traits.put(new TraitKey(parts[0], parts[1]), item);
+			}
 		}catch(FileNotFoundException fnfe) {
 			
 		}catch(IOException ioe) {

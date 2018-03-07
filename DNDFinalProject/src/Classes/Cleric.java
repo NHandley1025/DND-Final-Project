@@ -72,13 +72,6 @@ public class Cleric extends Class {
 		}
 	}
 
-	private void addSkill(Skill... skills) {
-		for (Skill skill : skills)
-			if (!classSkills.contains(skill)) {
-				classSkills.add(skill);
-			}
-	}
-
 	private void setProficiencies() {
 		Character.addProficiency("Light Armor");
 		Character.addProficiency("Medium Armor");

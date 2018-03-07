@@ -31,4 +31,11 @@ public class Class {
 		this.archetype=archetype;
 	}
 	
+	protected void addSkill(Skill... skills) {
+		for(Skill skill : skills)
+			if(!classSkills.contains(skill)) {
+				classSkills.add(skill);
+			}
+		}
+	
 }
