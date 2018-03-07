@@ -10,7 +10,11 @@ public class Cleric extends Class {
 		super();
 		setSkills(Character.getLevel());
 		setProficiencies();
+<<<<<<< HEAD
 		Character.setHitDice("1d10");
+=======
+		Character.setHitDice("1d8");
+>>>>>>> 164a62ed5f4b197ff09c1fa327ddc993355a73cb
 	}
 
 	public void setSkills(int level) {
@@ -71,13 +75,6 @@ public class Cleric extends Class {
 		default:
 			break;
 		}
-	}
-
-	private void addSkill(Skill... skills) {
-		for (Skill skill : skills)
-			if (!classSkills.contains(skill)) {
-				classSkills.add(skill);
-			}
 	}
 
 	private void setProficiencies() {

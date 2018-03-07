@@ -64,29 +64,57 @@ public class skills {
 
 	
 	//bard
-	public static final Skill superiorInspiration = new Skill("Superior Inspiration", "");
-	public static final Skill bardicInspiration = new Skill("Bardic Inspiration", "");
-	public static final Skill magicalSecrets = new Skill("Magical Secrets", "");
-	public static final Skill songOfRest = new Skill("Song of Rest", "");
+	public static final Skill superiorInspiration = new Skill("Superior Inspiration", "when you roll initiative and have no uses of Bardic Inspiration left, you regain one use.\r\n" + 
+			"");
+	public static final Skill bardicInspiration = new Skill("Bardic Inspiration", "You can inspire others through stirring words or music. To do so, you use a Bonus Action on Your Turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.\r\n" + 
+			"\r\n" + 
+			"Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, Attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.\r\n" + 
+			"\r\n" + 
+			"You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a Long Rest.\r\n" + 
+			"\r\n" + 
+			"Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level.\r\n" + 
+			"");
+	
+	public static final Skill magicalSecrets = new Skill("Magical Secrets", "You have plundered magical knowledge from a wide spectrum of disciplines. Choose two Spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.\r\n" + 
+			"\r\n" + 
+			"The chosen Spells count as bard Spells for you and are included in the number in the Spells Known column of the Bard table.\r\n" + 
+			"\r\n" + 
+			"You learn two additional Spells from any class at 14th level and again at 18th level.\r\n" + 
+			"");
+	public static final Skill songOfRest = new Skill("Song of Rest", "you can use soothing music or oration to help revitalize your wounded allies during a Short Rest. If you or any friendly creatures who can hear your performance regain hit points by spending Hit Dice at the end of the Short Rest, each of those creatures regains an extra 1d6 hit points.\r\n" + 
+			"\r\n" + 
+			"The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level.");
 	public static final Skill bardCollegeFeature = new Skill("Bard College Feature", "");
-	public static final Skill counterCharm = new Skill("Counter Charm", "");
-	public static final Skill fontOfInspiration = new Skill("Font of Inspiration", "");
-	public static final Skill jackOfAllTrades = new Skill("Jack of All Trades", "");
+	public static final Skill counterCharm = new Skill("Counter Charm", "you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being Frightened or Charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are Incapacitated or silenced or if you voluntarily end it (no action required).");
+	public static final Skill fontOfInspiration = new Skill("Font of Inspiration", "you regain all of your expended uses of Bardic Inspiration when you finish a short or Long Rest.");
+	public static final Skill jackOfAllTrades = new Skill("Jack of All Trades", "You can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.\r\n" + 
+			"");
 	public static final Skill expertise = new Skill("Expertise", "");
 	public static final Skill bardCollege = new Skill("Bard College", "");
+	public static final Skill spellCastingBard = new Skill("Spell Casting", "");
 
 	
 	//Cleric
 	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
 	public static final Skill DivineDomain = new Skill("Divine Domain", "");
-	public static final Skill ChannelDivinity = new Skill("Channel Divinity", "");
-	public static final Skill DivineIntervention = new Skill("Divine Domain", "");
+	public static final Skill ChannelDivinity = new Skill("Channel Divinity", "you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.\r\n" + 
+			"\r\n" + 
+			"When you use your Channel Divinity, you choose which effect to create. You must then finish a short or Long Rest to use your Channel Divinity again.\r\n" + 
+			"\r\n" + 
+			"Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.\r\n" + 
+			"\r\n" + 
+			"Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or Long Rest, you regain your expended uses.\r\n" + 
+			"");
+	public static final Skill DivineIntervention = new Skill("Divine Intervention", "you can call on your deity to intervene on your behalf when your need is great.\r\n" + 
+			"\r\n" + 
+			"Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a Long Rest.\r\n" + 
+			"");
 	public static final Skill DestroyUndeadCR0 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
 	public static final Skill DestroyUndeadCR1 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
 	public static final Skill DestroyUndeadCR2 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
 	public static final Skill DestroyUndeadCR3 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
 	public static final Skill DestroyUndeadCR4 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
-	public static final Skill DivineInterventionImprovement = new Skill("Divine Intervention", "");
+	public static final Skill DivineInterventionImprovement = new Skill("Divine Intervention", "Your call for intervention succeeds automatically, no roll required");
 	public static void chooseDivineDomainFeature() {
 		
 	}
@@ -138,7 +166,7 @@ public class skills {
 	public static final Skill hideInPlainSight = new Skill("Hide in plain Sight", "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, Plants, soot, and other naturally occurring materials with which to create your camouflage. Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit.");
 	public static final Skill vanish = new Skill("Vanish", "Starting at 14th level, you can use the Hide action as a Bonus Action on Your Turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.");
 	public static final Skill feralSenses = new Skill("Feral Senses", "you gain preternatural senses that help you fight creatures you can't see. When you Attack a creature you can't see, your inability to see it doesn't impose disadvantage on your Attack rolls against it. You are also aware of the location of any Invisible creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't Blinded or Deafened.");
-	public static final Skill foeSlayer = new Skill("Foe Slayer", "");
+	public static final Skill foeSlayer = new Skill("Foe Slayer", "You become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the Attack roll or the damage roll of an Attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.");
 	
 	//Rogue
 	public static final Skill sneakAttack = new Skill("Sneak Attack", "");
@@ -212,24 +240,5 @@ public class skills {
 	public static final Skill Retaliation = new Skill ("Retaliation", "");
 	public static final Skill IndomitableFight = new Skill ("Indomidable Fight", "");
 	public static final Skill PrimalChampion = new Skill ("Primal Champion", "");
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
