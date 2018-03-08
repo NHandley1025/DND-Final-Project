@@ -52,7 +52,7 @@ public class Monk extends Class{
 			
 			case 6: addSkill(skills.kiEmpoweredStrike);
 			
-			case 5:addSkill(skills.extraAttack);
+			case 5:addSkill(skills.ExtraAttack);
 			addSkill(skills.stunningStrike);
 			
 			case 4: addSkill(skills.slowFall);
@@ -60,10 +60,9 @@ public class Monk extends Class{
 			
 			case 3: addSkill(skills.deflectMissile);
 			
-			case 2: addSkill(skills.unArmoredMovement);
+			case 2: addSkill(skills.unArmoredMovement, skills.ki);
 			
-			case 1: addSkill(skills.UnArmoredDefense);
-					addSkill(skills.martialArts);
+			case 1: addSkill(skills.UnArmoredDefense, skills.martialArts);
 			default: break;
 			}
 			
