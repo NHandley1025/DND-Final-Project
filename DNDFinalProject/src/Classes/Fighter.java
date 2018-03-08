@@ -7,6 +7,7 @@ public class Fighter extends Class {
 	
 	public Fighter() {
 		setSkills(Character.getLevel());
+		setProficiencies();
 		Character.setHitDice("1d10");
 	}
 
@@ -63,6 +64,13 @@ public class Fighter extends Class {
 
 	private void chooseArchetype() {
 
+	}
+	
+	private void setProficiencies() {
+		Character.addProficiency("All Armor");
+		Character.addProficiency("Shields");
+		Character.addProficiency("Simple Weapons");
+		Character.addProficiency("Martial Weapons");
 	}
 
 }

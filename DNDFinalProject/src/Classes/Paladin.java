@@ -7,9 +7,12 @@ public class Paladin extends Class{
 	
 	public Paladin() {
 		Character.setHitDice("1d10");
+		setProficiencies();
 	}
 	
 	public void setSkills(int level){
+		super.setProficiencyByLevel(level);
+		super.improveAbilityScore(level);
 		switch(level) {
 		case 20: //sacred oath feature
 		case 19: skills.AbilityScoreImprovement();
@@ -34,6 +37,13 @@ public class Paladin extends Class{
 		case 1:addSkill(skills.divineSense, skills.layOnHands);
 		default: break;
 		}
+	}
+	
+	private void setProficiencies() {
+		Character.addProficiency("All Armor");
+		Character.addProficiency("Shields");
+		Character.addProficiency("Simple Weapons");
+		Character.addProficiency("Martial Weapons");
 	}
 
 }
