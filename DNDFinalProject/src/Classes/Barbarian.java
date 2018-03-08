@@ -55,7 +55,7 @@ public class Barbarian extends Class{
 		case 6:archetypeCheck(skills.TotemWarrior2, skills.MindlessRage);
 		setRagesPerDay((byte) 4);
 		
-		case 5:addSkill(skills.extraAttack, skills.FastMovement);
+		case 5:addSkill(skills.ExtraAttack, skills.FastMovement);
 		
 		case 4:skills.AbilityScoreImprovement();
 		

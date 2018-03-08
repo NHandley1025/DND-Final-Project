@@ -91,7 +91,6 @@ public class skills {
 			"");
 	public static final Skill expertise = new Skill("Expertise", "");
 	public static final Skill bardCollege = new Skill("Bard College", "");
-	public static final Skill spellCastingBard = new Skill("Spell Casting", "");
 
 	
 	//Cleric
@@ -143,13 +142,13 @@ public class skills {
 	public static final Skill perfectSelf = new Skill("Perfect Self", "When you roll for initiative and have no Ki points remaining, you regain 4 Ki points.");
 	
 	//Paladin
-	public static final Skill divineSence = new Skill("Divine Sence", "As an action, you can open your awareness to detect such forces. Until the end of your awareness to detect such forces. Until the end of your next turn, you know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecreated or desecrated, as with the hallow spell. You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.");
+	public static final Skill divineSense = new Skill("Divine Sense", "As an action, you can open your awareness to detect such forces. Until the end of your awareness to detect such forces. Until the end of your next turn, you know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecreated or desecrated, as with the hallow spell. You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.");
 	public static final Skill layOnHands = new Skill("Lay on Hands", "Your blessed touch can heal wounds. You have a pool of Healing power that replenishes when you take a Long Rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5. As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool. Alternatively, you can expend 5 hit points from your pool of Healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple Diseases and neutralize multiple Poisons with a single use of Lay on Hands, expending hit points separately for each one. This feature has no effect on Undead and constructs.");
 	public static final Skill fightingStyle = new Skill("Fighting Style", "You adopt a style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.");
 	public static final Skill divineSmite = new Skill("Divine Smite", "While you are wearing armor, you gain a +1 bonus to AC.");
 	public static final Skill divineHealth = new Skill("Divine Health", "when you hit a creature with a melee weapon Attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each Spell Level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an Undead or a fiend.");
 	public static final Skill sacredOath = new Skill("Sacred Oath", "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose an oath, such as the Oath of Devotion.");
-	//public static final Skill extraAttack1 = new Skill("Extra Attack", "you can Attack twice, instead of once, whenever you take the Attack action on Your Turn.");
+	public static final Skill auraOfProtection = new Skill("Aura of Protection", "Whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus. At 18th level, the range of this aura increases to 30 feet.");
 	public static final Skill sacredOathFeature = new Skill("Sacred Oath Feature", "");
 	public static final Skill auraOfCourage = new Skill("Aura of Courage", "Starting at 10th level, you and friendly creatures within 10 feet of you can't be Frightened while you are conscious. At 18th level, the range of this aura increases to 30 feet.");
 	public static final Skill improvedDivineSmite = new Skill("", "you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an Attack, you add this damage to the extra damage of your Divine Smite.");
@@ -260,5 +259,6 @@ public class skills {
 	public static final Skill Retaliation = new Skill ("Retaliation", "when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon Attack against that creature.");
 	public static final Skill IndomitableFight = new Skill ("Indomidable Fight", "");
 	public static final Skill PrimalChampion = new Skill ("Primal Champion", "you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.");
+
 	
 }
