@@ -29,7 +29,7 @@ public class Paladin extends Class{
 		case 5:addSkill(skills.ExtraAttack);
 		case 4:skills.AbilityScoreImprovement();
 		case 3:addSkill(skills.divineHealth, skills.sacredOath);
-		case 2:addSkill(skills.spellcasting, skills.divineSmite);
+		case 2:addSkill(skills.SpellCasting, skills.divineSmite);
 		addSkill(skills.fightingStyle);
 		case 1:addSkill(skills.divineSense, skills.layOnHands);
 		default: break;

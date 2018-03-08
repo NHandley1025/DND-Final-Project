@@ -61,7 +61,7 @@ public class Bard extends Class {
 		case 2: addSkill(skills.jackOfAllTrades);
 		addSkill(skills.songOfRest);
 		
-		case 1: addSkill(skills.spellCastingBard);
+		case 1: addSkill(skills.SpellCasting);
 		addSkill(skills.bardicInspiration);
 		}
 
