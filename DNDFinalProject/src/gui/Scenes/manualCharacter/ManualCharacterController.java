@@ -24,9 +24,14 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class ManualCharacterController implements Initializable {
+	
+	@FXML
+	private ImageView Image;
+	
 	@FXML
 	private Spinner<Integer> LvlSpinner;
 
@@ -335,7 +340,7 @@ public class ManualCharacterController implements Initializable {
 	private TextField ArcanaText;
 
 	@FXML
-	private TextField AtheticsText;
+	private TextField AthleticsText;
 
 	@FXML
 	private TextField DeceptionText;
@@ -380,22 +385,22 @@ public class ManualCharacterController implements Initializable {
 	private TextField SurvivalText;
 
 	@FXML
-	private TextField AcrobatText1;
+	private TextField StrengthText;
 
 	@FXML
-	private TextField AnimalText1;
+	private TextField DexterityText;
 
 	@FXML
-	private TextField ArcanaText1;
+	private TextField ConstitutionText;
 
 	@FXML
-	private TextField AtheticsText1;
+	private TextField IntelligenceText;
+	
+	@FXML
+	private TextField PassiveWisdomText;
 
 	@FXML
-	private TextField DeceptionText1;
-
-	@FXML
-	private TextField HistoryText1;
+	private TextField CharismaText;
 
 	@FXML
 	private Button SaveButton;
@@ -439,17 +444,45 @@ public class ManualCharacterController implements Initializable {
 		Generator.character.setStrength();
 		Generator.character.setStrength();
 		Generator.character.setMods();
+		Generator.character.setTraits();
 		StrengthStatText.setText(String.valueOf(Generator.character.getStrength()));
 		DexterityStatText.setText(String.valueOf(Generator.character.getDexterity()));
 		ConstitutionStatText.setText(String.valueOf(Generator.character.getConstitution()));
 		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntelligence()));
 		WisdomStatText.setText(String.valueOf(Generator.character.getWisdom()));
+		CharismaStatText.setText(String.valueOf(Generator.character.getCharisma()));
+		
 		StrengthModText.setText(String.valueOf(Generator.character.getStrMod()));
 		DexterityModText.setText(String.valueOf(Generator.character.getDexMod()));
 		ConstitutionModText.setText(String.valueOf(Generator.character.getConMod()));
 		IntelligenceModText.setText(String.valueOf(Generator.character.getIntMod()));
 		WisdomModText.setText(String.valueOf(Generator.character.getWisMod()));
+		CharismaModText.setText(String.valueOf(Generator.character.getChaMod()));
 		
+		StrengthText.setText(String.valueOf(Generator.character.getStrength()));
+		DexterityText.setText(String.valueOf(Generator.character.getDexterity()));
+		ConstitutionText.setText(String.valueOf(Generator.character.getConstitution()));
+		IntelligenceText.setText(String.valueOf(Generator.character.getIntelligence()));
+		WisdomText.setText(String.valueOf(Generator.character.getWisdom()));
+		CharismaText.setText(String.valueOf(Generator.character.getCharisma()));
+		AcrobatText.setText(String.valueOf(Generator.character.getAcrobatics()));
+		AnimalText.setText(String.valueOf(Generator.character.getAnimalHandling()));
+		ArcanaText.setText(String.valueOf(Generator.character.getArcana()));
+		AthleticsText.setText(String.valueOf(Generator.character.getAthletics()));
+		DeceptionText.setText(String.valueOf(Generator.character.getDeception()));
+		HistoryText.setText(String.valueOf(Generator.character.getHistory()));
+		InsightText.setText(String.valueOf(Generator.character.getInsight()));
+		IntimidationText.setText(String.valueOf(Generator.character.getIntimidation()));
+		InvestigationText.setText(String.valueOf(Generator.character.getInvestigation()));
+		MedicineText.setText(String.valueOf(Generator.character.getMedicine()));
+		NatureText.setText(String.valueOf(Generator.character.getNature()));
+		PerceptionText.setText(String.valueOf(Generator.character.getPerception()));
+		PerformanceText.setText(String.valueOf(Generator.character.getPerformance()));
+		PersuasionText.setText(String.valueOf(Generator.character.getPersuasion()));
+		ReligionText.setText(String.valueOf(Generator.character.getReligion()));
+		SleightText.setText(String.valueOf(Generator.character.getSleightOfHand()));
+		StealthText.setText(String.valueOf(Generator.character.getStealth()));
+		SurvivalText.setText(String.valueOf(Generator.character.getSurvival()));
 	}
 	
 	private Race setRC() {
