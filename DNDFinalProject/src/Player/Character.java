@@ -97,7 +97,7 @@ public class Character {
 			Perception += proficiencyBonus;
 		}
 		if(isProPerformance) {
-			Performance += proficiencyBonus;
+			setPerformance(getPerformance() + proficiencyBonus);
 		}
 		if(isProPersuasion) {
 			Persuasion += proficiencyBonus;
@@ -115,13 +115,13 @@ public class Character {
 			Survival += proficiencyBonus;
 		}
 		if(isProStr) {
-			strSaving += proficiencyBonus;
+			setStrSaving(getStrSaving() + proficiencyBonus);
 		}
 		if(isProDex) {
 			dexSaving += proficiencyBonus;
 		}
 		if(isProInt) {
-			intSaving += proficiencyBonus;
+			setIntSaving(getIntSaving() + proficiencyBonus);
 		}
 		if(isProCon) {
 			conSaving += proficiencyBonus;
@@ -129,9 +129,7 @@ public class Character {
 		if(isProWis) {
 			wisSaving += proficiencyBonus;
 		}
-		if(isProCha) {
-			chaSaving += proficiencyBonus;
-		}
+		
 	}
 
 
@@ -152,13 +150,14 @@ public class Character {
 		chaMod = baseMods[5] += raceMods[5];
 	}
 	
-	private static Race race;
-	public static int level;
+	private  Race race;
+	public  int level;
 	private Class characterClass;
 	private static String hitDice;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
 	private static ArrayList<String> proficiencies = new ArrayList<>();
+	private static ArrayList<String> languages = new ArrayList<>();
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
 	private String charactername;
 	private String playerName;
@@ -236,11 +235,128 @@ public class Character {
 	private int proficiencyBonus;
 	private int Initiative = dexMod;
 	
+	public void setTraits() {
+		Acrobatics = dexMod;
+		AnimalHandling = wisMod;
+		Arcana = intMod;
+		Athletics = strMod;
+		Deception = chaMod;
+		History = intMod;
+		Insight = wisMod;
+		Intimidation = chaMod;
+		Investigation = intMod;
+		Medicine = wisMod;
+		Nature = intMod;
+		Perception = wisMod;
+		Performance = chaMod;
+		Persuasion = chaMod;
+		Religion = intMod;
+		SleightOfHand = dexMod;
+		Stealth = dexMod;
+		Survival = wisMod;
+	}
+	
+	public int getDexSaving() {
+		return dexSaving;
+	}
+
+
+
+	public void setDexSaving(int dexSaving) {
+		this.dexSaving = dexSaving;
+	}
+
+
+
+	public boolean isProDex() {
+		return isProDex;
+	}
+
+
+
+	public void setProDex(boolean isProDex) {
+		this.isProDex = isProDex;
+	}
+
+
+
+	public int getConSaving() {
+		return conSaving;
+	}
+
+
+
+	public void setConSaving(int conSaving) {
+		this.conSaving = conSaving;
+	}
+
+
+
+	public boolean isProCon() {
+		return isProCon;
+	}
+
+
+
+	public void setProCon(boolean isProCon) {
+		this.isProCon = isProCon;
+	}
+
+
+
+	public int getWisSaving() {
+		return wisSaving;
+	}
+
+
+
+	public void setWisSaving(int wisSaving) {
+		this.wisSaving = wisSaving;
+	}
+
+
+
+	public boolean isProWis() {
+		return isProWis;
+	}
+
+
+
+	public void setProWis(boolean isProWis) {
+		this.isProWis = isProWis;
+	}
+
+
+
+	public int getChaSaving() {
+		return chaSaving;
+	}
+
+
+
+	public void setChaSaving(int chaSaving) {
+		this.chaSaving = chaSaving;
+	}
+
+
+
+	public boolean isProCha() {
+		return isProCha;
+	}
+
+
+
+	public void setProCha(boolean isProCha) {
+		this.isProCha = isProCha;
+	}
+
+
+
 	public int getInitiativa() {
 		return Initiative;
 	}
 
-	public static Race getRace() {
+	public Race getRace() {
 		return race;
 	}
 
@@ -568,7 +684,7 @@ public class Character {
 		this.level = level;
 	}
 
-	public static int getLevel() {
+	public int getLevel() {
 		return level;
 	}
 	
@@ -766,6 +882,81 @@ public class Character {
 
 	public static void setHitDice(String hitDie) {
 		hitDice = hitDie;
+	}
+
+
+
+
+	public static ArrayList<String> getLanguages() {
+		return languages;
+	}
+
+	public int getPerformance() {
+		return Performance;
+
+	}
+
+
+
+	public static void setLanguages(ArrayList<String> languages) {
+		Character.languages = languages;
+	}
+	
+	public static void addLanguage(String language) {
+		languages.add(language);
+	}
+
+	public void setPerformance(int performance) {
+		Performance = performance;
+
+	}
+
+
+
+	public int getStrSaving() {
+		return strSaving;
+	}
+
+
+
+	public void setStrSaving(int strSaving) {
+		this.strSaving = strSaving;
+	}
+
+
+
+	public boolean isProStr() {
+		return isProStr;
+	}
+
+
+
+	public void setProStr(boolean isProStr) {
+		this.isProStr = isProStr;
+	}
+
+
+
+	public int getIntSaving() {
+		return intSaving;
+	}
+
+
+
+	public void setIntSaving(int intSaving) {
+		this.intSaving = intSaving;
+	}
+
+
+
+	public boolean isProInt() {
+		return isProInt;
+	}
+
+
+
+	public void setProInt(boolean isProInt) {
+		this.isProInt = isProInt;
 	}
 	
 }

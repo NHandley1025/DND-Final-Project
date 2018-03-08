@@ -19,6 +19,11 @@
    <content>
       <Pane prefHeight="1600.0" prefWidth="1200.0">
          <children>
+            <TextField fx:id="PassiveWisdomText" alignment="CENTER" layoutX="65.0" layoutY="1195.0" prefHeight="34.0" prefWidth="39.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
             <ImageView fx:id="Image" fitHeight="1600.0" fitWidth="1200.0">
                <image>
                   <Image url="@../../../../../../../DnD_5E_CharacterSheet%20-%20Form%20Fillable-page-001.jpg" />
@@ -29,13 +34,13 @@
             <TextField fx:id="NameText" alignment="CENTER" layoutX="882.0" layoutY="102.0" prefHeight="25.0" prefWidth="232.0" promptText="Name" />
             <TextField fx:id="AllignmentText" alignment="CENTER" layoutX="691.0" layoutY="156.0" prefHeight="25.0" prefWidth="192.0" promptText="Alignment" />
             <TextField fx:id="XpText" alignment="CENTER" layoutX="883.0" layoutY="156.0" prefHeight="25.0" prefWidth="231.0" promptText="XP" />
-            <CheckBox fx:id="StrengthCheck" layoutX="340.0" layoutY="418.0" mnemonicParsing="false" />
-            <CheckBox fx:id="DexterityCheck" layoutX="340.0" layoutY="446.0" mnemonicParsing="false" />
-            <CheckBox fx:id="ConstitutionCheck" layoutX="340.0" layoutY="473.0" mnemonicParsing="false" prefWidth="21.0" />
-            <CheckBox fx:id="IntelligenceCheck" layoutX="340.0" layoutY="501.0" mnemonicParsing="false" />
-            <CheckBox fx:id="WisdomCheck" layoutX="340.0" layoutY="528.0" mnemonicParsing="false" />
-            <CheckBox fx:id="CharismaCheck" layoutX="340.0" layoutY="555.0" mnemonicParsing="false" />
-            <CheckBox fx:id="AcrobaticsCheck" layoutX="361.0" layoutY="653.0" mnemonicParsing="false" />
+            <CheckBox fx:id="StrengthCheck" layoutX="340.0" layoutY="418.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="DexterityCheck" layoutX="340.0" layoutY="446.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="ConstitutionCheck" layoutX="340.0" layoutY="473.0" mnemonicParsing="false" onAction="#topCheck" prefWidth="21.0" />
+            <CheckBox fx:id="IntelligenceCheck" layoutX="340.0" layoutY="501.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="WisdomCheck" layoutX="340.0" layoutY="528.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="CharismaCheck" layoutX="340.0" layoutY="555.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="AcrobaticsCheck" layoutX="361.0" layoutY="653.0" mnemonicParsing="false" onAction="#topCheck" />
             <CheckBox fx:id="AnimalCheck" layoutX="394.0" layoutY="681.0" mnemonicParsing="false" />
             <CheckBox fx:id="ArcanaCheck" layoutX="333.0" layoutY="708.0" mnemonicParsing="false" prefWidth="21.0" />
             <CheckBox fx:id="AthleticsCheck" layoutX="343.0" layoutY="736.0" mnemonicParsing="false" />
@@ -67,11 +72,6 @@
             <TextField fx:id="IntelligenceModText" alignment="CENTER" layoutX="95.0" layoutY="813.0" prefHeight="25.0" prefWidth="35.0" />
             <TextField fx:id="WisdomModText" alignment="CENTER" layoutX="95.0" layoutY="957.0" prefHeight="25.0" prefWidth="35.0" />
             <TextField fx:id="CharismaModText" alignment="CENTER" layoutX="95.0" layoutY="1101.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="WisdomText" alignment="CENTER" layoutX="65.0" layoutY="1195.0" prefHeight="34.0" prefWidth="39.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
             <TextArea fx:id="ProfText" layoutX="65.0" layoutY="1266.0" prefHeight="260.0" prefWidth="328.0" />
             <TextArea fx:id="EquipmentText" layoutX="529.0" layoutY="1195.0" prefHeight="334.0" prefWidth="233.0" promptText="Name:Description:Value:Weight" />
             <TextField fx:id="CpText" alignment="CENTER" layoutX="452.0" layoutY="1211.0" prefHeight="34.0" prefWidth="52.0">
@@ -97,7 +97,6 @@
             <TextArea fx:id="IdealsText" layoutX="821.0" layoutY="424.0" prefHeight="68.0" prefWidth="300.0" />
             <TextArea fx:id="BondsText" layoutX="821.0" layoutY="538.0" prefHeight="68.0" prefWidth="300.0" />
             <TextArea fx:id="FlawsText" layoutX="821.0" layoutY="647.0" prefHeight="68.0" prefWidth="300.0" />
-            <TextArea fx:id="CurrentHitPointsText" layoutX="450.0" layoutY="426.0" prefHeight="68.0" prefWidth="300.0" />
             <TextField fx:id="HitPointMaxText" layoutX="570.0" layoutY="393.0" prefHeight="25.0" prefWidth="176.0" />
             <TextArea fx:id="HitDiceText" layoutX="445.0" layoutY="670.0" prefHeight="45.0" prefWidth="138.0" />
             <TextField fx:id="HitDiceTotalText" layoutX="486.0" layoutY="643.0" prefHeight="19.0" prefWidth="88.0">
@@ -151,11 +150,10 @@
             <TextArea fx:id="IntelligenceStatText" layoutX="70.0" layoutY="744.0" prefHeight="61.0" prefWidth="84.0" />
             <TextArea fx:id="WisdomStatText" layoutX="70.0" layoutY="887.0" prefHeight="61.0" prefWidth="84.0" />
             <TextArea fx:id="CharismaStatText" layoutX="70.0" layoutY="1031.0" prefHeight="61.0" prefWidth="84.0" />
-            <TextArea fx:id="TempHitPointsText" layoutX="450.0" layoutY="530.0" prefHeight="68.0" prefWidth="300.0" />
             <TextField fx:id="AcrobatText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="647.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="AnimalText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="674.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="ArcanaText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="702.0" prefHeight="25.0" prefWidth="56.0" />
-            <TextField fx:id="AtheticsText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="730.0" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="AthleticsText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="730.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="DeceptionText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="756.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="HistoryText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="782.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="InsightText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="810.0" prefHeight="25.0" prefWidth="56.0" />
@@ -170,12 +168,12 @@
             <TextField fx:id="SleightText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="1056.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="StealthText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="1083.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="SurvivalText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="1111.0" prefHeight="25.0" prefWidth="56.0" />
-            <TextField fx:id="AcrobatText1" alignment="CENTER" editable="false" layoutX="195.0" layoutY="414.0" prefHeight="25.0" prefWidth="56.0" />
-            <TextField fx:id="AnimalText1" alignment="CENTER" editable="false" layoutX="195.0" layoutY="441.0" prefHeight="25.0" prefWidth="56.0" />
-            <TextField fx:id="ArcanaText1" alignment="CENTER" editable="false" layoutX="195.0" layoutY="469.0" prefHeight="25.0" prefWidth="56.0" />
-            <TextField fx:id="AtheticsText1" alignment="CENTER" editable="false" layoutX="195.0" layoutY="497.0" prefHeight="25.0" prefWidth="56.0" />
-            <TextField fx:id="DeceptionText1" alignment="CENTER" editable="false" layoutX="195.0" layoutY="523.0" prefHeight="25.0" prefWidth="56.0" />
-            <TextField fx:id="HistoryText1" alignment="CENTER" editable="false" layoutX="195.0" layoutY="549.0" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="StrengthText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="414.0" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="DexterityText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="441.0" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="ConstitutionText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="469.0" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="IntelligenceText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="497.0" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="WisdomText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="523.0" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="CharismaText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="549.0" prefHeight="25.0" prefWidth="56.0" />
             <Button fx:id="SaveButton" layoutX="1036.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="49.0" prefWidth="126.0" text="Save and Finish">
                <font>
                   <Font size="13.0" />
@@ -192,7 +190,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <ComboBox fx:id="ClassComboBox" layoutX="579.0" layoutY="102.0" prefHeight="25.0" prefWidth="131.0" promptText="Class" />
+            <ComboBox fx:id="ClassComboBox" layoutX="579.0" layoutY="102.0" onAction="#classSelect" prefHeight="25.0" prefWidth="131.0" promptText="Class" />
             <TextArea fx:id="TraitText" layoutX="822.0" layoutY="280.0" prefHeight="97.0" prefWidth="293.0" />
             <Text layoutX="817.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Names:">
                <font>
