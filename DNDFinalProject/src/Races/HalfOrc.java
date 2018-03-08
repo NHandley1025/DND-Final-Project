@@ -1,5 +1,6 @@
 package Races;
 
+import Player.Character;
 import Skills.skills;
 
 public class HalfOrc extends Race {
@@ -10,6 +11,8 @@ public class HalfOrc extends Race {
 		landBaseSpeed = 30;
 		setRacialSkills();
 		setRacialModifiers();
+		Character.addLanguage("Orcish");
+		Character.addLanguage("Common");
 	}
 	
 	private void setRacialSkills() {
