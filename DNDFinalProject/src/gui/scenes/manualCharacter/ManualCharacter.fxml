@@ -97,7 +97,6 @@
             <TextArea fx:id="IdealsText" layoutX="821.0" layoutY="424.0" prefHeight="68.0" prefWidth="300.0" />
             <TextArea fx:id="BondsText" layoutX="821.0" layoutY="538.0" prefHeight="68.0" prefWidth="300.0" />
             <TextArea fx:id="FlawsText" layoutX="821.0" layoutY="647.0" prefHeight="68.0" prefWidth="300.0" />
-            <TextArea fx:id="CurrentHitPointsText" layoutX="450.0" layoutY="426.0" prefHeight="68.0" prefWidth="300.0" />
             <TextField fx:id="HitPointMaxText" layoutX="570.0" layoutY="393.0" prefHeight="25.0" prefWidth="176.0" />
             <TextArea fx:id="HitDiceText" layoutX="445.0" layoutY="670.0" prefHeight="45.0" prefWidth="138.0" />
             <TextField fx:id="HitDiceTotalText" layoutX="486.0" layoutY="643.0" prefHeight="19.0" prefWidth="88.0">
@@ -151,7 +150,6 @@
             <TextArea fx:id="IntelligenceStatText" layoutX="70.0" layoutY="744.0" prefHeight="61.0" prefWidth="84.0" />
             <TextArea fx:id="WisdomStatText" layoutX="70.0" layoutY="887.0" prefHeight="61.0" prefWidth="84.0" />
             <TextArea fx:id="CharismaStatText" layoutX="70.0" layoutY="1031.0" prefHeight="61.0" prefWidth="84.0" />
-            <TextArea fx:id="TempHitPointsText" layoutX="450.0" layoutY="530.0" prefHeight="68.0" prefWidth="300.0" />
             <TextField fx:id="AcrobatText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="647.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="AnimalText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="674.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="ArcanaText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="702.0" prefHeight="25.0" prefWidth="56.0" />
