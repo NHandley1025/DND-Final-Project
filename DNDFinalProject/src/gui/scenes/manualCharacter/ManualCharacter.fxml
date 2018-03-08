@@ -34,13 +34,13 @@
             <TextField fx:id="NameText" alignment="CENTER" layoutX="882.0" layoutY="102.0" prefHeight="25.0" prefWidth="232.0" promptText="Name" />
             <TextField fx:id="AllignmentText" alignment="CENTER" layoutX="691.0" layoutY="156.0" prefHeight="25.0" prefWidth="192.0" promptText="Alignment" />
             <TextField fx:id="XpText" alignment="CENTER" layoutX="883.0" layoutY="156.0" prefHeight="25.0" prefWidth="231.0" promptText="XP" />
-            <CheckBox fx:id="StrengthCheck" layoutX="340.0" layoutY="418.0" mnemonicParsing="false" />
-            <CheckBox fx:id="DexterityCheck" layoutX="340.0" layoutY="446.0" mnemonicParsing="false" />
-            <CheckBox fx:id="ConstitutionCheck" layoutX="340.0" layoutY="473.0" mnemonicParsing="false" prefWidth="21.0" />
-            <CheckBox fx:id="IntelligenceCheck" layoutX="340.0" layoutY="501.0" mnemonicParsing="false" />
-            <CheckBox fx:id="WisdomCheck" layoutX="340.0" layoutY="528.0" mnemonicParsing="false" />
-            <CheckBox fx:id="CharismaCheck" layoutX="340.0" layoutY="555.0" mnemonicParsing="false" />
-            <CheckBox fx:id="AcrobaticsCheck" layoutX="361.0" layoutY="653.0" mnemonicParsing="false" />
+            <CheckBox fx:id="StrengthCheck" layoutX="340.0" layoutY="418.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="DexterityCheck" layoutX="340.0" layoutY="446.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="ConstitutionCheck" layoutX="340.0" layoutY="473.0" mnemonicParsing="false" onAction="#topCheck" prefWidth="21.0" />
+            <CheckBox fx:id="IntelligenceCheck" layoutX="340.0" layoutY="501.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="WisdomCheck" layoutX="340.0" layoutY="528.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="CharismaCheck" layoutX="340.0" layoutY="555.0" mnemonicParsing="false" onAction="#topCheck" />
+            <CheckBox fx:id="AcrobaticsCheck" layoutX="361.0" layoutY="653.0" mnemonicParsing="false" onAction="#topCheck" />
             <CheckBox fx:id="AnimalCheck" layoutX="394.0" layoutY="681.0" mnemonicParsing="false" />
             <CheckBox fx:id="ArcanaCheck" layoutX="333.0" layoutY="708.0" mnemonicParsing="false" prefWidth="21.0" />
             <CheckBox fx:id="AthleticsCheck" layoutX="343.0" layoutY="736.0" mnemonicParsing="false" />
@@ -192,7 +192,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <ComboBox fx:id="ClassComboBox" layoutX="579.0" layoutY="102.0" prefHeight="25.0" prefWidth="131.0" promptText="Class" />
+            <ComboBox fx:id="ClassComboBox" layoutX="579.0" layoutY="102.0" onAction="#classSelect" prefHeight="25.0" prefWidth="131.0" promptText="Class" />
             <TextArea fx:id="TraitText" layoutX="822.0" layoutY="280.0" prefHeight="97.0" prefWidth="293.0" />
             <Text layoutX="817.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Names:">
                <font>
