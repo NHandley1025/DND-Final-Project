@@ -157,6 +157,7 @@ public class Character {
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
 	private static ArrayList<String> proficiencies = new ArrayList<>();
+	private static ArrayList<String> languages = new ArrayList<>();
 	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
 	private String charactername;
 	private String playerName;
@@ -764,6 +765,22 @@ public class Character {
 
 	public static void setHitDice(String hitDie) {
 		hitDice = hitDie;
+	}
+
+
+
+	public static ArrayList<String> getLanguages() {
+		return languages;
+	}
+
+
+
+	public static void setLanguages(ArrayList<String> languages) {
+		Character.languages = languages;
+	}
+	
+	public static void addLanguage(String language) {
+		languages.add(language);
 	}
 	
 }

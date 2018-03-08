@@ -1,5 +1,6 @@
 package Races;
 
+import Player.Character;
 import Skills.skills;
 
 public class Halfling extends Race {
@@ -10,6 +11,8 @@ public class Halfling extends Race {
 		size = "Small";
 		setRacialModifiers();
 		setRacialSkills();
+		Character.addLanguage("Halfling");
+		Character.addLanguage("Common");
 	}
 	
 	private void setRacialModifiers() {
