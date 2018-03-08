@@ -10,7 +10,7 @@ public class Backgrounds {
 	static HashMap<TraitKey, trait> traits = new HashMap<>();
 	
 	public static trait get(TraitKey key) {
-		if(!key.isFilter()) {
+		if(key.isFilter()) {
 			throw new IllegalArgumentException("Key cannot have any null fields");
 		}
 		return traits.get(key);

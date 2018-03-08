@@ -3,6 +3,7 @@ package Classes;
 import java.util.ArrayList;
 
 import Skills.Skill;
+import Skills.skills;
 
 public class Class {
 
@@ -21,6 +22,32 @@ public class Class {
 
 	public void setProficiencyBonus(int proficiencyBonus) {
 		this.proficiencyBonus = proficiencyBonus;
+	}
+	
+	public void setProficiencyByLevel(int level) {
+		int profBon = 2;
+		if(level > 16) {
+			profBon = 6;
+		}else if(level > 12) {
+			profBon = 5;
+		}else if(level > 8) {
+			profBon = 4;
+		}else if(level > 4) {
+			profBon = 3;
+		}
+		setProficiencyBonus(profBon);
+	}
+	
+	public void improveAbilityScore(int level) {
+		int multiplicity = 0;
+		if(level == 19) {
+			multiplicity = 4;
+		}else{
+			multiplicity = level/4;
+		}
+		for(int i=0; i<multiplicity; i++) {
+			skills.AbilityScoreImprovement();
+		}
 	}
 	
 	public Archetype getArchetype() {
