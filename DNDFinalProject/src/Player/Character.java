@@ -129,9 +129,7 @@ public class Character {
 		if(isProWis) {
 			wisSaving += proficiencyBonus;
 		}
-		if(isProCha) {
-			chaSaving += proficiencyBonus;
-		}
+		
 	}
 
 
