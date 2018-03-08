@@ -97,7 +97,7 @@ public class Character {
 			Perception += proficiencyBonus;
 		}
 		if(isProPerformance) {
-			Performance += proficiencyBonus;
+			setPerformance(getPerformance() + proficiencyBonus);
 		}
 		if(isProPersuasion) {
 			Persuasion += proficiencyBonus;
@@ -235,6 +235,27 @@ public class Character {
 	private int platPieces;
 	private int proficiencyBonus;
 	private int Initiative = dexMod;
+	
+	public void setTraits() {
+		Acrobatics = dexMod;
+		AnimalHandling = wisMod;
+		Arcana = intMod;
+		Athletics = strMod;
+		Deception = chaMod;
+		History = intMod;
+		Insight = wisMod;
+		Intimidation = chaMod;
+		Investigation = intMod;
+		Medicine = wisMod;
+		Nature = intMod;
+		Perception = wisMod;
+		Performance = chaMod;
+		Persuasion = chaMod;
+		Religion = intMod;
+		SleightOfHand = dexMod;
+		Stealth = dexMod;
+		Survival = wisMod;
+	}
 	
 	public int getInitiativa() {
 		return Initiative;
@@ -766,6 +787,18 @@ public class Character {
 
 	public static void setHitDice(String hitDie) {
 		hitDice = hitDie;
+	}
+
+
+
+	public int getPerformance() {
+		return Performance;
+	}
+
+
+
+	public void setPerformance(int performance) {
+		Performance = performance;
 	}
 	
 }
