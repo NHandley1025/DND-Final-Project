@@ -1,7 +1,7 @@
 package Classes;
 
 import java.util.ArrayList;
-
+import Player.Character;
 import Skills.Skill;
 import Skills.skills;
 
@@ -66,4 +66,20 @@ public class Class {
 		}
 	}
 	
+	public int getInitialHitDie() {
+		int hitDie = 0;
+		if(Character.getHitDice().equals("1d12")) {
+			hitDie = 12;
+		}
+		if(Character.getHitDice().equals("1d10")) {
+			hitDie = 10;
+		}
+		if(Character.getHitDice().equals("1d8")) {
+			hitDie = 8;
+		}
+		if(Character.getHitDice().equals("1d6")) {
+			hitDie = 6;
+		}
+		return hitDie;
+	}
 }
