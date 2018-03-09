@@ -13,6 +13,7 @@ public class Barbarian extends Class{
 	public Barbarian() {
 		setSkills(Character.getLevel());
 		Character.setHitDice("1d12");
+		setProficiencies();
 	}
 	
 	public void setSkills(int level) {
@@ -95,5 +96,13 @@ public class Barbarian extends Class{
 	public String getRagesPerDay() {
 		String stringRage = (ragesPerDay == 0) ? "unlimited" : String.valueOf(ragesPerDay);
 		return stringRage;
+	}
+	
+	private void setProficiencies() {
+		Character.addProficiency("Light Armor");
+		Character.addProficiency("Medium Armor");
+		Character.addProficiency("Shields");
+		Character.addProficiency("Simple Weapons");
+		Character.addProficiency("Martial Weapons");
 	}
 }

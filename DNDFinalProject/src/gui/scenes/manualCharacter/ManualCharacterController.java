@@ -24,9 +24,14 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class ManualCharacterController implements Initializable {
+	
+	@FXML
+	private ImageView Image;
+	
 	@FXML
 	private Spinner<Integer> LvlSpinner;
 
@@ -335,7 +340,7 @@ public class ManualCharacterController implements Initializable {
 	private TextField ArcanaText;
 
 	@FXML
-	private TextField AtheticsText;
+	private TextField AthleticsText;
 
 	@FXML
 	private TextField DeceptionText;
@@ -380,22 +385,22 @@ public class ManualCharacterController implements Initializable {
 	private TextField SurvivalText;
 
 	@FXML
-	private TextField AcrobatText1;
+	private TextField StrengthText;
 
 	@FXML
-	private TextField AnimalText1;
+	private TextField DexterityText;
 
 	@FXML
-	private TextField ArcanaText1;
+	private TextField ConstitutionText;
 
 	@FXML
-	private TextField AtheticsText1;
+	private TextField IntelligenceText;
+	
+	@FXML
+	private TextField PassiveWisdomText;
 
 	@FXML
-	private TextField DeceptionText1;
-
-	@FXML
-	private TextField HistoryText1;
+	private TextField CharismaText;
 
 	@FXML
 	private Button SaveButton;
@@ -413,6 +418,10 @@ public class ManualCharacterController implements Initializable {
 	public void exitButton(ActionEvent event) {
 		System.exit(0);
 	}
+	
+	private int topCount;
+	
+	private int botCount;
 
 	@FXML
 	public void goBackButton(ActionEvent event) throws IOException {
@@ -431,26 +440,136 @@ public class ManualCharacterController implements Initializable {
 		Generator.character.setRace(setRC());
 	}
 	
+	@FXML void topCheck(ActionEvent event) {
+		if (((CheckBox) event.getSource()).isSelected()) {
+			topCount++;
+			CheckBox source = (CheckBox)event.getSource();
+			if(source == StrengthCheck) {
+				Generator.character.setStrSaving(Generator.character.getStrSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == DexterityCheck) {
+				
+			}
+		}
+		else {
+			topCount--;
+		}
+		if(topCount >= 2) {
+			StrengthCheck.setDisable(!StrengthCheck.isSelected());
+			DexterityCheck.setDisable(!DexterityCheck.isSelected());
+			ConstitutionCheck.setDisable(!ConstitutionCheck.isSelected());
+			IntelligenceCheck.setDisable(!IntelligenceCheck.isSelected());
+			WisdomCheck.setDisable(!WisdomCheck.isSelected());
+			CharismaCheck.setDisable(!CharismaCheck.isSelected());
+			
+		}
+		else {
+			StrengthCheck.setDisable(false);
+			DexterityCheck.setDisable(false);
+			ConstitutionCheck.setDisable(false);
+			IntelligenceCheck.setDisable(false);
+			WisdomCheck.setDisable(false);
+			CharismaCheck.setDisable(false);
+		}
+	}
+	
+	@FXML
+	public void classSelect(ActionEvent event) {
+		Class cl = null;
+		switch (ClassComboBox.getValue()) {
+		case "Barbarian":
+			cl = new Barbarian();
+			break;
+		case "Bard":
+			cl = new Bard();
+		case "Cleric":
+			cl = new Cleric();
+			break;
+		case "Druid":
+			cl = new Druid();
+			break;
+		case "Fighter":
+			cl = new Fighter();
+			break;
+		case "Monk":
+			cl = new Fighter();
+			break;
+		case "Paladin":
+			cl = new Paladin();
+			break;
+		case "Ranger":
+			cl = new Ranger();
+		case "Rogue":
+			cl = new Rogue();
+			break;
+		case "Sorcerer":
+			cl = new Sorcerer();
+			break;
+		case "Warlock":
+			cl = new Warlock();
+			break;
+		case "Wizard":
+			cl = new Wizard();
+			break;
+		}
+		Generator.character.setCharacterClass(cl);
+		Generator.character.getCharacterClass().setProficiencyBonus(5);
+		ProfBonusText.setText(String.valueOf(Generator.character.getCharacterClass().getProficiencyBonus()));
+	}
+	
+	
+	
 	@FXML
 	public void calculateButton(ActionEvent event) {
 		CalculateButton.setDisable(true);
 		Generator.character.setStrength();
 		Generator.character.setDexterity();
-		Generator.character.setStrength();
-		Generator.character.setStrength();
+		Generator.character.setConstitution();
+		Generator.character.setIntelligence();
+		Generator.character.setWisdom();
+		Generator.character.setCharisma();
 		Generator.character.setMods();
-		StrengthStatText.setText(String.valueOf(Generator.character.getStrength()));
-		DexterityStatText.setText(String.valueOf(Generator.character.getDexterity()));
-		ConstitutionStatText.setText(String.valueOf(Generator.character.getConstitution()));
-		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntelligence()));
-		WisdomStatText.setText(String.valueOf(Generator.character.getWisdom()));
+		Generator.character.setTraits();
+		StrengthStatText.setText(String.valueOf(Generator.character.getStrMod()));
+		DexterityStatText.setText(String.valueOf(Generator.character.getDexMod()));
+		ConstitutionStatText.setText(String.valueOf(Generator.character.getConMod()));
+		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntMod()));
+		WisdomStatText.setText(String.valueOf(Generator.character.getWisMod()));
+		CharismaStatText.setText(String.valueOf(Generator.character.getChaMod()));
+		
 		StrengthModText.setText(String.valueOf(Generator.character.getStrMod()));
 		DexterityModText.setText(String.valueOf(Generator.character.getDexMod()));
 		ConstitutionModText.setText(String.valueOf(Generator.character.getConMod()));
 		IntelligenceModText.setText(String.valueOf(Generator.character.getIntMod()));
 		WisdomModText.setText(String.valueOf(Generator.character.getWisMod()));
+		CharismaModText.setText(String.valueOf(Generator.character.getChaMod()));
 		
+		StrengthText.setText(String.valueOf(Generator.character.getStrength()));
+		DexterityText.setText(String.valueOf(Generator.character.getDexterity()));
+		ConstitutionText.setText(String.valueOf(Generator.character.getConstitution()));
+		IntelligenceText.setText(String.valueOf(Generator.character.getIntelligence()));
+		WisdomText.setText(String.valueOf(Generator.character.getWisdom()));
+		CharismaText.setText(String.valueOf(Generator.character.getCharisma()));
+		AcrobatText.setText(String.valueOf(Generator.character.getAcrobatics()));
+		AnimalText.setText(String.valueOf(Generator.character.getAnimalHandling()));
+		ArcanaText.setText(String.valueOf(Generator.character.getArcana()));
+		AthleticsText.setText(String.valueOf(Generator.character.getAthletics()));
+		DeceptionText.setText(String.valueOf(Generator.character.getDeception()));
+		HistoryText.setText(String.valueOf(Generator.character.getHistory()));
+		InsightText.setText(String.valueOf(Generator.character.getInsight()));
+		IntimidationText.setText(String.valueOf(Generator.character.getIntimidation()));
+		InvestigationText.setText(String.valueOf(Generator.character.getInvestigation()));
+		MedicineText.setText(String.valueOf(Generator.character.getMedicine()));
+		NatureText.setText(String.valueOf(Generator.character.getNature()));
+		PerceptionText.setText(String.valueOf(Generator.character.getPerception()));
+		PerformanceText.setText(String.valueOf(Generator.character.getPerformance()));
+		PersuasionText.setText(String.valueOf(Generator.character.getPersuasion()));
+		ReligionText.setText(String.valueOf(Generator.character.getReligion()));
+		SleightText.setText(String.valueOf(Generator.character.getSleightOfHand()));
+		StealthText.setText(String.valueOf(Generator.character.getStealth()));
+		SurvivalText.setText(String.valueOf(Generator.character.getSurvival()));
 	}
+	
+	
 	
 	private Race setRC() {
 		Race race = null;
@@ -485,11 +604,8 @@ public class ManualCharacterController implements Initializable {
 	
 	@FXML
 	public void saveButton(ActionEvent event) {
-
-
 		Class cl;
 		switch (ClassComboBox.getValue()) {
-
 		case "Barbarian":
 			cl = new Barbarian();
 			break;
@@ -574,7 +690,7 @@ public class ManualCharacterController implements Initializable {
 		ClassComboBox.setValue("Class");
 		RaceComboBox.getItems().addAll("Dragonborn", "Dwarf", "Elf", "Half Elf", "Halfling", "Half Orc", "Human",
 				"Tiefling");
-		ClassComboBox.getItems().addAll("Barbarian", "Bard", "Caster", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
+		ClassComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
 				"Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
 
 	}

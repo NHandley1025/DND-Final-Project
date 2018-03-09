@@ -1,7 +1,6 @@
 package Classes;
 
 import Player.Character;
-import Skills.Skill;
 import Skills.skills;
 
 public class Monk extends Class{
@@ -10,6 +9,7 @@ public class Monk extends Class{
 	public Monk() {
 		Character.setHitDice("1d8");
 		setSkills(Character.getLevel());
+		setProficiencies();
 	}
 	
 	public void setSkills(int level) {
@@ -19,17 +19,18 @@ public class Monk extends Class{
 			if(level > 1) {
 				ki = (byte)level;
 			}
-		
+			super.setProficiencyByLevel(level);
+			super.improveAbilityScore(level);
 			switch (level) {
 			case 20: addSkill(skills.perfectSelf);
 			
-			case 19: skills.AbilityScoreImprovement();
+			case 19:
 			
 			case 18: addSkill(skills.emptyBody);
 			
 			case 17:
 			
-			case 16: skills.AbilityScoreImprovement();
+			case 16:
 			
 			case 15: addSkill(skills.timelessBody);
 			
@@ -37,7 +38,7 @@ public class Monk extends Class{
 			
 			case 13: addSkill(skills.toungeOfTheSunAndMoon);
 			
-			case 12: skills.AbilityScoreImprovement();
+			case 12:
 			
 			case 11:
 			
@@ -45,25 +46,23 @@ public class Monk extends Class{
 			
 			case 9:
 			
-			case 8: skills.AbilityScoreImprovement();
+			case 8:
 			
 			case 7: addSkill(skills.evasion);
 			addSkill(skills.stillnessOfMind);
 			
 			case 6: addSkill(skills.kiEmpoweredStrike);
 			
-			case 5:addSkill(skills.extraAttack);
+			case 5:addSkill(skills.ExtraAttack);
 			addSkill(skills.stunningStrike);
 			
 			case 4: addSkill(skills.slowFall);
-			skills.AbilityScoreImprovement();
 			
 			case 3: addSkill(skills.deflectMissile);
 			
-			case 2: addSkill(skills.unArmoredMovement);
+			case 2: addSkill(skills.unArmoredMovement, skills.ki);
 			
-			case 1: addSkill(skills.UnArmoredDefense);
-					addSkill(skills.martialArts);
+			case 1: addSkill(skills.UnArmoredDefense, skills.martialArts);
 			default: break;
 			}
 			
@@ -71,5 +70,10 @@ public class Monk extends Class{
 		}
 	private void chooseArchetype() {
 		
+	}
+	
+	private void setProficiencies() {
+		Character.addProficiency("Short Sword");
+		Character.addProficiency("Simple Weapons");
 	}
 }
