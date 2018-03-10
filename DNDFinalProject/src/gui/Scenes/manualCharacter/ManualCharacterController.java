@@ -436,6 +436,7 @@ public class ManualCharacterController implements Initializable {
 	
 	@FXML
 	public void raceSelctor(ActionEvent event) {
+		((Node)event.getSource()).setDisable(true);
 		CalculateButton.setDisable(false);
 		Generator.character.setRace(setRC());
 	}
@@ -447,11 +448,35 @@ public class ManualCharacterController implements Initializable {
 			if(source == StrengthCheck) {
 				Generator.character.setStrSaving(Generator.character.getStrSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
 			}else if (source == DexterityCheck) {
-				
+				Generator.character.setDexSaving(Generator.character.getDexSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == ConstitutionCheck) {
+				Generator.character.setConSaving(Generator.character.getConSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == IntelligenceCheck) {
+				Generator.character.setIntSaving(Generator.character.getIntSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == WisdomCheck) {
+				Generator.character.setWisSaving(Generator.character.getWisSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == CharismaCheck) {
+				Generator.character.setChaSaving(Generator.character.getChaSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
 			}
+			setSkills();
 		}
 		else {
 			topCount--;
+			CheckBox source = (CheckBox)event.getSource();
+			if(source == StrengthCheck) {
+				Generator.character.setStrSaving(Generator.character.getStrSaving() - Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == DexterityCheck) {                                   
+				Generator.character.setDexSaving(Generator.character.getDexSaving() - Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == ConstitutionCheck) {                                
+				Generator.character.setConSaving(Generator.character.getConSaving() - Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == IntelligenceCheck) {     
+				Generator.character.setIntSaving(Generator.character.getIntSaving() - Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == WisdomCheck) {                                      
+				Generator.character.setWisSaving(Generator.character.getWisSaving() - Generator.character.getCharacterClass().getProficiencyBonus());
+			}else if (source == CharismaCheck) {                                    
+				Generator.character.setChaSaving(Generator.character.getChaSaving() - Generator.character.getCharacterClass().getProficiencyBonus());
+			}
+			setSkills();
 		}
 		if(topCount >= 2) {
 			StrengthCheck.setDisable(!StrengthCheck.isSelected());
@@ -473,68 +498,66 @@ public class ManualCharacterController implements Initializable {
 	}
 	
 	@FXML
+	public void lockInButton(ActionEvent event) {
+		((Node)event.getSource()).setDisable(true);
+		ClassComboBox.setDisable(false);
+		LvlSpinner.setDisable(true);
+	}
+	
+	@FXML
 	public void classSelect(ActionEvent event) {
-		Class cl = null;
+		((Node)event.getSource()).setDisable(true);
+		RaceComboBox.setDisable(false);
+		Class cl = null;	
+		int level = Generator.character.getLevel();
 		switch (ClassComboBox.getValue()) {
 		case "Barbarian":
-			cl = new Barbarian();
+			cl = new Barbarian(level);
 			break;
 		case "Bard":
-			cl = new Bard();
+			cl = new Bard(level);
 		case "Cleric":
-			cl = new Cleric();
+			cl = new Cleric(level);
 			break;
 		case "Druid":
-			cl = new Druid();
+			cl = new Druid(level);
 			break;
 		case "Fighter":
-			cl = new Fighter();
+			cl = new Fighter(level);
 			break;
 		case "Monk":
-			cl = new Fighter();
+			cl = new Fighter(level);
 			break;
 		case "Paladin":
-			cl = new Paladin();
+			cl = new Paladin(level);
 			break;
 		case "Ranger":
-			cl = new Ranger();
+			cl = new Ranger(level);
 		case "Rogue":
-			cl = new Rogue();
+			cl = new Rogue(level);
 			break;
 		case "Sorcerer":
-			cl = new Sorcerer();
+			cl = new Sorcerer(level);
 			break;
 		case "Warlock":
-			cl = new Warlock();
+			cl = new Warlock(level);
 			break;
 		case "Wizard":
-			cl = new Wizard();
+			cl = new Wizard(level);
 			break;
 		}
 		Generator.character.setCharacterClass(cl);
-		Generator.character.getCharacterClass().setProficiencyBonus(5);
+		Generator.character.getCharacterClass().setProficiencyBonus(Generator.character.getProficiencyBonus());
 		ProfBonusText.setText(String.valueOf(Generator.character.getCharacterClass().getProficiencyBonus()));
 	}
 	
-	
-	
-	@FXML
-	public void calculateButton(ActionEvent event) {
-		CalculateButton.setDisable(true);
-		Generator.character.setStrength();
-		Generator.character.setDexterity();
-		Generator.character.setConstitution();
-		Generator.character.setIntelligence();
-		Generator.character.setWisdom();
-		Generator.character.setCharisma();
-		Generator.character.setMods();
-		Generator.character.setTraits();
-		StrengthStatText.setText(String.valueOf(Generator.character.getStrMod()));
-		DexterityStatText.setText(String.valueOf(Generator.character.getDexMod()));
-		ConstitutionStatText.setText(String.valueOf(Generator.character.getConMod()));
-		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntMod()));
-		WisdomStatText.setText(String.valueOf(Generator.character.getWisMod()));
-		CharismaStatText.setText(String.valueOf(Generator.character.getChaMod()));
+	public void setSkills() {
+		StrengthStatText.setText(String.valueOf(Generator.character.getStrength()));
+		DexterityStatText.setText(String.valueOf(Generator.character.getDexterity()));
+		ConstitutionStatText.setText(String.valueOf(Generator.character.getConstitution()));
+		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntelligence()));
+		WisdomStatText.setText(String.valueOf(Generator.character.getWisdom()));
+		CharismaStatText.setText(String.valueOf(Generator.character.getCharisma()));
 		
 		StrengthModText.setText(String.valueOf(Generator.character.getStrMod()));
 		DexterityModText.setText(String.valueOf(Generator.character.getDexMod()));
@@ -543,12 +566,12 @@ public class ManualCharacterController implements Initializable {
 		WisdomModText.setText(String.valueOf(Generator.character.getWisMod()));
 		CharismaModText.setText(String.valueOf(Generator.character.getChaMod()));
 		
-		StrengthText.setText(String.valueOf(Generator.character.getStrength()));
-		DexterityText.setText(String.valueOf(Generator.character.getDexterity()));
-		ConstitutionText.setText(String.valueOf(Generator.character.getConstitution()));
-		IntelligenceText.setText(String.valueOf(Generator.character.getIntelligence()));
-		WisdomText.setText(String.valueOf(Generator.character.getWisdom()));
-		CharismaText.setText(String.valueOf(Generator.character.getCharisma()));
+		StrengthText.setText(String.valueOf(Generator.character.getStrSaving()));
+		DexterityText.setText(String.valueOf(Generator.character.getDexSaving()));
+		ConstitutionText.setText(String.valueOf(Generator.character.getConSaving()));
+		IntelligenceText.setText(String.valueOf(Generator.character.getIntSaving()));
+		WisdomText.setText(String.valueOf(Generator.character.getWisSaving()));
+		CharismaText.setText(String.valueOf(Generator.character.getChaSaving()));
 		AcrobatText.setText(String.valueOf(Generator.character.getAcrobatics()));
 		AnimalText.setText(String.valueOf(Generator.character.getAnimalHandling()));
 		ArcanaText.setText(String.valueOf(Generator.character.getArcana()));
@@ -567,6 +590,22 @@ public class ManualCharacterController implements Initializable {
 		SleightText.setText(String.valueOf(Generator.character.getSleightOfHand()));
 		StealthText.setText(String.valueOf(Generator.character.getStealth()));
 		SurvivalText.setText(String.valueOf(Generator.character.getSurvival()));
+	}
+	
+	
+	
+	@FXML
+	public void calculateButton(ActionEvent event) {
+		CalculateButton.setDisable(true);
+		Generator.character.setStrength();
+		Generator.character.setDexterity();
+		Generator.character.setConstitution();
+		Generator.character.setIntelligence();
+		Generator.character.setWisdom();
+		Generator.character.setCharisma();
+		Generator.character.setMods();
+		Generator.character.setSkills();
+		setSkills();
 	}
 	
 	
@@ -604,43 +643,6 @@ public class ManualCharacterController implements Initializable {
 	
 	@FXML
 	public void saveButton(ActionEvent event) {
-		Class cl;
-		switch (ClassComboBox.getValue()) {
-		case "Barbarian":
-			cl = new Barbarian();
-			break;
-		case "Bard":
-			cl = new Bard();
-		case "Cleric":
-			cl = new Cleric();
-			break;
-		case "Druid":
-			cl = new Druid();
-			break;
-		case "Fighter":
-			cl = new Fighter();
-			break;
-		case "Monk":
-			cl = new Fighter();
-			break;
-		case "Paladin":
-			cl = new Paladin();
-			break;
-		case "Ranger":
-			cl = new Ranger();
-		case "Rogue":
-			cl = new Rogue();
-			break;
-		case "Sorcerer":
-			cl = new Sorcerer();
-			break;
-		case "Warlock":
-			cl = new Warlock();
-			break;
-		case "Wizard":
-			cl = new Wizard();
-			break;
-		}
 		trait trt;
 		String[] keys = TraitText.getText().split("\n");
 		

@@ -29,7 +29,7 @@
                   <Image url="@../../../../../../../DnD_5E_CharacterSheet%20-%20Form%20Fillable-page-001.jpg" />
                </image>
             </ImageView>
-            <Spinner fx:id="LvlSpinner" layoutX="529.0" layoutY="102.0" prefHeight="25.0" prefWidth="50.0" />
+            <Spinner fx:id="LvlSpinner" amountToStepBy="1" initialValue="1" layoutX="529.0" layoutY="102.0" max="20" min="1" prefHeight="25.0" prefWidth="50.0" />
             <TextField fx:id="BackgroundTxt" alignment="CENTER" layoutX="711.0" layoutY="102.0" prefHeight="25.0" prefWidth="172.0" promptText="Background" />
             <TextField fx:id="NameText" alignment="CENTER" layoutX="882.0" layoutY="102.0" prefHeight="25.0" prefWidth="232.0" promptText="Name" />
             <TextField fx:id="AllignmentText" alignment="CENTER" layoutX="691.0" layoutY="156.0" prefHeight="25.0" prefWidth="192.0" promptText="Alignment" />
@@ -184,13 +184,13 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <ComboBox fx:id="RaceComboBox" layoutX="528.0" layoutY="156.0" onAction="#raceSelctor" prefHeight="25.0" prefWidth="165.0" promptText="Race" />
+            <ComboBox fx:id="RaceComboBox" disable="true" layoutX="528.0" layoutY="156.0" onAction="#raceSelctor" prefHeight="25.0" prefWidth="165.0" promptText="Race" />
             <Button fx:id="ExitButton" layoutX="821.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="49.0" prefWidth="96.0" text="Exit">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <ComboBox fx:id="ClassComboBox" layoutX="579.0" layoutY="102.0" onAction="#classSelect" prefHeight="25.0" prefWidth="131.0" promptText="Class" />
+            <ComboBox fx:id="ClassComboBox" disable="true" layoutX="579.0" layoutY="102.0" onAction="#classSelect" prefHeight="25.0" prefWidth="131.0" promptText="Class" />
             <TextArea fx:id="TraitText" layoutX="822.0" layoutY="280.0" prefHeight="97.0" prefWidth="293.0" />
             <Text layoutX="817.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Names:">
                <font>
@@ -203,6 +203,7 @@
                </font>
             </Text>
             <Button fx:id="CalculateButton" disable="true" layoutX="81.0" layoutY="256.0" mnemonicParsing="false" onAction="#calculateButton" text="Calculate" />
+            <Button fx:id="LockButton" layoutX="528.0" layoutY="77.0" mnemonicParsing="false" onAction="#lockInButton" text="Lock In" />
          </children>
       </Pane>
    </content>

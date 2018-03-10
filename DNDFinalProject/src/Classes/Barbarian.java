@@ -10,8 +10,8 @@ public class Barbarian extends Class{
 	byte ragesPerDay = 2;
 	byte rageDamage = 2;
 	
-	public Barbarian() {
-		setSkills(Character.getLevel());
+	public Barbarian(int Level) {
+		setSkills(Level);
 		Character.setHitDice("1d12");
 	}
 	

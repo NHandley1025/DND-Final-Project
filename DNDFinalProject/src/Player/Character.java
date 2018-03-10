@@ -231,11 +231,17 @@ public class Character {
 	private int copperPieces;
 	private int silverPieces;
 	private int goldPieces;
-	private int platPieces;
+	private int platPieces;	
 	private int proficiencyBonus;
 	private int Initiative = dexMod;
 	
-	public void setTraits() {
+	public void setSkills() {
+		strSaving = strMod;
+		dexSaving = dexMod;
+		intSaving = intMod;
+		conSaving = conMod;
+		wisSaving = wisMod;
+		chaSaving = chaMod;
 		Acrobatics = dexMod;
 		AnimalHandling = wisMod;
 		Arcana = intMod;
@@ -370,6 +376,10 @@ public class Character {
 
 	public void setCharacterClass(Class characterClass) {
 		this.characterClass = characterClass;
+	}
+	
+	public void setProficiencyBonus() {
+		proficiencyBonus = characterClass.getProficiencyBonus();
 	}
 
 	public trait getTraits() {

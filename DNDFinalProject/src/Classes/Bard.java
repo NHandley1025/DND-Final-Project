@@ -6,8 +6,8 @@ import Skills.skills;
 
 public class Bard extends Class {
 
-	public Bard() {
-		setSkills(Character.getLevel());
+	public Bard(int Level) {
+		setSkills(Level);
 		Character.setHitDice("1d8");
 	}
 	
