@@ -1,0 +1,339 @@
+Name::Class::Lvl
+
+Blade Ward::Bard::0
+Dancing Lights::Bard::0
+Friends::Bard::0
+Light::Bard::0
+Mage Hand::Bard::0
+Mending::Bard::0
+Message::Bard::0
+Minor Illusion::Bard::0
+Prestidigitation::Bard::0
+True strike::Bard::0
+Vicious Mockery::Bard::0
+Animal Friendship::Bard::1
+Bane::Bard::1
+Charm Person::Bard::1
+Comprehend Languages::Bard::1
+Cure Wounds::Bard::1
+Detect Magic::Bard::1
+Disguise Self::Bard::1
+Dissonant Whispers::Bard::1
+Faerie Fire::Bard::1
+Feather Fall::Bard::1
+Healing Word::Bard::1
+Heroism::Bard::1
+Identify::Bard::1
+Illusory Script::Bard::1
+Longstrider::Bard::1
+Silent Image::Bard::1
+Sleep::Bard::1
+Speak with Animals::Bard::1
+Tasha’s Hideous laughter::Bard::1
+Thunderwave::Bard::1
+Unseen Servant::Bard::1
+Animal Messenger::Bard::2
+Blindness/Deafness::Bard::2
+Calm Emotions::Bard::2
+Cloud of Daggers::Bard::2
+Crown of Madness::Bard::2
+Detect Thoughts::Bard::2
+Enhance Ability::Bard::2
+Enthrall::Bard::2
+Heat Metal::Bard::2
+Hold Person::Bard::2
+Invisibility::Bard::2
+Knick::Bard::2
+Lesser restoration::Bard::2
+Locate animals or plants::Bard::2
+Locate Object::Bard::2
+Magic Mouth::Bard::2
+Phantasmal Force::Bard::2
+See Invisibility::Bard::2
+Shatter::Bard::2
+Silence::Bard::2
+Suggestion::Bard::2
+Zone of Truth::Bard::2
+Bestow Curse::Bard::3
+Clairvoyance::Bard::3
+Dispel Magic::Bard::3
+Fear::Bard::3
+Feign Death::Bard::3
+Glyph of Warding::Bard::3
+Hypnotic Pattern::Bard::3
+Leomund’s Tiny Hut::Bard::3
+Major Image::Bard::3
+Nondetection::Bard::3
+Plant Growth::Bard::3
+Sending::Bard::3
+Speak with Dead::Bard::3
+Speak with Plants::Bard::3
+Stinking Cloud::Bard::3
+Tongues::Bard::3
+Compulsion::Bard::4
+Confusion::Bard::4
+Dimension Door::Bard::4
+Freedom of Movement::Bard::4
+Greater Invisibility::Bard::4
+Hallucinatory Terrain::Bard::4
+Locate Creature::Bard::4
+Polymorph::Bard::4
+Animate Objects::Bard::5
+Awaken Dominate Person::Bard::5
+Dream::Bard::5
+Geas::Bard::5
+Greater Restoration::Bard::5
+Hold Monster::Bard::5
+Legend Lore::Bard::5
+Nass Cure Wounds::Bard::5
+Mislead::Bard::5
+Modify Memory::Bard::5
+Planar Binding::Bard::5
+Raise Dead::Bard::5
+Scrying::Bard::5
+Seeming::Bard::5
+Teleportation Circle::Bard::5
+Eyebite::Bard::6
+Find the Path::Bard::6
+Guards and Wards::Bard::6
+Mass Suggestion::Bard::6
+Otto’s Irresistible Dance::Bard::6
+Programmed Illusion::Bard::6
+True Seeing::Bard::6
+Etherealness::Bard::7
+Forcecage::Bard::7
+Mirage Arcane::Bard::7
+Mordenkainen’s Magnificent Mansion::Bard::7
+Mordenkainen’s Sword::Bard::7
+Project Image::Bard::7
+Regenerate::Bard::7
+Resurrection::Bard::7
+Symbol::Bard::7
+Teleport::Bard::7
+Dominate Monster::Bard::8
+Feeblemind::Bard::8
+Glibness::Bard::8
+Mind Blank::Bard::8
+Power Sword Stun::Bard::8
+Foresight::Bard::9
+Power Word Heal::Bard::9
+Power Word Kill::Bard::9
+True Polymorph::Bard::9
+Guidance::Cleric::0
+Light::Cleric::0
+Mending::Cleric::0
+Resistance::Cleric::0
+Sacred Frame::Cleric::0
+Spare Of Dying::Cleric::0
+Thaumaturgy::Cleric::0
+Bane::Cleric::1
+Bless::Cleric::1
+Command::Cleric::1
+Create or Destroy Water::Cleric::1
+Cure Wounds::Cleric::1
+Detect Evil and Good::Cleric::1
+Detect Magic::Cleric::1
+Detect Poison and Disease::Cleric::1
+Guiding Bolt::Cleric::1
+Healing Word::Cleric::1
+Inflict Wounds::Cleric::1
+Protection Form::Cleric::1
+Evil and Good::Cleric::1
+Purify Food and Drink::Cleric::1
+Sanctuary::Cleric::1
+Shield of Faith::Cleric::1
+Aid::Cleric::2
+Augury::Cleric::2
+Blindness/Deafness::Cleric::2
+Calm Emotions::Cleric::2
+Continual Flame::Cleric::2
+Enhance Ability::Cleric::2
+Find Traps::Cleric::2
+Gentle Repose::Cleric::2
+Hold Person::Cleric::2
+Lesser Restoration::Cleric::2
+Locate Object::Cleric::2
+Prayer of Healing::Cleric::2
+Protection from Poison::Cleric::2
+Silence::Cleric::2
+Spiritual Weapon::Cleric::2
+Warding Bond::Cleric::2
+Zone of Truth::Cleric::2
+Animate Dead::Cleric::3
+Beacon of Hope::Cleric::3
+Bestow Curse::Cleric::3
+Clairvoyance::Cleric::3
+Create Food and Water::Cleric::3
+Daylight::Cleric::3
+Dispel Magic::Cleric::3
+Feign Death::Cleric::3
+Glyph of Warding::Cleric::3
+Magic Circle::Cleric::3
+Mass Healing Word::Cleric::3
+Meld into Stone::Cleric::3
+Protection from Energy::Cleric::3
+Remove Curse::Cleric::3
+Revivify::Cleric::3
+Sending::Cleric::3
+Speak with Dead::Cleric::3
+Spirit Guardians::Cleric::3
+Tongues::Cleric::3
+Water Walk::Cleric::3
+Banishment::Cleric::4
+Control Water::Cleric::4
+Death Wards::Cleric::4
+Divination::Cleric::4
+Freedom of Movement::Cleric::4
+Guardian Of faith::Cleric::4
+Locate Creature::Cleric::4
+Stone Shape::Cleric::4
+Commune::Cleric::5
+Contagion::Cleric::5
+Dispel Evil and Good::Cleric::5
+Flame Strike::Cleric::5
+Geas::Cleric::5
+Greater Restoration::Cleric::5
+Hallow::Cleric::5
+Insect Plague::Cleric::5
+Legend Lore::Cleric::5
+Mass Cure Wounds::Cleric::5
+Planar Binding::Cleric::5
+Raise Dead::Cleric::5
+Scrying::Cleric::5
+Blade Barrier::Cleric::6
+Create Undead::Cleric::6
+Find the Path::Cleric::6
+Forbiddance::Cleric::6
+Harm::Cleric::6
+Heal::Cleric::6
+Heroes’ Feast::Cleric::6
+Planar Ally::Cleric::6
+True Seeing::Cleric::6
+Word of Recall::Cleric::6
+Conjure Celestial::Cleric::7
+Divine Word::Cleric::7
+Etherealness::Cleric::7
+Firestorm::Cleric::7
+Plane Shift::Cleric::7
+Regenerate::Cleric::7
+Resurrection::Cleric::7
+Symbol::Cleric::7
+Antimagic Field::Cleric::8
+Control Weather::Cleric::8
+Earthquake::Cleric::8
+Holy Aura::Cleric::8
+Astral Projection::Cleric::9
+Gate::Cleric::9
+Mass Heal::Cleric::9
+True Resurrection::Cleric::9
+Druidcraft::Druid::0
+Guidance::Druid::0
+Mending::Druid::0
+Poison Spray::Druid::0
+Produce Flame::Druid::0
+Resistance::Druid::0
+Shillelagh::Druid::0
+Thorn Whip::Druid::0
+Animal Friendship::Druid::1
+Charm Person::Druid::1
+Create or Destroy Water::Druid::1
+Cure Wounds::Druid::1
+Detect Magic::Druid::1
+Detect Poison and Disease::Druid::1
+Entangle::Druid::1
+Faerie Fire::Druid::1
+Fog Cloud::Druid::1
+Goodberry::Druid::1
+Healing Word::Druid::1
+Jump::Druid::1
+Longstrider::Druid::1
+Purify Food and Drink::Druid::1
+Speak with Animals::Druid::1
+Thunderwave::Druid::1
+Animal Messenger::Druid::2
+Barkskin::Druid::2
+Beast Sense::Druid::2
+Darkvision::Druid::2
+Enhance Ability::Druid::2
+Find Traps::Druid::2
+Flame Blade::Druid::2
+Flaming Sphere::Druid::2
+Gust of Wind::Druid::2
+Heat Metal::Druid::2
+Hold Person::Druid::2
+Lesser Restoration::Druid::2
+Loate Animals or Plants::Druid::2
+Locate Object::Druid::2
+Moonbeam::Druid::2
+Pass without Trace::Druid::2
+Protection from Poison::Druid::2
+Spike Growth::Druid::2
+Call Lightning::Druid::3
+Conjure Animals::Druid::3
+Daylight::Druid::3
+Dispel Magic::Druid::3
+Feign Death::Druid::3
+Meld into Stone::Druid::3
+Plant Growth::Druid::3
+Protection from Energy::Druid::3
+Sleet Storm::Druid::3
+Speak with Plants::Druid::3
+Water Breathing::Druid::3
+Water Walk::Druid::3
+Wind Wall::Druid::3
+Blight::Druid::4
+Confusion::Druid::4
+Conjure Minor Elementals::Druid::4
+Conjure Woodland Beings::Druid::4
+Control Water::Druid::4
+Dominate Beast::Druid::4
+Freedom Of Movement::Druid::4
+Giant Insect::Druid::4
+Grasping Vine::Druid::4
+Hallucinatory Terrain::Druid::4
+Ice Storm::Druid::4
+Locate Creature::Druid::4
+Polymorph::Druid::4
+Stone Shape::Druid::4
+Stoneskin::Druid::4
+Wall of Fire::Druid::4
+Antilife Shell::Druid::5
+Awaken::Druid::5
+Commune with Nature::Druid::5
+Conjure Elemental::Druid::5
+Contagion::Druid::5
+Geas::Druid::5
+Greater Restoration::Druid::5
+Insect Plague::Druid::5
+Mass Cure Wounds::Druid::5
+Planar Binding::Druid::5
+Reincarnate::Druid::5
+Scrying::Druid::5
+Tree Stride::Druid::5
+Wall of Stone::Druid::5
+Conjure Fey::Druid::6
+Find the PAth::Druid::6
+Heal::Druid::6
+Heroes’ Feast::Druid::6
+Move Earth::Druid::6
+Sunbeam::Druid::6
+Transport via Plants::Druid::6
+Wall of Thorns::Druid::6
+Wind Walk::Druid::6
+Firestorm::Druid::7
+Mirage Arcane::Druid::7
+Plane Shift::Druid::7
+Regenerate::Druid::7
+Reverse Gravity::Druid::7
+Animal Shapes::Druid::8
+Antipathy/Sympathy::Druid::8
+Control Weather::Druid::8
+Earthquake::Druid::8
+Feeblemind::Druid::8
+Sunburst::Druid::8
+Tsunami::Druid::8
+Foresight::Druid::9
+Shapechange::Druid::9
+Storm of Vengeance::Druid::9
+True Resurrection::Druid::9
+

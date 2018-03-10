@@ -45,6 +45,36 @@ public class Generator {
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randCopper, randSilver,
 				randGold, randPlat);
 		randomChar.setMods();
+		
+		if(randomChar.level >= 2 && randomChar.getCharacterClass().equals(Wizard.class)) {
+			int tradition = rand.nextInt(8)+1;
+			switch(tradition) {
+			case 1:
+				Wizard.setArcaneTradition("Abjuration");
+				break;
+			case 2:
+				Wizard.setArcaneTradition("Conjuration");
+				break;
+			case 3:
+				Wizard.setArcaneTradition("Divination");
+				break;
+			case 4:
+				Wizard.setArcaneTradition("Enchantment");
+				break;
+			case 5:
+				Wizard.setArcaneTradition("Evocation");
+				break;
+			case 6:
+				Wizard.setArcaneTradition("Illusion");
+				break;
+			case 7:
+				Wizard.setArcaneTradition("Necromany");
+				break;
+			case 8:
+				Wizard.setArcaneTradition("Transmutation");
+				break;
+			}
+		}
 		return randomChar;
 	}
 

@@ -4,7 +4,6 @@ public class skills {
 	
 	
 	public static final Skill DarkVision = new Skill("DarkVision", "You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can't discern color in Darkness, only shades of gray.");
-	public static final Skill spellcasting = new Skill("Spell Casting", "");                
 	               
 	               
 	//Half-Orc     

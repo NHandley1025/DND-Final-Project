@@ -895,6 +895,16 @@ public class Character {
 	}
 
 
+<<<<<<< HEAD
+	public static ArrayList<String> getLanguages() {
+		return languages;
+	}
+		
+	public int getPerformance() {
+		return Performance;
+	}
+
+=======
 
 
 	public static ArrayList<String> getLanguages() {
@@ -908,6 +918,7 @@ public class Character {
 
 
 
+>>>>>>> c762388f7346d21aeefbf1366136ce6a9c07db95
 	public static void setLanguages(ArrayList<String> languages) {
 		Character.languages = languages;
 	}
@@ -915,6 +926,11 @@ public class Character {
 	public static void addLanguage(String language) {
 		languages.add(language);
 	}
+<<<<<<< HEAD
+		
+	public void setPerformance(int performance) {
+		Performance = performance;
+=======
 
 	public void setPerformance(int performance) {
 		Performance = performance;
@@ -967,6 +983,7 @@ public class Character {
 
 	public void setProInt(boolean isProInt) {
 		this.isProInt = isProInt;
+>>>>>>> c762388f7346d21aeefbf1366136ce6a9c07db95
 	}
 	
 }
