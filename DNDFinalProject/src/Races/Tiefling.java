@@ -10,6 +10,7 @@ public class Tiefling extends Race {
 		size = "Medium";
 		setRacialModifiers();
 		setRacialSkills();
+		setLandBaseSpeed(30);
 	}
 	
 	private void setRacialModifiers() {

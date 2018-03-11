@@ -14,14 +14,14 @@ public class Character {
 
 	public static int[] raceMods = new int[6];
 
-	public Character(Race race, int level, Class characterClass, String[] background,
-			ArrayList<Item> equipment, String charactername, String playerName, boolean isProAcrobatics,
-			boolean isProAnimalHandling, boolean isProArcana, boolean isProAthletics, boolean isProDeception,
-			boolean isProHistory, boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation,
-			boolean isProMedicine, boolean isProNature, boolean isProPerception, boolean isProPersuasion,
-			boolean isProReligion, boolean isProSleightOfHand, boolean isProStealth, boolean isProSurvival,
-			boolean isProStr, boolean isProDex, boolean isProInt, boolean isProCon, boolean isProWis, boolean isProCha,
-			int copperPieces, int silverPieces, int goldPieces, int platPieces) {
+	public Character(Race race, int level, Class characterClass, String[] background, ArrayList<Item> equipment,
+			String charactername, String playerName, boolean isProAcrobatics, boolean isProAnimalHandling,
+			boolean isProArcana, boolean isProAthletics, boolean isProDeception, boolean isProHistory,
+			boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation, boolean isProMedicine,
+			boolean isProNature, boolean isProPerception, boolean isProPersuasion, boolean isProReligion,
+			boolean isProSleightOfHand, boolean isProStealth, boolean isProSurvival, boolean isProStr, boolean isProDex,
+			boolean isProInt, boolean isProCon, boolean isProWis, boolean isProCha, int copperPieces, int silverPieces,
+			int goldPieces, int platPieces) {
 		super();
 		setRace(race);
 		setLevel(level);
@@ -58,87 +58,85 @@ public class Character {
 		this.silverPieces = silverPieces;
 		this.goldPieces = goldPieces;
 		this.platPieces = platPieces;
-		if(isProAcrobatics) {
+		if (isProAcrobatics) {
 			Acrobatics += proficiencyBonus;
 		}
-		if(isProAnimalHandling) {
+		if (isProAnimalHandling) {
 			AnimalHandling += proficiencyBonus;
 		}
-		if(isProArcana) {
+		if (isProArcana) {
 			Arcana += proficiencyBonus;
 		}
-		if(isProAthletics) {
+		if (isProAthletics) {
 			Athletics += proficiencyBonus;
 		}
-		if(isProDeception) {
+		if (isProDeception) {
 			Deception += proficiencyBonus;
 		}
-		if(isProHistory) {
+		if (isProHistory) {
 			History += proficiencyBonus;
 		}
-		if(isProInsight) {
+		if (isProInsight) {
 			Insight += proficiencyBonus;
 		}
-		if(isProIntimidation) {
+		if (isProIntimidation) {
 			Intimidation += proficiencyBonus;
 		}
-		if(isProInvestigation) {
+		if (isProInvestigation) {
 			Investigation += proficiencyBonus;
 		}
-		if(isProMedicine) {
+		if (isProMedicine) {
 			Medicine += proficiencyBonus;
 		}
-		if(isProNature) {
+		if (isProNature) {
 			Nature += proficiencyBonus;
 		}
-		if(isProPerception) {
+		if (isProPerception) {
 			Perception += proficiencyBonus;
 		}
-		if(isProPerformance) {
+		if (isProPerformance) {
 			setPerformance(getPerformance() + proficiencyBonus);
 		}
-		if(isProPersuasion) {
+		if (isProPersuasion) {
 			Persuasion += proficiencyBonus;
 		}
-		if(isProReligion) {
+		if (isProReligion) {
 			Religion += proficiencyBonus;
 		}
-		if(isProSleightOfHand) {
+		if (isProSleightOfHand) {
 			SleightOfHand += proficiencyBonus;
 		}
-		if(isProStealth) {
+		if (isProStealth) {
 			Stealth += proficiencyBonus;
 		}
-		if(isProSurvival) {
+		if (isProSurvival) {
 			Survival += proficiencyBonus;
 		}
-		if(isProStr) {
+		if (isProStr) {
 			setStrSaving(getStrSaving() + proficiencyBonus);
 		}
-		if(isProDex) {
+		if (isProDex) {
 			dexSaving += proficiencyBonus;
 		}
-		if(isProInt) {
+		if (isProInt) {
 			setIntSaving(getIntSaving() + proficiencyBonus);
 		}
-		if(isProCon) {
+		if (isProCon) {
 			conSaving += proficiencyBonus;
 		}
-		if(isProWis) {
+		if (isProWis) {
 			wisSaving += proficiencyBonus;
 		}
-		
+
 	}
 
-
-
 	public void setMods() {
-		baseMods[0] = (Strength-10)/2;
-		baseMods[1] = (Dexterity-10)/2;
-		baseMods[2] = (Intelligence-10)/2;
-		baseMods[3] = (Constitution-10)/2;
-		baseMods[4] = (Wisdom-10)/2;
-		baseMods[5] = (Charisma-10)/2;
+		baseMods[0] = (Strength - 10) / 2;
+		baseMods[1] = (Dexterity - 10) / 2;
+		baseMods[2] = (Intelligence - 10) / 2;
+		baseMods[3] = (Constitution - 10) / 2;
+		baseMods[4] = (Wisdom - 10) / 2;
+		baseMods[5] = (Charisma - 10) / 2;
 		raceMods = race.getRacialModifiers();
 		strMod = baseMods[0] += raceMods[0];
 		dexMod = baseMods[1] += raceMods[1];
@@ -147,16 +145,16 @@ public class Character {
 		wisMod = baseMods[4] += raceMods[4];
 		chaMod = baseMods[5] += raceMods[5];
 	}
-	
-	private  Race race;
-	public  int level;
+
+	private Race race;
+	public static int level;
 	private Class characterClass;
 	private static String hitDice;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
 	private static ArrayList<String> proficiencies = new ArrayList<>();
 	private static ArrayList<String> languages = new ArrayList<>();
-	private SimpleObjectProperty<Armor> equipArmor = new SimpleObjectProperty<>();
+	private Armor equipArmor;
 	private String charactername;
 	private String playerName;
 	private int Strength;
@@ -229,10 +227,10 @@ public class Character {
 	private int copperPieces;
 	private int silverPieces;
 	private int goldPieces;
-	private int platPieces;	
+	private int platPieces;
 	private int proficiencyBonus;
 	private int Initiative = dexMod;
-	
+
 	public void setSkills() {
 		strSaving = strMod;
 		dexSaving = dexMod;
@@ -260,102 +258,127 @@ public class Character {
 		Survival = wisMod;
 		Initiative = dexMod;
 	}
-	
+
+	public int setArmorClass() {
+		int AC = 10 + dexMod;
+		if (equipArmor.equals(Armors.getArmorHash().get("Padded"))) {
+			AC = 11;
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Leather"))) {
+			AC = 11 + dexMod;
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Studded Leather"))) {
+			AC = 12 + dexMod;
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Hide"))) {
+			if (Armors.getArmorHash().get("Chain Shirt").getMaxDex().equals(2) && dexMod > 2) {
+				AC = 12 + 2;
+			} else {
+				AC = 12 + dexMod;
+			}
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Chain Shirt"))) {
+			if (Armors.getArmorHash().get("Chain Shirt").getMaxDex().equals(2) && dexMod > 2) {
+				AC = 13 + 2;
+			} else {
+				AC = 13 + dexMod;
+			}
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Scale Mail"))) {
+			if (Armors.getArmorHash().get("Chain Shirt").getMaxDex().equals(2) && dexMod > 2) {
+				AC = 14 + 2;
+			} else {
+				AC = 14 + dexMod;
+			}
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Breastplate"))) {
+			if (Armors.getArmorHash().get("Chain Shirt").getMaxDex().equals(2) && dexMod > 2) {
+				AC = 14 + 2;
+			} else {
+				AC = 14 + dexMod;
+			}
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Half Plate"))) {
+			AC = 15 + dexMod;
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Ring Mail"))) {
+			AC = 14;
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Chain Mail"))) {
+			AC = 16;
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Splint"))) {
+			AC = 17;
+		}
+		if (equipArmor.equals(Armors.getArmorHash().get("Plate"))) {
+			AC += 18;
+		}
+		return AC;
+	}
+
 	public int getDexSaving() {
 		return dexSaving;
 	}
-
-
 
 	public void setDexSaving(int dexSaving) {
 		this.dexSaving = dexSaving;
 	}
 
-
-
 	public boolean isProDex() {
 		return isProDex;
 	}
-
-
 
 	public void setProDex(boolean isProDex) {
 		this.isProDex = isProDex;
 	}
 
-
-
 	public int getConSaving() {
 		return conSaving;
 	}
-
-
 
 	public void setConSaving(int conSaving) {
 		this.conSaving = conSaving;
 	}
 
-
-
 	public boolean isProCon() {
 		return isProCon;
 	}
-
-
 
 	public void setProCon(boolean isProCon) {
 		this.isProCon = isProCon;
 	}
 
-
-
 	public int getWisSaving() {
 		return wisSaving;
 	}
-
-
 
 	public void setWisSaving(int wisSaving) {
 		this.wisSaving = wisSaving;
 	}
 
-
-
 	public boolean isProWis() {
 		return isProWis;
 	}
-
-
 
 	public void setProWis(boolean isProWis) {
 		this.isProWis = isProWis;
 	}
 
-
-
 	public int getChaSaving() {
 		return chaSaving;
 	}
-
-
 
 	public void setChaSaving(int chaSaving) {
 		this.chaSaving = chaSaving;
 	}
 
-
-
 	public boolean isProCha() {
 		return isProCha;
 	}
 
-
-
 	public void setProCha(boolean isProCha) {
 		this.isProCha = isProCha;
 	}
-
-
 
 	public int getInitiativa() {
 		return Initiative;
@@ -376,7 +399,7 @@ public class Character {
 	public void setCharacterClass(Class characterClass) {
 		this.characterClass = characterClass;
 	}
-	
+
 	public void setProficiencyBonus() {
 		proficiencyBonus = characterClass.getProficiencyBonus();
 	}
@@ -397,11 +420,11 @@ public class Character {
 		this.equipment = equipment;
 	}
 
-	public SimpleObjectProperty<Armor> getEquipArmor() {
+	public Armor getEquipArmor() {
 		return equipArmor;
 	}
 
-	public void setEquipArmor(SimpleObjectProperty<Armor> equipArmor) {
+	public void setEquipArmor(Armor equipArmor) {
 		this.equipArmor = equipArmor;
 	}
 
@@ -693,10 +716,10 @@ public class Character {
 		this.level = level;
 	}
 
-	public int getLevel() {
+	public static int getLevel() {
 		return level;
 	}
-	
+
 	public void levelUp() {
 		level++;
 	}
@@ -836,34 +859,34 @@ public class Character {
 	public void setProSurvival(boolean isProSurvival) {
 		this.isProSurvival = isProSurvival;
 	}
-	
+
 	public static int rollStats() {
 		int roll1 = die.roll();
 		int roll2 = die.roll();
 		int roll3 = die.roll();
 		int roll4 = die.roll();
 		int dieSum = roll1 + roll2 + roll3 + roll4;
-		if(roll1 > roll2) {
-			if(roll1 > roll3) {
-				if(roll1 > roll4) {
+		if (roll1 > roll2) {
+			if (roll1 > roll3) {
+				if (roll1 > roll4) {
 					dieSum -= roll1;
 				}
 			}
-		}else if(roll2 > roll1) {
-			if(roll2 > roll3) {
-				if(roll2 < roll4) {
+		} else if (roll2 > roll1) {
+			if (roll2 > roll3) {
+				if (roll2 < roll4) {
 					dieSum -= roll2;
 				}
 			}
-		}else if(roll3 > roll1) {
-			if(roll3 > roll2) {
-				if(roll3 < roll4) {
+		} else if (roll3 > roll1) {
+			if (roll3 > roll2) {
+				if (roll3 < roll4) {
 					dieSum -= roll3;
 				}
 			}
-		}else if(roll4 > roll1) {
-			if(roll4 > roll2) {
-				if(roll4 < roll3) {
+		} else if (roll4 > roll1) {
+			if (roll4 > roll2) {
+				if (roll4 < roll3) {
 					dieSum -= roll4;
 				}
 			}
@@ -878,12 +901,10 @@ public class Character {
 	public void setProficiencyBonus(int proficiencyBonus) {
 		this.proficiencyBonus = proficiencyBonus;
 	}
-	
+
 	public static void addProficiency(String prof) {
 		proficiencies.add(prof);
 	}
-
-
 
 	public static String getHitDice() {
 		return hitDice;
@@ -893,6 +914,7 @@ public class Character {
 		hitDice = hitDie;
 	}
 
+<<<<<<< HEAD
 
 	public static ArrayList<String> getLanguages() {
 		return languages;
@@ -905,67 +927,62 @@ public class Character {
 
 
 
+=======
+	public static ArrayList<String> getLanguages() {
+		return languages;
+	}
+
+	public int getPerformance() {
+		return Performance;
+	}
+>>>>>>> 11ed91b28bfcd1d70748763caf41f82cc0390e17
 
 	public static void setLanguages(ArrayList<String> languages) {
 		Character.languages = languages;
 	}
-	
+
 	public static void addLanguage(String language) {
 		languages.add(language);
 	}
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 11ed91b28bfcd1d70748763caf41f82cc0390e17
 
 	public void setPerformance(int performance) {
 		Performance = performance;
-
 	}
-
-
 
 	public int getStrSaving() {
 		return strSaving;
 	}
 
-
-
 	public void setStrSaving(int strSaving) {
 		this.strSaving = strSaving;
 	}
-
-
 
 	public boolean isProStr() {
 		return isProStr;
 	}
 
-
-
 	public void setProStr(boolean isProStr) {
 		this.isProStr = isProStr;
 	}
-
-
 
 	public int getIntSaving() {
 		return intSaving;
 	}
 
-
-
 	public void setIntSaving(int intSaving) {
 		this.intSaving = intSaving;
 	}
-
-
 
 	public boolean isProInt() {
 		return isProInt;
 	}
 
-
-
 	public void setProInt(boolean isProInt) {
 		this.isProInt = isProInt;
 	}
-	
+
 }

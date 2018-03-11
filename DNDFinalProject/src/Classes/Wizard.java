@@ -5,16 +5,12 @@ import Skills.skills;
 
 public class Wizard extends Class{
 
-<<<<<<< HEAD
-	public Wizard(int level) {
-=======
 	private static String ArcaneTradition;
 	
 	public Wizard() {
 		super();
 		setSkills(Character.getLevel());
 		setProficiencies();
->>>>>>> bead429a34458cae0295c3874ac4bdb7e184d943
 		Character.setHitDice("1d6");
 	}
 

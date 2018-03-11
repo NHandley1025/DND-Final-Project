@@ -5,14 +5,9 @@ import Skills.skills;
 
 public class Fighter extends Class {
 	
-<<<<<<< HEAD
-	public Fighter(int Level) {
-		setSkills(Level);
-=======
 	public Fighter() {
 		setSkills(Character.getLevel());
 		setProficiencies();
->>>>>>> bead429a34458cae0295c3874ac4bdb7e184d943
 		Character.setHitDice("1d10");
 	}
 
