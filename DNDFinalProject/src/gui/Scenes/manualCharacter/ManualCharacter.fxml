@@ -44,7 +44,7 @@
             <CheckBox fx:id="AnimalCheck" layoutX="394.0" layoutY="681.0" mnemonicParsing="false" />
             <CheckBox fx:id="ArcanaCheck" layoutX="333.0" layoutY="708.0" mnemonicParsing="false" prefWidth="21.0" />
             <CheckBox fx:id="AthleticsCheck" layoutX="343.0" layoutY="736.0" mnemonicParsing="false" />
-            <CheckBox fx:id="DecptionCheck" layoutX="357.0" layoutY="761.0" mnemonicParsing="false" />
+            <CheckBox fx:id="DeceptionCheck" layoutX="357.0" layoutY="761.0" mnemonicParsing="false" />
             <CheckBox fx:id="HistoryCheck" layoutX="338.0" layoutY="790.0" mnemonicParsing="false" />
             <CheckBox fx:id="InsightCheck" layoutX="338.0" layoutY="818.0" mnemonicParsing="false" prefWidth="21.0" />
             <CheckBox fx:id="IntimidationCheck" layoutX="368.0" layoutY="844.0" mnemonicParsing="false" />
@@ -64,15 +64,15 @@
                </font>
             </TextField>
             <TextArea fx:id="FeaturesText" layoutX="807.0" layoutY="772.0" prefHeight="749.0" prefWidth="322.0" />
-            <TextField fx:id="InspirationText" alignment="CENTER" layoutX="193.0" layoutY="269.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="ProfBonusText" alignment="CENTER" layoutX="195.0" layoutY="346.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="StrengthModText" alignment="CENTER" layoutX="95.0" layoutY="378.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="DexterityModText" alignment="CENTER" layoutX="95.0" layoutY="523.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="ConstitutionModText" alignment="CENTER" layoutX="95.0" layoutY="667.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="IntelligenceModText" alignment="CENTER" layoutX="95.0" layoutY="813.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="WisdomModText" alignment="CENTER" layoutX="95.0" layoutY="957.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextField fx:id="CharismaModText" alignment="CENTER" layoutX="95.0" layoutY="1101.0" prefHeight="25.0" prefWidth="35.0" />
-            <TextArea fx:id="ProfText" layoutX="65.0" layoutY="1266.0" prefHeight="260.0" prefWidth="328.0" />
+            <TextField editable="false" fx:id="InspirationText" alignment="CENTER" layoutX="193.0" layoutY="269.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField editable="false" fx:id="ProfBonusText" alignment="CENTER" layoutX="195.0" layoutY="346.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField editable="false" fx:id="StrengthModText" alignment="CENTER" layoutX="95.0" layoutY="378.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField editable="false" fx:id="DexterityModText" alignment="CENTER" layoutX="95.0" layoutY="523.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField editable="false" fx:id="ConstitutionModText" alignment="CENTER" layoutX="95.0" layoutY="667.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField editable="false" fx:id="IntelligenceModText" alignment="CENTER" layoutX="95.0" layoutY="813.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField editable="false" fx:id="WisdomModText" alignment="CENTER" layoutX="95.0" layoutY="957.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField editable="false" fx:id="CharismaModText" alignment="CENTER" layoutX="95.0" layoutY="1101.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextArea editable="false" fx:id="ProfText" layoutX="65.0" layoutY="1266.0" prefHeight="260.0" prefWidth="328.0" />
             <TextArea fx:id="EquipmentText" layoutX="529.0" layoutY="1195.0" prefHeight="334.0" prefWidth="233.0" promptText="Name:Description:Value:Weight" />
             <TextField fx:id="CpText" alignment="CENTER" layoutX="452.0" layoutY="1211.0" prefHeight="34.0" prefWidth="52.0">
                <font>
@@ -110,8 +110,14 @@
             <CheckBox fx:id="FailCheck1" layoutX="679.0" layoutY="682.0" mnemonicParsing="false" />
             <CheckBox fx:id="FailCheck2" layoutX="705.0" layoutY="682.0" mnemonicParsing="false" />
             <CheckBox fx:id="FailCheck3" layoutX="730.0" layoutY="681.0" mnemonicParsing="false" />
-            <TextArea fx:id="InitiativeText" layoutX="558.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0" />
-            <TextArea fx:id="SpeedText" layoutX="674.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0" />
+            <TextArea fx:id="InitiativeText" layoutX="558.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+               <font>
+                  <Font size="19.0" />
+               </font></TextArea>
+            <TextArea fx:id="SpeedText" layoutX="674.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+               <font>
+                  <Font size="19.0" />
+               </font></TextArea>
             <TextArea fx:id="ArmorClassText" layoutX="458.0" layoutY="290.0" prefHeight="46.0" prefWidth="54.0">
                <font>
                   <Font size="8.0" />
@@ -144,12 +150,30 @@
             <TextField fx:id="AttNameText9" layoutX="441.0" layoutY="1116.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
             <TextField fx:id="AttType9" layoutX="646.0" layoutY="1116.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
             <TextField fx:id="AttBonus9" layoutX="578.0" layoutY="1116.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextArea fx:id="StrengthStatText" layoutX="70.0" layoutY="308.0" prefHeight="61.0" prefWidth="84.0" />
-            <TextArea fx:id="DexterityStatText" layoutX="71.0" layoutY="453.0" prefHeight="61.0" prefWidth="84.0" />
-            <TextArea fx:id="ConstitutionStatText" layoutX="71.0" layoutY="598.0" prefHeight="61.0" prefWidth="84.0" />
-            <TextArea fx:id="IntelligenceStatText" layoutX="70.0" layoutY="744.0" prefHeight="61.0" prefWidth="84.0" />
-            <TextArea fx:id="WisdomStatText" layoutX="70.0" layoutY="887.0" prefHeight="61.0" prefWidth="84.0" />
-            <TextArea fx:id="CharismaStatText" layoutX="70.0" layoutY="1031.0" prefHeight="61.0" prefWidth="84.0" />
+            <TextField editable="false" fx:id="StrengthStatText" layoutX="70.0" layoutY="308.0" prefHeight="61.0" prefWidth="84.0" alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font></TextField>
+            <TextField editable="false" fx:id="DexterityStatText" layoutX="71.0" layoutY="453.0" prefHeight="61.0" prefWidth="84.0" alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font></TextField>
+            <TextField editable="false" fx:id="ConstitutionStatText" layoutX="71.0" layoutY="598.0" prefHeight="61.0" prefWidth="84.0" alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font></TextField>
+            <TextField editable="false" fx:id="IntelligenceStatText" layoutX="70.0" layoutY="744.0" prefHeight="61.0" prefWidth="84.0" alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font></TextField>
+            <TextField editable="false" fx:id="WisdomStatText" layoutX="70.0" layoutY="887.0" prefHeight="61.0" prefWidth="84.0" alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font></TextField>
+            <TextField editable="false" fx:id="CharismaStatText" layoutX="70.0" layoutY="1031.0" prefHeight="61.0" prefWidth="84.0" alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font></TextField>
             <TextField fx:id="AcrobatText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="647.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="AnimalText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="674.0" prefHeight="25.0" prefWidth="56.0" />
             <TextField fx:id="ArcanaText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="702.0" prefHeight="25.0" prefWidth="56.0" />
