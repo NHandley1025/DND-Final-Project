@@ -5,7 +5,7 @@ import Skills.skills;
 
 public class Ranger extends Class {
 
-	public Ranger() {
+	public Ranger(int level) {
 		Character.setHitDice("1d10");
 		setProficiencies();
 		setSkills(Character.getLevel());

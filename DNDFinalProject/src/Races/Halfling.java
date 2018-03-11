@@ -13,6 +13,7 @@ public class Halfling extends Race {
 		setRacialSkills();
 		Character.addLanguage("Halfling");
 		Character.addLanguage("Common");
+		setLandBaseSpeed(25);
 	}
 	
 	private void setRacialModifiers() {

@@ -6,9 +6,9 @@ import Player.Character;
 
 public class Cleric extends Class {
 
-	public Cleric() {
+	public Cleric(int Level) {
 		super();
-		setSkills(Character.getLevel());
+		setSkills(Level);
 		setProficiencies();
 		Character.setHitDice("1d8");
 

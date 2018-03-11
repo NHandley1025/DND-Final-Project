@@ -5,7 +5,7 @@ import Skills.skills;
 
 public class Paladin extends Class{
 	
-	public Paladin() {
+	public Paladin(int level) {
 		Character.setHitDice("1d10");
 		setProficiencies();
 		setSkills(Character.getLevel());

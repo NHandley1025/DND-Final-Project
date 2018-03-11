@@ -84,7 +84,7 @@ public class ManualCharacterController implements Initializable {
 	private CheckBox AthleticsCheck;
 
 	@FXML
-	private CheckBox DecptionCheck;
+	private CheckBox DeceptionCheck;
 
 	@FXML
 	private CheckBox HistoryCheck;
@@ -310,22 +310,22 @@ public class ManualCharacterController implements Initializable {
 	private TextField AttBonus9;
 
 	@FXML
-	private TextArea StrengthStatText;
+	private TextField StrengthStatText;
 
 	@FXML
-	private TextArea DexterityStatText;
+	private TextField DexterityStatText;
 
 	@FXML
-	private TextArea ConstitutionStatText;
+	private TextField ConstitutionStatText;
 
 	@FXML
-	private TextArea IntelligenceStatText;
+	private TextField IntelligenceStatText;
 
 	@FXML
-	private TextArea WisdomStatText;
+	private TextField WisdomStatText;
 
 	@FXML
-	private TextArea CharismaStatText;
+	private TextField CharismaStatText;
 
 	@FXML
 	private TextArea TempHitPointsText;
@@ -436,23 +436,134 @@ public class ManualCharacterController implements Initializable {
 	
 	@FXML
 	public void raceSelctor(ActionEvent event) {
+		((Node)event.getSource()).setDisable(true);
 		CalculateButton.setDisable(false);
 		Generator.character.setRace(setRC());
 	}
 	
+	int bottomCount = 0;
+	
+	@FXML void bottomCheck(ActionEvent event) {
+		CheckBox box = (CheckBox) event.getSource();
+		int mod = 0;
+		if (box.isSelected()) {
+			bottomCount++;
+			mod = 1;
+		} else {
+			bottomCount--;
+			mod = 0;
+		}
+
+		int profBonus = Generator.character.getCharacterClass().getProficiencyBonus() * mod;
+		
+		if (box == AcrobaticsCheck) {
+			Generator.character.setAcrobatics(Generator.character.getAcrobatics() + profBonus);
+		} else if (box == AnimalCheck) {
+			Generator.character.setAnimalHandling(Generator.character.getAnimalHandling() + profBonus);
+		} else if (box == ArcanaCheck) {
+			Generator.character.setArcana(Generator.character.getArcana() + profBonus);
+		} else if (box == AthleticsCheck) {
+			Generator.character.setAthletics(Generator.character.getAthletics() + profBonus);
+		} else if (box == DeceptionCheck) {
+			Generator.character.setDeception(Generator.character.getDeception() + profBonus);
+		} else if (box == HistoryCheck) {
+			Generator.character.setHistory(Generator.character.getHistory() + profBonus);
+		} else if (box == InsightCheck) {
+			Generator.character.setInsight(Generator.character.getInsight() + profBonus);
+		} else if (box == IntimidationCheck) {
+			Generator.character.setIntimidation(Generator.character.getIntimidation() + profBonus);
+		} else if (box == InvestigationCheck) {
+			Generator.character.setInvestigation(Generator.character.getInvestigation() + profBonus);
+		} else if (box == MedicineCheck) {
+			Generator.character.setMedicine(Generator.character.getMedicine() + profBonus);
+		} else if (box == NatureCheck) {
+			Generator.character.setNature(Generator.character.getNature() + profBonus);
+		} else if (box == PerceptionCheck) {
+			Generator.character.setPerception(Generator.character.getPerception() + profBonus);
+		} else if (box == PerformanceCheck) {
+			Generator.character.setPerformance(Generator.character.getPerformance() + profBonus);
+		} else if (box == PersuasionCheck) {
+			Generator.character.setPersuasion(Generator.character.getPersuasion() + profBonus);
+		} else if (box == ReligionCheck) {
+			Generator.character.setReligion(Generator.character.getReligion() + profBonus);			
+		} else if (box == SleightCheck) {
+			Generator.character.setSleightOfHand(Generator.character.getSleightOfHand() + profBonus);
+		} else if (box == StealthCheck) {
+			Generator.character.setStealth(Generator.character.getStealth() + profBonus);
+		} else if (box == SurvivalCheck) {
+			Generator.character.setSurvival(Generator.character.getSurvival() + profBonus);
+		}
+		
+		
+		if (bottomCount >= 4){
+			AcrobaticsCheck.setDisable(!AcrobaticsCheck.isDisabled());
+			AnimalCheck.setDisable(!AnimalCheck.isDisabled());
+			ArcanaCheck.setDisable(!ArcanaCheck.isDisabled());
+			AthleticsCheck.setDisable(!AthleticsCheck.isDisabled());
+			DeceptionCheck.setDisable(!DeceptionCheck.isDisabled());
+			HistoryCheck.setDisable(!HistoryCheck.isDisabled());
+			InsightCheck.setDisable(!InsightCheck.isDisabled());
+			IntimidationCheck.setDisable(!IntimidationCheck.isDisabled());
+			InvestigationCheck.setDisable(!InvestigationCheck.isDisabled());
+			MedicineCheck.setDisable(!MedicineCheck.isDisabled());
+			NatureCheck.setDisable(!NatureCheck.isDisabled());
+			PerceptionCheck.setDisable(!PerceptionCheck.isDisabled());
+			PerformanceCheck.setDisable(!PerformanceCheck.isDisabled());
+			PersuasionCheck.setDisable(!PersuasionCheck.isDisabled());
+			ReligionCheck.setDisable(!ReligionCheck.isDisabled());
+			SleightCheck.setDisable(!SleightCheck.isDisabled());
+			StealthCheck.setDisable(!StealthCheck.isDisabled());
+			SurvivalCheck.setDisable(!SurvivalCheck.isDisabled());
+		} else {
+			
+			AcrobaticsCheck.setDisable(false);
+			AnimalCheck.setDisable(false);
+			ArcanaCheck.setDisable(false);
+			AthleticsCheck.setDisable(false);
+			DeceptionCheck.setDisable(false);
+			HistoryCheck.setDisable(false);
+			InsightCheck.setDisable(false);
+			IntimidationCheck.setDisable(false);
+			InvestigationCheck.setDisable(false);
+			MedicineCheck.setDisable(false);
+			NatureCheck.setDisable(false);
+			PerceptionCheck.setDisable(false);
+			PerformanceCheck.setDisable(false);
+			PersuasionCheck.setDisable(false);
+			ReligionCheck.setDisable(false);
+			SleightCheck.setDisable(false);
+			StealthCheck.setDisable(false);
+			SurvivalCheck.setDisable(false);
+		}
+	}
+	
 	@FXML void topCheck(ActionEvent event) {
-		if (((CheckBox) event.getSource()).isSelected()) {
+		CheckBox source = (CheckBox)event.getSource();
+		int mod = 0;
+		if (source.isSelected()) {
 			topCount++;
-			CheckBox source = (CheckBox)event.getSource();
-			if(source == StrengthCheck) {
-				Generator.character.setStrSaving(Generator.character.getStrSaving() + Generator.character.getCharacterClass().getProficiencyBonus());
-			}else if (source == DexterityCheck) {
-				
-			}
+			mod = 1;
+			setSkills();
 		}
 		else {
+			mod = -1;
 			topCount--;
 		}
+		int profBonus = Generator.character.getCharacterClass().getProficiencyBonus() * mod;
+		if(source == StrengthCheck) {
+			Generator.character.setStrSaving(Generator.character.getStrSaving() + profBonus);
+		}else if (source == DexterityCheck) {                                   
+			Generator.character.setDexSaving(Generator.character.getDexSaving() + profBonus);
+		}else if (source == ConstitutionCheck) {                                
+			Generator.character.setConSaving(Generator.character.getConSaving() + profBonus);
+		}else if (source == IntelligenceCheck) {     
+			Generator.character.setIntSaving(Generator.character.getIntSaving() + profBonus);
+		}else if (source == WisdomCheck) {                                      
+			Generator.character.setWisSaving(Generator.character.getWisSaving() + profBonus);
+		}else if (source == CharismaCheck) {                                    
+			Generator.character.setChaSaving(Generator.character.getChaSaving() + profBonus);
+		}
+		setSkills();
 		if(topCount >= 2) {
 			StrengthCheck.setDisable(!StrengthCheck.isSelected());
 			DexterityCheck.setDisable(!DexterityCheck.isSelected());
@@ -473,68 +584,66 @@ public class ManualCharacterController implements Initializable {
 	}
 	
 	@FXML
+	public void lockInButton(ActionEvent event) {
+		((Node)event.getSource()).setDisable(true);
+		ClassComboBox.setDisable(false);
+		LvlSpinner.setDisable(true);
+	}
+	
+	@FXML
 	public void classSelect(ActionEvent event) {
-		Class cl = null;
+		((Node)event.getSource()).setDisable(true);
+		RaceComboBox.setDisable(false);
+		Class cl = null;	
+		int level = Generator.character.getLevel();
 		switch (ClassComboBox.getValue()) {
 		case "Barbarian":
-			cl = new Barbarian();
+			cl = new Barbarian(level);
 			break;
 		case "Bard":
-			cl = new Bard();
+			cl = new Bard(level);
 		case "Cleric":
-			cl = new Cleric();
+			cl = new Cleric(level);
 			break;
 		case "Druid":
-			cl = new Druid();
+			cl = new Druid(level);
 			break;
 		case "Fighter":
-			cl = new Fighter();
+			cl = new Fighter(level);
 			break;
 		case "Monk":
-			cl = new Fighter();
+			cl = new Fighter(level);
 			break;
 		case "Paladin":
-			cl = new Paladin();
+			cl = new Paladin(level);
 			break;
 		case "Ranger":
-			cl = new Ranger();
+			cl = new Ranger(level);
 		case "Rogue":
-			cl = new Rogue();
+			cl = new Rogue(level);
 			break;
 		case "Sorcerer":
-			cl = new Sorcerer();
+			cl = new Sorcerer(level);
 			break;
 		case "Warlock":
-			cl = new Warlock();
+			cl = new Warlock(level);
 			break;
 		case "Wizard":
-			cl = new Wizard();
+			cl = new Wizard(level);
 			break;
 		}
 		Generator.character.setCharacterClass(cl);
-		Generator.character.getCharacterClass().setProficiencyBonus(5);
+		Generator.character.getCharacterClass().setProficiencyBonus(Generator.character.getProficiencyBonus());
 		ProfBonusText.setText(String.valueOf(Generator.character.getCharacterClass().getProficiencyBonus()));
 	}
 	
-	
-	
-	@FXML
-	public void calculateButton(ActionEvent event) {
-		CalculateButton.setDisable(true);
-		Generator.character.setStrength();
-		Generator.character.setDexterity();
-		Generator.character.setConstitution();
-		Generator.character.setIntelligence();
-		Generator.character.setWisdom();
-		Generator.character.setCharisma();
-		Generator.character.setMods();
-		Generator.character.setTraits();
-		StrengthStatText.setText(String.valueOf(Generator.character.getStrMod()));
-		DexterityStatText.setText(String.valueOf(Generator.character.getDexMod()));
-		ConstitutionStatText.setText(String.valueOf(Generator.character.getConMod()));
-		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntMod()));
-		WisdomStatText.setText(String.valueOf(Generator.character.getWisMod()));
-		CharismaStatText.setText(String.valueOf(Generator.character.getChaMod()));
+	public void setSkills() {
+		StrengthStatText.setText(String.valueOf(Generator.character.getStrength()));
+		DexterityStatText.setText(String.valueOf(Generator.character.getDexterity()));
+		ConstitutionStatText.setText(String.valueOf(Generator.character.getConstitution()));
+		IntelligenceStatText.setText(String.valueOf(Generator.character.getIntelligence()));
+		WisdomStatText.setText(String.valueOf(Generator.character.getWisdom()));
+		CharismaStatText.setText(String.valueOf(Generator.character.getCharisma()));
 		
 		StrengthModText.setText(String.valueOf(Generator.character.getStrMod()));
 		DexterityModText.setText(String.valueOf(Generator.character.getDexMod()));
@@ -543,12 +652,12 @@ public class ManualCharacterController implements Initializable {
 		WisdomModText.setText(String.valueOf(Generator.character.getWisMod()));
 		CharismaModText.setText(String.valueOf(Generator.character.getChaMod()));
 		
-		StrengthText.setText(String.valueOf(Generator.character.getStrength()));
-		DexterityText.setText(String.valueOf(Generator.character.getDexterity()));
-		ConstitutionText.setText(String.valueOf(Generator.character.getConstitution()));
-		IntelligenceText.setText(String.valueOf(Generator.character.getIntelligence()));
-		WisdomText.setText(String.valueOf(Generator.character.getWisdom()));
-		CharismaText.setText(String.valueOf(Generator.character.getCharisma()));
+		StrengthText.setText(String.valueOf(Generator.character.getStrSaving()));
+		DexterityText.setText(String.valueOf(Generator.character.getDexSaving()));
+		ConstitutionText.setText(String.valueOf(Generator.character.getConSaving()));
+		IntelligenceText.setText(String.valueOf(Generator.character.getIntSaving()));
+		WisdomText.setText(String.valueOf(Generator.character.getWisSaving()));
+		CharismaText.setText(String.valueOf(Generator.character.getChaSaving()));
 		AcrobatText.setText(String.valueOf(Generator.character.getAcrobatics()));
 		AnimalText.setText(String.valueOf(Generator.character.getAnimalHandling()));
 		ArcanaText.setText(String.valueOf(Generator.character.getArcana()));
@@ -567,6 +676,23 @@ public class ManualCharacterController implements Initializable {
 		SleightText.setText(String.valueOf(Generator.character.getSleightOfHand()));
 		StealthText.setText(String.valueOf(Generator.character.getStealth()));
 		SurvivalText.setText(String.valueOf(Generator.character.getSurvival()));
+		InitiativeText.setText(String.valueOf(Generator.character.getInitiativa()));
+	}
+	
+	
+	
+	@FXML
+	public void calculateButton(ActionEvent event) {
+		CalculateButton.setDisable(true);
+		Generator.character.setStrength();
+		Generator.character.setDexterity();
+		Generator.character.setConstitution();
+		Generator.character.setIntelligence();
+		Generator.character.setWisdom();
+		Generator.character.setCharisma();
+		Generator.character.setMods();
+		Generator.character.setSkills();
+		setSkills();
 	}
 	
 	
@@ -602,45 +728,9 @@ public class ManualCharacterController implements Initializable {
 		return race;
 	}
 	
+	
 	@FXML
 	public void saveButton(ActionEvent event) {
-		Class cl;
-		switch (ClassComboBox.getValue()) {
-		case "Barbarian":
-			cl = new Barbarian();
-			break;
-		case "Bard":
-			cl = new Bard();
-		case "Cleric":
-			cl = new Cleric();
-			break;
-		case "Druid":
-			cl = new Druid();
-			break;
-		case "Fighter":
-			cl = new Fighter();
-			break;
-		case "Monk":
-			cl = new Fighter();
-			break;
-		case "Paladin":
-			cl = new Paladin();
-			break;
-		case "Ranger":
-			cl = new Ranger();
-		case "Rogue":
-			cl = new Rogue();
-			break;
-		case "Sorcerer":
-			cl = new Sorcerer();
-			break;
-		case "Warlock":
-			cl = new Warlock();
-			break;
-		case "Wizard":
-			cl = new Wizard();
-			break;
-		}
 		trait trt;
 		String[] keys = TraitText.getText().split("\n");
 		
@@ -656,7 +746,7 @@ public class ManualCharacterController implements Initializable {
 		Boolean isAnimal = AnimalCheck.isSelected();
 		Boolean isArcana = ArcanaCheck.isSelected();
 		Boolean isAthletic = AthleticsCheck.isSelected();
-		Boolean isDeception = DecptionCheck.isSelected();
+		Boolean isDeception = DeceptionCheck.isSelected();
 		Boolean isHistory = HistoryCheck.isSelected();
 		Boolean isInsight = InsightCheck.isSelected();
 		Boolean isIntimidation = IntimidationCheck.isSelected();

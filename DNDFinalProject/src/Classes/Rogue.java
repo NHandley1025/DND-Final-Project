@@ -5,7 +5,7 @@ import Skills.skills;
 
 public class Rogue extends Class{
 
-	public Rogue() {
+	public Rogue(int level) {
 		Character.setHitDice("1d8");
 		setSkills(Character.getLevel());
 		setProficiencies();

@@ -5,7 +5,7 @@ import Skills.skills;
 
 public class Druid extends Class{
 
-	public Druid() {
+	public Druid(int level) {
 		Character.setHitDice("1d8");
 		setProficiencies();
 		setSkills(Character.getLevel());

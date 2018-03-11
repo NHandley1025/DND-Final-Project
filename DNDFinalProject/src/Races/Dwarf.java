@@ -12,6 +12,7 @@ public class Dwarf extends Race {
 		setRacialModifiers();
 		Character.addLanguage("Dwarven");
 		Character.addLanguage("Common");
+		setLandBaseSpeed(25);
 		}
 	
 	private void setRacialSkills() {

@@ -20,8 +20,9 @@ public class Backgrounds {
 		try {
 			String file = lib.ProgramUtil.readFile("Backgrounds.txt");
 			String[] lines = file.split("\n");
-			for(int i=0; i<lines.length; i++) {
-				String[] things = lines[i].split("::");
+			for(String line : lines) {
+				line = line.replace("/line", "\n");
+				String[] things = line.split("::");
 				if(things.length==3) {
 					Background b = new Background(things[0], new Skill(things[1], things[2]));
 					backgrounds.put(b.getName(), b);

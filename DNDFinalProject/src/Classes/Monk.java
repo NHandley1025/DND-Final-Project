@@ -6,8 +6,9 @@ import Skills.skills;
 public class Monk extends Class{
 	byte ki = 0;
 
-	public Monk() {
+	public Monk(int Level) {
 		Character.setHitDice("1d8");
+		setSkills(Level);
 		setSkills(Character.getLevel());
 		setProficiencies();
 	}

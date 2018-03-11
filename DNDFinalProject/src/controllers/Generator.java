@@ -38,7 +38,7 @@ public class Generator {
 		String playerName = "???";
 		String[] background = new String[4];
 		int randMoney = rand.nextInt(101);
-		Character randomChar = new Character(genRandRace(), randomLevel, genRandClass(), background,
+		Character randomChar = new Character(genRandRace(), randomLevel, genRandClass(randomLevel), background,
 				genRandEquipment(), randName, playerName, randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
@@ -123,46 +123,46 @@ public class Generator {
 		return race;
 	}
 
-	private static Class genRandClass() {
+	private static Class genRandClass(int level) {
 		Random rand = new Random();
 		int randomClass = rand.nextInt(12) + 1;
 		Class randClass = new Class();
 		switch (randomClass) {
 		case 1:
-			randClass = new Barbarian();
+			randClass = new Barbarian(level);
 			break;
 		case 2:
-			randClass = new Bard();
+			randClass = new Bard(level);
 			break;
 		case 3:
-			randClass = new Cleric();
+			randClass = new Cleric(level);
 			break;
 		case 4:
-			randClass = new Druid();
+			randClass = new Druid(level);
 			break;
 		case 5:
-			randClass = new Fighter();
+			randClass = new Fighter(level);
 			break;
 		case 6:
-			randClass = new Monk();
+			randClass = new Monk(level);
 			break;
 		case 7:
-			randClass = new Paladin();
+			randClass = new Paladin(level);
 			break;
 		case 8:
-			randClass = new Ranger();
+			randClass = new Ranger(level);
 			break;
 		case 9:
-			randClass = new Rogue();
+			randClass = new Rogue(level);
 			break;
 		case 10:
-			randClass = new Sorcerer();
+			randClass = new Sorcerer(level);
 			break;
 		case 11:
-			randClass = new Warlock();
+			randClass = new Warlock(level);
 			break;
 		case 12:
-			randClass = new Wizard();
+			randClass = new Wizard(level);
 			break;
 		}
 		return randClass;

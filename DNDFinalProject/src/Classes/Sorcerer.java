@@ -5,7 +5,7 @@ import Skills.skills;
 
 public class Sorcerer extends Class{
 
-	public Sorcerer() {
+	public Sorcerer(int level) {
 		Character.setHitDice("1d6");
 		setProficiencies();
 	}
@@ -34,7 +34,7 @@ public class Sorcerer extends Class{
 		case 4:
 		case 3:
 		case 2:
-		case 1:addSkill(skills.SpellCasting, )
+		case 1:addSkill(skills.SpellCasting);
 		default: break;
 		}
 	}
