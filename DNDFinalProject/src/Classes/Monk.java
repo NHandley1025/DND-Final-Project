@@ -8,12 +8,9 @@ public class Monk extends Class{
 
 	public Monk(int Level) {
 		Character.setHitDice("1d8");
-<<<<<<< HEAD
 		setSkills(Level);
-=======
 		setSkills(Character.getLevel());
 		setProficiencies();
->>>>>>> bead429a34458cae0295c3874ac4bdb7e184d943
 	}
 	
 	public void setSkills(int level) {
