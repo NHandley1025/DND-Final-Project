@@ -5,8 +5,8 @@ import Skills.skills;
 
 public class Fighter extends Class {
 	
-	public Fighter() {
-		setSkills(Character.getLevel());
+	public Fighter(int level) {
+		setSkills(level);
 		setProficiencies();
 		Character.setHitDice("1d10");
 	}

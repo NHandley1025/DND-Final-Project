@@ -8,6 +8,7 @@ import Items.Item;
 import Races.Race;
 import Traits.trait;
 import armor.Armor;
+import armor.Armors;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class Character {
@@ -914,8 +915,6 @@ public class Character {
 		hitDice = hitDie;
 	}
 
-<<<<<<< HEAD
-
 	public static ArrayList<String> getLanguages() {
 		return languages;
 	}
@@ -923,19 +922,6 @@ public class Character {
 	public int getPerformance() {
 		return Performance;
 	}
-
-
-
-
-=======
-	public static ArrayList<String> getLanguages() {
-		return languages;
-	}
-
-	public int getPerformance() {
-		return Performance;
-	}
->>>>>>> 11ed91b28bfcd1d70748763caf41f82cc0390e17
 
 	public static void setLanguages(ArrayList<String> languages) {
 		Character.languages = languages;
@@ -944,11 +930,6 @@ public class Character {
 	public static void addLanguage(String language) {
 		languages.add(language);
 	}
-<<<<<<< HEAD
-		
-=======
->>>>>>> 11ed91b28bfcd1d70748763caf41f82cc0390e17
-
 	public void setPerformance(int performance) {
 		Performance = performance;
 	}
