@@ -8,6 +8,7 @@ public class Ranger extends Class {
 	public Ranger() {
 		Character.setHitDice("1d10");
 		setProficiencies();
+		setSkills(Character.getLevel());
 	}
 
 	public void setSkills(int level) {

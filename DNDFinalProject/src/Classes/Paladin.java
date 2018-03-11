@@ -8,6 +8,7 @@ public class Paladin extends Class{
 	public Paladin() {
 		Character.setHitDice("1d10");
 		setProficiencies();
+		setSkills(Character.getLevel());
 	}
 	
 	public void setSkills(int level){

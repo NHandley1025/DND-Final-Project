@@ -1,6 +1,6 @@
 package Traits;
 
-import keys.TraitKey;
+import Skills.Skill;
 
 public class Background {
 	private Bond bond;
@@ -8,17 +8,23 @@ public class Background {
 	private Ideal ideals;
 	private Flaw flaws;
 	private String name;
+	private Skill feature;
 	
-	public Background(String name) {
+	public Background(String name, Skill feature) {
 		setName(name);
+		setFeature(feature);
 	}
-	
+
+	public Skill getFeature() {
+		return feature;
+	}
+
+	protected void setFeature(Skill feature) {
+		this.feature = feature;
+	}
+
 	public void setName(String name) {
-		if(Backgrounds.getTraitHash().containsKey(new TraitKey(name, null))) {
-			this.name = name;
-		}else {
-			this.name = "The Chosen One";
-		}
+		this.name = name;
 	}
 
 	public Bond getBond() {

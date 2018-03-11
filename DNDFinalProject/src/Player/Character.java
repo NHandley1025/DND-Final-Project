@@ -2,14 +2,12 @@ package Player;
 
 import java.util.ArrayList;
 
-import Dice.die;
-import Items.*;
-import Races.*;
-import Spells.*;
-import Traits.*;
-import Weapons.*;
-import armor.*;
 import Classes.Class;
+import Dice.die;
+import Items.Item;
+import Races.Race;
+import Traits.trait;
+import armor.Armor;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class Character {
@@ -885,18 +883,6 @@ public class Character {
 	}
 
 
-<<<<<<< HEAD
-	public static ArrayList<String> getLanguages() {
-		return languages;
-	}
-		
-	public int getPerformance() {
-		return Performance;
-	}
-
-=======
-
-
 	public static ArrayList<String> getLanguages() {
 		return languages;
 	}
@@ -905,10 +891,6 @@ public class Character {
 		return Performance;
 
 	}
-
-
-
->>>>>>> c762388f7346d21aeefbf1366136ce6a9c07db95
 	public static void setLanguages(ArrayList<String> languages) {
 		Character.languages = languages;
 	}
@@ -916,11 +898,6 @@ public class Character {
 	public static void addLanguage(String language) {
 		languages.add(language);
 	}
-<<<<<<< HEAD
-		
-	public void setPerformance(int performance) {
-		Performance = performance;
-=======
 
 	public void setPerformance(int performance) {
 		Performance = performance;
@@ -973,7 +950,6 @@ public class Character {
 
 	public void setProInt(boolean isProInt) {
 		this.isProInt = isProInt;
->>>>>>> c762388f7346d21aeefbf1366136ce6a9c07db95
 	}
 	
 }
