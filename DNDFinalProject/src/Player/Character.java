@@ -915,6 +915,14 @@ public class Character {
 		hitDice = hitDie;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+>>>>>>> 21db2cfbf51fc47149e1a7091f1f23379e133550
 	public static ArrayList<String> getLanguages() {
 		return languages;
 	}
@@ -923,6 +931,26 @@ public class Character {
 		return Performance;
 	}
 
+<<<<<<< HEAD
+=======
+
+
+
+=======
+>>>>>>> 66753d2464fde86a43982a215dd22979fc39e574
+	public static ArrayList<String> getLanguages() {
+		return languages;
+	}
+
+	public int getPerformance() {
+		return Performance;
+	}
+<<<<<<< HEAD
+=======
+>>>>>>> 11ed91b28bfcd1d70748763caf41f82cc0390e17
+
+>>>>>>> 66753d2464fde86a43982a215dd22979fc39e574
+>>>>>>> 21db2cfbf51fc47149e1a7091f1f23379e133550
 	public static void setLanguages(ArrayList<String> languages) {
 		Character.languages = languages;
 	}
@@ -930,6 +958,17 @@ public class Character {
 	public static void addLanguage(String language) {
 		languages.add(language);
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		
+=======
+>>>>>>> 11ed91b28bfcd1d70748763caf41f82cc0390e17
+>>>>>>> 66753d2464fde86a43982a215dd22979fc39e574
+
+>>>>>>> 21db2cfbf51fc47149e1a7091f1f23379e133550
 	public void setPerformance(int performance) {
 		Performance = performance;
 	}

@@ -7,6 +7,7 @@ public class Rogue extends Class{
 
 	public Rogue(int level) {
 		Character.setHitDice("1d8");
+		setSkills(Character.getLevel());
 		setProficiencies();
 	}
 	//needs fixing
@@ -14,21 +15,21 @@ public class Rogue extends Class{
 		super.setProficiencyByLevel(level);
 		super.improveAbilityScore(level);
 		switch(level) {
-		case 20:
+		case 20:addSkill(skills.strokeOfLuck);
 		case 19:
-		case 18:addSkill(skills.feralSenses);
-		case 17:
+		case 18:addSkill(skills.elusive);
+		case 17://archetype feature
 		case 16:
-		case 15://archetype feature
-		case 14:addSkill(skills.vanish); //favoredEnemy improvement
-		case 13:
+		case 15:addSkill(skills.slipperyMind);
+		case 14:addSkill(skills.blindSense);
+		case 13://archetype feature
 		case 12:
-		case 11://archetype feature
-		case 10:addSkill(skills.hideInPlainSight); // naturalExplorer improvement
-		case 9:
-		case 8:addSkill(skills.landsStride);
-		case 7://archetype feature
-		case 6://favoredEnemy/naturalExplorer improvements
+		case 11:addSkill(skills.reliableTalent);
+		case 10:skills.AbilityScoreImprovement(); //rogue gets an additional one
+		case 9://archetype feature
+		case 8:
+		case 7:addSkill(skills.evasion);
+		case 6:addSkill(skills.expertise);
 		case 5:addSkill(skills.uncannyDodge);
 		case 4:
 		case 3://choose archetype

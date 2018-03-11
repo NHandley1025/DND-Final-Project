@@ -13,7 +13,7 @@ import consumables.Potions;
 import Classes.*;
 import Classes.Class;
 import Items.Item;
-import keys.TraitKey;
+import keys.BackgroundKey;
 import tools.Tools;
 
 public class Generator {
@@ -230,8 +230,8 @@ public class Generator {
 		Random rand = new Random();
 		int traitListSize = Backgrounds.getTraitHash().keySet().size();
 		int randomTrait = rand.nextInt(traitListSize);
-		TraitKey[] traitList = new TraitKey[traitListSize];
-		for (TraitKey key : Backgrounds.getTraitHash().keySet()) {
+		BackgroundKey[] traitList = new BackgroundKey[traitListSize];
+		for (BackgroundKey key : Backgrounds.getTraitHash().keySet()) {
 			for (int x = 0; x > traitListSize; x++) {
 				traitList[x] = key;
 			}
