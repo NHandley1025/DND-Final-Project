@@ -976,4 +976,8 @@ public class Character implements Serializable{
 		this.isProInt = isProInt;
 	}
 
+	public boolean isProPerformance() {
+		return isProPerformance;
+	}
+
 }

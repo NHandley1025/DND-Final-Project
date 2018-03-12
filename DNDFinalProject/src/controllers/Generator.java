@@ -45,7 +45,7 @@ public class Generator {
 	public static void manualGenerateChar() {
 		String[] background = new String[4];
 		character = new Character( 0, background, null, null, null, false, false, false, false, false,
-				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 				false, false, false, 0, 0, 0, 0);
 	}
 	
@@ -75,7 +75,7 @@ public class Generator {
 				genRandEquipment(), randName, playerName, randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
-				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randCopper, randSilver,
+				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randCopper, randSilver,
 				randGold, randPlat);
 		randomChar.setRace(genRandRace(randomChar));
 		randomChar.setCharacterClass(genRandClass(randomChar.getLevel(), randomChar));
