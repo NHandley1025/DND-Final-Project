@@ -11,6 +11,8 @@ import controllers.Generator;
 import Classes.*;
 import Classes.Class;
 import Items.Item;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -178,16 +180,28 @@ public class ManualCharacterController implements Initializable {
 	private TextField PpText;
 
 	@FXML
-	private TextArea TraitText;
+	private TextArea TraitDescText;
 
 	@FXML
-	private TextArea IdealsText;
+	private TextArea IdealsDescText;
 
 	@FXML
-	private TextArea BondsText;
+	private TextArea BondsDescText;
 
 	@FXML
-	private TextArea FlawsText;
+	private TextArea FlawsDescText;
+	
+	@FXML
+	private TextArea TraitNameText;
+
+	@FXML
+	private TextArea IdealsNameText;
+
+	@FXML
+	private TextArea BondsNameText;
+
+	@FXML
+	private TextArea FlawsNameText;
 
 	@FXML
 	private TextArea CurrentHitPointsText;
@@ -798,6 +812,7 @@ public class ManualCharacterController implements Initializable {
 		int pp = Integer.parseInt(PpText.getText());
 
 	}
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -809,7 +824,38 @@ public class ManualCharacterController implements Initializable {
 		ClassComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
 				"Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
 		AlignmentComboBox.getItems().addAll("Chaotic Good", "Chaotic Neutral", "Chaotic Evil", "Neutral Good", "True Neutral", "Neutral Evil", "Lawful Good", "Lawful Neutral", "Lawful Evil");
-
+		CpText.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (!newValue.matches("[0-9]*")) {
+                    CpText.setText(oldValue);
+                }
+            }
+		});
+		SpText.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (!newValue.matches("[0-9]*")) {
+                	SpText.setText(oldValue);
+                }
+            }
+		});
+		GpText.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (!newValue.matches("[0-9]*")) {
+                	GpText.setText(oldValue);
+                }
+            }
+		});
+		PpText.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (!newValue.matches("[0-9]*")) {
+                	PpText.setText(oldValue);
+                }
+            }
+		});
 	}
 
 }

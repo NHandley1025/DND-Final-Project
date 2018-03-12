@@ -13,7 +13,6 @@ import consumables.Potions;
 import Classes.*;
 import Classes.Class;
 import Items.Item;
-import keys.BackgroundKey;
 import tools.Tools;
 
 public class Generator {
