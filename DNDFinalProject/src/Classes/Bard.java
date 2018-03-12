@@ -15,16 +15,18 @@ public class Bard extends Class {
 		if (level > 3 && getArchetype() == null) {
 			chooseArchetype();
 		}
+		super.setProficiencyByLevel(level);
+		super.improveAbilityScore(level);
 		switch (level) {
 		case 20: addSkill(skills.superiorInspiration);
 		
-		case 19: skills.AbilityScoreImprovement();
+		case 19: 
 			
 		case 18: addSkill(skills.magicalSecrets);
 		
 		case 17: addSkill(skills.songOfRest);
 		
-		case 16: skills.AbilityScoreImprovement();
+		case 16: 
 			
 		case 15: addSkill(skills.bardicInspiration);
 		
@@ -33,7 +35,7 @@ public class Bard extends Class {
 		
 		case 13: addSkill(skills.songOfRest);
 		
-		case 12: skills.AbilityScoreImprovement();
+		case 12: 
 			
 		case 11: ;
 		
@@ -43,7 +45,7 @@ public class Bard extends Class {
 		 
 		case 9: addSkill(skills.songOfRest);
 		 
-		case 8: skills.AbilityScoreImprovement();
+		case 8: 
 			
 		case 7: ;
 		
@@ -53,7 +55,7 @@ public class Bard extends Class {
 		case 5: addSkill(skills.bardicInspiration);
 		addSkill(skills.fontOfInspiration);
 		
-		case 4: skills.AbilityScoreImprovement();
+		case 4: 
 			
 		case 3: addSkill(skills.bardCollege);
 		addSkill(skills.expertise);
@@ -69,5 +71,14 @@ public class Bard extends Class {
 
 	private void chooseArchetype() {
 
+	}
+	
+	private void setProficiencies() {
+		Character.addProficiency("Light Armor");
+		Character.addProficiency("Hand Crossbows");
+		Character.addProficiency("Longswords");
+		Character.addProficiency("Simple Weapons");
+		Character.addProficiency("Rapiers");
+		Character.addProficiency("Shortswords");
 	}
 }

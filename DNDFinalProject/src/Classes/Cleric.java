@@ -1,8 +1,7 @@
 package Classes;
 
-import Skills.Skill;
-import Skills.skills;
 import Player.Character;
+import Skills.skills;
 
 public class Cleric extends Class {
 

@@ -8,7 +8,7 @@ public class Druid extends Class{
 	public Druid(int level) {
 		Character.setHitDice("1d8");
 		setProficiencies();
-		setSkills(Character.getLevel());
+		setSkills(level);
 	}
 	
 	public void setSkills(int level) {
@@ -42,6 +42,7 @@ public class Druid extends Class{
 	private void setProficiencies() {
 		String[] weapons = {"Clubs", "Daggers", "Darts", "Javelins", 
 				"Maces", "Quarterstaffs", "Scimitars", "Sickles", "Slings", "Spears"};
+		Character.addLanguage("Druidic");
 		Character.addProficiency("Light Armor(Cannot be made of metal)");
 		Character.addProficiency("Medium Armor(Cannot be made of metal)");
 		Character.addProficiency("Shields(Cannot be made of metal)");
