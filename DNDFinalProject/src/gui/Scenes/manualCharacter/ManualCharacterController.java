@@ -845,9 +845,9 @@ public class ManualCharacterController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ArmorComboBox.getItems().addAll(Armors.getArmorHash().keySet()); // add all armors
 		ArrayList<String> items = null;
-		for(String key : Potions.getPotionHash().keySet()) {
-			items.add(key);
-		}
+//		for(String key : Potions.getPotionHash().keySet()) {
+//			items.add(key);
+//		}
 		EqComboBox.getItems().addAll(); // add all selectable items
 		Generator.manualGenerateChar();
 		RaceComboBox.setValue("Race");
