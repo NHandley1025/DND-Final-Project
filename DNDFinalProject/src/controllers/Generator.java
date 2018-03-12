@@ -1,19 +1,40 @@
 package controllers;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.rmi.CORBA.Util;
+
+import Classes.Barbarian;
+import Classes.Bard;
+import Classes.Class;
+import Classes.Cleric;
+import Classes.Druid;
+import Classes.Fighter;
+import Classes.Monk;
+import Classes.Paladin;
+import Classes.Ranger;
+import Classes.Rogue;
+import Classes.Sorcerer;
+import Classes.Warlock;
+import Classes.Wizard;
+import Items.Item;
 import Player.Character;
-import Races.*;
-import Traits.Backgrounds;
-import Traits.trait;
+import Races.Dragonborn;
+import Races.Dwarf;
+import Races.Elf;
+import Races.HalfElf;
+import Races.HalfOrc;
+import Races.Halfling;
+import Races.Human;
+import Races.Race;
+import Races.Tiefling;
 import Weapons.weapons;
 import armor.Armor;
 import armor.Armors;
 import consumables.Potions;
-import Classes.*;
-import Classes.Class;
-import Items.Item;
 import tools.Tools;
 
 public class Generator {
@@ -26,6 +47,16 @@ public class Generator {
 		character = new Character( 0, background, null, null, null, false, false, false, false, false,
 				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 				false, false, false, 0, 0, 0, 0);
+	}
+	
+	public static void safeCharacter(Character character, File file) {
+		//safe character to file
+		try {
+			util.Utilities.serializeObject(file.getAbsolutePath(), character);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public static Character generateRandomChar() {
@@ -201,7 +232,6 @@ public class Generator {
 
 		Armor armor = (Armors.getArmorHash().get(armorList[randomArmor]));
 		equipment.add(armor);
-		randomChar.setEquipArmor(armor);
 
 		// choose random consumables to add to equipment
 

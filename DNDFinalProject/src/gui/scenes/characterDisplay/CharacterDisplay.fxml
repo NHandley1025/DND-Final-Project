@@ -1,8 +1,364 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?scenebuilder-stylesheet manualcharacterstyle.css?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	
-</AnchorPane>
-
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="1600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<content>
+		<Pane centerShape="true" prefHeight="1600.0" prefWidth="1200.0">
+			<children>
+				<TextField fx:id="PassiveWisdomText" alignment="CENTER"
+					layoutX="65.0" layoutY="1195.0" prefHeight="34.0" prefWidth="39.0">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</TextField>
+				<ImageView fx:id="Image" fitHeight="1600.0" fitWidth="1200.0">
+					<image>
+						<Image url="resources/DNDSheet.jpg" />
+					</image>
+				</ImageView>
+				<Spinner fx:id="LvlSpinner" amountToStepBy="1" initialValue="1"
+					layoutX="529.0" layoutY="102.0" max="20" min="1" prefHeight="25.0"
+					prefWidth="50.0" />
+				<TextField fx:id="NameText" alignment="CENTER" layoutX="882.0"
+					layoutY="102.0" prefHeight="25.0" prefWidth="232.0" promptText="Name" />
+				<CheckBox fx:id="StrengthCheck" disable="true" layoutX="340.0"
+					layoutY="418.0" mnemonicParsing="false" />
+				<CheckBox fx:id="DexterityCheck" disable="true" layoutX="340.0"
+					layoutY="446.0" mnemonicParsing="false" />
+				<CheckBox fx:id="ConstitutionCheck" disable="true" layoutX="340.0"
+					layoutY="473.0" mnemonicParsing="false" prefWidth="21.0" />
+				<CheckBox fx:id="IntelligenceCheck" disable="true" layoutX="340.0"
+					layoutY="501.0" mnemonicParsing="false" />
+				<CheckBox fx:id="WisdomCheck" disable="true" layoutX="340.0"
+					layoutY="528.0" mnemonicParsing="false" />
+				<CheckBox fx:id="CharismaCheck" disable="true" layoutX="340.0"
+					layoutY="555.0" mnemonicParsing="false" />
+				<CheckBox fx:id="AcrobaticsCheck" disable="true" layoutX="361.0"
+					layoutY="653.0" mnemonicParsing="false" />
+				<CheckBox fx:id="AnimalCheck" disable="true" layoutX="394.0"
+					layoutY="681.0" mnemonicParsing="false" />
+				<CheckBox fx:id="ArcanaCheck" disable="true" layoutX="333.0"
+					layoutY="708.0" mnemonicParsing="false" prefWidth="21.0" />
+				<CheckBox fx:id="AthleticsCheck" disable="true" layoutX="343.0"
+					layoutY="736.0" mnemonicParsing="false" />
+				<CheckBox fx:id="DeceptionCheck" disable="true" layoutX="357.0"
+					layoutY="761.0" mnemonicParsing="false" />
+				<CheckBox fx:id="HistoryCheck" disable="true" layoutX="338.0"
+					layoutY="790.0" mnemonicParsing="false" />
+				<CheckBox fx:id="InsightCheck" disable="true" layoutX="338.0"
+					layoutY="818.0" mnemonicParsing="false" prefWidth="21.0" />
+				<CheckBox fx:id="IntimidationCheck" disable="true" layoutX="368.0"
+					layoutY="844.0" mnemonicParsing="false" />
+				<CheckBox fx:id="InvestigationCheck" disable="true"
+					layoutX="368.0" layoutY="871.0" mnemonicParsing="false" />
+				<CheckBox fx:id="MedicineCheck" disable="true" layoutX="352.0"
+					layoutY="901.0" mnemonicParsing="false" />
+				<CheckBox fx:id="NatureCheck" disable="true" layoutX="333.0"
+					layoutY="925.0" mnemonicParsing="false" />
+				<CheckBox fx:id="PerceptionCheck" disable="true" layoutX="358.0"
+					layoutY="952.0" mnemonicParsing="false" />
+				<CheckBox fx:id="PerformanceCheck" disable="true" layoutX="372.0"
+					layoutY="979.0" mnemonicParsing="false" />
+				<CheckBox fx:id="PersuasionCheck" disable="true" layoutX="362.0"
+					layoutY="1008.0" mnemonicParsing="false" />
+				<CheckBox fx:id="ReligionCheck" disable="true" layoutX="340.0"
+					layoutY="1035.0" mnemonicParsing="false" />
+				<CheckBox fx:id="SleightCheck" disable="true" layoutX="384.0"
+					layoutY="1065.0" mnemonicParsing="false" />
+				<CheckBox fx:id="StealthCheck" disable="true" layoutX="340.0"
+					layoutY="1088.0" mnemonicParsing="false" />
+				<CheckBox fx:id="SurvivalCheck" disable="true" layoutX="343.0"
+					layoutY="1117.0" mnemonicParsing="false" />
+				<TextField fx:id="CharNameText" layoutX="93.0" layoutY="124.0"
+					prefHeight="25.0" prefWidth="352.0" promptText="Character Name">
+					<font>
+						<Font size="19.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="ProfBonusText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="346.0" prefHeight="25.0"
+					prefWidth="35.0" />
+				<TextField fx:id="StrengthModText" alignment="CENTER"
+					editable="false" layoutX="95.0" layoutY="378.0" prefHeight="25.0"
+					prefWidth="35.0" />
+				<TextField fx:id="DexterityModText" alignment="CENTER"
+					editable="false" layoutX="95.0" layoutY="523.0" prefHeight="25.0"
+					prefWidth="35.0" />
+				<TextField fx:id="ConstitutionModText" alignment="CENTER"
+					editable="false" layoutX="95.0" layoutY="667.0" prefHeight="25.0"
+					prefWidth="35.0" />
+				<TextField fx:id="IntelligenceModText" alignment="CENTER"
+					editable="false" layoutX="95.0" layoutY="813.0" prefHeight="25.0"
+					prefWidth="35.0" />
+				<TextField fx:id="WisdomModText" alignment="CENTER"
+					editable="false" layoutX="95.0" layoutY="957.0" prefHeight="25.0"
+					prefWidth="35.0" />
+				<TextField fx:id="CharismaModText" alignment="CENTER"
+					editable="false" layoutX="95.0" layoutY="1101.0" prefHeight="25.0"
+					prefWidth="35.0" />
+				<TextArea fx:id="ProfText" editable="false" layoutX="65.0"
+					layoutY="1266.0" prefHeight="113.0" prefWidth="328.0" promptText="Profiencies" />
+				<TextField fx:id="CpText" text="0" alignment="CENTER"
+					layoutX="452.0" layoutY="1211.0" prefHeight="34.0" prefWidth="52.0">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="SpText" text="0" alignment="CENTER"
+					layoutX="452.0" layoutY="1263.0" prefHeight="34.0" prefWidth="52.0">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="GpText" text="0" alignment="CENTER"
+					layoutX="452.0" layoutY="1369.0" prefHeight="34.0" prefWidth="52.0">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="PpText" text="0" alignment="CENTER"
+					layoutX="452.0" layoutY="1421.0" prefHeight="34.0" prefWidth="52.0">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</TextField>
+				<TextArea fx:id="IdealsDescText" layoutX="904.0" layoutY="424.0"
+					prefHeight="68.0" prefWidth="217.0" />
+				<TextArea fx:id="BondsDescText" layoutX="903.0" layoutY="538.0"
+					prefHeight="68.0" prefWidth="218.0" />
+				<TextArea fx:id="FlawsDescText" layoutX="905.0" layoutY="647.0"
+					prefHeight="68.0" prefWidth="216.0" />
+				<TextField fx:id="HitPointMaxText" layoutX="570.0"
+					layoutY="393.0" prefHeight="25.0" prefWidth="176.0" />
+				<TextField fx:id="HitDiceTotalText" editable="false"
+					layoutX="486.0" layoutY="643.0" prefHeight="19.0" prefWidth="88.0">
+					<font>
+						<Font size="9.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="InitiativeText" alignment="CENTER"
+					layoutX="558.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="SpeedText" alignment="CENTER" layoutX="674.0"
+					layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="ArmorClassText" layoutX="458.0" layoutY="290.0"
+					prefHeight="46.0" prefWidth="54.0">
+					<font>
+						<Font size="21.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="StrengthStatText" alignment="CENTER"
+					editable="false" layoutX="70.0" layoutY="308.0" prefHeight="61.0"
+					prefWidth="84.0">
+					<font>
+						<Font size="28.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="DexterityStatText" alignment="CENTER"
+					editable="false" layoutX="71.0" layoutY="453.0" prefHeight="61.0"
+					prefWidth="84.0">
+					<font>
+						<Font size="28.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="ConstitutionStatText" alignment="CENTER"
+					editable="false" layoutX="71.0" layoutY="598.0" prefHeight="61.0"
+					prefWidth="84.0">
+					<font>
+						<Font size="28.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="IntelligenceStatText" alignment="CENTER"
+					editable="false" layoutX="70.0" layoutY="744.0" prefHeight="61.0"
+					prefWidth="84.0">
+					<font>
+						<Font size="28.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="WisdomStatText" alignment="CENTER"
+					editable="false" layoutX="70.0" layoutY="887.0" prefHeight="61.0"
+					prefWidth="84.0">
+					<font>
+						<Font size="28.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="CharismaStatText" alignment="CENTER"
+					editable="false" layoutX="70.0" layoutY="1031.0" prefHeight="61.0"
+					prefWidth="84.0">
+					<font>
+						<Font size="28.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="AcrobatText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="647.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="AnimalText" alignment="CENTER" editable="false"
+					layoutX="195.0" layoutY="674.0" prefHeight="25.0" prefWidth="56.0" />
+				<TextField fx:id="ArcanaText" alignment="CENTER" editable="false"
+					layoutX="195.0" layoutY="702.0" prefHeight="25.0" prefWidth="56.0" />
+				<TextField fx:id="AthleticsText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="730.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="DeceptionText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="756.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="HistoryText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="782.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="InsightText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="810.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="IntimidationText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="838.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="InvestigationText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="865.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="MedicineText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="892.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="NatureText" alignment="CENTER" editable="false"
+					layoutX="195.0" layoutY="920.0" prefHeight="25.0" prefWidth="56.0" />
+				<TextField fx:id="PerceptionText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="948.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="PerformanceText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="974.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="PersuasionText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="1000.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="ReligionText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="1028.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="SleightText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="1056.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="StealthText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="1083.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="SurvivalText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="1111.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="StrengthText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="414.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="DexterityText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="441.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="ConstitutionText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="469.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="IntelligenceText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="497.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<TextField fx:id="WisdomText" alignment="CENTER" editable="false"
+					layoutX="195.0" layoutY="523.0" prefHeight="25.0" prefWidth="56.0" />
+				<TextField fx:id="CharismaText" alignment="CENTER"
+					editable="false" layoutX="195.0" layoutY="549.0" prefHeight="25.0"
+					prefWidth="56.0" />
+				<Button fx:id="SaveButton" layoutX="1036.0" layoutY="14.0"
+					mnemonicParsing="false" prefHeight="49.0" prefWidth="126.0"
+					text="Save and Finish">
+					<font>
+						<Font size="13.0" />
+					</font>
+				</Button>
+				<Button fx:id="BackButton" layoutX="928.0" layoutY="14.0"
+					mnemonicParsing="false" prefHeight="49.0" prefWidth="96.0" text="Go Back">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</Button>
+				<ComboBox fx:id="RaceComboBox" disable="true" layoutX="528.0"
+					layoutY="156.0" prefHeight="25.0" prefWidth="165.0" promptText="Race" />
+				<Button fx:id="ExitButton" layoutX="821.0" layoutY="14.0"
+					mnemonicParsing="false" prefHeight="49.0" prefWidth="96.0" text="Exit">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</Button>
+				<ComboBox fx:id="ClassComboBox" disable="true" layoutX="579.0"
+					layoutY="102.0" prefHeight="25.0" prefWidth="131.0" promptText="Class" />
+				<TextArea fx:id="TraitDescText" layoutX="904.0" layoutY="280.0"
+					prefHeight="97.0" prefWidth="211.0" />
+				<Text layoutX="817.0" layoutY="263.0" strokeType="OUTSIDE"
+					strokeWidth="0.0" text="Names:">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Text>
+				<Text layoutX="911.0" layoutY="262.0" strokeType="OUTSIDE"
+					strokeWidth="0.0" text="Descriptions:">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Text>
+				<Button fx:id="CalculateButton" disable="true" layoutX="81.0"
+					layoutY="256.0" mnemonicParsing="false" text="Calculate" />
+				<Button fx:id="LockButton" layoutX="528.0" layoutY="77.0"
+					mnemonicParsing="false" text="Lock In" />
+				<ComboBox fx:id="BackgroundComboBox" layoutX="710.0"
+					layoutY="102.0" prefHeight="25.0" prefWidth="175.0" promptText="Background" />
+				<ComboBox fx:id="AlignmentComboBox" layoutX="693.0"
+					layoutY="156.0" prefHeight="25.0" prefWidth="190.0" promptText="Alignment" />
+				<TextArea fx:id="TraitNameText" layoutX="821.0" layoutY="280.0"
+					prefHeight="97.0" prefWidth="82.0" />
+				<TextArea fx:id="IdealsNameText" layoutX="820.0" layoutY="424.0"
+					prefHeight="68.0" prefWidth="84.0" />
+				<TextArea fx:id="BondsNameText" layoutX="820.0" layoutY="538.0"
+					prefHeight="68.0" prefWidth="83.0" />
+				<TextArea fx:id="FlawsNameText" layoutX="820.0" layoutY="648.0"
+					prefHeight="68.0" prefWidth="84.0" />
+				<ListView fx:id="EqList" layoutX="528.0" layoutY="1237.0"
+					prefHeight="252.0" prefWidth="228.0" />
+				<ComboBox fx:id="EqComboBox" layoutX="437.0" layoutY="1501.0"
+					prefHeight="25.0" prefWidth="195.0" />
+				<Button fx:id="eqAddButton" layoutX="640.0" layoutY="1501.0"
+					mnemonicParsing="false" text="Add" />
+				<Button fx:id="EqRemoveButton" layoutX="703.0" layoutY="1501.0"
+					mnemonicParsing="false" text="Remove" />
+				<ComboBox fx:id="ArmorComboBox" layoutX="529.0" layoutY="1200.0"
+					prefHeight="25.0" prefWidth="228.0" promptText="Select Armor" />
+				<ListView fx:id="SpellList" layoutX="437.0" layoutY="918.0"
+					prefHeight="186.0" prefWidth="329.0" />
+				<ComboBox fx:id="SpellComboBox" layoutX="438.0" layoutY="1114.0"
+					prefHeight="25.0" prefWidth="195.0" />
+				<Button fx:id="SpellAddButton" layoutX="641.0" layoutY="1114.0"
+					mnemonicParsing="false" text="Add" />
+				<Button fx:id="SpellRemoveButton" layoutX="704.0" layoutY="1114.0"
+					mnemonicParsing="false" text="Remove" />
+				<ListView fx:id="AttacksList" layoutX="437.0" layoutY="789.0"
+					prefHeight="125.0" prefWidth="329.0" />
+				<ListView fx:id="TraitsList" layoutX="807.0" layoutY="778.0"
+					prefHeight="744.0" prefWidth="329.0" />
+				<TextArea fx:id="LangText" editable="false" layoutX="65.0"
+					layoutY="1382.0" prefHeight="140.0" prefWidth="328.0" promptText="Languages" />
+			</children>
+		</Pane>
+	</content>
+</ScrollPane>

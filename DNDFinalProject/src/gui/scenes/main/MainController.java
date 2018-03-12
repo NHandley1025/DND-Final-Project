@@ -25,7 +25,7 @@ public class MainController implements Initializable {
 	public void genCharButton(ActionEvent event) throws IOException {
 		System.out.println("Ive been CLICKED!!");
 		Parent root = null;
-		root = FXMLLoader.load(getClass().getResource("/gui/Scenes/manualCharacter/ManualCharacter.fxml"));
+		root = FXMLLoader.load(getClass().getResource("/gui/Scenes/Choice/Choice.fxml"));
 		Scene scene = new Scene(root);
 		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(scene);

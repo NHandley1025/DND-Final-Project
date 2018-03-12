@@ -1,5 +1,6 @@
 package Player;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import Classes.Class;
@@ -9,9 +10,8 @@ import Races.Race;
 import Traits.trait;
 import armor.Armor;
 import armor.Armors;
-import javafx.beans.property.SimpleObjectProperty;
 
-public class Character {
+public class Character implements Serializable{
 
 	public  int[] raceMods = new int[6];
 
@@ -19,7 +19,7 @@ public class Character {
 			String charactername, String playerName, boolean isProAcrobatics, boolean isProAnimalHandling,
 			boolean isProArcana, boolean isProAthletics, boolean isProDeception, boolean isProHistory,
 			boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation, boolean isProMedicine,
-			boolean isProNature, boolean isProPerception, boolean isProPersuasion, boolean isProReligion,
+			boolean isProNature, boolean isProPerception, boolean isProPersuasion, boolean isProReligion, boolean isProPerformance, 
 			boolean isProSleightOfHand, boolean isProStealth, boolean isProSurvival, boolean isProStr, boolean isProDex,
 			boolean isProInt, boolean isProCon, boolean isProWis, boolean isProCha, int copperPieces, int silverPieces,
 			int goldPieces, int platPieces) {
@@ -46,6 +46,7 @@ public class Character {
 		this.isProInsight = isProInsight;
 		this.isProIntimidation = isProIntimidation;
 		this.isProInvestigation = isProInvestigation;
+		this.isProPerformance = isProPerformance;
 		this.isProMedicine = isProMedicine;
 		this.isProNature = isProNature;
 		this.isProPerception = isProPerception;
@@ -485,6 +486,7 @@ public class Character {
 	public int getIntelligence() {
 		return Intelligence;
 	}
+	
 
 	public void setIntelligence() {
 		Intelligence = rollStats();
@@ -910,6 +912,10 @@ public class Character {
 
 	public  void addProficiency(String prof) {
 		proficiencies.add(prof);
+	}
+	
+	public void setProficiencies(ArrayList<String> list) {
+		proficiencies = list;
 	}
 
 	public  String getHitDice() {

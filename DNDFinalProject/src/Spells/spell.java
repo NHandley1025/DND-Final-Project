@@ -12,4 +12,8 @@ public class spell {
 		this.spellLevel = spellLevel;
 	}
 	
+	@Override
+	public String toString() {
+		return name + ": Class= " + classReq + " Spell Level= " + spellLevel;
+	}
 }
