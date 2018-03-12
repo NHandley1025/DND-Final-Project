@@ -914,15 +914,13 @@ public class Character {
 	public static void setHitDice(String hitDie) {
 		hitDice = hitDie;
 	}
-	
 	public static ArrayList<String> getLanguages() {
 		return languages;
 	}
-		
+
 	public int getPerformance() {
 		return Performance;
 	}
-
 	public static void setLanguages(ArrayList<String> languages) {
 		Character.languages = languages;
 	}
