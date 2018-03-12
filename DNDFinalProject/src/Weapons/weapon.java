@@ -28,4 +28,9 @@ public class weapon extends Item {
 		return damageType;
 	}
 	
+	@Override
+	public String toString() {
+		return getName() + ": Value=" + getValue() + ", Weight=" + getWeight() + ", Damage=" + getDamage() + ", Damage Type=" + getDamageType() + ", Classification=" + getClassification(); 
+	}
+	
 }
