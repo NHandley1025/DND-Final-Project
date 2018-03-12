@@ -5,14 +5,14 @@ import Skills.skills;
 
 public class Halfling extends Race {
 
-	public Halfling() {
+	public Halfling(Character character) {
 		super();
 		landBaseSpeed = 25;
 		size = "Small";
 		setRacialModifiers();
 		setRacialSkills();
-		Character.addLanguage("Halfling");
-		Character.addLanguage("Common");
+		character.addLanguage("Halfling");
+		character.addLanguage("Common");
 		setLandBaseSpeed(25);
 	}
 	

@@ -6,9 +6,10 @@ import Skills.skills;
 
 public class Bard extends Class {
 
-	public Bard(int Level) {
+	public Bard(int Level, Character character) {
 		setSkills(Level);
-		Character.setHitDice("1d8");
+		character.setHitDice("1d8");
+		setProficiencies(character);
 	}
 	
 	public void setSkills(int level) {
@@ -73,12 +74,12 @@ public class Bard extends Class {
 
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("Light Armor");
-		Character.addProficiency("Hand Crossbows");
-		Character.addProficiency("Longswords");
-		Character.addProficiency("Simple Weapons");
-		Character.addProficiency("Rapiers");
-		Character.addProficiency("Shortswords");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Light Armor");
+		character.addProficiency("Hand Crossbows");
+		character.addProficiency("Longswords");
+		character.addProficiency("Simple Weapons");
+		character.addProficiency("Rapiers");
+		character.addProficiency("Shortswords");
 	}
 }

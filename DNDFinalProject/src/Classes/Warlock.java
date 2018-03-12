@@ -5,10 +5,10 @@ import Skills.skills;
 
 public class Warlock extends Class{
 
-	public Warlock(int level) {
-		Character.setHitDice("1d8");
+	public Warlock(int level, Character character) {
+		character.setHitDice("1d8");
 		setSkills(level);
-		setProficiencies();
+		setProficiencies(character);
 	}
 	
 	public void setSkills(int level) {
@@ -44,9 +44,9 @@ public class Warlock extends Class{
 		
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("Light Armor");
-		Character.addProficiency("Simple Weapons");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Light Armor");
+		character.addProficiency("Simple Weapons");
 	}
 	
 }

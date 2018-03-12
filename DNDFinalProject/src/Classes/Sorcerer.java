@@ -5,9 +5,9 @@ import Skills.skills;
 
 public class Sorcerer extends Class{
 
-	public Sorcerer(int level) {
-		Character.setHitDice("1d6");
-		setProficiencies();
+	public Sorcerer(int level, Character character) {
+		character.setHitDice("1d6");
+		setProficiencies(character);
 		setSkills(level);
 	}
 	
@@ -40,11 +40,11 @@ public class Sorcerer extends Class{
 		}
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("Daggers");
-		Character.addProficiency("Slings");
-		Character.addProficiency("Quarterstaffs");
-		Character.addProficiency("Light Crossbows");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Daggers");
+		character.addProficiency("Slings");
+		character.addProficiency("Quarterstaffs");
+		character.addProficiency("Light Crossbows");
 	}
 	
 	private void chooseArchetype() {

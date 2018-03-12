@@ -66,18 +66,18 @@ public class Class {
 		}
 	}
 	
-	public int getInitialHitDie() {
+	public int getInitialHitDie(Character character) {
 		int hitDie = 0;
-		if(Character.getHitDice().equals("1d12")) {
+		if(character.getHitDice().equals("1d12")) {
 			hitDie = 12;
 		}
-		if(Character.getHitDice().equals("1d10")) {
+		if(character.getHitDice().equals("1d10")) {
 			hitDie = 10;
 		}
-		if(Character.getHitDice().equals("1d8")) {
+		if(character.getHitDice().equals("1d8")) {
 			hitDie = 8;
 		}
-		if(Character.getHitDice().equals("1d6")) {
+		if(character.getHitDice().equals("1d6")) {
 			hitDie = 6;
 		}
 		return hitDie;

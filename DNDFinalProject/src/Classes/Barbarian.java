@@ -10,10 +10,10 @@ public class Barbarian extends Class{
 	byte ragesPerDay = 2;
 	byte rageDamage = 2;
 	
-	public Barbarian(int Level) {
+	public Barbarian(int Level, Character character) {
 		setSkills(Level);
-		Character.setHitDice("1d12");
-		setProficiencies();
+		character.setHitDice("1d12");
+		setProficiencies(character);
 	}
 	
 	public void setSkills(int level) {
@@ -98,11 +98,11 @@ public class Barbarian extends Class{
 		return stringRage;
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("Light Armor");
-		Character.addProficiency("Medium Armor");
-		Character.addProficiency("Shields");
-		Character.addProficiency("Simple Weapons");
-		Character.addProficiency("Martial Weapons");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Light Armor");
+		character.addProficiency("Medium Armor");
+		character.addProficiency("Shields");
+		character.addProficiency("Simple Weapons");
+		character.addProficiency("Martial Weapons");
 	}
 }

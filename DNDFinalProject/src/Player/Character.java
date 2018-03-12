@@ -13,9 +13,9 @@ import javafx.beans.property.SimpleObjectProperty;
 
 public class Character {
 
-	public static int[] raceMods = new int[6];
+	public  int[] raceMods = new int[6];
 
-	public Character(Race race, int level, Class characterClass, String[] background, ArrayList<Item> equipment,
+	public Character(int level, String[] background, ArrayList<Item> equipment,
 			String charactername, String playerName, boolean isProAcrobatics, boolean isProAnimalHandling,
 			boolean isProArcana, boolean isProAthletics, boolean isProDeception, boolean isProHistory,
 			boolean isProInsight, boolean isProIntimidation, boolean isProInvestigation, boolean isProMedicine,
@@ -148,13 +148,13 @@ public class Character {
 	}
 
 	private Race race;
-	public static int level;
+	public  int level;
 	private Class characterClass;
-	private static String hitDice;
+	private  String hitDice;
 	private trait traits;
 	private ArrayList<Item> equipment = new ArrayList<>();
-	private static ArrayList<String> proficiencies = new ArrayList<>();
-	private static ArrayList<String> languages = new ArrayList<>();
+	private  ArrayList<String> proficiencies = new ArrayList<>();
+	private  ArrayList<String> languages = new ArrayList<>();
 	private Armor equipArmor;
 	private String charactername;
 	private String playerName;
@@ -717,7 +717,7 @@ public class Character {
 		this.level = level;
 	}
 
-	public static int getLevel() {
+	public  int getLevel() {
 		return level;
 	}
 
@@ -861,7 +861,7 @@ public class Character {
 		this.isProSurvival = isProSurvival;
 	}
 
-	public static int rollStats() {
+	public  int rollStats() {
 		int roll1 = die.roll();
 		int roll2 = die.roll();
 		int roll3 = die.roll();
@@ -903,29 +903,29 @@ public class Character {
 		this.proficiencyBonus = proficiencyBonus;
 	}
 
-	public static void addProficiency(String prof) {
+	public  void addProficiency(String prof) {
 		proficiencies.add(prof);
 	}
 
-	public static String getHitDice() {
+	public  String getHitDice() {
 		return hitDice;
 	}
 
-	public static void setHitDice(String hitDie) {
+	public void setHitDice(String hitDie) {
 		hitDice = hitDie;
 	}
-	public static ArrayList<String> getLanguages() {
+	public ArrayList<String> getLanguages() {
 		return languages;
 	}
 
 	public int getPerformance() {
 		return Performance;
 	}
-	public static void setLanguages(ArrayList<String> languages) {
-		Character.languages = languages;
+	public void setLanguages(ArrayList<String> languages) {
+		this.languages = languages;
 	}
 
-	public static void addLanguage(String language) {
+	public void addLanguage(String language) {
 		languages.add(language);
 	}
 

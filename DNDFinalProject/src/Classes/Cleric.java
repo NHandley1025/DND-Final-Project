@@ -5,11 +5,11 @@ import Skills.skills;
 
 public class Cleric extends Class {
 
-	public Cleric(int Level) {
+	public Cleric(int Level, Character character) {
 		super();
 		setSkills(Level);
-		setProficiencies();
-		Character.setHitDice("1d8");
+		setProficiencies(character);
+		character.setHitDice("1d8");
 
 	}
 
@@ -73,11 +73,11 @@ public class Cleric extends Class {
 		}
 	}
 
-	private void setProficiencies() {
-		Character.addProficiency("Light Armor");
-		Character.addProficiency("Medium Armor");
-		Character.addProficiency("Shields");
-		Character.addProficiency("Simple Weapons");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Light Armor");
+		character.addProficiency("Medium Armor");
+		character.addProficiency("Shields");
+		character.addProficiency("Simple Weapons");
 	}
 	
 }

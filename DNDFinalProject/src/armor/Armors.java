@@ -10,7 +10,7 @@ public class Armors {
 	public static HashMap<String, Armor> getArmorHash(){
 		return armorHash;
 	}
-	private static void readArmorFile() throws FileNotFoundException, IOException{
+	public static void readArmorFile() throws FileNotFoundException, IOException{
 		String file = lib.ProgramUtil.readFile("Armor.txt");
 		String[] lines = file.split("\n");
 		for(int i = 0; i < lines.length; i++) {

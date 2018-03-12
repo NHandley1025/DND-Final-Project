@@ -6,11 +6,11 @@ import Skills.skills;
 public class Monk extends Class{
 	byte ki = 0;
 
-	public Monk(int Level) {
-		Character.setHitDice("1d8");
+	public Monk(int Level, Character character) {
+		character.setHitDice("1d8");
 		setSkills(Level);
-		setSkills(Character.getLevel());
-		setProficiencies();
+		setSkills(character.getLevel());
+		setProficiencies(character);
 	}
 	
 	public void setSkills(int level) {
@@ -73,8 +73,8 @@ public class Monk extends Class{
 		
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("Short Sword");
-		Character.addProficiency("Simple Weapons");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Short Sword");
+		character.addProficiency("Simple Weapons");
 	}
 }

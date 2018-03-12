@@ -5,10 +5,10 @@ import Skills.skills;
 
 public class Fighter extends Class {
 	
-	public Fighter(int level) {
+	public Fighter(int level, Character character) {
 		setSkills(level);
-		setProficiencies();
-		Character.setHitDice("1d10");
+		setProficiencies(character);
+		character.setHitDice("1d10");
 	}
 
 	public void setSkills(int level) {
@@ -66,11 +66,11 @@ public class Fighter extends Class {
 
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("All Armor");
-		Character.addProficiency("Shields");
-		Character.addProficiency("Simple Weapons");
-		Character.addProficiency("Martial Weapons");
+	private void setProficiencies(Character character) {
+		character.addProficiency("All Armor");
+		character.addProficiency("Shields");
+		character.addProficiency("Simple Weapons");
+		character.addProficiency("Martial Weapons");
 	}
 
 }

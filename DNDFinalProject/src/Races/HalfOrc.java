@@ -5,14 +5,14 @@ import Skills.skills;
 
 public class HalfOrc extends Race {
 
-	public HalfOrc() {
+	public HalfOrc(Character character) {
 		super();
 		size = "Medium";
 		landBaseSpeed = 30;
 		setRacialSkills();
 		setRacialModifiers();
-		Character.addLanguage("Orcish");
-		Character.addLanguage("Common");
+		character.addLanguage("Orcish");
+		character.addLanguage("Common");
 		setLandBaseSpeed(30);
 	}
 	

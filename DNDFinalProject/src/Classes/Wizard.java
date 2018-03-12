@@ -7,11 +7,11 @@ public class Wizard extends Class{
 
 	private static String ArcaneTradition;
 	
-	public Wizard(int level) {
+	public Wizard(int level, Character character) {
 		super();
 		setSkills(level);
-		setProficiencies();
-		Character.setHitDice("1d6");
+		setProficiencies(character);
+		character.setHitDice("1d6");
 	}
 
 	public void setSkills(int level) {
@@ -52,11 +52,11 @@ public class Wizard extends Class{
 		}
 	}
 
-	private void setProficiencies() {
-		Character.addProficiency("Light Armor");
-		Character.addProficiency("Medium Armor");
-		Character.addProficiency("Shields");
-		Character.addProficiency("Simple Weapons");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Light Armor");
+		character.addProficiency("Medium Armor");
+		character.addProficiency("Shields");
+		character.addProficiency("Simple Weapons");
 	}
 	
 	public static void setArcaneTradition(String tradition){

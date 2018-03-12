@@ -234,7 +234,7 @@ public class ManualCharacterController implements Initializable {
 	private CheckBox FailCheck3;
 
 	@FXML
-	private TextArea InitiativeText;
+	private TextField InitiativeText;
 
 	@FXML
 	private TextField SpeedText;
@@ -603,32 +603,6 @@ public class ManualCharacterController implements Initializable {
 		LvlSpinner.setDisable(true);
 	}
 	
-	@FXML
-	public void alignmentSelect(ActionEvent event) {
-		((ComboBox)event.getSource()).setDisable(true);
-		
-		switch(ClassComboBox.getValue()) {
-		case "Chaotic Good":
-			break;
-		case "Chaotic Neutral":
-			break;
-		case "Chaotic Evil":
-			break;
-		case "Neutral Good":
-			break;
-		case "True Neutral":
-			break;
-		case "Neutral Evil":
-			break;
-		case "Lawful Good":
-			break;
-		case "Lawful Neutral":
-			break;
-		case "Lawful Evil":
-			break;
-			
-		}
-	}
 	
 	@FXML
 	public void classSelect(ActionEvent event) {
@@ -638,7 +612,7 @@ public class ManualCharacterController implements Initializable {
 		int level = Generator.character.getLevel();
 		switch (ClassComboBox.getValue()) {
 		case "Barbarian":
-			cl = new Barbarian(level);
+			cl = new Barbarian(level, Generator.character);
 			break;
 		case "Bard":
 			cl = new Bard(level);
@@ -772,7 +746,6 @@ public class ManualCharacterController implements Initializable {
 	@FXML
 	public void saveButton(ActionEvent event) {
 		trait trt;
-		String[] keys = TraitText.getText().split("\n");
 		
 		String[] items = EquipmentText.getText().split("\n");
 		ArrayList<Item> weapons = null;

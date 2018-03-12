@@ -6,14 +6,14 @@ import Player.Character;
 
 public class Dragonborn extends Race{
 
-	public Dragonborn() {
+	public Dragonborn(Character character) {
 		super();
 		size = "Medium";
 		landBaseSpeed = 30;
 		setRacialModifiers();
 		setRacialSkills();
-		Character.addLanguage("Dragonborn");
-		Character.addLanguage("Common");
+		character.addLanguage("Dragonborn");
+		character.addLanguage("Common");
 		setLandBaseSpeed(30);
 	}
 	

@@ -5,13 +5,13 @@ import Skills.skills;
 
 public class HalfElf extends Race {
 
-	public HalfElf() {
+	public HalfElf(Character character) {
 		size = "Medium";
 		landBaseSpeed = 30;
 		setRacialModifiers();
 		setRacialSkills();
-		Character.addLanguage("Elvish");
-		Character.addLanguage("Common");
+		character.addLanguage("Elvish");
+		character.addLanguage("Common");
 		setLandBaseSpeed(30);
 	}
 	
