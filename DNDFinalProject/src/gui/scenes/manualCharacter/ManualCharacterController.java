@@ -5,12 +5,33 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import Races.*;
-import Traits.trait;
-import controllers.Generator;
-import Classes.*;
+import Classes.Barbarian;
+import Classes.Bard;
 import Classes.Class;
+import Classes.Cleric;
+import Classes.Druid;
+import Classes.Fighter;
+import Classes.Monk;
+import Classes.Paladin;
+import Classes.Ranger;
+import Classes.Rogue;
+import Classes.Sorcerer;
+import Classes.Warlock;
+import Classes.Wizard;
 import Items.Item;
+import Races.Dragonborn;
+import Races.Dwarf;
+import Races.Elf;
+import Races.HalfElf;
+import Races.HalfOrc;
+import Races.Halfling;
+import Races.Human;
+import Races.Race;
+import Races.Tiefling;
+import Traits.trait;
+import armor.Armors;
+import consumables.Potions;
+import controllers.Generator;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -23,6 +44,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -615,35 +637,35 @@ public class ManualCharacterController implements Initializable {
 			cl = new Barbarian(level, Generator.character);
 			break;
 		case "Bard":
-			cl = new Bard(level);
+			cl = new Bard(level, Generator.character);
 		case "Cleric":
-			cl = new Cleric(level);
+			cl = new Cleric(level, Generator.character);
 			break;
 		case "Druid":
-			cl = new Druid(level);
+			cl = new Druid(level, Generator.character);
 			break;
 		case "Fighter":
-			cl = new Fighter(level);
+			cl = new Fighter(level, Generator.character);
 			break;
 		case "Monk":
-			cl = new Monk(level);
+			cl = new Monk(level, Generator.character);
 			break;
 		case "Paladin":
-			cl = new Paladin(level);
+			cl = new Paladin(level, Generator.character);
 			break;
 		case "Ranger":
-			cl = new Ranger(level);
+			cl = new Ranger(level, Generator.character);
 		case "Rogue":
-			cl = new Rogue(level);
+			cl = new Rogue(level, Generator.character);
 			break;
 		case "Sorcerer":
-			cl = new Sorcerer(level);
+			cl = new Sorcerer(level, Generator.character);
 			break;
 		case "Warlock":
-			cl = new Warlock(level);
+			cl = new Warlock(level, Generator.character);
 			break;
 		case "Wizard":
-			cl = new Wizard(level);
+			cl = new Wizard(level, Generator.character);
 			break;
 		}
 		Generator.character.setCharacterClass(cl);
@@ -715,22 +737,22 @@ public class ManualCharacterController implements Initializable {
 		Race race = null;
 		switch (RaceComboBox.getValue()) {
 		case "Dragonborn":
-			race = new Dragonborn();
+			race = new Dragonborn(Generator.character);
 			break;
 		case "Dwarf":
-			race = new Dwarf();
+			race = new Dwarf(Generator.character);
 			break;
 		case "Elf":
-			race = new Elf();
+			race = new Elf(Generator.character);
 			break;
 		case "Half Elf":
-			race = new HalfElf();
+			race = new HalfElf(Generator.character);
 			break;
 		case "Halfling":
-			race = new Halfling();
+			race = new Halfling(Generator.character);
 			break;
 		case "Half Orc":
-			race = new HalfOrc();
+			race = new HalfOrc(Generator.character);
 			break;
 		case "Human":
 			race = new Human();
@@ -786,9 +808,47 @@ public class ManualCharacterController implements Initializable {
 
 	}
 	
+	@FXML
+	private ListView<String> EqList;
+	
+	@FXML
+	private ComboBox<String> EqComboBox;
+	
+	@FXML
+	private Button eqAddButton;
+	
+	@FXML
+	private Button EqRemoveButton;
+	
+	@FXML
+	private ComboBox<String> ArmorComboBox;
+	
+	@FXML
+	private void armorSelector(ActionEvent event) {
+		String armor = ArmorComboBox.getValue();
+		Generator.character.setEquipArmor(Armors.getArmorHash().get(armor));
+		ArmorClassText.setText(String.valueOf(Generator.character.setArmorClass()));
+	}
+	
+	@FXML
+	public void eqAddButton(ActionEvent event) {
+		EqList.getItems().add(EqComboBox.getValue());
+	}
+	
+	@FXML
+	public void eqRemoveButton(ActionEvent event) {
+		EqList.getItems().remove(EqList.getSelectionModel().getSelectedIndex());
+	}
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		ArmorComboBox.getItems().addAll(Armors.getArmorHash().keySet()); // add all armors
+		ArrayList<String> items = null;
+		for(String key : Potions.getPotionHash().keySet()) {
+			items.add(key);
+		}
+		EqComboBox.getItems().addAll(); // add all selectable items
 		Generator.manualGenerateChar();
 		RaceComboBox.setValue("Race");
 		ClassComboBox.setValue("Class");

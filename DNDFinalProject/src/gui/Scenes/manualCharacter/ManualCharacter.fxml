@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
@@ -25,7 +26,7 @@
             </TextField>
             <ImageView fx:id="Image" fitHeight="1600.0" fitWidth="1200.0">
                <image>
-                  <Image url="@../../../../../../../DnD_5E_CharacterSheet%20-%20Form%20Fillable-page-001.jpg" />
+                  <Image url="resources/DNDSheet.jpg" />
                </image>
             </ImageView>
             <Spinner fx:id="LvlSpinner" amountToStepBy="1" initialValue="1" layoutX="529.0" layoutY="102.0" max="20" min="1" prefHeight="25.0" prefWidth="50.0" />
@@ -68,7 +69,6 @@
             <TextField fx:id="WisdomModText" alignment="CENTER" editable="false" layoutX="95.0" layoutY="957.0" prefHeight="25.0" prefWidth="35.0" />
             <TextField fx:id="CharismaModText" alignment="CENTER" editable="false" layoutX="95.0" layoutY="1101.0" prefHeight="25.0" prefWidth="35.0" />
             <TextArea fx:id="ProfText" editable="false" layoutX="65.0" layoutY="1266.0" prefHeight="260.0" prefWidth="328.0" />
-            <TextArea fx:id="EquipmentText" layoutX="529.0" layoutY="1195.0" prefHeight="334.0" prefWidth="233.0" promptText="Name:Description:Value:Weight" />
             <TextField fx:id="CpText" alignment="CENTER" layoutX="452.0" layoutY="1211.0" prefHeight="34.0" prefWidth="52.0">
                <font>
                   <Font size="14.0" />
@@ -98,15 +98,15 @@
                   <Font size="9.0" />
                </font>
             </TextField>
-            <TextField fx:id="InitiativeText" editable="false" layoutX="558.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+            <TextField fx:id="InitiativeText" layoutX="558.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
                <font>
                   <Font size="24.0" />
                </font></TextField>
-            <TextField fx:id="SpeedText" editable="false" layoutX="674.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+            <TextField fx:id="SpeedText" layoutX="674.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
                <font>
                   <Font size="24.0" />
                </font></TextField>
-            <TextField fx:id="ArmorClassText" editable="false" layoutX="458.0" layoutY="290.0" prefHeight="46.0" prefWidth="54.0">
+            <TextField fx:id="ArmorClassText" layoutX="458.0" layoutY="290.0" prefHeight="46.0" prefWidth="54.0">
                <font>
                   <Font size="21.0" />
                </font>
@@ -216,12 +216,17 @@
             </Text>
             <Button fx:id="CalculateButton" disable="true" layoutX="81.0" layoutY="256.0" mnemonicParsing="false" onAction="#calculateButton" text="Calculate" />
             <Button fx:id="LockButton" layoutX="528.0" layoutY="77.0" mnemonicParsing="false" onAction="#lockInButton" text="Lock In" />
-            <ComboBox fx:id="BackgroundComboBox" layoutX="710.0" layoutY="102.0"  prefHeight="25.0" prefWidth="175.0" promptText="Background" />
+            <ComboBox fx:id="BackgroundComboBox" layoutX="710.0" layoutY="102.0" prefHeight="25.0" prefWidth="175.0" promptText="Background" />
             <ComboBox fx:id="AlignmentComboBox" layoutX="693.0" layoutY="156.0" prefHeight="25.0" prefWidth="190.0" promptText="Alignment" />
             <TextArea fx:id="TraitNameText" layoutX="821.0" layoutY="280.0" prefHeight="97.0" prefWidth="82.0" />
             <TextArea fx:id="IdealsNameText" layoutX="820.0" layoutY="424.0" prefHeight="68.0" prefWidth="84.0" />
             <TextArea fx:id="BondsNameText" layoutX="820.0" layoutY="538.0" prefHeight="68.0" prefWidth="83.0" />
             <TextArea fx:id="FlawsNameText" layoutX="820.0" layoutY="648.0" prefHeight="68.0" prefWidth="84.0" />
+            <ListView fx:id="EqList" layoutX="528.0" layoutY="1237.0" prefHeight="252.0" prefWidth="228.0" />
+            <ComboBox fx:id="EqComboBox" layoutX="437.0" layoutY="1501.0" prefHeight="25.0" prefWidth="195.0" />
+            <Button fx:id="eqAddButton" layoutX="640.0" layoutY="1501.0" mnemonicParsing="false" onAction="#eqAddButton" text="Add" />
+            <Button fx:id="EqRemoveButton" layoutX="703.0" layoutY="1501.0" mnemonicParsing="false" onAction="#eqRemoveButton" text="Remove" />
+            <ComboBox fx:id="ArmorComboBox" layoutX="529.0" layoutY="1200.0" onAction="#armorSelector" prefHeight="25.0" prefWidth="228.0" promptText="Select Armor" />
          </children>
       </Pane>
    </content>
