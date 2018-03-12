@@ -9,4 +9,11 @@ public class Tool extends Item{
 		
 	}
 
+	@Override
+	public String toString() {
+		return this.getName() + " : " + this.getDescription();
+	}
+	
+	
+
 }

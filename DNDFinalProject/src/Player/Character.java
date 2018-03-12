@@ -35,7 +35,6 @@ public class Character {
 		setCharisma();
 		setTraits(traits);
 		setEquipment(equipment);
-		setEquipArmor(equipArmor);
 		setCharacterName(charactername);
 		setPlayerName(playerName);
 		this.isProAcrobatics = isProAcrobatics;
