@@ -9,6 +9,8 @@ public class Bard extends Class {
 	public Bard(int Level) {
 		setSkills(Level);
 		Character.setHitDice("1d8");
+		setProficiencies();
+		chooseArchetype();
 	}
 	
 	public void setSkills(int level) {
@@ -47,7 +49,7 @@ public class Bard extends Class {
 		 
 		case 8: 
 			
-		case 7: ;
+		case 7:
 		
 		case 6: addSkill(skills.bardCollegeFeature);
 		addSkill(skills.counterCharm);
@@ -57,8 +59,7 @@ public class Bard extends Class {
 		
 		case 4: 
 			
-		case 3: addSkill(skills.bardCollege);
-		addSkill(skills.expertise);
+		case 3:addSkill(skills.expertise);
 		
 		case 2: addSkill(skills.jackOfAllTrades);
 		addSkill(skills.songOfRest);
@@ -70,7 +71,7 @@ public class Bard extends Class {
 	}
 
 	private void chooseArchetype() {
-
+		setArchetype(Archetypes.CollegeOfLore);
 	}
 	
 	private void setProficiencies() {

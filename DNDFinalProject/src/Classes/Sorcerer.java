@@ -74,6 +74,7 @@ public class Sorcerer extends Class{
 		case "White": a = Archetypes.white;
 		break;
 		}
+		setArchetype(a);
 	}
 	
 }

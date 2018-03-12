@@ -83,12 +83,11 @@ public class skills {
 	public static final Skill songOfRest = new Skill("Song of Rest", "you can use soothing music or oration to help revitalize your wounded allies during a Short Rest. If you or any friendly creatures who can hear your performance regain hit points by spending Hit Dice at the end of the Short Rest, each of those creatures regains an extra 1d6 hit points.\r\n" + 
 			"\r\n" + 
 			"The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level.");
-	public static final Skill bardCollegeFeature = new Skill("Bard College Feature", "");
 	public static final Skill counterCharm = new Skill("Counter Charm", "you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being Frightened or Charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are Incapacitated or silenced or if you voluntarily end it (no action required).");
 	public static final Skill fontOfInspiration = new Skill("Font of Inspiration", "you regain all of your expended uses of Bardic Inspiration when you finish a short or Long Rest.");
 	public static final Skill jackOfAllTrades = new Skill("Jack of All Trades", "You can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.");
-	public static final Skill expertise = new Skill("Expertise", "");
-	public static final Skill bardCollege = new Skill("Bard College", "");
+	public static final Skill expertise = new Skill("Expertise", "Choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. You'll choose 2 more at 10th level.");
+	public static final Skill 
 
 	
 	//Cleric
@@ -107,10 +106,10 @@ public class skills {
 			"Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a Long Rest.\r\n" + 
 			"");
 	public static final Skill DestroyUndeadCR0 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
-	public static final Skill DestroyUndeadCR1 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
-	public static final Skill DestroyUndeadCR2 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
-	public static final Skill DestroyUndeadCR3 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
-	public static final Skill DestroyUndeadCR4 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1/2 or less!");
+	public static final Skill DestroyUndeadCR1 = new Skill("Destroy Undead", "You can destroy undead with a CR of 1 or less!");
+	public static final Skill DestroyUndeadCR2 = new Skill("Destroy Undead", "You can destroy undead with a CR of 2 or less!");
+	public static final Skill DestroyUndeadCR3 = new Skill("Destroy Undead", "You can destroy undead with a CR of 3 or less!");
+	public static final Skill DestroyUndeadCR4 = new Skill("Destroy Undead", "You can destroy undead with a CR of 4 or less!");
 	public static final Skill DivineInterventionImprovement = new Skill("Divine Intervention", "Your call for intervention succeeds automatically, no roll required");
 
 	public static void chooseDivineDomainFeature() {
