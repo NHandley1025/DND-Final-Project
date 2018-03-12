@@ -33,6 +33,7 @@ import Races.Tiefling;
 import Skills.Skill;
 import Spells.spells;
 import Traits.trait;
+import Weapons.weapon;
 import Weapons.weapons;
 import armor.Armors;
 import consumables.Potions;
@@ -743,7 +744,7 @@ public class ManualCharacterController implements Initializable {
 		InitiativeText.setText(String.valueOf(Generator.character.getInitiativa()));
 	}
 	
-	public void PopUp(MouseEvent event, String text) {
+	public void PopUp(String text) {
 		try {
 			System.out.println("Ive been CLICKED!!");
 			Parent root = null;
@@ -985,15 +986,10 @@ public class ManualCharacterController implements Initializable {
 		    @Override
 		    public void handle(MouseEvent event) {
 		        if(event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
-
-		         }    
-		    }
-		});
-		AttacksList.setOnMousePressed(new EventHandler<MouseEvent>() {
-		    @Override
-		    public void handle(MouseEvent event) {
-		        if(event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
-
+		        	String name = ((ListView<String>)event.getSource()).getSelectionModel().getSelectedItem();
+		        	if(weapons.getWeaponHash().containsKey(name)) {
+		        		PopUp(weapons.getWeaponHash().get(name).toString());
+		        	}
 		         }    
 		    }
 		});
@@ -1002,7 +998,7 @@ public class ManualCharacterController implements Initializable {
 		    public void handle(MouseEvent event) {
 		        if(event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
 		        	Skill skill = ((ListView<Skill>)event.getSource()).getSelectionModel().getSelectedItem();
-		        	PopUp(event, skill.getDescription());
+		        	PopUp(skill.getDescription());
 		         }    
 		    }
 		});
