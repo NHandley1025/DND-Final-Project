@@ -7,6 +7,7 @@ import Classes.Class;
 import Dice.die;
 import Items.Item;
 import Races.Race;
+import Spells.spell;
 import Traits.trait;
 import armor.Armor;
 import armor.Armors;
@@ -152,12 +153,14 @@ public class Character implements Serializable{
 		Wisdom += raceMods[4];
 		Charisma += raceMods[5];
 	}
-
+	public String Alignment;
+	public String Background;
 	private Race race;
 	public  int level;
 	private Class characterClass;
 	private  String hitDice;
 	private trait traits;
+	public ArrayList<spell> spells = new ArrayList<>();
 	private ArrayList<Item> equipment = new ArrayList<>();
 	private  ArrayList<String> proficiencies = new ArrayList<>();
 	private  ArrayList<String> languages = new ArrayList<>();

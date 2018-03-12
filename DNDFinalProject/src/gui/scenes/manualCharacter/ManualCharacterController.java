@@ -873,6 +873,9 @@ public class ManualCharacterController implements Initializable {
 		Generator.character.setSilverPieces(Integer.parseInt(SpText.getText()));
 		Generator.character.setGoldPieces(Integer.parseInt(GpText.getText()));
 		Generator.character.setPlatPieces(Integer.parseInt(PpText.getText()));
+		for(String spel : SpellComboBox.getItems()) {
+			Generator.character.spells.add(spells.get(new spellKey(0, spel, "")));
+		}
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Open Save File");
 		File file = fileChooser.showOpenDialog(((Node) event.getSource()).getScene().getWindow());
