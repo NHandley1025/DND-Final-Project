@@ -1,5 +1,3 @@
-Name::Class::Lvl
-
 Blade Ward::Bard::0
 Dancing Lights::Bard::0
 Friends::Bard::0
@@ -312,7 +310,7 @@ Scrying::Druid::5
 Tree Stride::Druid::5
 Wall of Stone::Druid::5
 Conjure Fey::Druid::6
-Find the PAth::Druid::6
+Find the Path::Druid::6
 Heal::Druid::6
 Heroes’ Feast::Druid::6
 Move Earth::Druid::6
@@ -336,4 +334,513 @@ Foresight::Druid::9
 Shapechange::Druid::9
 Storm of Vengeance::Druid::9
 True Resurrection::Druid::9
-
+Bless::Paladin::1
+Command::Paladin::1
+Compelled Duel::Paladin::1
+Cure Wounds::Paladin::1
+Detect Evil and Good::Paladin::1
+Detect Magic::Paladin::1
+Detect Poison and Disease::Paladin::1
+Divine Favor::Paladin::1
+Heroism::Paladin::1
+Protection from Evil and Good::Paladin::1
+Purify Food and Drink::Paladin::1
+Searing Smite::Paladin::1
+Shield of Faith::Paladin::1
+Thunderous Smite::Paladin::1
+Wrathful Smite::Paladin::1
+Aid::Paladin::2
+Branding Smite::Paladin::2
+Find Steed::Paladin::2
+Lesser Restoration::Paladin::2
+Locate Object::Paladin::2
+Magic Weapon::Paladin::2
+Protection from Poison::Paladin::2
+Zone of Truth::Paladin::2
+Aura of Vitality::Paladin::3
+Blinding Smite::Paladin::3
+Create Food and Water::Paladin::3
+Crusader’s Mantle::Paladin::3
+Daylight::Paladin::3
+Dispel Magic::Paladin::3
+Elemental Weapon::Paladin::3
+Magic Circle::Paladin::3
+Remove Curse::Paladin::3
+Revivify::Paladin::3
+Aura of Life::Paladin::4
+Aura of Purity::Paladin::4
+Banishment::Paladin::4
+Death Ward::Paladin::4
+Locate Creature::Paladin::4
+Staggering Smite::Paladin::4
+Banishing Smite::Paladin::5
+Circle of Power::Paladin::5
+Destructive Wave::Paladin::5
+Dispel Evil and Good::Paladin::5
+Geas::Paladin::5
+Raise Dead::Paladin::5
+Alarm::Ranger::1
+Animal Friendship::Ranger::1
+Cure Wounds::Ranger::1
+Detect Magic::Ranger::1
+Detect Poison and Disease::Ranger::1
+Ensnaring Strike::Ranger::1
+Fog Cloud::Ranger::1
+Goodberry::Ranger::1
+Hail of Thorns::Ranger::1
+Hunter’s Mark::Ranger::1
+Jump::Ranger::1
+Longstrider::Ranger::1
+Speak with Animals::Ranger::1
+Animal Messenger::Ranger::2
+Barkskin::Ranger::2
+Beast Sense::Ranger::2
+Cordon Of Arrows::Ranger::2
+Darkvision::Ranger::2
+Find Traps::Ranger::2
+Lesser Restoration::Ranger::2
+Locate Animals and Plants::Ranger::2
+Locate Object::Ranger::2
+Pass Without Trace::Ranger::2
+Protection From Poison::Ranger::2
+Silence::Ranger::2
+Spike Growth::Ranger::2
+Conjure Animals::Ranger::3
+Conjure Barrage::Ranger::3
+Daylight::Ranger::3
+Lightning Arrow::Ranger::3
+Nondetection::Ranger::3
+Plant Growth::Ranger::3
+Protection from Energy::Ranger::3
+Speak with Plants::Ranger::3
+Water Breathing::Ranger::3
+Water Walk::Ranger::3
+Wind Walk::Ranger::3
+Conjure Woodland Beings::Ranger::4
+Freedom Of Movement::Ranger::4
+Grasping Vine::Ranger::4
+Locate Creature::Ranger::4
+Stoneskin::Ranger::4
+Commute with Nature::Ranger::5
+Conjure Volley::Ranger::5
+Swift Quiver::Ranger::5
+Tree Stride::Ranger::5
+Acid Splash::Sorceror::0
+Blade Ward::Sorceror::0
+Chill Touch::Sorceror::0
+Dancing Lights::Sorceror::0
+Fire Bolt::Sorceror::0
+Friends::Sorceror::0
+Light::Sorceror::0
+Mage Hand::Sorceror::0
+Mending::Sorceror::0
+Message::Sorceror::0
+MInor Illusion::Sorceror::0
+Poison Spray::Sorceror::0
+Prestidigitation::Sorceror::0
+Ray of Frost::Sorceror::0
+Shocking Grasp::Sorceror::0
+True Strike::Sorceror::0
+Burning Hands::Sorceror::1
+Charm Person::Sorceror::1
+Chromatic orb::Sorceror::1
+Color Spray::Sorceror::1
+Comprehend Languages::Sorceror::1
+Detect Magic::Sorceror::1
+Disguise Self::Sorceror::1
+Expeditious Retreat::Sorceror::1
+False LIfe::Sorceror::1
+Feather Fall::Sorceror::1
+Fog Cloud::Sorceror::1
+Jump::Sorceror::1
+Mage Armor::Sorceror::1
+Magic MIssile::Sorceror::1
+Ray of Sickness::Sorceror::1
+Shield::Sorceror::1
+Silent Image::Sorceror::1
+Sleep::Sorceror::1
+Thunderwave::Sorceror::1
+Witch Bolt ::Sorceror::1
+Alter Self::Sorceror::2
+Blindness/Deafness::Sorceror::2
+Blur::Sorceror::2
+Cloud of Dagger::Sorceror::2
+Crown of Madness::Sorceror::2
+Darkness::Sorceror::2
+Darkvision::Sorceror::2
+Detect thoughts::Sorceror::2
+Enhance Ability::Sorceror::2
+Enlarge/Reduce::Sorceror::2
+Gust of Wind::Sorceror::2
+Hold Person::Sorceror::2
+Invisibility::Sorceror::2
+Knock::Sorceror::2
+Levitate::Sorceror::2
+Mirror Image::Sorceror::2
+Misty Step::Sorceror::2
+Phantasmal Force::Sorceror::2
+Scorching Ray::Sorceror::2
+See Invisibility::Sorceror::2
+Shatter::Sorceror::2
+Spider Climb::Sorceror::2
+Suggestion::Sorceror::2
+Web::Sorceror::2
+Blink::Sorceror::3
+Clairvoyance::Sorceror::3
+Counterspell::Sorceror::3
+Daylight::Sorceror::3
+Dispel Magic::Sorceror::3
+Fear::Sorceror::3
+Fireball::Sorceror::3
+Fly::Sorceror::3
+Gaseous Form::Sorceror::3
+Haste::Sorceror::3
+Hypnotic Pattern::Sorceror::3
+Lightning Bolt::Sorceror::3
+Major Image::Sorceror::3
+Protection from Energy::Sorceror::3
+Sleet Storm::Sorceror::3
+Slow::Sorceror::3
+Stinking Cloud::Sorceror::3
+Tongues::Sorceror::3
+Water Breathing::Sorceror::3
+Water Walk::Sorceror::3
+Banishment::Sorceror::4
+Blight::Sorceror::4
+Confusion::Sorceror::4
+Dimension Door::Sorceror::4
+Dominate Beast::Sorceror::4
+Greater Invisibility::Sorceror::4
+Ice Storm::Sorceror::4
+Polymorph::Sorceror::4
+Stoneskin::Sorceror::4
+Wall of Fire::Sorceror::4
+Animate Object::Sorceror::5
+Cloudkill::Sorceror::5
+Cone of Cold::Sorceror::5
+Creation::Sorceror::5
+Dominate person::Sorceror::5
+HOld MOnster::Sorceror::5
+Insect plague::Sorceror::5
+Seeming::Sorceror::5
+Telekinesis::Sorceror::5
+Teleportation Circle::Sorceror::5
+Wall of Stone::Sorceror::5
+Arcane Gate::Sorceror::6
+Chain Lightning::Sorceror::6
+Circle of Death::Sorceror::6
+Distengrate::Sorceror::6
+Eyebite::Sorceror::6
+Globe of Invulnerability::Sorceror::6
+Mass Suggestion::Sorceror::6
+Move Earth::Sorceror::6
+Sunbeam::Sorceror::6
+True Seeing::Sorceror::6
+Delayed Blast Fireball::Sorceror::7
+Etherealness::Sorceror::7
+Finger of Death::Sorceror::7
+Fire Storm::Sorceror::7
+Plane Shift::Sorceror::7
+Prismatic Spray::Sorceror::7
+Reverse Gravity::Sorceror::7
+Teleport::Sorceror::7
+Dominate Monster::Sorceror::8
+Earthquake::Sorceror::8
+Incendiary Cloud::Sorceror::8
+Power Word Stun::Sorceror::8
+Sunburst::Sorceror::8
+Gate::Sorceror::9
+Meteor Swarm::Sorceror::9
+Power Word Kill::Sorceror::9
+Time Stop::Sorceror::9
+Wish::Sorceror::9 
+Blade Ward::Warlock::0
+Chill Touch::Warlock::0
+Eldritch Blast::Warlock::0
+Friends::Warlock::0
+Mage Hand::Warlock::0
+Minor Illusion::Warlock::0
+Poison Spray::Warlock::0
+Prestidigitation::Warlock::0
+True Strike::Warlock::0
+Armor of Agathys::Warlock::1
+Armor of Hadar::Warlock::1
+Charm Person::Warlock::1
+Comprehend Languages::Warlock::1
+Expeditious Retreat::Warlock::1
+Hellish Rebuke::Warlock::1
+Hex::Warlock::1
+Illusory Script::Warlock::1
+Protection from Evil and Good::Warlock::1
+Unseen Servant::Warlock::1
+Witch Bolt::Warlock::1
+Cloud Of Daggers::Warlock::2
+Crown of Madness::Warlock::2
+Darkness::Warlock::2
+Entherall::Warlock::2
+Hold Person::Warlock::2
+Invisibility::Warlock::2
+Mirror Image::Warlock::2
+Misty step::Warlock::2
+Ray of Enfeeblement::Warlock::2
+Shatter::Warlock::2
+Spider Climb::Warlock::2
+Suggestion::Warlock::2
+Counterspell::Warlock::3
+Dispel Magic::Warlock::3
+Fear::Warlock::3
+Fly::Warlock::3
+Gaseous Form::Warlock::3
+Hunger of Hadar::Warlock::3
+Hypnotic Pattern::Warlock::3
+Magic Circle::Warlock::3
+Major image::Warlock::3
+Remove Curse::Warlock::3
+Tongues::Warlock::3
+Vampiric Touch::Warlock::3
+Banishment::Warlock::4
+Blight::Warlock::4
+Dimension Door::Warlock::4
+Hallucinatory Terrain::Warlock::4
+Contact Other Plane::Warlock::5
+Dream::Warlock::5
+Hold Monster::Warlock::5
+Scrying::Warlock::5
+Arcane Gate::Warlock::6
+Circle of Death::Warlock::6
+Conjure fey::Warlock::6
+Create Undead::Warlock::6
+Eyebite::Warlock::6
+Flesh of Stone::Warlock::6
+Mass Suggestion::Warlock::6
+True Seeing::Warlock::6
+Etherealness::Warlock::7
+Finger of Death::Warlock::7
+Forcecage::Warlock::7
+Plane Shift::Warlock::7
+Demiplane::Warlock::8
+Dominate Monster::Warlock::8
+Feeblemind::Warlock::8
+Glibness::Warlock::8
+Power Word Stun::Warlock::8
+Astral Projection::Warlock::9
+Foresight::Warlock::9
+Imprisonment::Warlock::9
+Power Word Kill::Warlock::9
+True Polymorph::Warlock::9
+Acid Splash::Wizard::0
+Blade Ward::Wizard::0
+Chill Touch::Wizard::0
+Dancing Light::Wizard::0
+Fire Bolt::Wizard::0
+Friends::Wizard::0
+Light::Wizard::0
+Mage Hand::Wizard::0
+Mending::Wizard::0
+Message::Wizard::0
+Minor Illusion::Wizard::0
+Poison Spray::Wizard::0
+Prestidigitation::Wizard::0
+Ray of Frost::Wizard::0
+Shocking Grasp::Wizard::0
+True Strike::Wizard::0
+Alarm::Wizard::1
+Burning Hands::Wizard::1
+Charm Person::Wizard::1
+Chromatic Orb::Wizard::1
+Color Spray::Wizard::1
+Comprehend Languages::Wizard::1
+Detect Magic::Wizard::1
+Disguise Self::Wizard::1
+Expeditious Retreat::Wizard::1
+False Life::Wizard::1
+Feather Fall::Wizard::1
+Find Familiar::Wizard::1
+Fog Cloud::Wizard::1
+Grease::Wizard::1
+Identify::Wizard::1
+Illusory Script::Wizard::1
+Jump::Wizard::1
+Longstrider::Wizard::1
+Mage Armor::Wizard::1
+Magic Missile::Wizard::1
+Protection from Evil::Wizard::1
+Protection from Good::Wizard::1
+Ray of Sickness::Wizard::1
+Shield::Wizard::1
+Silent Image::Wizard::1
+Sleep::Wizard::1
+Tasha’s Hideous Laughter::Wizard::1
+Tenser’s Floating Disk::Wizard::1
+Thunderwave::Wizard::1
+Unseen Servant::Wizard::1
+Witch Bolt::Wizard::1
+Alter Self::Wizard::2
+Arcane Lock::Wizard::2
+Blindness/Deafness::Wizard::2
+Blur::Wizard::2
+Cloud of Dagger::Wizard::2
+Continual Flame::Wizard::2
+Crown of Madness::Wizard::2
+Darkness::Wizard::2
+Darkvision::Wizard::2
+Detect Thoughts::Wizard::2
+Enlarge/Reduce::Wizard::2
+Flaming Sphere::Wizard::2
+Gentle Repose::Wizard::2
+Gust of Wind::Wizard::2
+Hold Person::Wizard::2
+Invisibility::Wizard::2
+Knock::Wizard::2
+Levitate::Wizard::2
+Locate Object::Wizard::2
+Magic Mouth::Wizard::2
+Magic Weapon::Wizard::2
+Melf’s Acid Arrow::Wizard::2
+Mirror Image::Wizard::2
+Misty Step::Wizard::2
+Nystul’s Magic Aura::Wizard::2
+Phantasmal Force::Wizard::2
+Ray of Enfeeblement::Wizard::2
+Rope Trick::Wizard::2
+Scorching Ray::Wizard::2
+See Invisibility::Wizard::2
+Shatter::Wizard::2
+Spider Climb::Wizard::2
+Suggestion::Wizard::2
+Web::Wizard::2
+Animate Dead::Wizard::3
+Bestow Curse::Wizard::3
+Blink::Wizard::3
+Clairvoyance::Wizard::3
+Counterspell::Wizard::3
+Dispel Magic::Wizard::3
+Fear::Wizard::3
+Feign Death::Wizard::3
+Fireball::Wizard::3
+Fly::Wizard::3
+Gaseous Form::Wizard::3
+Glyph of Warding::Wizard::3
+Haste::Wizard::3
+Hypnotic Pattern::Wizard::3
+Leomund’s Tiny Hut::Wizard::3
+Lightning Bolt::Wizard::3
+Magic Circle::Wizard::3
+Major Image::Wizard::3
+Nondetection::Wizard::3
+Phantom Steed::Wizard::3
+Protection from Energy::Wizard::3
+Remove Curse::Wizard::3
+Sending::Wizard::3
+Sleet Storm::Wizard::3
+Slow::Wizard::3
+Stinking Cloud::Wizard::3
+Tongues::Wizard::3
+Vampiric Touch::Wizard::3
+Water Breathing::Wizard::3
+Arcane Eye::Wizard::4
+Banishment::Wizard::4
+Blight::Wizard::4
+Confusion::Wizard::4
+Conjure Minor Elementals::Wizard::4
+Control Water::Wizard::4
+Dimension Door::Wizard::4
+Evard’s Black Tentacles::Wizard::4
+Fabricate::Wizard::4
+Fire Shield::Wizard::4
+Greater Invisibility::Wizard::4
+Hallucinatory Terrain::Wizard::4
+Ice Storm::Wizard::4
+Leomund’s Secret Chest::Wizard::4
+Locate Creature::Wizard::4
+Mordenkainen’s Faithful Hound::Wizard::4
+Mordenkainen’s Private Sanctum::Wizard::4
+Otiluke’s Resilient Sphere::Wizard::4
+Phantasmal Killer::Wizard::4
+Polymorph::Wizard::4
+Stone Shape::Wizard::4
+Stoneskin::Wizard::4
+Wall of Fire::Wizard::4
+Animate Objects::Wizard::5
+Bigby’s Hand::Wizard::5
+Cloudkill::Wizard::5
+Cone of Cold::Wizard::5
+Conjure Elemental::Wizard::5
+Contact Other Plane::Wizard::5
+Creation::Wizard::5
+Dominate Person::Wizard::5
+Dream::Wizard::5
+Geas::Wizard::5
+Hold Monster::Wizard::5
+Legend Lore::Wizard::5
+Mislead::Wizard::5
+Modify Memory::Wizard::5
+Passwall::Wizard::5
+Planar Binding::Wizard::5
+Rary’s Telepathic Bond::Wizard::5
+Scrying::Wizard::5
+Seeming::Wizard::5
+Telekinesis::Wizard::5
+Teleportation Circle::Wizard::5
+Wall of Force::Wizard::5
+Wall of Stone::Wizard::5
+Arcane Gate::Wizard::6
+Chain Lightning::Wizard::6
+Circle of Death::Wizard::6
+Contingency::Wizard::6
+Create Undead::Wizard::6
+Disintegrate::Wizard::6
+Drawmij’s Instant Summons::Wizard::6
+Eyebite::Wizard::6
+Flesh to Stone::Wizard::6
+Globe of Invulnerability::Wizard::6
+Guards and Wards::Wizard::6
+Magic Jar::Wizard::6
+Mass Suggestion::Wizard::6
+Move Earth::Wizard::6
+Otiluke’s Freezing Sphere::Wizard::6
+Otto’s Irresistible Dance::Wizard::6
+Programmed Illusion::Wizard::6
+Sunbeam::Wizard::6
+True Seeing::Wizard::6
+Wall of Ice::Wizard::6
+Delayed Blast Fireball::Wizard::7
+Etherealness::Wizard::7
+Finger of Death::Wizard::7
+Forcecage::Wizard::7
+Mirage Arcane::Wizard::7
+Mordenkainen’s Magnificent Mansion::Wizard::7
+Mordenkainen’s Sword::Wizard::7
+Plane Shift::Wizard::7
+Prismatic Spray::Wizard::7
+Project Image::Wizard::7
+Reverse Gravity::Wizard::7
+Sequester::Wizard::7
+Simulacrum::Wizard::7
+Symbol::Wizard::7
+Teleport::Wizard::7
+Antimagic Field::Wizard::8
+AntiPathy/Sympathy::Wizard::8
+Clone::Wizard::8
+Control Weather::Wizard::8
+Demi PLane::Wizard::8
+Dominate Monster::Wizard::8
+Feeblemind::Wizard::8
+Incendiary Cloud::Wizard::8
+Maze::Wizard::8
+Mind Blank::Wizard::8
+Power Word Stun::Wizard::8
+Sunburst::Wizard::8
+Telepathy::Wizard::8
+Astral Projection::Wizard::9
+Foresight::Wizard::9
+Gate::Wizard::9
+Imprisonment::Wizard::9
+Meteor Swarm::Wizard::9
+Power Word Kill::Wizard::9
+Prismatic Wall::Wizard::9
+Shapechange::Wizard::9
+Time Stop::Wizard::9
+True Polymorph::Wizard::9
+Weird::Wizard::9
+Wish::Wizard::9
