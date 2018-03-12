@@ -138,13 +138,19 @@ public class Character {
 		baseMods[3] = (Constitution - 10) / 2;
 		baseMods[4] = (Wisdom - 10) / 2;
 		baseMods[5] = (Charisma - 10) / 2;
+		strMod += baseMods[0];
+		dexMod += baseMods[1];
+		intMod += baseMods[2];
+		conMod += baseMods[3];
+		wisMod += baseMods[4];
+		chaMod += baseMods[5];
 		raceMods = race.getRacialModifiers();
-		strMod = baseMods[0] += raceMods[0];
-		dexMod = baseMods[1] += raceMods[1];
-		intMod = baseMods[2] += raceMods[2];
-		conMod = baseMods[3] += raceMods[3];
-		wisMod = baseMods[4] += raceMods[4];
-		chaMod = baseMods[5] += raceMods[5];
+		Strength += raceMods[0];
+		Dexterity += raceMods[1];
+		Intelligence += raceMods[2];
+		Constitution += raceMods[3];
+		Wisdom += raceMods[4];
+		Charisma += raceMods[5];
 	}
 
 	private Race race;
