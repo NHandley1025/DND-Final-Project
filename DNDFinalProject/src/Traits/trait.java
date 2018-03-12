@@ -3,6 +3,7 @@ package Traits;
 import java.io.Serializable;
 
 public class trait implements Serializable{
+	private static final long serialVersionUID = -3406690843258293325L;
 	private String keyword;
 	private String description;
 	public trait(String keyword, String description) {
