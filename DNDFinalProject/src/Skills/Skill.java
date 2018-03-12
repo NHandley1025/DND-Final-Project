@@ -26,6 +26,11 @@ public class Skill {
 		Description = description;
 	}
 	
+	@Override
+	public String toString() {
+		return getName();
+	}
+	
 	
 	
 }

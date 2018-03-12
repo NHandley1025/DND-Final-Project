@@ -553,7 +553,7 @@ Gate::Sorceror::9
 Meteor Swarm::Sorceror::9
 Power Word Kill::Sorceror::9
 Time Stop::Sorceror::9
-Wish::Sorceror::9 
+Wish::Sorceror::9
 Blade Ward::Warlock::0
 Chill Touch::Warlock::0
 Eldritch Blast::Warlock::0
