@@ -5,12 +5,17 @@ import Skills.skills;
 
 public class Cleric extends Class {
 
+	public Cleric() {
+		super();
+		setName("Cleric");
+	}
+	
 	public Cleric(int Level, Character character) {
 		super();
 		setSkills(Level);
 		setProficiencies(character);
 		character.setHitDice("1d8");
-
+		setName("Cleric");
 	}
 
 	public void setSkills(int level) {

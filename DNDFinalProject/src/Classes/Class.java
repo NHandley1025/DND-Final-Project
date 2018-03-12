@@ -8,7 +8,16 @@ import Skills.Skill;
 import Skills.skills;
 
 public class Class implements Serializable{
+	private String name;
+
 	private static final long serialVersionUID = -10422226606236608L;
+	
+	public Class() {}
+	
+	public Class(String name) {
+		setName(name);
+	}
+	
 	ArrayList<Skill> classSkills = new ArrayList<>();
 	private Archetype archetype;
 	private int proficiencyBonus;
@@ -83,5 +92,13 @@ public class Class implements Serializable{
 			hitDie = 6;
 		}
 		return hitDie;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

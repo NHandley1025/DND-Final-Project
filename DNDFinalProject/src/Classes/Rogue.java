@@ -6,7 +6,12 @@ import Skills.skills;
 public class Rogue extends Class{
 	private static final long serialVersionUID = -7107871969965788474L;
 
-	public Rogue(int level, Character character) {
+	public Rogue() {
+		super("Rogue");
+	}
+	
+	public Rogue(Character character) {
+		super("Rogue");
 		character.setHitDice("1d8");
 		setSkills(character.getLevel());
 		setProficiencies(character);

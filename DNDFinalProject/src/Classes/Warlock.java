@@ -6,9 +6,14 @@ import Skills.skills;
 public class Warlock extends Class{
 	private static final long serialVersionUID = 579163838474117722L;
 
-	public Warlock(int level, Character character) {
+	public Warlock() {
+		super("Warlock");
+	}
+	
+	public Warlock(Character character) {
+		super("Warlock");
 		character.setHitDice("1d8");
-		setSkills(level);
+		setSkills(character.getLevel());
 		setProficiencies(character);
 	}
 	

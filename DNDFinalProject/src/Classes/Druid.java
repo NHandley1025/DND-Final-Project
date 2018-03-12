@@ -6,10 +6,14 @@ import Skills.skills;
 public class Druid extends Class{
 	private static final long serialVersionUID = -6715805774129847281L;
 
-	public Druid(int level, Character character) {
+	public Druid() {
+		super("Druid");
+		}
+	public Druid(Character character) {
+		super("Druid");
 		character.setHitDice("1d8");
 		setProficiencies(character);
-		setSkills(level);
+		setSkills(character.getLevel());
 	}
 	
 	public void setSkills(int level) {

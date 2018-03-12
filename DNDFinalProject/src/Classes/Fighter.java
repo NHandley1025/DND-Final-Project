@@ -6,8 +6,13 @@ import Skills.skills;
 public class Fighter extends Class {
 	private static final long serialVersionUID = -4158395232989788734L;
 
-	public Fighter(int level, Character character) {
-		setSkills(level);
+	public Fighter() {
+		super("Fighter");
+	}
+	
+	public Fighter(Character character) {
+		super("Fighter");
+		setSkills(character.getLevel());
 		setProficiencies(character);
 		character.setHitDice("1d10");
 	}

@@ -7,7 +7,12 @@ public class Paladin extends Class{
 	
 	private static final long serialVersionUID = 2133468970242828383L;
 
-	public Paladin(int level, Character character) {
+	public Paladin() {
+		super("Paladin");
+	}
+	
+	public Paladin(Character character) {
+		super("Paladin");
 		character.setHitDice("1d10");
 		setProficiencies(character);
 		setSkills(character.getLevel());

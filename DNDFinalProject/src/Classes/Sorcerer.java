@@ -6,10 +6,11 @@ import Skills.skills;
 public class Sorcerer extends Class{
 	private static final long serialVersionUID = -8260577810407023006L;
 
-	public Sorcerer(int level, Character character) {
+	public Sorcerer(Character character) {
 		character.setHitDice("1d6");
 		setProficiencies(character);
-		setSkills(level);
+		setSkills(character.getLevel());
+		setName("Sorcerer");
 	}
 	
 	public void setSkills(int level) {
