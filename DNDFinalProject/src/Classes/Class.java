@@ -1,12 +1,14 @@
 package Classes;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+
 import Player.Character;
 import Skills.Skill;
 import Skills.skills;
 
-public class Class {
-
+public class Class implements Serializable{
+	private static final long serialVersionUID = -10422226606236608L;
 	ArrayList<Skill> classSkills = new ArrayList<>();
 	private Archetype archetype;
 	private int proficiencyBonus;

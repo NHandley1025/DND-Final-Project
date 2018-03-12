@@ -3,7 +3,7 @@ package Weapons;
 import Items.Item;
 
 public class weapon extends Item {
-
+	private static final long serialVersionUID = -9025817486072899595L;
 	protected String damage;
 	protected String classification;
 	protected String damageType;

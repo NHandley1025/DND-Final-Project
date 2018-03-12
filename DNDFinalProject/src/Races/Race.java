@@ -1,11 +1,12 @@
 package Races;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import Skills.Skill;
 
-public class Race {
-
+public class Race implements Serializable{
+	private static final long serialVersionUID = -5630180854436653449L;
 	protected int weight;
 	protected int height;
 	protected String size;

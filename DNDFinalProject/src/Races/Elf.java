@@ -4,6 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Elf extends Race {
+	private static final long serialVersionUID = -8526674006457357127L;
 
 	public Elf(Character character) {
 		super();

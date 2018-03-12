@@ -1,14 +1,14 @@
 package Classes;
 
 import Player.Character;
-import Skills.Skill;
 import Skills.skills;
 
 public class Bard extends Class {
+	private static final long serialVersionUID = -6469303127065022138L;
 
 	public Bard(int Level, Character character) {
 		setSkills(Level);
-		character.setHitDice("1d8");
+		chooseArchetype();
 		setProficiencies(character);
 	}
 	
@@ -32,7 +32,7 @@ public class Bard extends Class {
 		case 15: addSkill(skills.bardicInspiration);
 		
 		case 14: addSkill(skills.magicalSecrets);
-				 addSkill(skills.bardCollegeFeature);
+				 addSkill(skills.peerlessSkill);
 		
 		case 13: addSkill(skills.songOfRest);
 		
@@ -48,21 +48,18 @@ public class Bard extends Class {
 		 
 		case 8: 
 			
-		case 7: ;
+		case 7:
 		
-		case 6: addSkill(skills.bardCollegeFeature);
-		addSkill(skills.counterCharm);
+		case 6: addSkill(skills.additionalMagicSecrets, skills.counterCharm);
 		
 		case 5: addSkill(skills.bardicInspiration);
 		addSkill(skills.fontOfInspiration);
 		
 		case 4: 
 			
-		case 3: addSkill(skills.bardCollege);
-		addSkill(skills.expertise);
+		case 3:addSkill(skills.expertise);
 		
-		case 2: addSkill(skills.jackOfAllTrades);
-		addSkill(skills.songOfRest);
+		case 2: addSkill(skills.jackOfAllTrades, skills.bonusProficiencies, skills.songOfRest, skills.cuttingWords);
 		
 		case 1: addSkill(skills.SpellCasting);
 		addSkill(skills.bardicInspiration);
@@ -71,7 +68,7 @@ public class Bard extends Class {
 	}
 
 	private void chooseArchetype() {
-
+		setArchetype(Archetypes.CollegeOfLore);
 	}
 	
 	private void setProficiencies(Character character) {

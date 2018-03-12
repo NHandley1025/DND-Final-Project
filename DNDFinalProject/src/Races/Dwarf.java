@@ -4,6 +4,8 @@ import Player.Character;
 import Skills.skills;
 
 public class Dwarf extends Race {
+	private static final long serialVersionUID = -1300343157365156986L;
+
 	public Dwarf(Character character) {
 		super();
 		size = "Medium";

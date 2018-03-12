@@ -1,8 +1,7 @@
 package Races;
 
-import Skills.skills;
-
 public class Human extends Race {
+	private static final long serialVersionUID = 6830728256483655425L;
 
 	public Human() {	
 		super();

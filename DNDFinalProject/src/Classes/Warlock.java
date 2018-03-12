@@ -4,6 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Warlock extends Class{
+	private static final long serialVersionUID = 579163838474117722L;
 
 	public Warlock(int level, Character character) {
 		character.setHitDice("1d8");

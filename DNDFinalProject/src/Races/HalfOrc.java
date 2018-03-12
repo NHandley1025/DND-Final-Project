@@ -4,6 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class HalfOrc extends Race {
+	private static final long serialVersionUID = -4350436322288880398L;
 
 	public HalfOrc(Character character) {
 		super();

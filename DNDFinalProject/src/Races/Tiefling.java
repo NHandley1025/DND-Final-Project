@@ -3,6 +3,7 @@ package Races;
 import Skills.skills;
 
 public class Tiefling extends Race {
+	private static final long serialVersionUID = 8130967246711518625L;
 
 	public Tiefling() {
 		super();

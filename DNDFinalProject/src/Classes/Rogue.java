@@ -4,6 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Rogue extends Class{
+	private static final long serialVersionUID = -7107871969965788474L;
 
 	public Rogue(int level, Character character) {
 		character.setHitDice("1d8");

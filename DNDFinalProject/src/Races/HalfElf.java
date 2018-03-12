@@ -4,7 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class HalfElf extends Race {
-
+	private static final long serialVersionUID = 1167227436506103703L;
 	public HalfElf(Character character) {
 		size = "Medium";
 		landBaseSpeed = 30;

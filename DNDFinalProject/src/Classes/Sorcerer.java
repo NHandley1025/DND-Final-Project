@@ -4,6 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Sorcerer extends Class{
+	private static final long serialVersionUID = -8260577810407023006L;
 
 	public Sorcerer(int level, Character character) {
 		character.setHitDice("1d6");
@@ -74,6 +75,7 @@ public class Sorcerer extends Class{
 		case "White": a = Archetypes.white;
 		break;
 		}
+		setArchetype(a);
 	}
 	
 }

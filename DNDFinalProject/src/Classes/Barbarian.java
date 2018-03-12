@@ -7,6 +7,7 @@ import Player.Character;
 
 public class Barbarian extends Class{
 	
+	private static final long serialVersionUID = 282250874088700347L;
 	byte ragesPerDay = 2;
 	byte rageDamage = 2;
 	

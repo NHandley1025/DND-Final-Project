@@ -4,6 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Monk extends Class{
+	private static final long serialVersionUID = -5116275298248811263L;
 	byte ki = 0;
 
 	public Monk(int Level, Character character) {

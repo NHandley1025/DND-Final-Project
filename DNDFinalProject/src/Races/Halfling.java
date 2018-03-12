@@ -4,7 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Halfling extends Race {
-
+	private static final long serialVersionUID = -3102078293902923838L;
 	public Halfling(Character character) {
 		super();
 		landBaseSpeed = 25;

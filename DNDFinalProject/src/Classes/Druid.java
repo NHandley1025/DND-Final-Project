@@ -4,6 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Druid extends Class{
+	private static final long serialVersionUID = -6715805774129847281L;
 
 	public Druid(int level, Character character) {
 		character.setHitDice("1d8");

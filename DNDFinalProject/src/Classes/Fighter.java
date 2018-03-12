@@ -4,7 +4,8 @@ import Player.Character;
 import Skills.skills;
 
 public class Fighter extends Class {
-	
+	private static final long serialVersionUID = -4158395232989788734L;
+
 	public Fighter(int level, Character character) {
 		setSkills(level);
 		setProficiencies(character);

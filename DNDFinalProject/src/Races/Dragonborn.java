@@ -1,10 +1,15 @@
 package Races;
 
 import Skills.skills;
+
+import java.io.Serializable;
+
 import Player.*;
 import Player.Character;
 
 public class Dragonborn extends Race{
+
+	private static final long serialVersionUID = 1L;
 
 	public Dragonborn(Character character) {
 		super();

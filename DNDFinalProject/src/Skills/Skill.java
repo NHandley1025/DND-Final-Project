@@ -1,7 +1,9 @@
 package Skills;
 
-public class Skill {
+import java.io.Serializable;
 
+public class Skill implements Serializable{
+	private static final long serialVersionUID = 1450228353177559415L;
 	private String name;
 	private String Description;
 	

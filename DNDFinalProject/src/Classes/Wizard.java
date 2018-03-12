@@ -4,7 +4,7 @@ import Player.Character;
 import Skills.skills;
 
 public class Wizard extends Class{
-	
+	private static final long serialVersionUID = -8893366727680555800L;
 	public Wizard(int level, Character character) {
 		super();
 		setSkills(level);
