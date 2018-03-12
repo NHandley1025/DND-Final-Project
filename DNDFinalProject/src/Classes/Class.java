@@ -12,8 +12,8 @@ public class Class {
 	private int proficiencyBonus;
 	ArrayList<String> itemProficiencies = new ArrayList<>();
 	
-	public Skill getSkill(Skill skill) {
-		return skill;
+	public ArrayList<Skill> getSkillList() {
+		return classSkills;
 	}
 
 	public int getProficiencyBonus() {

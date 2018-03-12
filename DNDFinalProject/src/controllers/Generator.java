@@ -227,17 +227,17 @@ public class Generator {
 		return equipment;
 	}
 
-	public static trait genRandTrait() {
-		Random rand = new Random();
-		int traitListSize = Backgrounds.getTraitHash().keySet().size();
-		int randomTrait = rand.nextInt(traitListSize);
-		BackgroundKey[] traitList = new BackgroundKey[traitListSize];
-		for (BackgroundKey key : Backgrounds.getTraitHash().keySet()) {
-			for (int x = 0; x > traitListSize; x++) {
-				traitList[x] = key;
-			}
-		}
-		trait randomTraits = Backgrounds.get(traitList[randomTrait]);
-		return randomTraits;
-	}
+//	public static trait genRandTrait() {
+//		Random rand = new Random();
+//		int traitListSize = Backgrounds.getBackgroundHash().keySet().size();
+//		int randomTrait = rand.nextInt(traitListSize);
+//		String[] traitList = new String[traitListSize];
+//		for (String key : Backgrounds.getBackgroundHash().keySet()) {
+//			for (int x = 0; x > traitListSize; x++) {
+//				traitList[x] = key;
+//			}
+//		}
+//		trait randomTraits = Backgrounds.get(traitList[randomTrait]);
+//		return randomTraits;
+//	}
 }

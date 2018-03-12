@@ -51,7 +51,7 @@ public class Wizard extends Class{
 	}
 	
 	public static void setArcaneTradition(String tradition){
-		ArcaneTradition = tradition;
+		String ArcaneTradition = tradition;
 	}
 	private void setProficiencies(Character character) {
 		character.addProficiency("Daggers");

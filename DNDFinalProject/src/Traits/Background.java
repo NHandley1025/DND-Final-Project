@@ -1,5 +1,7 @@
 package Traits;
 
+import java.util.Random;
+
 import Skills.Skill;
 
 public class Background {
@@ -14,6 +16,7 @@ public class Background {
 		setName(name);
 		setFeature(feature);
 	}
+
 
 	public Skill getFeature() {
 		return feature;

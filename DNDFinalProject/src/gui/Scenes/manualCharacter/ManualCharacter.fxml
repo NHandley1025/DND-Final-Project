@@ -15,9 +15,9 @@
 <?import javafx.scene.text.Text?>
 <?scenebuilder-stylesheet manualcharacterstyle.css?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1600.0" prefWidth="1200.0" styleClass="manualcharacterstyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Scenes.manualCharacter.ManualCharacterController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1600.0" prefWidth="1200.0" styleClass="manualcharacterstyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Scenes.manualCharacter.ManualCharacterController">
    <content>
-      <Pane prefHeight="1600.0" prefWidth="1200.0">
+      <Pane centerShape="true" prefHeight="1600.0" prefWidth="1200.0">
          <children>
             <TextField fx:id="PassiveWisdomText" alignment="CENTER" layoutX="65.0" layoutY="1195.0" prefHeight="34.0" prefWidth="39.0">
                <font>
@@ -27,8 +27,7 @@
             <ImageView fx:id="Image" fitHeight="1600.0" fitWidth="1200.0">
                <image>
                   <Image url="resources/DNDSheet.jpg" />
-               </image>
-            </ImageView>
+               </image></ImageView>
             <Spinner fx:id="LvlSpinner" amountToStepBy="1" initialValue="1" layoutX="529.0" layoutY="102.0" max="20" min="1" prefHeight="25.0" prefWidth="50.0" />
             <TextField fx:id="NameText" alignment="CENTER" layoutX="882.0" layoutY="102.0" prefHeight="25.0" prefWidth="232.0" promptText="Name" />
             <CheckBox fx:id="StrengthCheck" layoutX="340.0" layoutY="418.0" mnemonicParsing="false" onAction="#topCheck" />
@@ -60,7 +59,6 @@
                   <Font size="19.0" />
                </font>
             </TextField>
-            <TextArea fx:id="FeaturesText" layoutX="807.0" layoutY="772.0" prefHeight="749.0" prefWidth="322.0" />
             <TextField fx:id="ProfBonusText" alignment="CENTER" editable="false" layoutX="195.0" layoutY="346.0" prefHeight="25.0" prefWidth="35.0" />
             <TextField fx:id="StrengthModText" alignment="CENTER" editable="false" layoutX="95.0" layoutY="378.0" prefHeight="25.0" prefWidth="35.0" />
             <TextField fx:id="DexterityModText" alignment="CENTER" editable="false" layoutX="95.0" layoutY="523.0" prefHeight="25.0" prefWidth="35.0" />
@@ -98,11 +96,11 @@
                   <Font size="9.0" />
                </font>
             </TextField>
-            <TextField fx:id="InitiativeText" layoutX="558.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+            <TextField fx:id="InitiativeText" alignment="CENTER" layoutX="558.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
                <font>
                   <Font size="24.0" />
                </font></TextField>
-            <TextField fx:id="SpeedText" layoutX="674.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
+            <TextField fx:id="SpeedText" alignment="CENTER" layoutX="674.0" layoutY="280.0" prefHeight="72.0" prefWidth="75.0">
                <font>
                   <Font size="24.0" />
                </font></TextField>
@@ -111,33 +109,6 @@
                   <Font size="21.0" />
                </font>
             </TextField>
-            <TextField fx:id="AttNameText1" layoutX="440.0" layoutY="795.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType1" layoutX="645.0" layoutY="795.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus1" layoutX="577.0" layoutY="795.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText2" layoutX="440.0" layoutY="837.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType2" layoutX="645.0" layoutY="837.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus2" layoutX="577.0" layoutY="837.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText3" layoutX="440.0" layoutY="879.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType3" layoutX="645.0" layoutY="879.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus3" layoutX="577.0" layoutY="879.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText4" layoutX="440.0" layoutY="921.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType4" layoutX="645.0" layoutY="921.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus4" layoutX="577.0" layoutY="921.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText5" layoutX="441.0" layoutY="956.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType5" layoutX="646.0" layoutY="956.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus5" layoutX="578.0" layoutY="956.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText6" layoutX="441.0" layoutY="998.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType6" layoutX="646.0" layoutY="998.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus6" layoutX="578.0" layoutY="998.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText7" layoutX="441.0" layoutY="1040.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType7" layoutX="646.0" layoutY="1040.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus7" layoutX="578.0" layoutY="1040.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText8" layoutX="441.0" layoutY="1082.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType8" layoutX="646.0" layoutY="1082.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus8" layoutX="578.0" layoutY="1082.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
-            <TextField fx:id="AttNameText9" layoutX="441.0" layoutY="1116.0" prefHeight="25.0" prefWidth="119.0" promptText="Name" />
-            <TextField fx:id="AttType9" layoutX="646.0" layoutY="1116.0" prefHeight="25.0" prefWidth="113.0" promptText="Damage/Type" />
-            <TextField fx:id="AttBonus9" layoutX="578.0" layoutY="1116.0" prefHeight="25.0" prefWidth="50.0" promptText="Bonus" />
             <TextField fx:id="StrengthStatText" alignment="CENTER" editable="false" layoutX="70.0" layoutY="308.0" prefHeight="61.0" prefWidth="84.0">
                <font>
                   <Font size="28.0" />
@@ -227,6 +198,12 @@
             <Button fx:id="eqAddButton" layoutX="640.0" layoutY="1501.0" mnemonicParsing="false" onAction="#eqAddButton" text="Add" />
             <Button fx:id="EqRemoveButton" layoutX="703.0" layoutY="1501.0" mnemonicParsing="false" onAction="#eqRemoveButton" text="Remove" />
             <ComboBox fx:id="ArmorComboBox" layoutX="529.0" layoutY="1200.0" onAction="#armorSelector" prefHeight="25.0" prefWidth="228.0" promptText="Select Armor" />
+            <ListView fx:id="SpellList" layoutX="437.0" layoutY="918.0" prefHeight="186.0" prefWidth="329.0" />
+            <ComboBox fx:id="SpellComboBox" layoutX="438.0" layoutY="1114.0" prefHeight="25.0" prefWidth="195.0" />
+            <Button fx:id="SpellAddButton" layoutX="641.0" layoutY="1114.0" mnemonicParsing="false" onAction="#SpellAddButton" text="Add" />
+            <Button fx:id="SpellRemoveButton" layoutX="704.0" layoutY="1114.0" mnemonicParsing="false" onAction="#SpellRemoveButton" text="Remove" />
+            <ListView fx:id="AttacksList" layoutX="437.0" layoutY="789.0" prefHeight="125.0" prefWidth="329.0" />
+            <ListView fx:id="TraitsList" layoutX="807.0" layoutY="778.0" prefHeight="744.0" prefWidth="329.0" />
          </children>
       </Pane>
    </content>

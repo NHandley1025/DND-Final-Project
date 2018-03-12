@@ -93,7 +93,7 @@ public class skills {
 	
 	//Cleric
 	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
-	public static final Skill DivineDomain = new Skill("Divine Domain", "");
+	public static final Skill DivineDomain = new Skill("Divine Domain", "Unknown");
 	public static final Skill ChannelDivinity = new Skill("Channel Divinity", "you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.\r\n" + 
 			"\r\n" + 
 			"When you use your Channel Divinity, you choose which effect to create. You must then finish a short or Long Rest to use your Channel Divinity again.\r\n" + 
