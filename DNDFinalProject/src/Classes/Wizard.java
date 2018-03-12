@@ -4,12 +4,12 @@ import Player.Character;
 import Skills.skills;
 
 public class Wizard extends Class{
-	
-	public Wizard(int level) {
+	private static final long serialVersionUID = -8893366727680555800L;
+	public Wizard(int level, Character character) {
 		super();
 		setSkills(level);
-		setProficiencies();
-		Character.setHitDice("1d6");
+		setProficiencies(character);
+		character.setHitDice("1d6");
 		//currently there is only one official archetype or archane tradition for wizard, so it's always set to the School of Evocation
 		if(level >= 2) {
 			setArchetype(Archetypes.evocation);
@@ -49,12 +49,15 @@ public class Wizard extends Class{
 			break;
 		}
 	}
-
-	private void setProficiencies() {
-		Character.addProficiency("Daggers");
-		Character.addProficiency("Darts");
-		Character.addProficiency("Quarterstaffs");
-		Character.addProficiency("Light Crossbows");
+	
+	public static void setArcaneTradition(String tradition){
+		String ArcaneTradition = tradition;
+	}
+	private void setProficiencies(Character character) {
+		character.addProficiency("Daggers");
+		character.addProficiency("Darts");
+		character.addProficiency("Quarterstaffs");
+		character.addProficiency("Light Crossbows");
 	}
 	
 }

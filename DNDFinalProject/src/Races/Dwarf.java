@@ -4,14 +4,16 @@ import Player.Character;
 import Skills.skills;
 
 public class Dwarf extends Race {
-	public Dwarf() {
+	private static final long serialVersionUID = -1300343157365156986L;
+
+	public Dwarf(Character character) {
 		super();
 		size = "Medium";
 		landBaseSpeed = 25;
 		setRacialSkills();
 		setRacialModifiers();
-		Character.addLanguage("Dwarven");
-		Character.addLanguage("Common");
+		character.addLanguage("Dwarven");
+		character.addLanguage("Common");
 		setLandBaseSpeed(25);
 		}
 	

@@ -1,19 +1,21 @@
 package Classes;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+
 import Player.Character;
 import Skills.Skill;
 import Skills.skills;
 
-public class Class {
-
+public class Class implements Serializable{
+	private static final long serialVersionUID = -10422226606236608L;
 	ArrayList<Skill> classSkills = new ArrayList<>();
 	private Archetype archetype;
 	private int proficiencyBonus;
 	ArrayList<String> itemProficiencies = new ArrayList<>();
 	
-	public Skill getSkill(Skill skill) {
-		return skill;
+	public ArrayList<Skill> getSkillList() {
+		return classSkills;
 	}
 
 	public int getProficiencyBonus() {
@@ -66,18 +68,18 @@ public class Class {
 		}
 	}
 	
-	public int getInitialHitDie() {
+	public int getInitialHitDie(Character character) {
 		int hitDie = 0;
-		if(Character.getHitDice().equals("1d12")) {
+		if(character.getHitDice().equals("1d12")) {
 			hitDie = 12;
 		}
-		if(Character.getHitDice().equals("1d10")) {
+		if(character.getHitDice().equals("1d10")) {
 			hitDie = 10;
 		}
-		if(Character.getHitDice().equals("1d8")) {
+		if(character.getHitDice().equals("1d8")) {
 			hitDie = 8;
 		}
-		if(Character.getHitDice().equals("1d6")) {
+		if(character.getHitDice().equals("1d6")) {
 			hitDie = 6;
 		}
 		return hitDie;

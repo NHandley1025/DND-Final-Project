@@ -1,6 +1,8 @@
 package Traits;
 
-public class trait{
+import java.io.Serializable;
+
+public class trait implements Serializable{
 	private String keyword;
 	private String description;
 	public trait(String keyword, String description) {

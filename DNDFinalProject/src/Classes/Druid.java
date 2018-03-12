@@ -4,10 +4,11 @@ import Player.Character;
 import Skills.skills;
 
 public class Druid extends Class{
+	private static final long serialVersionUID = -6715805774129847281L;
 
-	public Druid(int level) {
-		Character.setHitDice("1d8");
-		setProficiencies();
+	public Druid(int level, Character character) {
+		character.setHitDice("1d8");
+		setProficiencies(character);
 		setSkills(level);
 	}
 	
@@ -39,15 +40,15 @@ public class Druid extends Class{
 		}
 	}
 	
-	private void setProficiencies() {
+	private void setProficiencies(Character character) {
 		String[] weapons = {"Clubs", "Daggers", "Darts", "Javelins", 
 				"Maces", "Quarterstaffs", "Scimitars", "Sickles", "Slings", "Spears"};
-		Character.addLanguage("Druidic");
-		Character.addProficiency("Light Armor(Cannot be made of metal)");
-		Character.addProficiency("Medium Armor(Cannot be made of metal)");
-		Character.addProficiency("Shields(Cannot be made of metal)");
+		character.addLanguage("Druidic");
+		character.addProficiency("Light Armor(Cannot be made of metal)");
+		character.addProficiency("Medium Armor(Cannot be made of metal)");
+		character.addProficiency("Shields(Cannot be made of metal)");
 		for(String weapon: weapons) {
-			Character.addProficiency(weapon);
+			character.addProficiency(weapon);
 		}
 	}
 	

@@ -1,9 +1,11 @@
 package armor;
 
+import java.io.Serializable;
+
 import Items.Item;
 
-public class Armor extends Item {
-
+public class Armor extends Item implements Serializable {
+	private static final long serialVersionUID = -838236850590805477L;
 	protected int baseAC;
 	protected Integer maxDexMod;
 	protected int strRequriement;

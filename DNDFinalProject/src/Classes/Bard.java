@@ -1,16 +1,15 @@
 package Classes;
 
 import Player.Character;
-import Skills.Skill;
 import Skills.skills;
 
 public class Bard extends Class {
+	private static final long serialVersionUID = -6469303127065022138L;
 
-	public Bard(int Level) {
+	public Bard(int Level, Character character) {
 		setSkills(Level);
-		Character.setHitDice("1d8");
-		setProficiencies();
 		chooseArchetype();
+		setProficiencies(character);
 	}
 	
 	public void setSkills(int level) {
@@ -33,7 +32,7 @@ public class Bard extends Class {
 		case 15: addSkill(skills.bardicInspiration);
 		
 		case 14: addSkill(skills.magicalSecrets);
-				 addSkill(skills.bardCollegeFeature);
+				 addSkill(skills.peerlessSkill);
 		
 		case 13: addSkill(skills.songOfRest);
 		
@@ -51,8 +50,7 @@ public class Bard extends Class {
 			
 		case 7:
 		
-		case 6: addSkill(skills.bardCollegeFeature);
-		addSkill(skills.counterCharm);
+		case 6: addSkill(skills.additionalMagicSecrets, skills.counterCharm);
 		
 		case 5: addSkill(skills.bardicInspiration);
 		addSkill(skills.fontOfInspiration);
@@ -61,8 +59,7 @@ public class Bard extends Class {
 			
 		case 3:addSkill(skills.expertise);
 		
-		case 2: addSkill(skills.jackOfAllTrades);
-		addSkill(skills.songOfRest);
+		case 2: addSkill(skills.jackOfAllTrades, skills.bonusProficiencies, skills.songOfRest, skills.cuttingWords);
 		
 		case 1: addSkill(skills.SpellCasting);
 		addSkill(skills.bardicInspiration);
@@ -74,12 +71,12 @@ public class Bard extends Class {
 		setArchetype(Archetypes.CollegeOfLore);
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("Light Armor");
-		Character.addProficiency("Hand Crossbows");
-		Character.addProficiency("Longswords");
-		Character.addProficiency("Simple Weapons");
-		Character.addProficiency("Rapiers");
-		Character.addProficiency("Shortswords");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Light Armor");
+		character.addProficiency("Hand Crossbows");
+		character.addProficiency("Longswords");
+		character.addProficiency("Simple Weapons");
+		character.addProficiency("Rapiers");
+		character.addProficiency("Shortswords");
 	}
 }

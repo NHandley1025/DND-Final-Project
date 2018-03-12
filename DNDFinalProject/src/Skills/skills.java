@@ -87,12 +87,14 @@ public class skills {
 	public static final Skill fontOfInspiration = new Skill("Font of Inspiration", "you regain all of your expended uses of Bardic Inspiration when you finish a short or Long Rest.");
 	public static final Skill jackOfAllTrades = new Skill("Jack of All Trades", "You can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.");
 	public static final Skill expertise = new Skill("Expertise", "Choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. You'll choose 2 more at 10th level.");
-	public static final Skill 
-
+	public static final Skill bonusProficiencies = new Skill("Bonus Proficiencies", "You can choose 3 more proficiencies.");
+	public static final Skill cuttingWords = new Skill("Cutting Words", "You know how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature’s roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can’t hear you or if it’s immune to being charmed.");
+	public static final Skill additionalMagicSecrets = new Skill("Additional Magical Secrets", "You learn 2 more Spells on top of your already learned spells from your other Magical Secrets");
+	public static final Skill peerlessSkill = new Skill("Peerless Skill", "When you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail.");
 	
 	//Cleric
 	public static final Skill SpellCasting = new Skill("SpellCasting", "You can cast spells!");
-	public static final Skill DivineDomain = new Skill("Divine Domain", "");
+	public static final Skill DivineDomain = new Skill("Divine Domain", "Unknown");
 	public static final Skill ChannelDivinity = new Skill("Channel Divinity", "you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.\r\n" + 
 			"\r\n" + 
 			"When you use your Channel Divinity, you choose which effect to create. You must then finish a short or Long Rest to use your Channel Divinity again.\r\n" + 

@@ -4,15 +4,15 @@ import Player.Character;
 import Skills.skills;
 
 public class Halfling extends Race {
-
-	public Halfling() {
+	private static final long serialVersionUID = -3102078293902923838L;
+	public Halfling(Character character) {
 		super();
 		landBaseSpeed = 25;
 		size = "Small";
 		setRacialModifiers();
 		setRacialSkills();
-		Character.addLanguage("Halfling");
-		Character.addLanguage("Common");
+		character.addLanguage("Halfling");
+		character.addLanguage("Common");
 		setLandBaseSpeed(25);
 	}
 	

@@ -1,8 +1,11 @@
 package Traits;
 
+import java.io.Serializable;
+
 import Skills.Skill;
 
-public class Background {
+public class Background implements Serializable{
+	private static final long serialVersionUID = -3091885494490061580L;
 	private Bond bond;
 	private Personality personalityTraits;
 	private Ideal ideals;
@@ -14,6 +17,7 @@ public class Background {
 		setName(name);
 		setFeature(feature);
 	}
+
 
 	public Skill getFeature() {
 		return feature;

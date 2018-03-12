@@ -18,6 +18,10 @@ public class spells {
 		return spells.get(key);	
 	}
 	
+	public static HashMap<spellKey, spell> getSpellHashmap(){
+		return spells;
+	}
+	
 	public static spell[] getSpellList(spellKey key) {
 		Map<spellKey, spell> collect = spells.entrySet().stream()
 				.filter(map -> map.getKey() == key)
@@ -28,11 +32,11 @@ public class spells {
 	
 	public static void readSpellFile() throws IOException, FileNotFoundException{
 		String file = lib.ProgramUtil.readFile("Spells.txt");
-		String[] lines = file.split("\n");
+		String[] lines = file.split("\r\n");
 		for(int i=0; i<lines.length; i++) {
 			String[] things = lines[i].split("::");
-			if(things.length==4) {
-				spell spell = new spell(things[0], things[3], things[1], Integer.parseInt(things[2]));
+			if(things.length==3) {
+				spell spell = new spell(things[0], things[1], Integer.parseInt(things[2]));
 				spells.put(new spellKey(spell.spellLevel, spell.name, spell.classReq), spell);
 			}
 		}

@@ -5,15 +5,44 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import Races.*;
-import Traits.trait;
-import controllers.Generator;
-import Classes.*;
+import com.sun.javafx.scene.control.skin.LabeledText;
+
+import Classes.Barbarian;
+import Classes.Bard;
 import Classes.Class;
+import Classes.Cleric;
+import Classes.Druid;
+import Classes.Fighter;
+import Classes.Monk;
+import Classes.Paladin;
+import Classes.Ranger;
+import Classes.Rogue;
+import Classes.Sorcerer;
+import Classes.Warlock;
+import Classes.Wizard;
 import Items.Item;
+import Races.Dragonborn;
+import Races.Dwarf;
+import Races.Elf;
+import Races.HalfElf;
+import Races.HalfOrc;
+import Races.Halfling;
+import Races.Human;
+import Races.Race;
+import Races.Tiefling;
+import Skills.Skill;
+import Spells.spells;
+import Traits.trait;
+import Weapons.weapon;
+import Weapons.weapons;
+import armor.Armors;
+import consumables.Potions;
+import controllers.Generator;
+import gui.Scenes.Info.InfoController;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,11 +52,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Popup;
+import javafx.stage.PopupBuilder;
 import javafx.stage.Stage;
+import keys.spellKey;
+import tools.Tools;
 
 public class ManualCharacterController implements Initializable {
 	
@@ -234,7 +271,7 @@ public class ManualCharacterController implements Initializable {
 	private CheckBox FailCheck3;
 
 	@FXML
-	private TextArea InitiativeText;
+	private TextField InitiativeText;
 
 	@FXML
 	private TextField SpeedText;
@@ -447,11 +484,19 @@ public class ManualCharacterController implements Initializable {
 	}
 	
 	@FXML
+	private ListView<Skill> TraitsList;
+	
+	
+	
+	@FXML
 	public void raceSelctor(ActionEvent event) {
 		((Node)event.getSource()).setDisable(true);
 		CalculateButton.setDisable(false);
 		Generator.character.setRace(setRC());
 		SpeedText.setText(String.valueOf(Generator.character.getRace().getLandBaseSpeed()));
+		for(Skill skill : Generator.character.getRace().getRacialSkills()) {
+			TraitsList.getItems().add(skill);
+		}
 	}
 	
 	int bottomCount = 0;
@@ -506,27 +551,28 @@ public class ManualCharacterController implements Initializable {
 		} else if (box == SurvivalCheck) {
 			Generator.character.setSurvival(Generator.character.getSurvival() + profBonus);
 		}
+		setSkills();
 		
 		
 		if (bottomCount >= 4){
-			AcrobaticsCheck.setDisable(!AcrobaticsCheck.isDisabled());
-			AnimalCheck.setDisable(!AnimalCheck.isDisabled());
-			ArcanaCheck.setDisable(!ArcanaCheck.isDisabled());
-			AthleticsCheck.setDisable(!AthleticsCheck.isDisabled());
-			DeceptionCheck.setDisable(!DeceptionCheck.isDisabled());
-			HistoryCheck.setDisable(!HistoryCheck.isDisabled());
-			InsightCheck.setDisable(!InsightCheck.isDisabled());
-			IntimidationCheck.setDisable(!IntimidationCheck.isDisabled());
-			InvestigationCheck.setDisable(!InvestigationCheck.isDisabled());
-			MedicineCheck.setDisable(!MedicineCheck.isDisabled());
-			NatureCheck.setDisable(!NatureCheck.isDisabled());
-			PerceptionCheck.setDisable(!PerceptionCheck.isDisabled());
-			PerformanceCheck.setDisable(!PerformanceCheck.isDisabled());
-			PersuasionCheck.setDisable(!PersuasionCheck.isDisabled());
-			ReligionCheck.setDisable(!ReligionCheck.isDisabled());
-			SleightCheck.setDisable(!SleightCheck.isDisabled());
-			StealthCheck.setDisable(!StealthCheck.isDisabled());
-			SurvivalCheck.setDisable(!SurvivalCheck.isDisabled());
+			AcrobaticsCheck.setDisable(!AcrobaticsCheck.isSelected());
+			AnimalCheck.setDisable(!AnimalCheck.isSelected());
+			ArcanaCheck.setDisable(!ArcanaCheck.isSelected());
+			AthleticsCheck.setDisable(!AthleticsCheck.isSelected());
+			DeceptionCheck.setDisable(!DeceptionCheck.isSelected());
+			HistoryCheck.setDisable(!HistoryCheck.isSelected());
+			InsightCheck.setDisable(!InsightCheck.isSelected());
+			IntimidationCheck.setDisable(!IntimidationCheck.isSelected());
+			InvestigationCheck.setDisable(!InvestigationCheck.isSelected());
+			MedicineCheck.setDisable(!MedicineCheck.isSelected());
+			NatureCheck.setDisable(!NatureCheck.isSelected());
+			PerceptionCheck.setDisable(!PerceptionCheck.isSelected());
+			PerformanceCheck.setDisable(!PerformanceCheck.isSelected());
+			PersuasionCheck.setDisable(!PersuasionCheck.isSelected());
+			ReligionCheck.setDisable(!ReligionCheck.isSelected());
+			SleightCheck.setDisable(!SleightCheck.isSelected());
+			StealthCheck.setDisable(!StealthCheck.isSelected());
+			SurvivalCheck.setDisable(!SurvivalCheck.isSelected());
 		} else {
 			
 			AcrobaticsCheck.setDisable(false);
@@ -601,34 +647,9 @@ public class ManualCharacterController implements Initializable {
 		((Node)event.getSource()).setDisable(true);
 		ClassComboBox.setDisable(false);
 		LvlSpinner.setDisable(true);
+		Generator.character.setLevel(LvlSpinner.getValue());
 	}
 	
-	@FXML
-	public void alignmentSelect(ActionEvent event) {
-		((ComboBox)event.getSource()).setDisable(true);
-		
-		switch(ClassComboBox.getValue()) {
-		case "Chaotic Good":
-			break;
-		case "Chaotic Neutral":
-			break;
-		case "Chaotic Evil":
-			break;
-		case "Neutral Good":
-			break;
-		case "True Neutral":
-			break;
-		case "Neutral Evil":
-			break;
-		case "Lawful Good":
-			break;
-		case "Lawful Neutral":
-			break;
-		case "Lawful Evil":
-			break;
-			
-		}
-	}
 	
 	@FXML
 	public void classSelect(ActionEvent event) {
@@ -638,43 +659,47 @@ public class ManualCharacterController implements Initializable {
 		int level = Generator.character.getLevel();
 		switch (ClassComboBox.getValue()) {
 		case "Barbarian":
-			cl = new Barbarian(level);
+			cl = new Barbarian(level, Generator.character);
 			break;
 		case "Bard":
-			cl = new Bard(level);
+			cl = new Bard(level, Generator.character);
 		case "Cleric":
-			cl = new Cleric(level);
+			cl = new Cleric(level, Generator.character);
 			break;
 		case "Druid":
-			cl = new Druid(level);
+			cl = new Druid(level, Generator.character);
 			break;
 		case "Fighter":
-			cl = new Fighter(level);
+			cl = new Fighter(level, Generator.character);
 			break;
 		case "Monk":
-			cl = new Monk(level);
+			cl = new Monk(level, Generator.character);
 			break;
 		case "Paladin":
-			cl = new Paladin(level);
+			cl = new Paladin(level, Generator.character);
 			break;
 		case "Ranger":
-			cl = new Ranger(level);
+			cl = new Ranger(level, Generator.character);
 		case "Rogue":
-			cl = new Rogue(level);
+			cl = new Rogue(level, Generator.character);
 			break;
 		case "Sorcerer":
-			cl = new Sorcerer(level);
+			cl = new Sorcerer(level, Generator.character);
 			break;
 		case "Warlock":
-			cl = new Warlock(level);
+			cl = new Warlock(level, Generator.character);
 			break;
 		case "Wizard":
-			cl = new Wizard(level);
+			cl = new Wizard(level, Generator.character);
 			break;
 		}
 		Generator.character.setCharacterClass(cl);
-		Generator.character.getCharacterClass().setProficiencyBonus(Generator.character.getProficiencyBonus());
+		Generator.character.getCharacterClass().setProficiencyByLevel(Generator.character.getLevel());
+		Generator.character.setProficiencyBonus();
 		ProfBonusText.setText(String.valueOf(Generator.character.getCharacterClass().getProficiencyBonus()));
+		for(Skill skill : Generator.character.getCharacterClass().getSkillList()) {
+			TraitsList.getItems().add(skill);
+		}
 	}
 	
 	public void setSkills() {
@@ -719,6 +744,23 @@ public class ManualCharacterController implements Initializable {
 		InitiativeText.setText(String.valueOf(Generator.character.getInitiativa()));
 	}
 	
+	public void PopUp(String text) {
+		try {
+			System.out.println("Ive been CLICKED!!");
+			Parent root = null;
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/Scenes/Info/Info.fxml"));
+			loader.setController(new InfoController(text));
+			root = loader.load();
+			Scene scene = new Scene(root);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	
 	
 	@FXML
@@ -733,6 +775,31 @@ public class ManualCharacterController implements Initializable {
 		Generator.character.setMods();
 		Generator.character.setSkills();
 		setSkills();
+		StrengthCheck.setDisable(false);
+		DexterityCheck.setDisable(false);
+		ConstitutionCheck.setDisable(false);
+		IntelligenceCheck.setDisable(false);
+		WisdomCheck.setDisable(false);
+		CharismaCheck.setDisable(false);
+		AcrobaticsCheck.setDisable(false);
+		AnimalCheck.setDisable(false);
+		ArcanaCheck.setDisable(false);
+		AthleticsCheck.setDisable(false);
+		DeceptionCheck.setDisable(false);
+		HistoryCheck.setDisable(false);
+		InsightCheck.setDisable(false);
+		IntimidationCheck.setDisable(false);
+		InvestigationCheck.setDisable(false);
+		MedicineCheck.setDisable(false);
+		NatureCheck.setDisable(false);
+		PerceptionCheck.setDisable(false);
+		PerformanceCheck.setDisable(false);
+		PersuasionCheck.setDisable(false);
+		ReligionCheck.setDisable(false);
+		SleightCheck.setDisable(false);
+		StealthCheck.setDisable(false);
+		SurvivalCheck.setDisable(false);
+		
 	}
 	
 	
@@ -741,22 +808,22 @@ public class ManualCharacterController implements Initializable {
 		Race race = null;
 		switch (RaceComboBox.getValue()) {
 		case "Dragonborn":
-			race = new Dragonborn();
+			race = new Dragonborn(Generator.character);
 			break;
 		case "Dwarf":
-			race = new Dwarf();
+			race = new Dwarf(Generator.character);
 			break;
 		case "Elf":
-			race = new Elf();
+			race = new Elf(Generator.character);
 			break;
 		case "Half Elf":
-			race = new HalfElf();
+			race = new HalfElf(Generator.character);
 			break;
 		case "Halfling":
-			race = new Halfling();
+			race = new Halfling(Generator.character);
 			break;
 		case "Half Orc":
-			race = new HalfOrc();
+			race = new HalfOrc(Generator.character);
 			break;
 		case "Human":
 			race = new Human();
@@ -772,7 +839,6 @@ public class ManualCharacterController implements Initializable {
 	@FXML
 	public void saveButton(ActionEvent event) {
 		trait trt;
-		String[] keys = TraitText.getText().split("\n");
 		
 		String[] items = EquipmentText.getText().split("\n");
 		ArrayList<Item> weapons = null;
@@ -813,17 +879,136 @@ public class ManualCharacterController implements Initializable {
 
 	}
 	
+	@FXML
+	private ComboBox<String> BackgroundComboBox;
+	
+	@FXML
+	private ListView<String> EqList;
+	
+	@FXML
+	private ComboBox<String> EqComboBox;
+	
+	@FXML
+	private Button eqAddButton;
+	
+	@FXML
+	private Button EqRemoveButton;
+	
+	@FXML
+	private ComboBox<String> ArmorComboBox;
+	
+	@FXML
+	private void armorSelector(ActionEvent event) {
+		String armor = ArmorComboBox.getValue();
+		Generator.character.setEquipArmor(Armors.getArmorHash().get(armor));
+		ArmorClassText.setText(String.valueOf(Generator.character.setArmorClass()));
+	}
+	
+	@FXML
+	public void eqAddButton(ActionEvent event) {
+		EqList.getItems().add(EqComboBox.getValue());
+		for(String key : weapons.getWeaponHash().keySet()) {
+			if (key.equals(EqComboBox.getValue())){
+				String item = weapons.getWeaponHash().get(key).getName();
+				item += "    " + weapons.getWeaponHash().get(key).getDamage() + "/" + weapons.getWeaponHash().get(key).getDamageType();
+				AttacksList.getItems().add(item);
+			}
+		}
+	}
+	
+	@FXML
+	public void eqRemoveButton(ActionEvent event) {
+		EqList.getItems().remove(EqList.getSelectionModel().getSelectedIndex());
+		for(String key : weapons.getWeaponHash().keySet()) {
+			if (key.equals(EqComboBox.getValue())){
+				String item = weapons.getWeaponHash().get(key).getName();
+				item += "    " + weapons.getWeaponHash().get(key).getDamage() + "/" + weapons.getWeaponHash().get(key).getDamageType();
 
+				AttacksList.getItems().remove(item);
+			}
+		}
+	}
+	
+	@FXML
+	private ListView<String> SpellList;
+	
+	@FXML
+	private ComboBox<String> SpellComboBox;
+	
+	@FXML
+	private Button SpellAddButton;
+	
+	@FXML
+	private Button SpellRemoveButton;
+	
+	@FXML
+	private ListView<String> AttacksList;
+	
+	@FXML
+	public void SpellAddButton(ActionEvent event) {
+		SpellList.getItems().add(SpellComboBox.getValue());
+	}
+	
+	@FXML
+	public void SpellRemoveButton(ActionEvent event) {
+		SpellList.getItems().remove(SpellList.getSelectionModel().getSelectedIndex());
+	}
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		ArmorComboBox.getItems().addAll(Armors.getArmorHash().keySet()); // add all armors
+		EqComboBox.getItems().addAll(Potions.getPotionHash().keySet());
+		ArrayList<String> spels = new ArrayList<String>();
+		for(spellKey key : spells.getSpellHashmap().keySet()){
+			spels.add(key.getName());
+		}
+		SpellComboBox.getItems().addAll(spels);
+		EqComboBox.getItems().addAll(weapons.getWeaponHash().keySet());
+		EqComboBox.getItems().addAll(Tools.getToolHash().keySet());
 		Generator.manualGenerateChar();
 		RaceComboBox.setValue("Race");
 		ClassComboBox.setValue("Class");
+		BackgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisian", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
 		RaceComboBox.getItems().addAll("Dragonborn", "Dwarf", "Elf", "Half Elf", "Halfling", "Half Orc", "Human",
 				"Tiefling");
 		ClassComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
 				"Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
 		AlignmentComboBox.getItems().addAll("Chaotic Good", "Chaotic Neutral", "Chaotic Evil", "Neutral Good", "True Neutral", "Neutral Evil", "Lawful Good", "Lawful Neutral", "Lawful Evil");
+		SpellList.setOnMousePressed(new EventHandler<MouseEvent>() {
+		    @Override
+		    public void handle(MouseEvent event) {
+		        if(event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+		        	spellKey spl = new spellKey(0, ((ListView<String>)event.getSource()).getSelectionModel().getSelectedItem(), "");
+		        	PopUp(spells.get(spl).toString());
+		         }    
+		    }
+		});
+		EqList.setOnMousePressed(new EventHandler<MouseEvent>() {
+		    @Override
+		    public void handle(MouseEvent event) {
+		        if(event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+		        	String name = ((ListView<String>)event.getSource()).getSelectionModel().getSelectedItem();
+		        	if(weapons.getWeaponHash().containsKey(name)) {
+		        		PopUp(weapons.getWeaponHash().get(name).toString());
+		        	}
+		        	else if(Potions.getPotionHash().containsKey(name)){
+		        		PopUp(Potions.getPotionHash().get(name).toString());
+		        	}
+		        	else if(Tools.getToolHash().containsKey(name)) {
+		        		PopUp(Tools.getToolHash().get(name).toString());
+		        	}
+		         }    
+		    }
+		});
+		TraitsList.setOnMousePressed(new EventHandler<MouseEvent>() {
+		    @Override
+		    public void handle(MouseEvent event) {
+		        if(event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+		        	Skill skill = ((ListView<Skill>)event.getSource()).getSelectionModel().getSelectedItem();
+		        	PopUp(skill.getDescription());
+		         }    
+		    }
+		});
 		CpText.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {

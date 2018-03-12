@@ -1,19 +1,24 @@
 package Races;
 
 import Skills.skills;
+
+import java.io.Serializable;
+
 import Player.*;
 import Player.Character;
 
 public class Dragonborn extends Race{
 
-	public Dragonborn() {
+	private static final long serialVersionUID = 1L;
+
+	public Dragonborn(Character character) {
 		super();
 		size = "Medium";
 		landBaseSpeed = 30;
 		setRacialModifiers();
 		setRacialSkills();
-		Character.addLanguage("Dragonborn");
-		Character.addLanguage("Common");
+		character.addLanguage("Dragonborn");
+		character.addLanguage("Common");
 		setLandBaseSpeed(30);
 	}
 	

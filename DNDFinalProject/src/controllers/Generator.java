@@ -8,6 +8,7 @@ import Races.*;
 import Traits.Backgrounds;
 import Traits.trait;
 import Weapons.weapons;
+import armor.Armor;
 import armor.Armors;
 import consumables.Potions;
 import Classes.*;
@@ -17,10 +18,12 @@ import tools.Tools;
 
 public class Generator {
 	public static Character character;
+	
+	public static Character randomChar;
 
 	public static void manualGenerateChar() {
 		String[] background = new String[4];
-		character = new Character(null, 0, null, background, null, null, null, false, false, false, false, false,
+		character = new Character( 0, background, null, null, null, false, false, false, false, false,
 				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 				false, false, false, 0, 0, 0, 0);
 	}
@@ -37,12 +40,14 @@ public class Generator {
 		String playerName = "???";
 		String[] background = new String[4];
 		int randMoney = rand.nextInt(101);
-		Character randomChar = new Character(genRandRace(), randomLevel, genRandClass(randomLevel), background,
+		randomChar = new Character(randomLevel, background,
 				genRandEquipment(), randName, playerName, randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randCopper, randSilver,
 				randGold, randPlat);
+		randomChar.setRace(genRandRace(randomChar));
+		randomChar.setCharacterClass(genRandClass(randomChar.getLevel(), randomChar));
 		randomChar.setMods();
 		
 		if(randomChar.level >= 2 && randomChar.getCharacterClass().equals(Wizard.class)) {
@@ -89,28 +94,28 @@ public class Generator {
 		return bool;
 	}
 
-	private static Race genRandRace() {
+	private static Race genRandRace(Character character) {
 		Race race = new Race();
 		Random rand = new Random();
 		int randomRace = rand.nextInt(8) + 1;
 		switch (randomRace) {
 		case 1:
-			race = new Dragonborn();
+			race = new Dragonborn(character);
 			break;
 		case 2:
-			race = new Dwarf();
+			race = new Dwarf(character);
 			break;
 		case 3:
-			race = new Elf();
+			race = new Elf(character);
 			break;
 		case 4:
-			race = new HalfElf();
+			race = new HalfElf(character);
 			break;
 		case 5:
-			race = new Halfling();
+			race = new Halfling(character);
 			break;
 		case 6:
-			race = new HalfOrc();
+			race = new HalfOrc(character);
 			break;
 		case 7:
 			race = new Human();
@@ -122,46 +127,46 @@ public class Generator {
 		return race;
 	}
 
-	private static Class genRandClass(int level) {
+	private static Class genRandClass(int level, Character character) {
 		Random rand = new Random();
 		int randomClass = rand.nextInt(12) + 1;
 		Class randClass = new Class();
 		switch (randomClass) {
 		case 1:
-			randClass = new Barbarian(level);
+			randClass = new Barbarian(level, character);
 			break;
 		case 2:
-			randClass = new Bard(level);
+			randClass = new Bard(level, character);
 			break;
 		case 3:
-			randClass = new Cleric(level);
+			randClass = new Cleric(level, character);
 			break;
 		case 4:
-			randClass = new Druid(level);
+			randClass = new Druid(level, character);
 			break;
 		case 5:
-			randClass = new Fighter(level);
+			randClass = new Fighter(level, character);
 			break;
 		case 6:
-			randClass = new Monk(level);
+			randClass = new Monk(level, character);
 			break;
 		case 7:
-			randClass = new Paladin(level);
+			randClass = new Paladin(level, character);
 			break;
 		case 8:
-			randClass = new Ranger(level);
+			randClass = new Ranger(level, character);
 			break;
 		case 9:
-			randClass = new Rogue(level);
+			randClass = new Rogue(level, character);
 			break;
 		case 10:
-			randClass = new Sorcerer(level);
+			randClass = new Sorcerer(level, character);
 			break;
 		case 11:
-			randClass = new Warlock(level);
+			randClass = new Warlock(level, character);
 			break;
 		case 12:
-			randClass = new Wizard(level);
+			randClass = new Wizard(level, character);
 			break;
 		}
 		return randClass;
@@ -194,7 +199,9 @@ public class Generator {
 			}
 		}
 
-		equipment.add(Armors.getArmorHash().get(armorList[randomArmor]));
+		Armor armor = (Armors.getArmorHash().get(armorList[randomArmor]));
+		equipment.add(armor);
+		randomChar.setEquipArmor(armor);
 
 		// choose random consumables to add to equipment
 
@@ -225,17 +232,17 @@ public class Generator {
 		return equipment;
 	}
 
-	public static trait genRandTrait() {
-		Random rand = new Random();
-		int traitListSize = Backgrounds.getTraitHash().keySet().size();
-		int randomTrait = rand.nextInt(traitListSize);
-		BackgroundKey[] traitList = new BackgroundKey[traitListSize];
-		for (BackgroundKey key : Backgrounds.getTraitHash().keySet()) {
-			for (int x = 0; x > traitListSize; x++) {
-				traitList[x] = key;
-			}
-		}
-		trait randomTraits = Backgrounds.get(traitList[randomTrait]);
-		return randomTraits;
-	}
+//	public static trait genRandTrait() {
+//		Random rand = new Random();
+//		int traitListSize = Backgrounds.getBackgroundHash().keySet().size();
+//		int randomTrait = rand.nextInt(traitListSize);
+//		String[] traitList = new String[traitListSize];
+//		for (String key : Backgrounds.getBackgroundHash().keySet()) {
+//			for (int x = 0; x > traitListSize; x++) {
+//				traitList[x] = key;
+//			}
+//		}
+//		trait randomTraits = Backgrounds.get(traitList[randomTrait]);
+//		return randomTraits;
+//	}
 }

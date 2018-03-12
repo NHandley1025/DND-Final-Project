@@ -4,15 +4,16 @@ import Player.Character;
 import Skills.skills;
 
 public class Elf extends Race {
+	private static final long serialVersionUID = -8526674006457357127L;
 
-	public Elf() {
+	public Elf(Character character) {
 		super();
 		size = "Medium";
 		landBaseSpeed = 30;
 		setRacialModifiers();
 		setRacialSkills();
-		Character.addLanguage("Elvish");
-		Character.addLanguage("Common");
+		character.addLanguage("Elvish");
+		character.addLanguage("Common");
 		setLandBaseSpeed(30);
 	}
 	

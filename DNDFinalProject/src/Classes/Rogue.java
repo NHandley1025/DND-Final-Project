@@ -4,11 +4,12 @@ import Player.Character;
 import Skills.skills;
 
 public class Rogue extends Class{
+	private static final long serialVersionUID = -7107871969965788474L;
 
-	public Rogue(int level) {
-		Character.setHitDice("1d8");
-		setSkills(Character.getLevel());
-		setProficiencies();
+	public Rogue(int level, Character character) {
+		character.setHitDice("1d8");
+		setSkills(character.getLevel());
+		setProficiencies(character);
 	}
 	//needs fixing
 	public void setSkills(int level) {
@@ -39,13 +40,13 @@ public class Rogue extends Class{
 		}
 	}
 	
-	private void setProficiencies() {
-		Character.addProficiency("Light Armor");
-		Character.addProficiency("Hand Crossbows");
-		Character.addProficiency("Longswords");
-		Character.addProficiency("Simple Weapons");
-		Character.addProficiency("Rapiers");
-		Character.addProficiency("Shortswords");
+	private void setProficiencies(Character character) {
+		character.addProficiency("Light Armor");
+		character.addProficiency("Hand Crossbows");
+		character.addProficiency("Longswords");
+		character.addProficiency("Simple Weapons");
+		character.addProficiency("Rapiers");
+		character.addProficiency("Shortswords");
 	}
 	
 	
