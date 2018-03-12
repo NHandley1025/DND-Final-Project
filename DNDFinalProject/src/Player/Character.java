@@ -914,7 +914,6 @@ public class Character {
 	public static void setHitDice(String hitDie) {
 		hitDice = hitDie;
 	}
-
 	public static ArrayList<String> getLanguages() {
 		return languages;
 	}
@@ -929,6 +928,7 @@ public class Character {
 	public static void addLanguage(String language) {
 		languages.add(language);
 	}
+
 	public void setPerformance(int performance) {
 		Performance = performance;
 	}

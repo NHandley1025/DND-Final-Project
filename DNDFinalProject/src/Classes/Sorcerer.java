@@ -8,6 +8,7 @@ public class Sorcerer extends Class{
 	public Sorcerer(int level) {
 		Character.setHitDice("1d6");
 		setProficiencies();
+		setSkills(level);
 	}
 	
 	public void setSkills(int level) {
@@ -15,13 +16,13 @@ public class Sorcerer extends Class{
 		super.improveAbilityScore(level);
 		chooseArchetype();
 		switch(level) {
-		case 20:
+		case 20:addSkill(skills.sorcerousRestoration);
 		case 19:
-		case 18:
+		case 18:addSkill(skills.draconicPresence);
 		case 17:
 		case 16:
 		case 15:
-		case 14:
+		case 14:addSkill(skills.dragonWings);
 		case 13:
 		case 12:
 		case 11:
@@ -29,11 +30,11 @@ public class Sorcerer extends Class{
 		case 9:
 		case 8:
 		case 7:
-		case 6:
+		case 6:addSkill(skills.draconicResiliance);
 		case 5:
 		case 4:
-		case 3:
-		case 2:
+		case 3:addSkill(skills.metaMagic);
+		case 2:addSkill(skills.fontOfMagic);
 		case 1:addSkill(skills.SpellCasting);
 		default: break;
 		}
