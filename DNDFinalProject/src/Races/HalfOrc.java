@@ -15,6 +15,7 @@ public class HalfOrc extends Race {
 		character.addLanguage("Orcish");
 		character.addLanguage("Common");
 		setLandBaseSpeed(30);
+		name = "Half-Orc";
 	}
 	
 	private void setRacialSkills() {

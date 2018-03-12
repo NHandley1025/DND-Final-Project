@@ -13,6 +13,7 @@ public class Race implements Serializable{
 	protected int landBaseSpeed;
 	protected ArrayList<Skill> racialSkills = new ArrayList<>();
 	public int[] racialModifiers = new int[6];
+	protected String name;
 	
 	public int getWeight() {
 		return weight;
@@ -49,6 +50,12 @@ public class Race implements Serializable{
 	}
 	public void setRacialModifiers(int[] racialModifiers) {
 		this.racialModifiers = racialModifiers;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }
