@@ -15,24 +15,24 @@ public class Paladin extends Class{
 		super.setProficiencyByLevel(level);
 		super.improveAbilityScore(level);
 		switch(level) {
-		case 20: //sacred oath feature
-		case 19: skills.AbilityScoreImprovement();
+		case 20:addSkill(skills.holyNimbus);
+		case 19: 
 		case 18: //aura improvements
 		case 17:
-		case 16:skills.AbilityScoreImprovement();
-		case 15://sacred oath feature
+		case 16:
+		case 15:addSkill(skills.purityOfSpirit);
 		case 14:addSkill(skills.cleansingTouch);
 		case 13:
-		case 12:skills.AbilityScoreImprovement();
+		case 12:
 		case 11:addSkill(skills.improvedDivineSmite);
 		case 10:addSkill(skills.auraOfCourage);
 		case 9:
-		case 8:skills.AbilityScoreImprovement();
-		case 7://sacred oath feature
+		case 8:
+		case 7:addSkill(skills.auraOfDevotion);
 		case 6:addSkill(skills.auraOfProtection);
 		case 5:addSkill(skills.ExtraAttack);
-		case 4:skills.AbilityScoreImprovement();
-		case 3:addSkill(skills.divineHealth, skills.sacredOath);
+		case 4:
+		case 3:addSkill(skills.divineHealth, skills.sacredOath, skills.channelDivinity, skills.cDSacredWeapon, skills.cDTurnTheUnholy);
 		case 2:addSkill(skills.SpellCasting, skills.divineSmite);
 		addSkill(skills.fightingStyle);
 		case 1:addSkill(skills.divineSense, skills.layOnHands);

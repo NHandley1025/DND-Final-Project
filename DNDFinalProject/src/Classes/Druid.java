@@ -21,19 +21,19 @@ public class Druid extends Class{
 		case 17:
 		case 16:
 		case 15:
-		case 14:addSkill(skills.druidCircle3);
+		case 14:addSkill(skills.natureSanctuary);
 		case 13:
 		case 12:
 		case 11:
-		case 10:addSkill(skills.druidCircle2);
+		case 10:addSkill(skills.natureWard);
 		case 9:
 		case 8:addSkill(skills.wildShape2);
 		case 7:
-		case 6:addSkill(skills.druidCircle1);
+		case 6:addSkill(skills.landsStride);
 		case 5:
 		case 4:addSkill(skills.wildShape1);
 		case 3:
-		case 2:addSkill(skills.wildShape0, skills.druidCircle0);
+		case 2:addSkill(skills.wildShape0, skills.druidCircle, skills.bonusCantrip, skills.naturalRecovery);
 		case 1:addSkill(skills.druidic, skills.SpellCasting);
 		default: break;
 		}
