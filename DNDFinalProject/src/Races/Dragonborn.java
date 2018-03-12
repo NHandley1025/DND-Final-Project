@@ -20,6 +20,7 @@ public class Dragonborn extends Race{
 		character.addLanguage("Dragonborn");
 		character.addLanguage("Common");
 		setLandBaseSpeed(30);
+		name = "Dragonborn";
 	}
 	
 	private void setRacialModifiers() {
@@ -42,5 +43,6 @@ public class Dragonborn extends Race{
 		racialSkills.add(skills.BreathWeapon);
 		racialSkills.add(skills.DamageResistance);
 	}
+	
 	
 }

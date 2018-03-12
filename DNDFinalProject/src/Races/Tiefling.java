@@ -12,6 +12,7 @@ public class Tiefling extends Race {
 		setRacialModifiers();
 		setRacialSkills();
 		setLandBaseSpeed(30);
+		name = "Tiefling";
 	}
 	
 	private void setRacialModifiers() {

@@ -9,6 +9,7 @@ public class Human extends Race {
 		size = "Medium";
 		setRacialModifiers();
 		setLandBaseSpeed(30);
+		name = "Human";
 	}
 	
 	private void setRacialModifiers() {

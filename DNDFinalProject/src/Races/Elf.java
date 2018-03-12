@@ -15,6 +15,7 @@ public class Elf extends Race {
 		character.addLanguage("Elvish");
 		character.addLanguage("Common");
 		setLandBaseSpeed(30);
+		name = "Elf";
 	}
 	
 	private void setRacialModifiers() {
