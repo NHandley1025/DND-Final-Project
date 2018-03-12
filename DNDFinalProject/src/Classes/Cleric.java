@@ -10,9 +10,9 @@ public class Cleric extends Class {
 		setName("Cleric");
 	}
 	
-	public Cleric(int Level, Character character) {
+	public Cleric(Character character) {
 		super();
-		setSkills(Level);
+		setSkills(character.getLevel());
 		setProficiencies(character);
 		character.setHitDice("1d8");
 		setName("Cleric");

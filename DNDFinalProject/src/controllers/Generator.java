@@ -164,40 +164,40 @@ public class Generator {
 		Class randClass = new Class();
 		switch (randomClass) {
 		case 1:
-			randClass = new Barbarian(level, character);
+			randClass = new Barbarian(character);
 			break;
 		case 2:
-			randClass = new Bard(level, character);
+			randClass = new Bard(character);
 			break;
 		case 3:
-			randClass = new Cleric(level, character);
+			randClass = new Cleric(character);
 			break;
 		case 4:
-			randClass = new Druid(level, character);
+			randClass = new Druid(character);
 			break;
 		case 5:
-			randClass = new Fighter(level, character);
+			randClass = new Fighter(character);
 			break;
 		case 6:
-			randClass = new Monk(level, character);
+			randClass = new Monk(character);
 			break;
 		case 7:
-			randClass = new Paladin(level, character);
+			randClass = new Paladin(character);
 			break;
 		case 8:
-			randClass = new Ranger(level, character);
+			randClass = new Ranger(character);
 			break;
 		case 9:
-			randClass = new Rogue(level, character);
+			randClass = new Rogue(character);
 			break;
 		case 10:
-			randClass = new Sorcerer(level, character);
+			randClass = new Sorcerer(character);
 			break;
 		case 11:
-			randClass = new Warlock(level, character);
+			randClass = new Warlock(character);
 			break;
 		case 12:
-			randClass = new Wizard(level, character);
+			randClass = new Wizard(character);
 			break;
 		}
 		return randClass;

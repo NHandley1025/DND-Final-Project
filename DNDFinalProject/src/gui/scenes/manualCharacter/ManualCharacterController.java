@@ -667,38 +667,38 @@ public class ManualCharacterController implements Initializable {
 		int level = Generator.character.getLevel();
 		switch (ClassComboBox.getValue()) {
 		case "Barbarian":
-			cl = new Barbarian(level, Generator.character);
+			cl = new Barbarian(Generator.character);
 			break;
 		case "Bard":
-			cl = new Bard(level, Generator.character);
+			cl = new Bard(Generator.character);
 		case "Cleric":
-			cl = new Cleric(level, Generator.character);
+			cl = new Cleric(Generator.character);
 			break;
 		case "Druid":
-			cl = new Druid(level, Generator.character);
+			cl = new Druid( Generator.character);
 			break;
 		case "Fighter":
-			cl = new Fighter(level, Generator.character);
+			cl = new Fighter( Generator.character);
 			break;
 		case "Monk":
-			cl = new Monk(level, Generator.character);
+			cl = new Monk(Generator.character);
 			break;
 		case "Paladin":
-			cl = new Paladin(level, Generator.character);
+			cl = new Paladin(Generator.character);
 			break;
 		case "Ranger":
-			cl = new Ranger(level, Generator.character);
+			cl = new Ranger(Generator.character);
 		case "Rogue":
-			cl = new Rogue(level, Generator.character);
+			cl = new Rogue(Generator.character);
 			break;
 		case "Sorcerer":
-			cl = new Sorcerer(level, Generator.character);
+			cl = new Sorcerer(Generator.character);
 			break;
 		case "Warlock":
-			cl = new Warlock(level, Generator.character);
+			cl = new Warlock(Generator.character);
 			break;
 		case "Wizard":
-			cl = new Wizard(level, Generator.character);
+			cl = new Wizard(Generator.character);
 			break;
 		}
 		Generator.character.setCharacterClass(cl);
