@@ -26,17 +26,19 @@ public class Barbarian extends Class{
 		if(level > 3 && getArchetype() == null) {
 			chooseArchetype();
 		}
+		improveAbilityScore(level);
+		setProficiencyByLevel(level);
 		switch(level) {
 		case 20:addSkill(skills.PrimalChampion);
 		setRagesPerDay((byte) 0);
 			
-		case 19:skills.AbilityScoreImprovement();
+		case 19:
 			
 		case 18:addSkill(skills.IndomitableFight);
 		
 		case 17:setRagesPerDay((byte) 6);
 			
-		case 16:skills.AbilityScoreImprovement();
+		case 16:
 		setRageDamage((byte)4);
 		
 		case 15:addSkill(skills.PersistantRage);
@@ -45,7 +47,7 @@ public class Barbarian extends Class{
 	
 		case 13:
 			
-		case 12:skills.AbilityScoreImprovement();
+		case 12:
 		setRagesPerDay((byte) 5);
 		
 		case 11:addSkill(skills.PersistantRage);
@@ -55,7 +57,7 @@ public class Barbarian extends Class{
 		case 9:addSkill(skills.BrutalCritical);
 		setRageDamage((byte) 3);
 		
-		case 8:skills.AbilityScoreImprovement();
+		case 8:
 		
 		case 7:addSkill(skills.FeralInstinct);
 		
@@ -64,7 +66,7 @@ public class Barbarian extends Class{
 		
 		case 5:addSkill(skills.ExtraAttack, skills.FastMovement);
 		
-		case 4:skills.AbilityScoreImprovement();
+		case 4:
 		
 		case 3:archetypeCheck(skills.TotemWarrior1, skills.Frenzy);
 		setRagesPerDay((byte) 3);
