@@ -8,6 +8,7 @@ import Races.*;
 import Traits.Backgrounds;
 import Traits.trait;
 import Weapons.weapons;
+import armor.Armor;
 import armor.Armors;
 import consumables.Potions;
 import Classes.*;
@@ -17,6 +18,8 @@ import tools.Tools;
 
 public class Generator {
 	public static Character character;
+	
+	public static Character randomChar;
 
 	public static void manualGenerateChar() {
 		String[] background = new String[4];
@@ -37,15 +40,15 @@ public class Generator {
 		String playerName = "???";
 		String[] background = new String[4];
 		int randMoney = rand.nextInt(101);
-		Character randomChar = new Character(randomLevel, background,
+		randomChar = new Character(randomLevel, background,
 				genRandEquipment(), randName, playerName, randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(),
 				randBoolean(), randBoolean(), randBoolean(), randBoolean(), randBoolean(), randCopper, randSilver,
 				randGold, randPlat);
-		randomChar.setMods();
-		randomChar.setCharacterClass(genRandClass(randomChar.getLevel(), randomChar));
 		randomChar.setRace(genRandRace(randomChar));
+		randomChar.setCharacterClass(genRandClass(randomChar.getLevel(), randomChar));
+		randomChar.setMods();
 		
 		if(randomChar.level >= 2 && randomChar.getCharacterClass().equals(Wizard.class)) {
 			int tradition = rand.nextInt(8)+1;
@@ -196,7 +199,9 @@ public class Generator {
 			}
 		}
 
-		equipment.add(Armors.getArmorHash().get(armorList[randomArmor]));
+		Armor armor = (Armors.getArmorHash().get(armorList[randomArmor]));
+		equipment.add(armor);
+		randomChar.setEquipArmor(armor);
 
 		// choose random consumables to add to equipment
 
