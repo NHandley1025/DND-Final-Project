@@ -12,6 +12,19 @@ public class spellKey {
 		this.classReq = classReq;
 	}
 	
+	@Override
+	public int hashCode() {
+		return 0;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		spellKey key = (spellKey) obj;
+		if (key.getName() == this.name)
+			return true;
+		else return false;
+	}
+	
 	
 	
 	public Integer getSpellLevel() {

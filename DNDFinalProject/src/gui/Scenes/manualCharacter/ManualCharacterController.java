@@ -978,7 +978,8 @@ public class ManualCharacterController implements Initializable {
 		    @Override
 		    public void handle(MouseEvent event) {
 		        if(event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
-
+		        	spellKey spl = new spellKey(0, ((ListView<String>)event.getSource()).getSelectionModel().getSelectedItem(), "");
+		        	PopUp(spells.get(spl).toString());
 		         }    
 		    }
 		});
@@ -989,6 +990,12 @@ public class ManualCharacterController implements Initializable {
 		        	String name = ((ListView<String>)event.getSource()).getSelectionModel().getSelectedItem();
 		        	if(weapons.getWeaponHash().containsKey(name)) {
 		        		PopUp(weapons.getWeaponHash().get(name).toString());
+		        	}
+		        	else if(Potions.getPotionHash().containsKey(name)){
+		        		PopUp(Potions.getPotionHash().get(name).toString());
+		        	}
+		        	else if(Tools.getToolHash().containsKey(name)) {
+		        		PopUp(Tools.getToolHash().get(name).toString());
 		        	}
 		         }    
 		    }
