@@ -28,7 +28,9 @@ import Races.Halfling;
 import Races.Human;
 import Races.Race;
 import Races.Tiefling;
+import Spells.spells;
 import Traits.trait;
+import Weapons.weapons;
 import armor.Armors;
 import consumables.Potions;
 import controllers.Generator;
@@ -50,6 +52,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import keys.spellKey;
+import tools.Tools;
 
 public class ManualCharacterController implements Initializable {
 	
@@ -809,6 +813,9 @@ public class ManualCharacterController implements Initializable {
 	}
 	
 	@FXML
+	private ComboBox<String> BackgroundComboBox;
+	
+	@FXML
 	private ListView<String> EqList;
 	
 	@FXML
@@ -844,14 +851,18 @@ public class ManualCharacterController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ArmorComboBox.getItems().addAll(Armors.getArmorHash().keySet()); // add all armors
-		ArrayList<String> items = null;
-//		for(String key : Potions.getPotionHash().keySet()) {
-//			items.add(key);
-//		}
-		EqComboBox.getItems().addAll(); // add all selectable items
+		EqComboBox.getItems().addAll(Potions.getPotionHash().keySet());
+		ArrayList<String> spels = new ArrayList<String>();
+		for(spellKey ky : spells.getSpellHashmap().keySet()){
+			spels.add(ky.getName());
+		}
+//		EqComboBox.getItems().addAll(spells.getSpellHashmap().keySet());
+		EqComboBox.getItems().addAll(weapons.getWeaponHash().keySet());
+		EqComboBox.getItems().addAll(Tools.getToolHash().keySet());
 		Generator.manualGenerateChar();
 		RaceComboBox.setValue("Race");
 		ClassComboBox.setValue("Class");
+		BackgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisian", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
 		RaceComboBox.getItems().addAll("Dragonborn", "Dwarf", "Elf", "Half Elf", "Halfling", "Half Orc", "Human",
 				"Tiefling");
 		ClassComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin",

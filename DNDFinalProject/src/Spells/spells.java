@@ -18,6 +18,10 @@ public class spells {
 		return spells.get(key);	
 	}
 	
+	public static HashMap<spellKey, spell> getSpellHashmap(){
+		return spells;
+	}
+	
 	public static spell[] getSpellList(spellKey key) {
 		Map<spellKey, spell> collect = spells.entrySet().stream()
 				.filter(map -> map.getKey() == key)
