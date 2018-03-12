@@ -9,7 +9,6 @@ public class Archetypes {
 	Archetype CollegeOfLore = new Archetype("College of Lore");
 	Archetype CollegeOfValor = new Archetype("College of Valor");
 	// Cleric
-	
 	Archetype Knowledge = new Archetype("Divine Domain of Knowledge");
 	Archetype Life = new Archetype("Divine Domain of Life");
 	Archetype Light = new Archetype("Divine Domain of Light");
@@ -37,4 +36,5 @@ public class Archetypes {
 	public static Archetype black = new Archetype("Dragon Ancestor: Black Dragon (Acid)");
 	// Warlock
 	// Wizard
+	public static Archetype evocation = new Archetype("School of Evocation");
 }
