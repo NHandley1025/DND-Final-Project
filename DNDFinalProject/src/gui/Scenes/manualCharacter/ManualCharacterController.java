@@ -48,7 +48,7 @@ public class ManualCharacterController implements Initializable {
 	private ComboBox<String> RaceComboBox;
 
 	@FXML
-	private TextField AllignmentText;
+	private ComboBox<String> AlignmentComboBox;
 
 	@FXML
 	private TextField XpText;
@@ -223,10 +223,10 @@ public class ManualCharacterController implements Initializable {
 	private TextArea InitiativeText;
 
 	@FXML
-	private TextArea SpeedText;
+	private TextField SpeedText;
 
 	@FXML
-	private TextArea ArmorClassText;
+	private TextField ArmorClassText;
 
 	@FXML
 	private TextField AttNameText1;
@@ -420,8 +420,6 @@ public class ManualCharacterController implements Initializable {
 	}
 	
 	private int topCount;
-	
-	private int botCount;
 
 	@FXML
 	public void goBackButton(ActionEvent event) throws IOException {
@@ -439,6 +437,7 @@ public class ManualCharacterController implements Initializable {
 		((Node)event.getSource()).setDisable(true);
 		CalculateButton.setDisable(false);
 		Generator.character.setRace(setRC());
+		SpeedText.setText(String.valueOf(Generator.character.getRace().getLandBaseSpeed()));
 	}
 	
 	int bottomCount = 0;
@@ -591,6 +590,33 @@ public class ManualCharacterController implements Initializable {
 	}
 	
 	@FXML
+	public void alignmentSelect(ActionEvent event) {
+		((ComboBox)event.getSource()).setDisable(true);
+		
+		switch(ClassComboBox.getValue()) {
+		case "Chaotic Good":
+			break;
+		case "Chaotic Neutral":
+			break;
+		case "Chaotic Evil":
+			break;
+		case "Neutral Good":
+			break;
+		case "True Neutral":
+			break;
+		case "Neutral Evil":
+			break;
+		case "Lawful Good":
+			break;
+		case "Lawful Neutral":
+			break;
+		case "Lawful Evil":
+			break;
+			
+		}
+	}
+	
+	@FXML
 	public void classSelect(ActionEvent event) {
 		((Node)event.getSource()).setDisable(true);
 		RaceComboBox.setDisable(false);
@@ -612,7 +638,7 @@ public class ManualCharacterController implements Initializable {
 			cl = new Fighter(level);
 			break;
 		case "Monk":
-			cl = new Fighter(level);
+			cl = new Monk(level);
 			break;
 		case "Paladin":
 			cl = new Paladin(level);
@@ -782,6 +808,7 @@ public class ManualCharacterController implements Initializable {
 				"Tiefling");
 		ClassComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
 				"Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
+		AlignmentComboBox.getItems().addAll("Chaotic Good", "Chaotic Neutral", "Chaotic Evil", "Neutral Good", "True Neutral", "Neutral Evil", "Lawful Good", "Lawful Neutral", "Lawful Evil");
 
 	}
 

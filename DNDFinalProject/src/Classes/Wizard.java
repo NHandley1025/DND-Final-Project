@@ -7,9 +7,9 @@ public class Wizard extends Class{
 
 	private static String ArcaneTradition;
 	
-	public Wizard() {
+	public Wizard(int level) {
 		super();
-		setSkills(Character.getLevel());
+		setSkills(level);
 		setProficiencies();
 		Character.setHitDice("1d6");
 	}
