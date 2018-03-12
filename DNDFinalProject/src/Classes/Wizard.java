@@ -5,13 +5,18 @@ import Skills.skills;
 
 public class Wizard extends Class{
 	private static final long serialVersionUID = -8893366727680555800L;
-	public Wizard(int level, Character character) {
-		super();
-		setSkills(level);
+	
+	public Wizard() {
+		super("Wizard");
+	}
+	
+	public Wizard(Character character) {
+		super("Wizard");
+		setSkills(character.getLevel());
 		setProficiencies(character);
 		character.setHitDice("1d6");
 		//currently there is only one official archetype or archane tradition for wizard, so it's always set to the School of Evocation
-		if(level >= 2) {
+		if(character.getLevel() >= 2) {
 			setArchetype(Archetypes.evocation);
 		}
 	}

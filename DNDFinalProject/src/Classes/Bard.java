@@ -6,8 +6,12 @@ import Skills.skills;
 public class Bard extends Class {
 	private static final long serialVersionUID = -6469303127065022138L;
 
-	public Bard(int Level, Character character) {
-		setSkills(Level);
+	public Bard() {
+		super("Bard");
+	}
+	public Bard(Character character) {
+		super("Bard");
+		setSkills(character.getLevel());
 		chooseArchetype();
 		setProficiencies(character);
 	}

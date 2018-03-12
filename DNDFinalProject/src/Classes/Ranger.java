@@ -6,7 +6,12 @@ import Skills.skills;
 public class Ranger extends Class {
 	private static final long serialVersionUID = 55557765231767598L;
 
-	public Ranger(int level, Character character) {
+	public Ranger() {
+		super("Ranger");
+	}
+	
+	public Ranger(Character character) {
+		super("Ranger");
 		character.setHitDice("1d10");
 		setProficiencies(character);
 		setSkills(character.getLevel());

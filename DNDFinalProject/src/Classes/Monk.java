@@ -6,10 +6,14 @@ import Skills.skills;
 public class Monk extends Class{
 	private static final long serialVersionUID = -5116275298248811263L;
 	byte ki = 0;
+	
+	public Monk() {
+		super("Monk");
+	}
 
-	public Monk(int Level, Character character) {
+	public Monk(Character character) {
+		super("Monk");
 		character.setHitDice("1d8");
-		setSkills(Level);
 		setSkills(character.getLevel());
 		setProficiencies(character);
 	}
