@@ -39,7 +39,7 @@ public class ChoiceController implements Initializable{
 		System.out.println("Ive been CLICKED!!");
 		Parent root = null;
 		try {
-			root = FXMLLoader.load(getClass().getResource("/gui/Scenes/ManualCharacter.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/gui/Scenes/ManualCharacter/ManualCharacter.fxml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -29,7 +29,7 @@ public class CharacterDisplayController implements Initializable {
 	private ImageView Image;
 
 	@FXML
-	private Spinner<?> LvlSpinner;
+	private Spinner<Integer> LvlSpinner;
 
 	@FXML
 	private TextField NameText;
@@ -315,64 +315,16 @@ public class CharacterDisplayController implements Initializable {
 
 	@FXML
 	private TextArea LangText;
+	
+	private Character character;
 
 	public CharacterDisplayController(Character character) {
-		setSkills(character);
-		HitDiceTotalText.setText(Generator.character.getHitDice());
-		ProfBonusText.setText(String.valueOf(Generator.character.getCharacterClass().getProficiencyBonus()));
-		for (Skill skill : Generator.character.getCharacterClass().getSkillList()) {
-			TraitsList.getItems().add(skill);
-		}
-		for (Skill skill : Generator.character.getRace().getRacialSkills()) {
-			TraitsList.getItems().add(skill);
-		}
-		StrengthCheck.setSelected(character.isProStr());
-		IntelligenceCheck.setSelected(character.isProInt());
-		DexterityCheck.setDisable(character.isProDex());
-		ConstitutionCheck.setDisable(character.isProCon());
-		WisdomCheck.setDisable(character.isProWis());
-		CharismaCheck.setDisable(character.isProCha());
-
-		AcrobaticsCheck.setSelected(character.isProAcrobatics());
-		AnimalCheck.setSelected(character.isProAnimalHandling());
-		ArcanaCheck.setSelected(character.isProArcana());
-		AthleticsCheck.setSelected(character.isProAthletics());
-		DeceptionCheck.setSelected(character.isProDeception());
-		HistoryCheck.setSelected(character.isProHistory());
-		InsightCheck.setSelected(character.isProInsight());
-		IntimidationCheck.setSelected(character.isProIntimidation());
-		InvestigationCheck.setSelected(character.isProInvestigation());
-		MedicineCheck.setSelected(character.isProMedicine());
-		NatureCheck.setSelected(character.isProNature());
-		PerceptionCheck.setSelected(character.isProPerception());
-		PerformanceCheck.setSelected(character.isProPerformance());
-		PersuasionCheck.setSelected(character.isProPersuasion());
-		ReligionCheck.setSelected(character.isProReligion());
-		SleightCheck.setSelected(character.isProSleightOfHand());
-		StealthCheck.setSelected(character.isProStealth());
-		SurvivalCheck.setSelected(character.isProSurvival());
-
-		// RaceComboBox.setValue(character.getRace().getName());
-		// ClassComboBox.setValue(character.getCharacterClass().getName());
-		AlignmentComboBox.setValue(character.Alignment);
-		BackgroundComboBox.setValue(character.Background);
-
-		for (Item item : character.getEquipment()) {
-			EqList.getItems().add(item.getName());
-			if (weapons.getWeaponHash().containsKey(item.getName())) {
-				String LI = item.getName() + "    " + weapons.getWeaponHash().get(item.getName()).getDamage() + "/"
-						+ weapons.getWeaponHash().get(item.getName()).getDamageType();
-				AttacksList.getItems().add(LI);
-			}
-		}
-		for (spell spel : character.spells) {
-			SpellList.getItems().add(spel.name);
-		}
-
+		this.character = character;
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		setSkills(character);
 
 	}
 
@@ -416,6 +368,56 @@ public class CharacterDisplayController implements Initializable {
 		StealthText.setText(String.valueOf(character.getStealth()));
 		SurvivalText.setText(String.valueOf(character.getSurvival()));
 		InitiativeText.setText(String.valueOf(character.getInitiativa()));
+//		HitDiceTotalText.setText(Generator.character.getHitDice());
+//		ProfBonusText.setText(String.valueOf(Generator.character.getCharacterClass().getProficiencyBonus()));
+//		for (Skill skill : Generator.character.getCharacterClass().getSkillList()) {
+//			TraitsList.getItems().add(skill);
+//		}
+//		for (Skill skill : Generator.character.getRace().getRacialSkills()) {
+//			TraitsList.getItems().add(skill);
+//		}
+		StrengthCheck.setSelected(character.isProStr());
+		IntelligenceCheck.setSelected(character.isProInt());
+		DexterityCheck.setDisable(character.isProDex());
+		ConstitutionCheck.setDisable(character.isProCon());
+		WisdomCheck.setDisable(character.isProWis());
+		CharismaCheck.setDisable(character.isProCha());
+
+		AcrobaticsCheck.setSelected(character.isProAcrobatics());
+		AnimalCheck.setSelected(character.isProAnimalHandling());
+		ArcanaCheck.setSelected(character.isProArcana());
+		AthleticsCheck.setSelected(character.isProAthletics());
+		DeceptionCheck.setSelected(character.isProDeception());
+		HistoryCheck.setSelected(character.isProHistory());
+		InsightCheck.setSelected(character.isProInsight());
+		IntimidationCheck.setSelected(character.isProIntimidation());
+		InvestigationCheck.setSelected(character.isProInvestigation());
+		MedicineCheck.setSelected(character.isProMedicine());
+		NatureCheck.setSelected(character.isProNature());
+		PerceptionCheck.setSelected(character.isProPerception());
+		PerformanceCheck.setSelected(character.isProPerformance());
+		PersuasionCheck.setSelected(character.isProPersuasion());
+		ReligionCheck.setSelected(character.isProReligion());
+		SleightCheck.setSelected(character.isProSleightOfHand());
+		StealthCheck.setSelected(character.isProStealth());
+		SurvivalCheck.setSelected(character.isProSurvival());
+
+//		RaceComboBox.setValue(character.getRace());
+		ClassComboBox.setValue(character.getCharacterClass().getName());
+		AlignmentComboBox.setValue(character.Alignment);
+		BackgroundComboBox.setValue(character.Background);
+
+//		for (Item item : character.getEquipment()) {
+//			EqList.getItems().add(item.getName());
+//			if (weapons.getWeaponHash().containsKey(item.getName())) {
+//				String LI = item.getName() + "    " + weapons.getWeaponHash().get(item.getName()).getDamage() + "/"
+//						+ weapons.getWeaponHash().get(item.getName()).getDamageType();
+//				AttacksList.getItems().add(LI);
+//			}
+//		}
+		for (spell spel : character.spells) {
+			SpellList.getItems().add(spel.name);
+		}
 	}
 
 }
