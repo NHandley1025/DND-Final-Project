@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 <?scenebuilder-stylesheet manualcharacterstyle.css?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1600.0" prefWidth="1200.0" styleClass="manualcharacterstyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Scenes.manualCharacter.ManualCharacterController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0" styleClass="manualcharacterstyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Scenes.manualCharacter.ManualCharacterController">
    <content>
       <Pane centerShape="true" prefHeight="1600.0" prefWidth="1200.0">
          <children>
